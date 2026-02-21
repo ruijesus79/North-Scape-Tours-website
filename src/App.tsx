@@ -638,8 +638,8 @@ export default function App() {
                   </StaggerContainer>
 
                   <Reveal className="relative rounded-2xl overflow-hidden mb-16 md:mb-20">
-                    <img src={IMG.team} alt="Equipa North Scape Tours" className="w-full h-56 sm:h-80 md:h-96 object-cover" referrerPolicy="no-referrer" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent flex items-end p-7 sm:p-10">
+                    <img src={IMG.team} alt="Equipa North Scape Tours" className="w-full h-80 sm:h-96 md:h-[550px] object-cover object-bottom" referrerPolicy="no-referrer" />
+                    <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent flex items-end p-7 sm:p-10 pointer-events-none">
                       <div><h3 className="font-serif text-xl sm:text-2xl md:text-3xl mb-3">{t.about.teamTitle}</h3><p className="text-white/45 font-light leading-relaxed max-w-xl text-sm sm:text-base">{t.about.promise}</p></div>
                     </div>
                   </Reveal>
