@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #0c0c0c;
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hide default cursor on desktop machines so custom cursor shines */
+@media (hover: hover) and (pointer: fine) {
+
+  body,
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  .cursor-pointer {
+    cursor: none !important;
+  }
+}
+
+/* ─── Premium animated gradient text ─── */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-gradient-animate {
+  background: linear-gradient(120deg,
+      #ffffff 0%,
+      #d4af37 25%,
+      #ffffff 50%,
+      #c9a84c 75%,
+      #ffffff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+/* ─── Header Navigation Link Hover Effect ─── */
+.nav-link-hover {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link-hover:hover {
+  background: linear-gradient(120deg, #ffffff 0%, #d4af37 20%, #fcd34d 50%, #c9a84c 80%, #ffffff 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease-in-out infinite;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.nav-link-hover:hover::after {
+  transform: scaleX(1);
+}
+
+/* ─── Hero radial glow ─── */
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+  animation: glow-pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ─── Floating glass badge ─── */
+@keyframes float-badge {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.glass-badge {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: float-badge 4s ease-in-out infinite;
+}
+
+/* ─── CTA button glow on hover ─── */
+.cta-glow {
+  position: relative;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  background: linear-gradient(120deg, rgba(212, 175, 55, 0.3), rgba(255, 255, 255, 0.1), rgba(212, 175, 55, 0.3));
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.cta-glow:hover::before {
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Character-by-character text reveal ─── */
+@keyframes char-reveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.text-reveal-char {
+  display: inline-block;
+  opacity: 0;
+}
+
+.text-reveal-char.revealed {
+  animation: char-reveal 0.5s ease-in-out forwards;
+  animation-delay: calc(0.025s * var(--index));
+}
+
+/* Whitespace chars need width */
+.text-reveal-char.is-space {
+  width: 0.3em;
+}
+
+/* Visible focus ring for keyboard navigation */
+:focus-visible {
+  outline: 3px solid rgba(212, 175, 55, 0.8);
+  outline-offset: 3px;
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+  background-color: rgba(212, 175, 55, 0.05);
+  transition: all 0.2s ease-out;
+}
+
+/* Remove outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── PRO MAX 1: Card Lift + Shadow on Hover ─── */
+.card-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease;
+  will-change: transform;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px) perspective(1000px) rotateX(2deg) rotateY(-1deg);
+  box-shadow:
+    0 15px 35px rgba(212, 175, 55, 0.08),
+    0 5px 15px rgba(0, 0, 0, 0.4);
+  border-color: rgba(212, 175, 55, 0.25);
+}
+
+/* ─── PRO MAX 2: Border Beam (Linear/Vercel) ─── */
+@keyframes border-beam {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.border-beam {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.border-beam::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(120deg,
+      transparent 20%,
+      rgba(212, 175, 55, 0.6) 40%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(212, 175, 55, 0.6) 60%,
+      transparent 80%);
+  background-size: 300% 300%;
+  animation: border-beam 3s ease-in-out infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.border-beam:hover::after {
+  opacity: 1;
+}
+
+/* ─── PRO MAX 3: Scroll Reading Progress Bar ─── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #f5d76e, #d4af37);
+  z-index: 9999;
+  transition: width 80ms linear;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+  pointer-events: none;
+}
+
+/* ─── PRO MAX 4: Button Press Feedback (150-300ms timing) ─── */
+.btn-press {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.25s ease;
+  will-change: transform;
+}
+
+.btn-press:hover {
+  transform: scale(1.02) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+}
+
+.btn-press:active {
+  transform: scale(0.98) translateY(0px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.08);
+  transition-duration: 0.15s;
+}
+
+/* Reading Progress Indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, #f5d76e, #d4af37);
+  z-index: 9999;
+  transition: width 100ms linear;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  pointer-events: none;
+}

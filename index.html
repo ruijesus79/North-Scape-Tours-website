@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Northscape Tours — Experiências privadas e exclusivas no Douro Vinhateiro. Navegue em iates, deguste vinhos raros e descubra a região vinícola mais antiga do mundo." />
+  <meta name="theme-color" content="#050505" />
+  <title>North Scape Tours | Experiências Exclusivas no Douro Vinhateiro</title>
+
+  <!-- SEO Avançado Promax: JSON-LD Schema -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristAttraction",
+        "name": "North Scape Tours - Experiências no Douro",
+        "description": "Experiências privadas exclusivas no Vale do Douro, incluindo degustação de vinhos premium, almoços Michelin e passeios de barco em iates privados.",
+        "url": "https://northscapetours.pt",
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "89.00",
+          "highPrice": "490.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        "provider": {
+          "@type": "TravelAgency",
+          "name": "North Scape Tours",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto",
+            "addressCountry": "PT"
+          }
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Lenis Smooth Scrolling CDN -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script>
+    // Initialize Lenis exactly as requested for absolute fluidity
+    window.addEventListener('DOMContentLoaded', () => {
+      // Wait just a brief moment for the React DOM tree to mount
+      setTimeout(() => {
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          direction: 'vertical',
+          gestureDirection: 'vertical',
+          smooth: true,
+          mouseMultiplier: 1,
+          smoothTouch: false,
+          touchMultiplier: 2,
+          infinite: false,
+        });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Listen for React Router changes to scroll to top smoothly
+        window.lenis = lenis;
+      }, 100);
+    });
+  </script>
+</body>
+
+</html>
