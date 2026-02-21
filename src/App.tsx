@@ -36,7 +36,7 @@ const IMG = {
   /* TRANSFER — Premium chauffeur service */
   transfer: '/images/transfer_branded.png',
   /* TEAM — Quinta do Vallado estate amid terraces: professional, established */
-  team: 'https://s27363.pcdn.co/wp-content/uploads/2024/02/Quinta-do-Vallado-Douro-Valley.jpg.optimal.jpg',
+  team: '/images/North Scape Tours Team example2.png',
   /* CTA BACKGROUND — Quinta house amid vineyard terraces by river: exclusive, luxury brochure feel */
   ctaBg: 'https://images.winalist.com/blog/wp-content/uploads/2024/02/26114506/AdobeStock_106808196.jpeg',
   /* ambient backgrounds — subtle, low-opacity images for visual depth */
