@@ -1,7 +1,8 @@
 export type Language = 'pt' | 'en';
 
 export const WHATSAPP_NUMBER = '351911923499';
-export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+export const WHATSAPP_MESSAGE = 'Olá North Scape Tours! Gostaria de mais informações sobre os vossos tours no Douro.';
+export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 export const EMAIL = 'manager@northscapetours.pt';
 
 export const CONTENT = {
