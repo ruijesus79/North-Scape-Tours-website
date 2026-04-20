@@ -83,7 +83,7 @@ export default function BlogPost({ lang }: { lang: Language }) {
                 <div className="mt-20 pt-16 border-t border-white/10 text-center">
                     <h3 className="text-2xl sm:text-3xl font-serif mb-4">{lang === 'pt' ? 'Gostou deste artigo?' : 'Enjoyed this article?'}</h3>
                     <p className="text-white/50 mb-8 max-w-md mx-auto">{lang === 'pt' ? 'Descubra estas paisagens ao vivo connosco, numa experiência totalmente exclusiva e desenhada à sua medida.' : 'Discover these landscapes live with us, in a fully exclusive and tailor-made experience.'}</p>
-                    <Link to="/" onClick={() => setTimeout(() => document.getElementById('tour-douro')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="cta-glow border-beam btn-press inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-medium transition-all hover:bg-white/90">
+                    <Link to="/" onClick={() => setTimeout(() => document.getElementById('tours')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="cta-glow border-beam btn-press inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-medium transition-all hover:bg-white/90">
                         {lang === 'pt' ? 'Ver Experiências' : 'View Experiences'} <ChevronRight size={18} />
                     </Link>
                 </div>
