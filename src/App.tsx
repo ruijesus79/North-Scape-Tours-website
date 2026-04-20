@@ -9,7 +9,7 @@ import HeroText from './components/HeroText';
 import MagneticButton from './components/MagneticButton';
 import BentoBox from './components/BentoBox';
 import ScrollRevealText from './components/ScrollRevealText';
-import { Star, ArrowRight, Clock, Users, Menu, X, Globe, ChevronDown, Phone, Mail, Shield, Check, Wine, Ship, Car, Heart, Camera, MessageCircle, Calendar, Award } from 'lucide-react';
+import { Star, ArrowRight, Users, Menu, X, Globe, ChevronDown, Phone, Mail, Shield, Check, Wine, Car, Heart, MessageCircle, Award } from 'lucide-react';
 import { CONTENT, WHATSAPP_LINK, type Language } from './content';
 import CustomCursor from './components/CustomCursor';
 
@@ -35,8 +35,6 @@ const IMG = {
   romantic: 'https://www.louderthanfire.com/wp-content/uploads/2023/07/Boat-Trip-Marriage-Proposal-Douro-Valley-featured.jpg',
   /* TRANSFER — Premium chauffeur service */
   transfer: '/images/transfer_branded.png',
-  /* TEAM — Quinta do Vallado estate amid terraces: professional, established */
-  team: '/images/North Scape Tours Team example2.png',
   /* CTA BACKGROUND — Quinta house amid vineyard terraces by river: exclusive, luxury brochure feel */
   ctaBg: 'https://images.winalist.com/blog/wp-content/uploads/2024/02/26114506/AdobeStock_106808196.jpeg',
   /* ambient backgrounds — subtle, low-opacity images for visual depth */
@@ -46,7 +44,7 @@ const IMG = {
   ambientSunset: 'https://blog.winetourismportugal.com/hs-fs/hubfs/1607627042-portugal-estates-douro-quinta-do-seixo-6.jpg?width=1383',
 };
 
-const NAV_IDS = ['home', 'tour-douro', 'douro-a-dois', 'transfer', 'sobre-nos', 'avaliacoes', 'blog', 'contacto'] as const;
+const NAV_IDS = ['home', 'tours', 'transfer', 'sobre-nos', 'avaliacoes', 'blog', 'contacto'] as const;
 
 /* ─── Chanteclerc-style scroll-reveal animation ─── */
 const fadeUp = {
@@ -272,7 +270,7 @@ export default function App() {
     }
     setMenuOpen(false);
   };
-  const navKeys: (keyof typeof t.nav)[] = ['home', 'tourDouro', 'douroADois', 'transfer', 'about', 'reviews', 'blog', 'contact'];
+  const navKeys: (keyof typeof t.nav)[] = ['home', 'tours', 'transfer', 'about', 'reviews', 'blog', 'contact'];
 
   return (
     <div className="min-h-screen bg-[#0c0c0c] text-[#fafafa] font-sans selection:bg-white/20 overflow-x-hidden">
@@ -432,140 +430,101 @@ export default function App() {
                 </div>
               </section>
 
-              {/* ═══════ TOUR NO DOURO ═══════ */}
-              <section id="tour-douro" className="py-28 md:py-36 px-6 md:px-12 relative overflow-hidden">
-                <AmbientBg src={IMG.ambientRiver} opacity={0.04} position="center 30%" />
-                <AmbientGlow color="rgba(139,92,246,0.03)" top="20%" left="80%" size={500} />
-                <AmbientGlow color="rgba(212,175,55,0.03)" top="70%" left="20%" size={600} />
+              {/* ═══════ TOURS & PREÇOS ═══════ */}
+              <section id="tours" className="py-28 md:py-36 px-6 md:px-12 relative overflow-hidden">
+                <AmbientBg src={IMG.ambientSunset} opacity={0.05} position="center 50%" />
+                <AmbientGlow color="rgba(251,191,36,0.05)" top="25%" left="75%" size={600} />
+                <AmbientGlow color="rgba(244,63,94,0.03)" top="75%" left="20%" size={500} />
                 <div className="relative z-10 max-w-7xl mx-auto">
-                  <Reveal className="mb-16 md:mb-20 max-w-2xl">
-                    <span className="inline-block px-4 py-1.5 border border-amber-500/25 rounded-full text-[11px] tracking-[0.15em] uppercase text-amber-400/70 mb-5">{t.tourDouro.badge}</span>
-                    <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-5"><TextReveal text={t.tourDouro.title} /></h2>
-                    <p className="text-white/40 text-lg font-light leading-relaxed">{t.tourDouro.subtitle}</p>
+                  <Reveal className="mb-12 md:mb-14 max-w-2xl">
+                    <span className="inline-block px-4 py-1.5 border border-amber-500/25 rounded-full text-[11px] tracking-[0.15em] uppercase text-amber-400/70 mb-5">{t.tours.badge}</span>
+                    <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-5"><TextReveal text={t.tours.title} /></h2>
+                    <p className="text-white/40 text-lg font-light leading-relaxed">{t.tours.subtitle}</p>
                   </Reveal>
 
-                  <StaggerContainer className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-20 md:mb-24">
-                    <StaggerItem className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white/5">
-                      <img src={IMG.douroVineyard} alt="Vinhas em socalcos no Vale do Douro" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105" referrerPolicy="no-referrer" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6 flex items-baseline gap-2">
-                        <span className="text-2xl sm:text-3xl font-serif">{t.tourDouro.priceLabel} {t.tourDouro.price}€</span>
-                        <span className="text-xs sm:text-sm uppercase tracking-wider text-white/60">/ {t.tourDouro.priceUnit.replace('€/', '')}</span>
-                      </div>
-                    </StaggerItem>
-                    <StaggerItem className="flex flex-col justify-center">
-                      <p className="text-white/50 font-light text-base sm:text-lg leading-relaxed mb-6">{t.tourDouro.intro}</p>
-                      <p className="text-xs text-white/25 mb-8">{t.tourDouro.priceIncludes}</p>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <button onClick={() => scrollTo('contacto')} className="cta-glow cursor-pointer flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-black rounded-full font-medium text-sm hover:shadow-[0_0_30px_rgba(255,255,255,0.12)] hover:-translate-y-0.5 transition-all duration-300">{t.tourDouro.ctaBook} <ArrowRight size={14} /></button>
-                        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cursor-pointer flex items-center justify-center gap-2 px-7 py-3.5 border border-white/15 rounded-full text-sm text-white/50 hover:text-white hover:bg-white/5 transition-all duration-300"><MessageCircle size={14} /> {t.tourDouro.ctaWhatsapp}</a>
-                      </div>
-                    </StaggerItem>
-                  </StaggerContainer>
-
-                  {/* Timeline */}
-                  <Reveal className="mb-20 md:mb-24">
-                    <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-center mb-14">{t.tourDouro.timelineTitle}</h3>
-                    <div className="relative">
-                      <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-white/8" />
-                      {t.tourDouro.timeline.map((step, i) => (
-                        <Reveal key={i} delay={i * 0.08} className="relative flex gap-6 sm:gap-8 pl-2 py-5">
-                          <div className="relative z-10 flex-shrink-0 w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-[#0a0a0a] border border-white/8 flex items-center justify-center text-xs sm:text-sm font-mono text-white/40">{step.time}</div>
-                          <div className="pt-2"><h4 className="font-serif text-base sm:text-lg mb-2">{step.title}</h4><p className="text-white/30 font-light leading-relaxed text-sm sm:text-base">{step.desc}</p></div>
-                        </Reveal>
-                      ))}
+                  {/* Discount banner */}
+                  <Reveal className="mb-10 md:mb-14">
+                    <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20 backdrop-blur-sm">
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/15 text-amber-300">
+                        <Heart size={14} />
+                      </span>
+                      <p className="text-sm sm:text-base text-amber-100/90 font-light">
+                        {t.tours.discount}
+                      </p>
                     </div>
                   </Reveal>
 
-                  {/* Gallery + included */}
-                  <StaggerContainer className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
-                    <StaggerItem>
-                      <h3 className="font-serif text-xl sm:text-2xl mb-7">{t.tourDouro.includedTitle}</h3>
-                      <BentoBox features={t.tourDouro.included} />
-                      <p className="text-xs text-white/20 mt-6 italic font-light">{t.tourDouro.groupNote}</p>
-                    </StaggerItem>
-                    <StaggerItem className="grid grid-cols-2 gap-3">
-                      <div className="rounded-xl overflow-hidden aspect-square"><img src={IMG.wineTasting} alt="Prova de vinhos DOC Douro" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105" referrerPolicy="no-referrer" /></div>
-                      <div className="rounded-xl overflow-hidden aspect-square"><img src={IMG.boatRide} alt="Passeio de barco no rio" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105" referrerPolicy="no-referrer" /></div>
-                      <div className="rounded-xl overflow-hidden col-span-2 aspect-[2/1]"><img src={IMG.lunch} alt="Almoço regional" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105" referrerPolicy="no-referrer" /></div>
-                    </StaggerItem>
+                  {/* Pricing cards */}
+                  <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {t.tours.items.map((tour, i) => {
+                      const tourImage = [IMG.lunch, IMG.romantic, IMG.boatRide][i] ?? IMG.boatRide;
+                      const isPerPerson = 'perPerson' in tour;
+                      return (
+                        <StaggerItem key={tour.id} className="group relative flex flex-col rounded-2xl overflow-hidden bg-white/[0.03] border border-white/8 backdrop-blur-sm hover:border-amber-500/30 transition-all duration-500">
+                          <div className="relative h-52 overflow-hidden">
+                            <img src={tourImage} alt={tour.name} className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" referrerPolicy="no-referrer" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
+                            <div className="absolute top-4 left-4">
+                              <span className="text-[10px] px-3 py-1 bg-black/50 backdrop-blur-md rounded-full border border-white/15 uppercase tracking-[0.15em] text-white/80">
+                                {tour.tagline}
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="p-6 sm:p-7 flex flex-col flex-1">
+                            <h3 className="font-serif text-2xl mb-5">{tour.name}</h3>
+
+                            <ul className="space-y-2.5 mb-6">
+                              {tour.bullets.map((b, j) => (
+                                <li key={j} className="flex items-start gap-2.5 text-sm text-white/60 font-light leading-relaxed">
+                                  <Check size={14} className="text-amber-400/70 mt-1 flex-shrink-0" />
+                                  <span>{b}</span>
+                                </li>
+                              ))}
+                            </ul>
+
+                            <div className="border-t border-white/8 pt-5 space-y-2.5 mb-5">
+                              {isPerPerson ? (
+                                <div className="flex items-baseline justify-between">
+                                  <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.perPersonLabel}</span>
+                                  <span className="font-serif text-2xl text-white">{tour.perPerson}€</span>
+                                </div>
+                              ) : (
+                                <>
+                                  <div className="flex items-baseline justify-between">
+                                    <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.private}</span>
+                                    <span className="font-serif text-xl text-white">{tour.pricePrivate}€</span>
+                                  </div>
+                                  <div className="flex items-baseline justify-between">
+                                    <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.shared}</span>
+                                    <span className="font-serif text-xl text-white/85">{tour.priceShared}€</span>
+                                  </div>
+                                  <div className="flex items-baseline justify-between">
+                                    <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.extra}</span>
+                                    <span className="font-serif text-xl text-white/85">{tour.priceExtra}€</span>
+                                  </div>
+                                </>
+                              )}
+                            </div>
+
+                            <div className="flex items-center gap-2 text-xs text-white/50 mb-6">
+                              <Users size={13} className="text-white/35" />
+                              <span className="font-light">{tour.capacityLabel}</span>
+                            </div>
+
+                            <div className="mt-auto flex flex-col gap-2">
+                              <button onClick={() => scrollTo('contacto')} className="cta-glow cursor-pointer flex items-center justify-center gap-2 px-5 py-3 bg-white text-black rounded-full font-medium text-sm hover:shadow-[0_0_30px_rgba(255,255,255,0.12)] hover:-translate-y-0.5 transition-all duration-300">
+                                {t.tours.labels.book} <ArrowRight size={14} />
+                              </button>
+                              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cursor-pointer flex items-center justify-center gap-2 px-5 py-3 border border-white/15 rounded-full text-sm text-white/55 hover:text-white hover:bg-white/5 transition-all duration-300">
+                                <MessageCircle size={13} /> {t.tours.labels.whatsapp}
+                              </a>
+                            </div>
+                          </div>
+                        </StaggerItem>
+                      );
+                    })}
                   </StaggerContainer>
-
-                  {/* Practical info */}
-                  <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-                    {[
-                      { icon: <Clock size={15} />, label: lang === 'pt' ? 'Duração' : 'Duration', value: t.tourDouro.duration },
-                      { icon: <Calendar size={15} />, label: lang === 'pt' ? 'Saída' : 'Departure', value: t.tourDouro.departure },
-                      { icon: <Users size={15} />, label: lang === 'pt' ? 'Grupo' : 'Group', value: t.tourDouro.groupType },
-                      { icon: <Globe size={15} />, label: lang === 'pt' ? 'Idiomas' : 'Languages', value: t.tourDouro.languages },
-                      { icon: <Shield size={15} />, label: lang === 'pt' ? 'Cancelamento' : 'Cancellation', value: t.tourDouro.cancellation },
-                    ].map((info, i) => (
-                      <StaggerItem key={i} className="card-lift bg-white/[0.03] border border-white/5 rounded-xl p-4 text-center backdrop-blur-sm">
-                        <div className="text-white/20 mb-2 flex justify-center">{info.icon}</div>
-                        <p className="text-[10px] text-white/20 uppercase tracking-[0.15em] mb-1">{info.label}</p>
-                        <p className="text-xs sm:text-sm text-white/50 font-light">{info.value}</p>
-                      </StaggerItem>
-                    ))}
-                  </StaggerContainer>
-                </div>
-              </section>
-
-              {/* ═══════ DOURO A DOIS ═══════ */}
-              <section id="douro-a-dois" className="py-28 md:py-36 px-6 md:px-12 relative overflow-hidden">
-                <AmbientBg src={IMG.ambientSunset} opacity={0.06} position="center 60%" />
-                <AmbientGlow color="rgba(244,63,94,0.04)" top="30%" left="70%" size={600} />
-                <AmbientGlow color="rgba(251,191,36,0.03)" top="80%" left="30%" size={500} />
-                <div className="relative z-10 max-w-7xl mx-auto">
-                  <Reveal className="mb-16 md:mb-20 max-w-2xl">
-                    <span className="inline-block px-4 py-1.5 border border-rose-400/25 rounded-full text-[11px] tracking-[0.15em] uppercase text-rose-300/60 mb-5">{t.douroADois.badge}</span>
-                    <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl mb-5"><TextReveal text={t.douroADois.title} /></h2>
-                    <p className="text-white/40 text-lg font-light italic leading-relaxed">{t.douroADois.subtitle}</p>
-                  </Reveal>
-
-                  <StaggerContainer className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-20 md:mb-24">
-                    <StaggerItem className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white/5">
-                      <img src={IMG.romantic} alt="Casal com pôr-do-sol nos vinhedos do Douro" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-105" referrerPolicy="no-referrer" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6 flex items-baseline gap-2">
-                        <span className="text-2xl sm:text-3xl font-serif">{t.douroADois.priceLabel} {t.douroADois.price}€</span>
-                        <span className="text-xs sm:text-sm uppercase tracking-wider text-white/60">/ {t.douroADois.priceUnit.replace('€/', '')}</span>
-                      </div>
-                    </StaggerItem>
-                    <StaggerItem className="flex flex-col justify-center">
-                      <p className="text-white/50 font-light text-base sm:text-lg leading-relaxed mb-4">{t.douroADois.intro}</p>
-                      <p className="text-white/30 italic font-light mb-8 text-sm sm:text-base">{t.douroADois.noGroup}</p>
-                      <p className="text-xs text-white/20 mb-4">{t.douroADois.bookingNote}</p>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <button onClick={() => scrollTo('contacto')} className="cta-glow border-beam btn-press cursor-pointer flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-black rounded-full font-medium text-sm"><Heart size={14} /> {t.douroADois.ctaBook}</button>
-                        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-press cursor-pointer flex items-center justify-center gap-2 px-7 py-3.5 border border-white/15 rounded-full text-sm text-white/50 hover:text-white hover:bg-white/5 transition-all duration-300"><MessageCircle size={14} /> {t.douroADois.ctaWhatsapp}</a>
-                      </div>
-                    </StaggerItem>
-                  </StaggerContainer>
-
-                  {/* Timeline */}
-                  <Reveal className="mb-20 md:mb-24">
-                    <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-center mb-14">{t.douroADois.timelineTitle}</h3>
-                    <div className="relative">
-                      <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-rose-400/8" />
-                      {t.douroADois.timeline.map((step, i) => (
-                        <Reveal key={i} delay={i * 0.08} className="relative flex gap-6 sm:gap-8 pl-2 py-5">
-                          <div className="relative z-10 flex-shrink-0 w-12 sm:w-14 h-12 sm:h-14 rounded-full bg-[#0a0a0a] border border-rose-400/15 flex items-center justify-center text-xs sm:text-sm font-mono text-rose-300/40">{step.time}</div>
-                          <div className="pt-2"><h4 className="font-serif text-base sm:text-lg mb-2">{step.title}</h4><p className="text-white/30 font-light leading-relaxed text-sm sm:text-base">{step.desc}</p></div>
-                        </Reveal>
-                      ))}
-                    </div>
-                  </Reveal>
-
-                  {/* Features */}
-                  <StaggerContainer className="grid md:grid-cols-2 gap-6 mb-14">
-                    <StaggerItem className="bg-white/[0.03] border border-white/5 rounded-2xl p-7 backdrop-blur-sm"><Ship size={22} className="text-rose-300/40 mb-4" /><h3 className="font-serif text-lg mb-3">{t.douroADois.boatTitle}</h3><p className="text-white/35 font-light leading-relaxed text-sm">{t.douroADois.boatDesc}</p></StaggerItem>
-                    <StaggerItem className="bg-white/[0.03] border border-white/5 rounded-2xl p-7 backdrop-blur-sm"><Camera size={22} className="text-rose-300/40 mb-4" /><h3 className="font-serif text-lg mb-3">{t.douroADois.photoTitle}</h3><p className="text-white/35 font-light leading-relaxed text-sm mb-3">{t.douroADois.photoDesc}</p><p className="text-[11px] text-white/20 italic">{t.douroADois.photoUpgrade}</p></StaggerItem>
-                  </StaggerContainer>
-
-                  <Reveal className="mt-6">
-                    <h3 className="font-serif text-3xl sm:text-4xl text-center mb-10">{t.douroADois.includedTitle}</h3>
-                    <BentoBox features={t.douroADois.included} />
-                  </Reveal>
                 </div>
               </section>
 
@@ -637,15 +596,8 @@ export default function App() {
                     ))}
                   </StaggerContainer>
 
-                  <Reveal className="relative rounded-2xl overflow-hidden mb-16 md:mb-20">
-                    <img src={IMG.team} alt="Equipa North Scape Tours" className="w-full h-80 sm:h-96 md:h-[550px] object-cover object-center" referrerPolicy="no-referrer" />
-                    <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent flex items-end p-7 sm:p-10 pointer-events-none">
-                      <div><h3 className="font-serif text-xl sm:text-2xl md:text-3xl mb-3">{t.about.teamTitle}</h3><p className="text-white/45 font-light leading-relaxed max-w-xl text-sm sm:text-base">{t.about.promise}</p></div>
-                    </div>
-                  </Reveal>
-
-                  <Reveal className="bg-white/[0.03] border border-white/5 rounded-2xl p-7 backdrop-blur-sm">
-                    <p className="text-white/40 font-light leading-relaxed">{t.about.teamDesc}</p>
+                  <Reveal className="bg-white/[0.03] border border-white/5 rounded-2xl p-7 sm:p-10 backdrop-blur-sm">
+                    <p className="text-white/50 font-light italic leading-relaxed text-base sm:text-lg max-w-3xl">{t.about.promise}</p>
                   </Reveal>
                 </div>
               </section>
@@ -864,7 +816,7 @@ export default function App() {
             <SocialIcons />
           </div>
           <div className="flex flex-wrap justify-center gap-8 mb-8">
-            {navKeys.slice(0, 8).map((key, i) => (
+            {navKeys.map((key, i) => (
               <button key={key} onClick={() => scrollTo(NAV_IDS[i])} className="cursor-pointer text-xs font-serif tracking-wide text-white/30 hover:text-white/60 transition-colors duration-300">{t.nav[key]}</button>
             ))}
           </div>

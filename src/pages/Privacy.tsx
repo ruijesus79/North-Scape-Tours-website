@@ -50,7 +50,7 @@ export default function Privacy() {
 
                         <section>
                             <h2 className="text-xl font-serif text-white mb-4">5. Retenção e Direitos</h2>
-                            <p>Mantemos a informação de clientes apenas durante o tempo útil do serviço ou mandato tributário de faturação obrigatório. Mediante a submissão de um e-mail escrito a <a href="mailto:northscapetours@gmail.com" className="text-white hover:underline">northscapetours@gmail.com</a>, o cliente tem direito de pedir Acesso, Portabilidade ou Apagamento ('Right to be Forgotten').</p>
+                            <p>Mantemos a informação de clientes apenas durante o tempo útil do serviço ou mandato tributário de faturação obrigatório. Mediante a submissão de um e-mail escrito a <a href="mailto:manager@northscapetours.pt" className="text-white hover:underline">manager@northscapetours.pt</a>, o cliente tem direito de pedir Acesso, Portabilidade ou Apagamento ('Right to be Forgotten').</p>
                         </section>
                     </div>
                 </motion.div>
