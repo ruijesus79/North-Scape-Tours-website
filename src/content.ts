@@ -103,15 +103,16 @@ export const CONTENT = {
             ctaWhatsapp: 'Reservar via WhatsApp',
         },
         about: {
-            badge: 'Quem Somos',
-            title: 'Experiências Autênticas no Norte de Portugal',
-            mission: 'Na North Scape Tours, o cliente não é um turista. É um convidado especial.',
-            pillars: [
-                { title: 'O Douro que se vive', desc: 'Os nossos roteiros vão além do óbvio. Conectamos cada cliente a vinícolas selecionadas, provas enogastronómicas autênticas e paisagens de tirar o fôlego.' },
-                { title: 'O nosso diferencial', desc: 'Atendimento próximo, humano e personalizado. Roteiros feitos à medida e uma curadoria rigorosa de parceiros locais de excelência em conforto e segurança.' },
-                { title: 'Muito além do Douro', desc: 'Exploramos o património histórico, a gastronomia e a natureza fora do turismo massificado, sempre com um padrão elevado de serviço.' },
+            badge: 'Sobre N\u00F3s',
+            title: 'Al\u00E9m do Horizonte: A Ess\u00EAncia da North Scape Tours',
+            paragraphs: [
+                'Na North Scape Tours, acreditamos que o luxo n\u00E3o se define pelo que se v\u00EA, mas pelo que se sente. Nascemos da paix\u00E3o por revelar o Douro invis\u00EDvel \u2014 aquele que n\u00E3o aparece nos mapas tur\u00EDsticos, mas que pulsa nas quintas privadas, no sil\u00EAncio das \u00E1guas ao entardecer e nos sabores de uma cozinha que honra a terra.',
+                'A nossa miss\u00E3o \u00E9 desenhar experi\u00EAncias, n\u00E3o apenas trajetos. Cada detalhe, desde o conforto dos nossos ve\u00EDculos executivos \u00E0 escolha meticulosa de parceiros com Estrela Michelin, \u00E9 pensado para quem valoriza o tempo, a privacidade e a autenticidade.',
+                'N\u00E3o somos apenas guias; somos contadores de hist\u00F3rias e facilitadores de momentos. No banco de tr\u00E1s da nossa exclusividade, o Douro deixa de ser um destino para passar a ser uma mem\u00F3ria eterna.',
+                'Bem-vindo ao Douro, no seu ritmo. Bem-vindo \u00E0 North Scape.',
             ],
-            promise: 'A nossa promessa é criar experiências memoráveis, onde cada paisagem, cada vinho e cada momento se transformam numa ligação real com Portugal.',
+            signature: 'A Equipa North Scape',
+            imageAlt: 'Vale do Douro envolto em n\u00E9voa matinal',
         },
         reviews: {
             badge: 'Avaliações',
@@ -155,7 +156,7 @@ export const CONTENT = {
             readTimeDefault: '3 min de leitura',
             items: [
                 {
-                    slug: 'emerald-awakening-douro-spring', title: 'The Emerald Awakening: Douro\u2019s Secret Spring', excerpt: 'Descubra a rara fase \u201Cverde n\u00E9on\u201D do vale, um espet\u00E1culo ef\u00E9mero da natureza exclusivo dos viajantes de Abril.', date: '20 Abr 2026', category: 'Primavera', image: '/images/blog/spring2026/emerald-awakening.jpg', readTime: '3 min', bookable: false,
+                    slug: 'emerald-awakening-douro-spring', title: 'O Despertar Esmeralda: A Primavera Secreta do Douro', excerpt: 'Descubra a rara fase \u201Cverde n\u00E9on\u201D do vale, um espet\u00E1culo ef\u00E9mero da natureza exclusivo dos viajantes de Abril.', date: '20 Abr 2026', category: 'Primavera', image: '/images/blog/spring2026/emerald-awakening.jpg', readTime: '3 min de leitura', bookable: false,
                     fullContent: [
                         { type: 'p', text: 'Todos os Abris, durante três breves semanas, o Vale do Douro sofre uma transformação cromática que poucos viajantes conhecem: a fase do verde néon. É o instante em que o primeiro rebento, tenro e translúcido, apanha a luz baixa da manhã e devolve ao vale um tom de esmeralda quase fluorescente — impossível de capturar em folheto, difícil de esquecer em memória.' },
                         { type: 'image', url: '/images/blog/spring2026/emerald-awakening.jpg', text: 'O rebento de Abril, fotografado ao amanhecer junto à margem do rio. A luz cria um verde impossível de ver em qualquer outro mês.' },
@@ -167,7 +168,7 @@ export const CONTENT = {
                     ]
                 },
                 {
-                    slug: 'barefoot-luxury-private-picnic', title: 'Barefoot Luxury: The Anatomy of a Private Picnic', excerpt: 'Porque o verdadeiro luxo em 2026 n\u00E3o \u00E9 cristal \u2014 \u00E9 sabor artesanal numa vinha secreta onde o tempo p\u00E1ra.', date: '18 Abr 2026', category: 'Luxo Lento', image: '/images/blog/spring2026/barefoot-luxury.jpg', readTime: '3 min', bookable: true,
+                    slug: 'barefoot-luxury-private-picnic', title: 'Luxo Descal\u00E7o: A Anatomia de um Piquenique Privado', excerpt: 'Porque o verdadeiro luxo em 2026 n\u00E3o \u00E9 cristal \u2014 \u00E9 sabor artesanal numa vinha secreta onde o tempo p\u00E1ra.', date: '18 Abr 2026', category: 'Luxo Lento', image: '/images/blog/spring2026/barefoot-luxury.jpg', readTime: '3 min de leitura', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'O luxo contemporâneo não se mede pelo peso do talher, mas pela discrição do cenário. Em 2026, os nossos hóspedes já não pedem o restaurante mais caro — pedem o local onde ninguém mais pode entrar. Um socalco escondido, uma mesa baixa de nogueira, linho cru, figos maduros e vinho branco do Douro a sete graus.' },
                         { type: 'image', url: '/images/blog/spring2026/barefoot-luxury.jpg', text: 'Picnic privado na Quinta do Pé do Monte — acessível apenas por caminho de terra batida e apenas para quem sabe o nome certo.' },
@@ -179,7 +180,7 @@ export const CONTENT = {
                     ]
                 },
                 {
-                    slug: 'n222-slow-motion-chauffeur', title: 'The N222 in Slow Motion: The Joy of Not Driving', excerpt: 'Viva a estrada mais bonita do mundo a partir do conforto do banco traseiro executivo, c\u00E1lice de vinho na m\u00E3o.', date: '15 Abr 2026', category: 'Transfer', image: '/images/blog/spring2026/n222-slow-motion.jpg', readTime: '3 min', bookable: false,
+                    slug: 'n222-slow-motion-chauffeur', title: 'A N222 em C\u00E2mara Lenta: A Arte de N\u00E3o Conduzir', excerpt: 'Viva a estrada mais bonita do mundo a partir do conforto do banco traseiro executivo, c\u00E1lice de vinho na m\u00E3o.', date: '15 Abr 2026', category: 'Transfer', image: '/images/blog/spring2026/n222-slow-motion.jpg', readTime: '3 min de leitura', bookable: false,
                     fullContent: [
                         { type: 'p', text: 'A N222 entre Peso da Régua e Pinhão foi eleita pela Avis como a estrada mais bela do mundo. O segredo, porém, é que ela só revela a sua plenitude quando não se é a pessoa a conduzir. Cada curva, cada miradouro não oficial, cada inclinação acentuada exige atenção — e atenção é o preço que se paga quando se perde a paisagem.' },
                         { type: 'image', url: '/images/blog/spring2026/n222-slow-motion.jpg', text: 'A vista lateral a partir de uma Mercedes-Benz Classe V, a 40 km/h, no troço mais fotografado da N222.' },
@@ -191,7 +192,7 @@ export const CONTENT = {
                     ]
                 },
                 {
-                    slug: 'golden-hour-science-douro', title: 'Golden Hour Science: How Douro\u2019s Light Changes Everything', excerpt: 'Explore a magia sensorial do vale quando o sol toca a \u00E1gua no \u00E2ngulo perfeito para o seu cruzeiro da tarde.', date: '10 Abr 2026', category: 'Golden Hour', image: '/images/blog/spring2026/golden-hour-science.jpg', readTime: '3 min', bookable: true,
+                    slug: 'golden-hour-science-douro', title: 'A Ci\u00EAncia da Hora Dourada: Como a Luz do Douro Muda Tudo', excerpt: 'Explore a magia sensorial do vale quando o sol toca a \u00E1gua no \u00E2ngulo perfeito para o seu cruzeiro da tarde.', date: '10 Abr 2026', category: 'Golden Hour', image: '/images/blog/spring2026/golden-hour-science.jpg', readTime: '3 min de leitura', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'Há uma razão científica para o Douro à hora dourada ser diferente de qualquer outro rio do mundo. O vale corre no sentido este-oeste, o que significa que, durante os 40 minutos antes do pôr-do-sol, a luz passa rasante sobre a água e multiplica-se nas mil curvas do rio. O resultado: um ouro líquido que só existe aqui.' },
                         { type: 'image', url: '/images/blog/spring2026/golden-hour-science.jpg', text: 'Os primeiros reflexos da hora dourada, captados a partir de um barco rabelo tradicional, rio abaixo de Pinhão.' },
@@ -325,14 +326,15 @@ export const CONTENT = {
         },
         about: {
             badge: 'About Us',
-            title: 'Authentic Experiences in Northern Portugal',
-            mission: 'At North Scape Tours, the client is not a tourist. They are a special guest.',
-            pillars: [
-                { title: 'The Douro you live', desc: 'Our itineraries go beyond the obvious. We connect each client to selected wineries, authentic gastronomic tastings and breathtaking landscapes.' },
-                { title: 'Our differential', desc: 'Close, human and personalised service. Tailored itineraries and rigorous curation of local partners standing for excellence, comfort, and safety.' },
-                { title: 'Far beyond the Douro', desc: 'We explore the historical heritage, gastronomy, and nature away from mass tourism, always with a high standard of service.' },
+            title: 'Beyond the Horizon: The Soul of North Scape Tours',
+            paragraphs: [
+                'At North Scape Tours, we believe that luxury is not defined by what you see, but by what you feel. We were born out of a passion for revealing the invisible Douro \u2014 the one that doesn\u2019t appear on tourist maps, but that pulses inside private estates, in the silence of the river at dusk, and in the flavours of a cuisine that honours the land.',
+                'Our mission is to design experiences, not itineraries. Every detail, from the comfort of our executive vehicles to the meticulous selection of Michelin-starred partners, is crafted for those who value time, privacy, and authenticity.',
+                'We are not simply guides; we are storytellers and curators of unforgettable moments. In the backseat of our exclusivity, the Douro stops being a destination and becomes an eternal memory.',
+                'Welcome to the Douro, at your own pace. Welcome to North Scape.',
             ],
-            promise: 'Our promise is to create memorable experiences, where every landscape, every wine and every moment becomes a real connection with Portugal.',
+            signature: 'The North Scape Team',
+            imageAlt: 'Douro Valley wrapped in morning mist',
         },
         reviews: {
             badge: 'Reviews',
@@ -376,7 +378,7 @@ export const CONTENT = {
             readTimeDefault: '3 min read',
             items: [
                 {
-                    slug: 'emerald-awakening-douro-spring', title: 'The Emerald Awakening: Douro\u2019s Secret Spring', excerpt: 'Discover the rare \u201Cneon green\u201D phase of the valley, a short-lived spectacle of nature exclusive to April travellers.', date: 'April 20, 2026', category: 'Spring', image: '/images/blog/spring2026/emerald-awakening.jpg', readTime: '3 min', bookable: false,
+                    slug: 'emerald-awakening-douro-spring', title: 'The Emerald Awakening: Douro\u2019s Secret Spring', excerpt: 'Discover the rare \u201Cneon green\u201D phase of the valley, a short-lived spectacle of nature exclusive to April travellers.', date: 'April 20, 2026', category: 'Spring', image: '/images/blog/spring2026/emerald-awakening.jpg', readTime: '3 min read', bookable: false,
                     fullContent: [
                         { type: 'p', text: 'Every April, for just three short weeks, the Douro Valley undergoes a chromatic transformation that few travellers ever witness: the neon-green phase. It is the moment when the first leaves, tender and translucent, catch the low morning light and return an almost fluorescent emerald to the valley — impossible to capture in a brochure, impossible to forget once seen.' },
                         { type: 'image', url: '/images/blog/spring2026/emerald-awakening.jpg', text: 'The April bud, photographed at dawn near the riverbank. The light produces a green you cannot see in any other month.' },
@@ -388,7 +390,7 @@ export const CONTENT = {
                     ]
                 },
                 {
-                    slug: 'barefoot-luxury-private-picnic', title: 'Barefoot Luxury: The Anatomy of a Private Picnic', excerpt: 'Why true luxury in 2026 isn\u2019t about crystal \u2014 it\u2019s about artisanal flavours in a secret vineyard where time stands still.', date: 'April 18, 2026', category: 'Slow Luxury', image: '/images/blog/spring2026/barefoot-luxury.jpg', readTime: '3 min', bookable: true,
+                    slug: 'barefoot-luxury-private-picnic', title: 'Barefoot Luxury: The Anatomy of a Private Picnic', excerpt: 'Why true luxury in 2026 isn\u2019t about crystal \u2014 it\u2019s about artisanal flavours in a secret vineyard where time stands still.', date: 'April 18, 2026', category: 'Slow Luxury', image: '/images/blog/spring2026/barefoot-luxury.jpg', readTime: '3 min read', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'Contemporary luxury is no longer measured by the weight of the cutlery, but by the discretion of the setting. In 2026, our guests stop asking for the most expensive restaurant — they ask for the place no one else can reach. A hidden terrace, a low walnut table, raw linen, ripe figs, and a white Douro wine served at exactly seven degrees.' },
                         { type: 'image', url: '/images/blog/spring2026/barefoot-luxury.jpg', text: 'Private picnic at Quinta do P\u00E9 do Monte \u2014 reachable only by dirt track and only by those who know the right name.' },
@@ -400,7 +402,7 @@ export const CONTENT = {
                     ]
                 },
                 {
-                    slug: 'n222-slow-motion-chauffeur', title: 'The N222 in Slow Motion: The Joy of Not Driving', excerpt: 'Experience the world\u2019s most beautiful road from the comfort of an executive backseat, glass of wine in hand.', date: 'April 15, 2026', category: 'Transfer', image: '/images/blog/spring2026/n222-slow-motion.jpg', readTime: '3 min', bookable: false,
+                    slug: 'n222-slow-motion-chauffeur', title: 'The N222 in Slow Motion: The Joy of Not Driving', excerpt: 'Experience the world\u2019s most beautiful road from the comfort of an executive backseat, glass of wine in hand.', date: 'April 15, 2026', category: 'Transfer', image: '/images/blog/spring2026/n222-slow-motion.jpg', readTime: '3 min read', bookable: false,
                     fullContent: [
                         { type: 'p', text: 'The N222, between Peso da R\u00E9gua and Pinh\u00E3o, was named by Avis the most beautiful road in the world. The secret, however, is that it only reveals itself to someone who isn\u2019t driving. Every curve, every unmarked viewpoint, every steep descent demands attention — and attention is the price you pay when you lose the view.' },
                         { type: 'image', url: '/images/blog/spring2026/n222-slow-motion.jpg', text: 'Side window view from a Mercedes-Benz V-Class, at 40 km/h, on the most photographed section of the N222.' },
@@ -412,7 +414,7 @@ export const CONTENT = {
                     ]
                 },
                 {
-                    slug: 'golden-hour-science-douro', title: 'Golden Hour Science: How Douro\u2019s Light Changes Everything', excerpt: 'Explore the sensory magic of the valley as the sun hits the water at the perfect angle for your evening cruise.', date: 'April 10, 2026', category: 'Golden Hour', image: '/images/blog/spring2026/golden-hour-science.jpg', readTime: '3 min', bookable: true,
+                    slug: 'golden-hour-science-douro', title: 'Golden Hour Science: How Douro\u2019s Light Changes Everything', excerpt: 'Explore the sensory magic of the valley as the sun hits the water at the perfect angle for your evening cruise.', date: 'April 10, 2026', category: 'Golden Hour', image: '/images/blog/spring2026/golden-hour-science.jpg', readTime: '3 min read', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'There is a scientific reason why golden hour in the Douro is unlike any other river in the world. The valley runs east to west, which means that for the 40 minutes before sunset, the light skims the water and multiplies itself across the river\u2019s thousand curves. The result: a liquid gold that exists only here.' },
                         { type: 'image', url: '/images/blog/spring2026/golden-hour-science.jpg', text: 'The first reflections of golden hour, captured from a traditional rabelo boat, downriver from Pinh\u00E3o.' },
