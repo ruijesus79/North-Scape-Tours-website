@@ -34,7 +34,7 @@ const IMG = {
   /* ROMANTIC — Couple sharing wine on Douro river boat at golden hour sunset */
   romantic: 'https://www.louderthanfire.com/wp-content/uploads/2023/07/Boat-Trip-Marriage-Proposal-Douro-Valley-featured.jpg',
   /* TAILOR-MADE — Custom luxury experiences */
-  tailorMade: '/images/tailor-made.png',
+  tailorMade: 'https://images.unsplash.com/photo-1605459862899-f50615376c96?q=80&w=2070&auto=format&fit=crop',
   /* TRANSFER — Premium chauffeur service */
   transfer: '/images/transfer_branded.png',
   /* CTA BACKGROUND — Quinta house amid vineyard terraces by river: exclusive, luxury brochure feel */
@@ -233,7 +233,15 @@ function SocialIcons() {
 }
 
 export default function App() {
-  const [lang, setLang] = useState<Language>('pt');
+  const [lang, setLang] = useState<Language>(() => {
+    const saved = localStorage.getItem('ns_lang') as Language;
+    return (saved && ['pt', 'en', 'es', 'fr', 'de'].includes(saved)) ? saved : 'pt';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('ns_lang', lang);
+  }, [lang]);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -402,7 +410,7 @@ export default function App() {
               exit={{ opacity: 0, scale: 0.98, filter: 'blur(5px)' }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <BlogPost lang={resolvedLang} />
+              <BlogPost lang={lang} />
             </motion.div>
           } />
 
