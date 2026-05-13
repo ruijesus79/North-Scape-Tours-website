@@ -17,9 +17,9 @@ export default function BlogPost({ lang }: { lang: Language }) {
         return (
             <div className="min-h-screen flex items-center justify-center pt-24">
                 <div className="text-center">
-                    <h1 className="text-4xl font-serif mb-4">Artigo não encontrado</h1>
+                    <h1 className="text-4xl font-serif mb-4">{t.common.notFound}</h1>
                     <Link to="/" className="text-white/50 hover:text-white transition-colors flex items-center gap-2 justify-center">
-                        <ArrowLeft size={16} /> Voltar ao início
+                        <ArrowLeft size={16} /> {t.common.backHome}
                     </Link>
                 </div>
             </div>
@@ -39,7 +39,7 @@ export default function BlogPost({ lang }: { lang: Language }) {
                 <div className="relative max-w-4xl mx-auto px-6 w-full text-center sm:text-left">
                     <Link to="/" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8 sm:mb-12 group">
                         <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-                        {lang === 'pt' ? 'Voltar' : 'Back'}
+                        {t.common.back}
                     </Link>
 
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-serif leading-tight mb-6 drop-shadow-xl">{post.title}</h1>
@@ -81,10 +81,10 @@ export default function BlogPost({ lang }: { lang: Language }) {
 
                 {/* CTA */}
                 <div className="mt-20 pt-16 border-t border-white/10 text-center">
-                    <h3 className="text-2xl sm:text-3xl font-serif mb-4">{lang === 'pt' ? 'Gostou deste artigo?' : 'Enjoyed this article?'}</h3>
-                    <p className="text-white/50 mb-8 max-w-md mx-auto">{lang === 'pt' ? 'Descubra estas paisagens ao vivo connosco, numa experiência totalmente exclusiva e desenhada à sua medida.' : 'Discover these landscapes live with us, in a fully exclusive and tailor-made experience.'}</p>
+                    <h3 className="text-2xl sm:text-3xl font-serif mb-4">{t.common.enjoyed}</h3>
+                    <p className="text-white/50 mb-8 max-w-md mx-auto">{t.common.enjoyedDesc}</p>
                     <Link to="/" onClick={() => setTimeout(() => document.getElementById('tours')?.scrollIntoView({ behavior: 'smooth' }), 100)} className="cta-glow border-beam btn-press inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-medium transition-all hover:bg-white/90">
-                        {lang === 'pt' ? 'Ver Experiências' : 'View Experiences'} <ChevronRight size={18} />
+                        {t.hero.cta} <ChevronRight size={18} />
                     </Link>
                 </div>
             </div>

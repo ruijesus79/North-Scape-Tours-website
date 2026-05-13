@@ -253,6 +253,36 @@ export const CONTENT = {
             essentialBtn: 'Apenas Essenciais',
         },
         mobileBar: { book: 'Reservar', whatsapp: 'WhatsApp' },
+        privacy: {
+            title: 'Política de Privacidade',
+            back: 'Voltar',
+            sections: [
+                { title: '1. Identificação do Responsável de Tratamento', content: 'A entidade responsável pelo tratamento de dados é a "North Scape Tours" (NIPC: 518 190 145), com sede em Portugal. Comprometemo-nos com a proteção de dados pessoais, cumprindo estritamente as normativas do RGPD Europeu (Regulamento de Proteção de Dados de Caráter Pessoal).' },
+                { title: '2. Recolha e Finalidade', content: 'Não dispomos de formulários de venda diretos. Os dados fornecidos aquando de reservas ou contacto via e-mail e WhatsApp (nome completo, número de telemóvel, preferências dietéticas) servem o exclusivo propósito de organizar as logísticas do tour de forma 100% personalizada por cliente.' },
+                { title: '3. Partilha Externa', content: 'Alguns dados essenciais poderão ser comunicados apenas aos parceiros logísticos (Quintas e Restaurantes) sob o critério de intolerâncias/alergias alimentares ou adaptações de viaturas.' },
+                { title: '4. Política de Cookies', content: 'O Website usa tecnologia Cookie, exclusivamente com propósito técnico e analítico (Google Analytics) para entendermos o perfil do nosso visitante. Na primeira visita, foi inquirido do seu consentimento explícito em concordância com a Diretiva CE/PE de proteção da e-Privacy. Pode remover este consentimento ou apagar o histórico de sessão no seu Web Browser a qualquer tempo.' },
+                { title: '5. Retenção e Direitos', content: 'Mantemos a informação de clientes apenas durante o tempo útil do serviço ou mandato tributário de faturação obrigatório. O cliente tem direito de pedir Acesso, Portabilidade ou Apagamento.' },
+            ]
+        },
+        terms: {
+            title: 'Termos e Condições',
+            back: 'Voltar',
+            sections: [
+                { title: '1. Âmbito e Objeto', content: 'Estes Termos e Condições aplicam-se a todos os serviços prestados pela North Scape Tours. Ao reservar connosco, o cliente declara conhecer e aceitar estas normas.' },
+                { title: '2. Reservas e Pagamentos', content: 'As reservas tornam-se efetivas após confirmação escrita por parte da North Scape Tours. Os pagamentos são realizados conforme o método acordado no momento da reserva.' },
+                { title: '3. Política de Cancelamento', content: 'Cancelamento gratuito até 48 horas antes da data do tour. Após este período, será cobrado o valor total da reserva devido aos compromissos assumidos com parceiros locais.' },
+                { title: '4. Responsabilidade', content: 'A North Scape Tours detém todos os seguros obrigatórios por lei (Acidentes Pessoais e Responsabilidade Civil). Não nos responsabilizamos por perdas de bens pessoais durante as atividades.' },
+                { title: '5. Jurisdição', content: 'Para a resolução de qualquer litígio, é competente o tribunal da comarca do Porto, com renúncia a qualquer outro.' },
+            ]
+        },
+        common: {
+            back: 'Voltar',
+            backHome: 'Voltar ao início',
+            notFound: 'Artigo não encontrado',
+            enjoyed: 'Gostou deste artigo?',
+            enjoyedDesc: 'Descubra estas paisagens ao vivo connosco, numa experiência totalmente exclusiva e desenhada à sua medida.',
+            exclusiveExp: 'Experiências exclusivas no Norte de Portugal',
+        },
     },
     en: {
         nav: {
@@ -495,6 +525,36 @@ export const CONTENT = {
             acceptBtn: 'Accept All',
         },
         mobileBar: { book: 'Book Now', whatsapp: 'WhatsApp' },
+        privacy: {
+            title: 'Privacy Policy',
+            back: 'Back',
+            sections: [
+                { title: '1. Identification of the Data Controller', content: 'The entity responsible for data processing is "North Scape Tours" (NIPC: 518 190 145), based in Portugal. We are committed to the protection of personal data, strictly complying with the EU GDPR (General Data Protection Regulation) standards.' },
+                { title: '2. Collection and Purpose', content: 'We do not have direct sales forms. Data provided during bookings or contact via email and WhatsApp (full name, mobile number, dietary preferences) serve the exclusive purpose of organizing tour logistics in a 100% personalized way per client.' },
+                { title: '3. External Sharing', content: 'Some essential data may be communicated only to logistics partners (Estates and Restaurants) under the criteria of food intolerances/allergies or vehicle adaptations.' },
+                { title: '4. Cookie Policy', content: 'The Website uses Cookie technology, exclusively for technical and analytical purposes (Google Analytics) to understand our visitor profile. On your first visit, your explicit consent was requested in accordance with the EC/PE Directive on e-Privacy protection. You can remove this consent or clear your session history in your Web Browser at any time.' },
+                { title: '5. Retention and Rights', content: 'We keep client information only for the useful time of the service or mandatory tax invoicing period. The client has the right to request Access, Portability or Erasure.' },
+            ]
+        },
+        terms: {
+            title: 'Terms and Conditions',
+            back: 'Back',
+            sections: [
+                { title: '1. Scope and Object', content: 'These Terms and Conditions apply to all services provided by North Scape Tours. By booking with us, the client declares they know and accept these rules.' },
+                { title: '2. Bookings and Payments', content: 'Bookings become effective after written confirmation from North Scape Tours. Payments are made according to the method agreed upon at the time of booking.' },
+                { title: '3. Cancellation Policy', content: 'Free cancellation up to 48 hours before the tour date. After this period, the full booking value will be charged due to commitments made with local partners.' },
+                { title: '4. Responsibility', content: 'North Scape Tours holds all insurance required by law (Personal Accident and Civil Liability). We are not responsible for loss of personal belongings during activities.' },
+                { title: '5. Jurisdiction', content: 'For the resolution of any dispute, the court of the district of Porto is competent, with the waiver of any other.' },
+            ]
+        },
+        common: {
+            back: 'Back',
+            backHome: 'Back Home',
+            notFound: 'Article not found',
+            enjoyed: 'Enjoyed this article?',
+            enjoyedDesc: 'Discover these landscapes live with us, in a fully exclusive and tailor-made experience.',
+            exclusiveExp: 'Exclusive experiences in Northern Portugal',
+        },
     },
     es: {
         nav: {
@@ -693,8 +753,39 @@ export const CONTENT = {
             text: 'Utilizamos cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web. Al continuar, acepta nuestra',
             linkText: 'Política de Privacidad',
             acceptBtn: 'Aceptar todo',
+            essentialBtn: 'Solo esenciales',
         },
         mobileBar: { book: 'Reservar ahora', whatsapp: 'WhatsApp' },
+        privacy: {
+            title: 'Política de Privacidad',
+            back: 'Volver',
+            sections: [
+                { title: '1. Identificación del Responsable del Tratamiento', content: 'La entidad responsable del tratamiento de datos es "North Scape Tours" (NIPC: 518 190 145), con sede en Portugal. Nos comprometemos con la protección de datos personales, cumpliendo estrictamente con la normativa RGPD Europea.' },
+                { title: '2. Recogida y Finalidad', content: 'No disponemos de formularios de venta directa. Los datos proporcionados durante las reservas o el contacto por correo electrónico y WhatsApp sirven al propósito exclusivo de organizar la logística del tour de forma personalizada.' },
+                { title: '3. Intercambio Externo', content: 'Algunos datos esenciales pueden ser comunicados solo a socios logísticos (fincas y restaurantes) bajo el criterio de intolerancias alimentarias o adaptaciones de vehículos.' },
+                { title: '4. Política de Cookies', content: 'El sitio web utiliza tecnología de cookies, exclusivamente con fines técnicos y analíticos para comprender el perfil del visitante. Puede retirar su consentimiento en cualquier momento.' },
+                { title: '5. Retención y Derechos', content: 'Mantenemos la información del cliente solo durante el tiempo útil del servicio. El cliente tiene derecho a solicitar acceso, portabilidad o supresión.' },
+            ]
+        },
+        terms: {
+            title: 'Términos y Condiciones',
+            back: 'Volver',
+            sections: [
+                { title: '1. Alcance y Objeto', content: 'Estos Términos y Condiciones se aplican a todos los servicios prestados por North Scape Tours.' },
+                { title: '2. Reservas y Pagos', content: 'Las reservas se hacen efectivas tras la confirmación por escrito. Los pagos se realizan según el método acordado.' },
+                { title: '3. Política de Cancelación', content: 'Cancelación gratuita hasta 48 horas antes del tour. Después, se aplicará la tarifa completa.' },
+                { title: '4. Responsabilidad', content: 'North Scape Tours cuenta con todos los seguros obligatorios por ley. No nos responsabilizamos por la pérdida de bienes personales.' },
+                { title: '5. Jurisdicción', content: 'Para la resolución de cualquier disputa, es competente el tribunal del distrito de Oporto.' },
+            ]
+        },
+        common: {
+            back: 'Volver',
+            backHome: 'Volver al inicio',
+            notFound: 'Artículo no encontrado',
+            enjoyed: '¿Le gustó este artículo?',
+            enjoyedDesc: 'Descubra estos paisajes en vivo con nosotros, en una experiencia exclusiva diseñada a su medida.',
+            exclusiveExp: 'Experiencias exclusivas en el norte de Portugal',
+        },
     },
     fr: {
         nav: {
@@ -893,8 +984,39 @@ export const CONTENT = {
             text: 'Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site. En continuant, vous acceptez notre',
             linkText: 'Politique de Confidentialité',
             acceptBtn: 'Tout accepter',
+            essentialBtn: 'Uniquement essentiels',
         },
         mobileBar: { book: 'Réserver maintenant', whatsapp: 'WhatsApp' },
+        privacy: {
+            title: 'Politique de Confidentialité',
+            back: 'Retour',
+            sections: [
+                { title: '1. Identification du Responsable du Traitement', content: 'L\'entité responsable du traitement des données est "North Scape Tours" (NIPC : 518 190 145), basée au Portugal. Nous nous engageons à protéger les données personnelles conformément au RGPD européen.' },
+                { title: '2. Collecte et Finalité', content: 'Nous ne disposons pas de formulaires de vente directe. Les données fournies lors des réservations ou des contacts servent exclusivement à l\'organisation personnalisée du tour.' },
+                { title: '3. Partage Externe', content: 'Certaines données essentielles peuvent être communiquées uniquement aux partenaires logistiques pour des raisons d\'intolérances alimentaires ou d\'adaptation des véhicules.' },
+                { title: '4. Politique de Cookies', content: 'Le site utilise des cookies à des fins techniques et analytiques. Vous pouvez retirer votre consentement à tout moment.' },
+                { title: '5. Rétention et Droits', content: 'Nous conservons les informations des clients uniquement pendant la durée utile du service. Le client a le droit de demander l\'accès, la portabilité ou l\'effacement.' },
+            ]
+        },
+        terms: {
+            title: 'Conditions Générales',
+            back: 'Retour',
+            sections: [
+                { title: '1. Champ d\'Application', content: 'Ces conditions générales s\'appliquent à tous les services fournis par North Scape Tours.' },
+                { title: '2. Réservations et Paiements', content: 'Les réservations sont effectives après confirmation écrite. Les paiements sont effectués selon la méthode convenue.' },
+                { title: '3. Politique d\'Annulation', content: 'Annulation gratuite jusqu\'à 48 heures avant le tour. Au-delà, le tarif plein est appliqué.' },
+                { title: '4. Responsabilité', content: 'North Scape Tours détient toutes les assurances obligatoires. Nous ne sommes pas responsables de la perte de biens personnels.' },
+                { title: '5. Juridiction', content: 'Pour la résolution de tout litige, le tribunal du district de Porto est compétent.' },
+            ]
+        },
+        common: {
+            back: 'Retour',
+            backHome: 'Retour à l\'accueil',
+            notFound: 'Article non trouvé',
+            enjoyed: 'Vous avez aimé cet article ?',
+            enjoyedDesc: 'Découvrez ces paysages en direct avec nous, lors d\'une expérience exclusive et sur mesure.',
+            exclusiveExp: 'Expériences exclusives dans le nord du Portugal',
+        },
     },
     de: {
         nav: {
@@ -1093,7 +1215,38 @@ export const CONTENT = {
             text: 'Wir verwenden Cookies, um sicherzustellen, dass Sie die beste Erfahrung auf unserer Website machen. Durch die Fortsetzung stimmen Sie unserer',
             linkText: 'Datenschutzrichtlinie',
             acceptBtn: 'Alle akzeptieren',
+            essentialBtn: 'Nur essenzielle',
         },
         mobileBar: { book: 'Jetzt buchen', whatsapp: 'WhatsApp' },
+        privacy: {
+            title: 'Datenschutzerklärung',
+            back: 'Zurück',
+            sections: [
+                { title: '1. Identifizierung des Verantwortlichen', content: 'Verantwortlich für die Datenverarbeitung ist "North Scape Tours" (NIPC: 518 190 145) mit Sitz in Portugal. Wir verpflichten uns zum Schutz personenbezogener Daten gemäß der DSGVO.' },
+                { title: '2. Erhebung und Zweck', content: 'Wir haben keine direkten Verkaufsformulare. Daten aus Buchungen dienen ausschließlich der Organisation der Tour.' },
+                { title: '3. Externe Weitergabe', content: 'Daten werden nur bei Notwendigkeit an Logistikpartner (Weingüter/Restaurants) weitergegeben (z.B. Allergien).' },
+                { title: '4. Cookie-Richtlinie', content: 'Die Website verwendet Cookies zu technischen und analytischen Zwecken. Sie können Ihre Einwilligung jederzeit widerrufen.' },
+                { title: '5. Aufbewahrung und Rechte', content: 'Wir speichern Daten nur so lange wie nötig. Kunden haben das Recht auf Auskunft, Übertragbarkeit oder Löschung.' },
+            ]
+        },
+        terms: {
+            title: 'Allgemeine Geschäftsbedingungen',
+            back: 'Zurück',
+            sections: [
+                { title: '1. Geltungsbereich', content: 'Diese Bedingungen gelten für alle Dienstleistungen von North Scape Tours.' },
+                { title: '2. Buchung und Zahlung', content: 'Buchungen sind nach schriftlicher Bestätigung wirksam. Zahlungen erfolgen nach Vereinbarung.' },
+                { title: '3. Stornierung', content: 'Kostenlose Stornierung bis 48 Stunden vor dem Termin. Danach wird der volle Preis berechnet.' },
+                { title: '4. Haftung', content: 'Wir verfügen über alle gesetzlich vorgeschriebenen Versicherungen. Keine Haftung für den Verlust persönlicher Gegenstände.' },
+                { title: '5. Gerichtsstand', content: 'Gerichtsstand für alle Streitigkeiten ist Porto.' },
+            ]
+        },
+        common: {
+            back: 'Zurück',
+            backHome: 'Zur Startseite',
+            notFound: 'Beitrag nicht gefunden',
+            enjoyed: 'Hat Ihnen dieser Beitrag gefallen?',
+            enjoyedDesc: 'Entdecken Sie diese Landschaften live mit uns in einem exklusiven, maßgeschneiderten Erlebnis.',
+            exclusiveExp: 'Exklusive Erlebnisse in Nordportugal',
+        },
     },
 };

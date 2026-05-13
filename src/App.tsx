@@ -1013,8 +1013,8 @@ export default function App() {
               </section>
             </motion.div>
           } />
-          <Route path="/termos" element={<motion.div key="/termos" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Terms /></motion.div>} />
-          <Route path="/privacidade" element={<motion.div key="/privacidade" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Privacy /></motion.div>} />
+          <Route path="/termos" element={<motion.div key="/termos" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Terms lang={lang} /></motion.div>} />
+          <Route path="/privacidade" element={<motion.div key="/privacidade" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Privacy lang={lang} /></motion.div>} />
         </Routes>
       </AnimatePresence>
 
@@ -1024,7 +1024,7 @@ export default function App() {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-10">
             <img src="/logo-white.png" alt="North Scape Tours" className="h-20 sm:h-24 md:h-28 w-auto opacity-80 mb-4" />
-            <p className="font-serif italic text-white/30 text-sm sm:text-base mb-6">{lang === 'pt' ? 'Experiências exclusivas no Norte de Portugal' : 'Exclusive experiences in Northern Portugal'}</p>
+            <p className="font-serif italic text-white/30 text-sm sm:text-base mb-6">{t.common.exclusiveExp}</p>
 
             {/* Social Icons — 21st.dev inspired */}
             <SocialIcons />
