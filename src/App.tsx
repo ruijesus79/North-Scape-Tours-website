@@ -34,7 +34,7 @@ const IMG = {
   /* ROMANTIC — Couple sharing wine on Douro river boat at golden hour sunset */
   romantic: 'https://www.louderthanfire.com/wp-content/uploads/2023/07/Boat-Trip-Marriage-Proposal-Douro-Valley-featured.jpg',
   /* TAILOR-MADE — Custom luxury experiences */
-  tailorMade: 'https://images.unsplash.com/photo-1605459862899-f50615376c96?q=80&w=2070&auto=format&fit=crop',
+  tailorMade: '/images/tailor-made.png',
   /* TRANSFER — Premium chauffeur service */
   transfer: '/images/transfer_branded.png',
   /* CTA BACKGROUND — Quinta house amid vineyard terraces by river: exclusive, luxury brochure feel */
