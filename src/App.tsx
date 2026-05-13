@@ -436,7 +436,7 @@ export default function App() {
                     {t.hero.desc}
                   </motion.p>
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.1, ease: [0.22, 1, 0.36, 1] }} className="flex flex-col sm:flex-row sm:justify-center items-start sm:items-center gap-3 mb-8">
-                    <MagneticButton onClick={() => scrollTo('tour-douro')} className="cta-glow border-beam btn-press cursor-pointer px-7 py-3.5 rounded-full bg-white text-black font-medium">
+                    <MagneticButton onClick={() => scrollTo('tours')} className="cta-glow border-beam btn-press cursor-pointer px-7 py-3.5 rounded-full bg-white text-black font-medium">
                       <span className="flex items-center gap-3">{t.hero.cta} <ArrowRight size={18} /></span>
                     </MagneticButton>
                     <MagneticButton href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-press cursor-pointer px-6 py-3.5 rounded-full border border-white/15 text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300">
