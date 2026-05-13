@@ -33,6 +33,8 @@ const IMG = {
   lunch: 'https://blog.winetourismportugal.com/hs-fs/hubfs/Enotourism%5B6%5D%20(4).jpg?width=1969',
   /* ROMANTIC — Couple sharing wine on Douro river boat at golden hour sunset */
   romantic: 'https://www.louderthanfire.com/wp-content/uploads/2023/07/Boat-Trip-Marriage-Proposal-Douro-Valley-featured.jpg',
+  /* TAILOR-MADE — Custom luxury experiences */
+  tailorMade: '/images/tailor-made.png',
   /* TRANSFER — Premium chauffeur service */
   transfer: '/images/transfer_branded.png',
   /* CTA BACKGROUND — Quinta house amid vineyard terraces by river: exclusive, luxury brochure feel */
@@ -250,8 +252,7 @@ export default function App() {
   };
 
   const { scrollY } = useScroll();
-  const resolvedLang: 'pt' | 'en' = (lang === 'pt') ? 'pt' : 'en';
-  const t = CONTENT[resolvedLang];
+  const t = CONTENT[lang];
   const LANG_LABELS: Record<Language, string> = { pt: 'Português', en: 'English', es: 'Español', fr: 'Français', de: 'Deutsch' };
 
   // Close dropdown on click outside
@@ -597,7 +598,7 @@ export default function App() {
                     {/* Left: Image */}
                     <Reveal>
                       <div className="relative rounded-2xl overflow-hidden aspect-[3/4] sm:aspect-[4/5]">
-                        <img src={IMG.romantic} alt="Tailor-made experience" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                        <img src={IMG.tailorMade} alt="Tailor-made experience" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c]/80 via-transparent to-[#0c0c0c]/20" />
                         <div className="absolute bottom-8 left-8 right-8">
                           <span className="text-[10px] uppercase tracking-[0.3em] text-amber-300/80 font-medium">{t.tailorMade.collection}</span>
