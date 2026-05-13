@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
-import * as THREE from 'three';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { Routes, Route, useLocation, useNavigate, Link } from 'react-router-dom';
 import BlogPost from './pages/BlogPost';
@@ -233,15 +232,7 @@ function SocialIcons() {
 }
 
 export default function App() {
-  const [lang, setLang] = useState<Language>(() => {
-    const saved = localStorage.getItem('ns_lang') as Language;
-    return (saved && ['pt', 'en', 'es', 'fr', 'de'].includes(saved)) ? saved : 'pt';
-  });
-
-  useEffect(() => {
-    localStorage.setItem('ns_lang', lang);
-  }, [lang]);
-
+  const [lang, setLang] = useState<Language>('pt');
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -410,7 +401,7 @@ export default function App() {
               exit={{ opacity: 0, scale: 0.98, filter: 'blur(5px)' }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <BlogPost lang={lang} />
+              <BlogPost lang={resolvedLang} />
             </motion.div>
           } />
 
@@ -1021,8 +1012,8 @@ export default function App() {
               </section>
             </motion.div>
           } />
-          <Route path="/termos" element={<motion.div key="/termos" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Terms lang={lang} /></motion.div>} />
-          <Route path="/privacidade" element={<motion.div key="/privacidade" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Privacy lang={lang} /></motion.div>} />
+          <Route path="/termos" element={<motion.div key="/termos" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Terms /></motion.div>} />
+          <Route path="/privacidade" element={<motion.div key="/privacidade" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Privacy /></motion.div>} />
         </Routes>
       </AnimatePresence>
 
@@ -1032,7 +1023,7 @@ export default function App() {
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-10">
             <img src="/logo-white.png" alt="North Scape Tours" className="h-20 sm:h-24 md:h-28 w-auto opacity-80 mb-4" />
-            <p className="font-serif italic text-white/30 text-sm sm:text-base mb-6">{t.common.exclusiveExp}</p>
+            <p className="font-serif italic text-white/30 text-sm sm:text-base mb-6">{lang === 'pt' ? 'Experiências exclusivas no Norte de Portugal' : 'Exclusive experiences in Northern Portugal'}</p>
 
             {/* Social Icons — 21st.dev inspired */}
             <SocialIcons />
