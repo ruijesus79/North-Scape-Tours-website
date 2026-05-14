@@ -166,71 +166,40 @@ export const CONTENT = {
         blog: {
             badge: 'Jornal',
             title: 'Diário do Douro',
-            subtitle: 'Histórias, segredos e experiências do vale mais belo do mundo.',
+            subtitle: 'Notícias, segredos e as últimas do enoturismo em Portugal.',
             readMore: 'Ler História',
             bookCta: 'Reservar esta experiência',
             readTimeDefault: '3 min de leitura',
             items: [
                 {
-                    slug: 'golden-hour-science-douro', title: 'A Ciência da Hora Dourada: Por Que o Douro Brilha ao Entardecer', excerpt: 'A luz do pôr do sol no Douro não é apenas bonita \u2014 ela altera a perceção do vinho e transforma cada degustação numa experiência sensorial única.', date: '10 de Maio de 2026', category: 'Experiências', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 min de leitura', bookable: true,
+                    slug: 'melhor-vinho-do-ano-douro', title: '"O Melhor Vinho do Ano" é um tinto do Douro', excerpt: 'O prestigiado prémio foi para um vinho do Douro que custa 75 euros, reafirmando a qualidade excecional da região.', date: '13 de Maio de 2026', category: 'Prémios', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de leitura', bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'Há um momento em cada dia no vale do Douro que os viticultores chamam de \"a hora de ouro\". Quando o sol começa a descer por trás dos socalcos de xisto, a luz torna-se dourada, quase âmbar, e o vale inteiro parece arder numa chama suave. Mas este fenómeno não é apenas visual \u2014 tem fundamento científico.' },
-                        { type: 'h3', text: 'O Fenómeno Ótico do Vale' },
-                        { type: 'p', text: 'O Vale do Douro, classificado como Património Mundial da UNESCO desde 2001, possui uma orientação geográfica única. As encostas de xisto, que retêm o calor do dia, criam micro-correntes de ar quente que refratam a luz solar ao entardecer. O resultado é uma dispersão de Rayleigh intensificada \u2014 o mesmo efeito que pinta o céu de tons alaranjados, mas ampliado pela topografia do vale.' },
-                        { type: 'blockquote', text: 'No Douro, a luz do entardecer não ilumina \u2014 ela acaricia. E nesse momento, o vinho sabe diferente.' },
-                        { type: 'h3', text: 'Como a Luz Afeta a Degustação' },
-                        { type: 'p', text: 'Estudos de neurogastronomia demonstram que a perceção do sabor é influenciada pelo ambiente visual. Num estudo da Universidade de Oxford, investigadores verificaram que vinhos tintos degustados sob luz âmbar quente são percecionados como 15% mais suaves e complexos do que sob luz fluorescente. No Douro, esta magia acontece naturalmente todas as tardes.' },
-                        { type: 'p', text: 'As quintas mais exclusivas \u2014 como a Quinta Nova de Nossa Senhora do Carmo, membro da rede Relais \u0026 Châteaux, ou a histórica Quinta do Crasto \u2014 programam as suas degustações privadas para coincidir com este momento. É quando o vinho do Porto Vintage ganha notas de caramelo e frutos secos que parecem amplificadas pela paisagem.' },
-                        { type: 'h3', text: 'A Experiência North Scape' },
-                        { type: 'p', text: 'Nos nossos tours privados, cronometramos cada momento para que a degustação principal coincida com a hora dourada. Viaje connosco e descubra porque é que o Douro não é apenas um destino \u2014 é uma experiência multissensorial.' }
+                        { type: 'p', text: 'A crítica especializada voltou a premiar a excelência do Douro. O título de "Melhor Vinho do Ano" foi atribuído a um tinto duriense, uma distinção que reforça o prestígio internacional da mais antiga região demarcada do mundo.' },
+                        { type: 'p', text: 'Na North Scape Tours, proporcionamos aos nossos clientes degustações premium que incluem colheitas premiadas nas melhores quintas da região. Venha provar a excelência connosco.' }
                     ]
                 },
                 {
-                    slug: 'quintas-secretas-douro', title: 'O Douro Invisível: Quintas Fechadas ao Público que Abrem Portas para Poucos', excerpt: 'Conheça as propriedades históricas do Douro que não aparecem nos guias turísticos \u2014 acessíveis apenas por marcação privada.', date: '3 de Maio de 2026', category: 'Exclusivo', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 min de leitura', bookable: true,
+                    slug: 'napa-valley-para-o-douro', title: 'De Napa Valley para o Douro: Investimento de 10 milhões em Enoturismo', excerpt: 'Um empresário norte-americano escolheu o Douro para um projeto de luxo focado em vinhos e turismo.', date: '16 de Março de 2026', category: 'Notícias', image: '/images/blog/2026/quinta-estate.jpg', readTime: '4 min de leitura', bookable: false,
                     fullContent: [
-                        { type: 'p', text: 'O Alto Douro Vinhateiro, reconhecido pela UNESCO como paisagem cultural viva, alberga mais de 40.000 propriedades vinícolas. Destas, apenas uma fração abre as suas portas ao público. As mais exclusivas operam por convite ou marcação privada \u2014 e são estas que definem o verdadeiro luxo no Douro.' },
-                        { type: 'h3', text: 'Quinta da Vacaria: Uma Estrela Michelin Entre Vinhas' },
-                        { type: 'p', text: 'Fundada em 1616, a Torel Quinta da Vacaria é uma das propriedades mais antigas do Douro. O seu restaurante Schistó, sob a direção do chef Vítor Matos, conquistou recentemente uma estrela Michelin. Com apenas 14 lugares, cada refeição é uma experiência intimista que reinterpreta os sabores ancestrais da região com técnica contemporânea.' },
-                        { type: 'h3', text: 'Quinta do Bomfim: Pedro Lemos no Coração de Pinhão' },
-                        { type: 'p', text: 'No centro de Pinhão, a Quinta do Bomfim \u2014 propriedade da Symington Family Estates \u2014 alberga o Bomfim 1896 by Pedro Lemos. O chef portuense, detentor de estrela Michelin no seu restaurante homónimo no Porto, traz ao Douro uma cozinha focada em grelhados e produtos sazonais. A vista sobre o rio desde o terraço é considerada uma das mais emblemáticas do vale.' },
-                        { type: 'blockquote', text: 'O verdadeiro luxo no Douro não se compra \u2014 conquista-se com tempo, curiosidade e as conexões certas.' },
-                        { type: 'h3', text: 'Quinta de la Rosa: A Tradição Familiar' },
-                        { type: 'p', text: 'Situada nas margens do Douro em Pinhão, a Quinta de la Rosa mantém uma atmosfera familiar e autêntica. O restaurante Cozinha da Clara oferece uma cozinha tradicional com toques modernos, e as suas provas verticais de vinho do Porto são consideradas das mais educativas da região.' },
-                        { type: 'h3', text: 'Como Aceder a Estas Experiências' },
-                        { type: 'p', text: 'Na North Scape Tours, mantemos relações diretas com estas quintas privadas. Através dos nossos tours à medida, organizamos visitas exclusivas que incluem degustações com enólogos, almoços privados e acesso a caves que normalmente permanecem fechadas. Contacte-nos para desenharmos a sua experiência personalizada.' }
+                        { type: 'p', text: 'O Douro continua a atrair os maiores investidores mundiais. Recentemente, um empresário de Napa Valley, na Califórnia, investiu cerca de 10 milhões de euros num novo projeto de vinhos e turismo na região.' },
+                        { type: 'p', text: 'Este investimento milionário é a prova de que o Douro Vinhateiro é um destino de eleição global para o enoturismo de luxo, rivalizando com as mais famosas regiões vinícolas do mundo.' }
                     ]
                 },
                 {
-                    slug: 'gastronomia-michelin-douro', title: 'Quando a Alta Gastronomia Encontra a Tradição: Os Sabores Michelin do Douro', excerpt: 'Dos enchidos de Lamego ao refinamento de uma estrela Michelin \u2014 a revolução gastronómica que está a transformar o vale.', date: '25 de Abril de 2026', category: 'Gastronomia', image: '/images/blog/2026/gastronomy.jpg', readTime: '4 min de leitura', bookable: true,
+                    slug: 'cimeira-mundial-enoturismo', title: 'Portugal recebe a Cimeira Mundial de Enoturismo', excerpt: 'O nosso país reforça a sua posição de liderança ao acolher o maior evento global dedicado ao turismo de vinhos.', date: '11 de Maio de 2026', category: 'Eventos', image: '/images/blog/2026/gastronomy.jpg', readTime: '3 min de leitura', bookable: false,
                     fullContent: [
-                        { type: 'p', text: 'O Douro Vinhateiro sempre foi terra de sabores intensos: o cabrito assado no forno de lenha, a alheira de Mirandela, o azeite extraído dos olivais centenários. Mas nos últimos anos, uma nova geração de chefs está a reinventar esta herança com técnica de alta gastronomia \u2014 e o resultado é extraordinário.' },
-                        { type: 'h3', text: 'A Revolução na Cozinha Duriense' },
-                        { type: 'p', text: 'O ponto de viragem aconteceu com a chegada do Six Senses Douro Valley, um resort de luxo que trouxe padrões internacionais de hospitalidade à região. O seu restaurante Vale de Abraão tornou-se referência em farm-to-table, com ingredientes colhidos na própria horta biológica do hotel. Mas a verdadeira revolução gastronómica está nas quintas independentes.' },
-                        { type: 'h3', text: 'Terraçu\\\'s na Quinta Nova: Relais \\u0026 Châteaux' },
-                        { type: 'p', text: 'O restaurante Terraçu\\\'s, na Quinta Nova de Nossa Senhora do Carmo, oferece uma experiência gastronómica que honra o terroir duriense. Membro da prestigiada rede Relais \\u0026 Châteaux, cada prato é harmonizado com vinhos da própria propriedade. O menu muda com as estações: na primavera, espargos selvagens e ervas aromáticas das encostas; no outono, cogumelos silvestres e porco bísaro.' },
-                        { type: 'blockquote', text: 'Cozinhar no Douro é ouvir a terra. Cada ingrediente conta uma história de séculos.' },
-                        { type: 'h3', text: 'O Renascimento do Farm-to-Table' },
-                        { type: 'p', text: 'A Cantina de Ventozelo, no Ventozelo Hotel \\u0026 Quinta, representa o conceito farm-to-table na sua forma mais pura. Os ingredientes viajam literalmente metros da horta para o prato. O pão é cozido no forno de lenha da quinta, o azeite é prensado ali mesmo, e os legumes são colhidos na manhã do serviço.' },
-                        { type: 'h3', text: 'Saboreie o Douro Connosco' },
-                        { type: 'p', text: 'Nos nossos tours gastronómicos, incluímos almoços em quintas selecionadas com menus exclusivos desenhados para os nossos clientes. Desde degustações de azeite e mel até jantares privados sob as estrelas \u2014 cada refeição é um capítulo da sua história no Douro.' }
+                        { type: 'p', text: 'Portugal continua a fazer história no turismo mundial. O país foi escolhido para sediar a Cimeira Mundial de Enoturismo, um marco que sublinha a nossa dedicação à cultura do vinho e à hospitalidade de excelência.' },
+                        { type: 'p', text: 'Sendo o Douro a principal montra do enoturismo nacional, celebramos este reconhecimento global e continuamos empenhados em oferecer experiências inesquecíveis.' }
                     ]
                 },
                 {
-                    slug: 'vindima-douro-tradicao-viva', title: 'A Vindima no Douro: Uma Tradição Viva que Pode Experienciar', excerpt: 'Setembro no Douro é mágico \u2014 o vale transforma-se numa festa de cores, aromas e tradições ancestrais que sobrevivem há séculos.', date: '15 de Abril de 2026', category: 'Tradição', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de leitura', bookable: true,
+                    slug: 'quinta-renasce-experiencias', title: 'Experiências Sensoriais "Pés na Terra" nas Quintas', excerpt: 'O enoturismo em Portugal está a evoluir para experiências imersivas, onde o visitante interage diretamente com a terra e o vinho.', date: '6 de Abril de 2026', category: 'Tendências', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de leitura', bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'Quando Setembro chega ao Douro, o vale transforma-se. Os socalcos, que passaram meses em tons de verde, explodem em paletas de dourado, vermelho e âmbar. É a vindima \u2014 o momento mais importante do calendário duriense, uma tradição que os registos históricos situam desde o século XII.' },
-                        { type: 'h3', text: 'A Dança nos Socalcos' },
-                        { type: 'p', text: 'O Douro é a região demarcada mais antiga do mundo (desde 1756, por decreto do Marquês de Pombal). Aqui, muitas vindimas ainda são feitas à mão \u2014 uma necessidade imposta pela inclinação extrema dos socalcos de xisto, que pode chegar aos 60 graus. Os vindimadores carregam cestos de vime pelas encostas, numa coreografia que se repete há gerações.' },
-                        { type: 'h3', text: 'A Pisa da Uva: Ritual Ancestral' },
-                        { type: 'p', text: 'Em algumas quintas tradicionais, as uvas ainda são pisadas nos lagares de granito \u2014 grandes tanques de pedra onde homens e mulheres pisam as uvas ao ritmo de músicas tradicionais. Este método ancestral, longe de ser um anacronismo, é considerado pelos enólogos como o mais delicado para extrair taninos e cor das castas do Douro, como a Touriga Nacional e a Tinta Roriz.' },
-                        { type: 'blockquote', text: 'Participar numa vindima no Douro é tocar a alma de Portugal. É sentir o peso da história nas mãos e o sabor do futuro nos lábios.' },
-                        { type: 'h3', text: 'Turismo de Vindima: Uma Tendência em Crescimento' },
-                        { type: 'p', text: 'O turismo de vindima cresceu significativamente nos últimos anos, com o Douro a atrair visitantes dos EUA, Reino Unido e Alemanha. Quintas como a Quinta do Crasto e a Quinta do Vallado oferecem programas de vindima participativa, onde os hóspedes podem colher uvas, pisar nos lagares e participar em jantares de vindima sob as estrelas.' },
-                        { type: 'h3', text: 'Viva a Vindima com a North Scape' },
-                        { type: 'p', text: 'De Setembro a meados de Outubro, organizamos tours especiais de vindima que incluem participação ativa na colheita, pisa da uva tradicional, almoço na quinta e degustação do mosto fresco. Uma experiência autêntica e irrepetível que recomendamos reservar com antecedência.' }
+                        { type: 'p', text: 'A tendência atual no enoturismo é a autenticidade. Os visitantes já não procuram apenas provar o vinho, mas sim compreender o terroir, participar nas vindimas e desfrutar de experiências "pés na terra".' },
+                        { type: 'p', text: 'As nossas tours à medida no Douro são desenhadas exatamente com esse propósito: conectar os nossos clientes com a verdadeira essência da cultura e tradição portuguesas.' }
                     ]
                 }
-            ],
+            ]
         },
         contact: {
             title: 'Pronto para embarcar?',
@@ -450,61 +419,40 @@ export const CONTENT = {
         blog: {
             badge: 'Journal',
             title: 'The Douro Diary',
-            subtitle: 'Stories, secrets and experiences from the most beautiful valley in the world.',
+            subtitle: 'News, secrets and the latest from wine tourism in Portugal.',
             readMore: 'Read Story',
             bookCta: 'Book this experience',
             readTimeDefault: '3 min read',
             items: [
                 {
-                    slug: 'golden-hour-science-douro', title: 'The Science of Golden Hour: Why the Douro Glows at Sunset', excerpt: 'The sunset light in the Douro is not just beautiful \u2014 it alters wine perception and transforms every tasting into a unique sensory experience.', date: 'May 10, 2026', category: 'Experiences', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 min read', bookable: true,
+                    slug: 'melhor-vinho-do-ano-douro', title: '"The Best Wine of the Year" is a Douro Red', excerpt: 'The prestigious award went to a Douro wine, reaffirming the exceptional quality of the region.', date: 'May 13, 2026', category: 'Awards', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min read', bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'There is a moment in every day in the Douro Valley that winemakers call "the golden hour." When the sun begins to descend behind the schist terraces, the light turns golden, almost amber, and the entire valley seems to burn in a gentle flame. But this phenomenon is not just visual \u2014 it has scientific foundation.' },
-                        { type: 'h3', text: 'The Optical Phenomenon of the Valley' },
-                        { type: 'p', text: 'The Douro Valley, classified as a UNESCO World Heritage Site since 2001, has a unique geographical orientation. The schist slopes, which retain daytime heat, create warm air micro-currents that refract sunlight at dusk. The result is an intensified Rayleigh scattering \u2014 the same effect that paints the sky in orange tones, but amplified by the valley\\\'s topography.' },
-                        { type: 'blockquote', text: 'In the Douro, the evening light does not illuminate \u2014 it caresses. And in that moment, wine tastes different.' },
-                        { type: 'h3', text: 'How Light Affects Wine Tasting' },
-                        { type: 'p', text: 'Neurogastronomy studies show that flavor perception is influenced by the visual environment. In a University of Oxford study, researchers found that red wines tasted under warm amber light are perceived as 15% smoother and more complex than under fluorescent light. In the Douro, this magic happens naturally every afternoon.' },
-                        { type: 'p', text: 'The most exclusive quintas \u2014 such as Quinta Nova de Nossa Senhora do Carmo, a Relais \u0026 Ch\u00e2teaux member, or the historic Quinta do Crasto \u2014 schedule their private tastings to coincide with this moment. It is when Vintage Port wine gains notes of caramel and dried fruits that seem amplified by the landscape.' },
-                        { type: 'h3', text: 'The North Scape Experience' },
-                        { type: 'p', text: 'On our private tours, we time every moment so that the main tasting coincides with the golden hour. Travel with us and discover why the Douro is not just a destination \u2014 it is a multisensory experience.' }
+                        { type: 'p', text: 'Specialized critics have once again rewarded the excellence of the Douro. The title of "Best Wine of the Year" was awarded to a Douro red, a distinction that reinforces the international prestige of the oldest demarcated region in the world.' },
+                        { type: 'p', text: 'At North Scape Tours, we provide our clients with premium tastings that include award-winning vintages at the best estates in the region. Come taste excellence with us.' }
                     ]
                 },
                 {
-                    slug: 'quintas-secretas-douro', title: 'The Invisible Douro: Private Estates That Open Their Doors to Few', excerpt: 'Discover the historic Douro properties that don\\\'t appear in tourist guides \u2014 accessible only by private appointment.', date: 'May 3, 2026', category: 'Exclusive', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 min read', bookable: true,
+                    slug: 'napa-valley-para-o-douro', title: 'From Napa Valley to Douro: 10 Million Investment in Wine Tourism', excerpt: 'An American entrepreneur chose the Douro for a luxury project focused on wine and tourism.', date: 'March 16, 2026', category: 'News', image: '/images/blog/2026/quinta-estate.jpg', readTime: '4 min read', bookable: false,
                     fullContent: [
-                        { type: 'p', text: 'The Alto Douro Wine Region, recognized by UNESCO as a living cultural landscape, is home to over 40,000 wine properties. Of these, only a fraction opens its doors to the public. The most exclusive operate by invitation or private appointment \u2014 and it is these that define true luxury in the Douro.' },
-                        { type: 'h3', text: 'Quinta da Vacaria: A Michelin Star Among Vines' },
-                        { type: 'p', text: 'Founded in 1616, the Torel Quinta da Vacaria is one of the oldest properties in the Douro. Its restaurant Schist\u00f3, under the direction of chef V\u00edtor Matos, recently earned a Michelin star. With only 14 seats, each meal is an intimate experience that reinterprets the ancestral flavors of the region with contemporary technique.' },
-                        { type: 'h3', text: 'Quinta do Bomfim: Pedro Lemos in the Heart of Pinh\u00e3o' },
-                        { type: 'p', text: 'In the center of Pinh\u00e3o, Quinta do Bomfim \u2014 owned by the Symington Family Estates \u2014 houses Bomfim 1896 by Pedro Lemos. The Porto-based chef, holder of a Michelin star at his eponymous restaurant, brings a cuisine focused on grilled dishes and seasonal produce. The river view from the terrace is considered one of the most iconic in the valley.' },
-                        { type: 'blockquote', text: 'True luxury in the Douro cannot be bought \u2014 it is earned with time, curiosity, and the right connections.' },
-                        { type: 'h3', text: 'How to Access These Experiences' },
-                        { type: 'p', text: 'At North Scape Tours, we maintain direct relationships with these private quintas. Through our tailor-made tours, we organize exclusive visits that include tastings with winemakers, private lunches and access to cellars that normally remain closed. Contact us to design your personalized experience.' }
+                        { type: 'p', text: 'The Douro continues to attract the world\'s largest investors. Recently, an entrepreneur from Napa Valley, California, invested around 10 million euros in a new wine and tourism project in the region.' },
+                        { type: 'p', text: 'This millionaire investment is proof that the Douro Valley is a global destination of choice for luxury wine tourism, rivaling the most famous wine regions in the world.' }
                     ]
                 },
                 {
-                    slug: 'gastronomia-michelin-douro', title: 'When Fine Dining Meets Tradition: The Michelin Flavors of the Douro', excerpt: 'From Lamego\\\'s cured meats to the refinement of a Michelin star \u2014 the gastronomic revolution transforming the valley.', date: 'April 25, 2026', category: 'Gastronomy', image: '/images/blog/2026/gastronomy.jpg', readTime: '4 min read', bookable: true,
+                    slug: 'cimeira-mundial-enoturismo', title: 'Portugal hosts the Global Wine Tourism Summit', excerpt: 'Our country strengthens its leadership position by hosting the largest global event dedicated to wine tourism.', date: 'May 11, 2026', category: 'Events', image: '/images/blog/2026/gastronomy.jpg', readTime: '3 min read', bookable: false,
                     fullContent: [
-                        { type: 'p', text: 'The Douro wine region has always been a land of intense flavors: slow-roasted kid, alheira sausage from Mirandela, olive oil pressed from century-old groves. But in recent years, a new generation of chefs is reinventing this heritage with fine dining technique \u2014 and the result is extraordinary.' },
-                        { type: 'h3', text: 'The Farm-to-Table Renaissance' },
-                        { type: 'p', text: 'The arrival of Six Senses Douro Valley brought international hospitality standards to the region. Its restaurant Vale de Abr\u00e3o became a farm-to-table benchmark, with ingredients harvested from the hotel\\\'s own organic garden. But the true gastronomic revolution is happening at independent quintas.' },
-                        { type: 'blockquote', text: 'Cooking in the Douro means listening to the land. Every ingredient tells a story spanning centuries.' },
-                        { type: 'h3', text: 'Taste the Douro With Us' },
-                        { type: 'p', text: 'On our gastronomic tours, we include lunches at selected quintas with exclusive menus designed for our clients. From olive oil and honey tastings to private dinners under the stars \u2014 every meal is a chapter in your Douro story.' }
+                        { type: 'p', text: 'Portugal continues to make history in world tourism. The country was chosen to host the Global Wine Tourism Summit, a milestone that underlines our dedication to wine culture and hospitality excellence.' },
+                        { type: 'p', text: 'As the Douro is the main showcase of national wine tourism, we celebrate this global recognition and remain committed to offering unforgettable experiences.' }
                     ]
                 },
                 {
-                    slug: 'vindima-douro-tradicao-viva', title: 'The Douro Harvest: A Living Tradition You Can Experience', excerpt: 'September in the Douro is magical \u2014 the valley transforms into a celebration of colors, aromas and ancestral traditions that have survived for centuries.', date: 'April 15, 2026', category: 'Tradition', image: '/images/blog/2026/harvest.jpg', readTime: '4 min read', bookable: true,
+                    slug: 'quinta-renasce-experiencias', title: 'Immersive "Hands-On" Experiences in the Quintas', excerpt: 'Wine tourism in Portugal is evolving into immersive experiences, where visitors interact directly with the land and the wine.', date: 'April 6, 2026', category: 'Trends', image: '/images/blog/2026/harvest.jpg', readTime: '4 min read', bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'When September arrives in the Douro, the valley transforms. The terraces, which spent months in shades of green, explode into palettes of gold, red and amber. It is the vindima \u2014 the most important moment in the Douro calendar, a tradition that historical records trace back to the 12th century.' },
-                        { type: 'h3', text: 'The Dance on the Terraces' },
-                        { type: 'p', text: 'The Douro is the oldest demarcated wine region in the world (since 1756, by decree of the Marquis of Pombal). Here, many harvests are still done by hand \u2014 a necessity imposed by the extreme steepness of the schist terraces, which can reach 60 degrees. Harvesters carry wicker baskets along the slopes in a choreography repeated for generations.' },
-                        { type: 'blockquote', text: 'To participate in a Douro harvest is to touch the soul of Portugal. To feel the weight of history in your hands and the taste of the future on your lips.' },
-                        { type: 'h3', text: 'Experience the Harvest with North Scape' },
-                        { type: 'p', text: 'From September to mid-October, we organize special harvest tours that include active participation in grape picking, traditional grape treading, lunch at the quinta, and tasting of fresh must. An authentic and unrepeatable experience that we recommend booking in advance.' }
+                        { type: 'p', text: 'The current trend in wine tourism is authenticity. Visitors no longer seek just to taste wine, but to understand the terroir, participate in the harvest and enjoy "hands-on" experiences.' },
+                        { type: 'p', text: 'Our tailor-made tours in the Douro are designed precisely with this purpose: to connect our clients with the true essence of Portuguese culture and tradition.' }
                     ]
                 }
-            ],
+            ]
         },
         contact: {
             title: 'Ready to embark?',
@@ -724,16 +672,40 @@ export const CONTENT = {
         blog: {
             badge: 'Diario',
             title: 'Diario del Duero',
-            subtitle: 'Historias, secretos y experiencias del valle m\u00e1s bello del mundo.',
+            subtitle: 'Noticias, secretos y lo último en enoturismo en Portugal.',
             readMore: 'Leer Historia',
             bookCta: 'Reservar esta experiencia',
             readTimeDefault: '3 min de lectura',
             items: [
-                { slug: 'golden-hour-science-douro', title: 'La Ciencia de la Hora Dorada: Por Qu\u00e9 el Duero Brilla al Atardecer', excerpt: 'La luz del atardecer en el Duero altera la percepci\u00f3n del vino y transforma cada degustaci\u00f3n en una experiencia sensorial \u00fanica.', date: '10 de mayo de 2026', category: 'Experiencias', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 min de lectura', bookable: true, fullContent: [{ type: 'p', text: 'Hay un momento en cada d\u00eda en el valle del Duero que los viticultores llaman la hora de oro. La luz se vuelve dorada, casi \u00e1mbar, y todo el valle parece arder en una llama suave.' }, { type: 'h3', text: 'La Experiencia North Scape' }, { type: 'p', text: 'En nuestros tours privados, cronometramos cada momento para que la degustaci\u00f3n principal coincida con la hora dorada.' }] },
-                { slug: 'quintas-secretas-douro', title: 'El Duero Invisible: Quintas Cerradas al P\u00fablico', excerpt: 'Conozca las propiedades hist\u00f3ricas del Duero accesibles solo con cita privada.', date: '3 de mayo de 2026', category: 'Exclusivo', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 min de lectura', bookable: true, fullContent: [{ type: 'p', text: 'El Alto Duero Vin\u00edcola alberga m\u00e1s de 40.000 propiedades. Las m\u00e1s exclusivas operan por invitaci\u00f3n privada.' }, { type: 'blockquote', text: 'El verdadero lujo en el Duero no se compra. Se conquista con tiempo y curiosidad.' }, { type: 'p', text: 'En North Scape Tours organizamos visitas exclusivas a quintas privadas. Cont\u00e1ctenos para su experiencia personalizada.' }] },
-                { slug: 'gastronomia-michelin-douro', title: 'Alta Gastronom\u00eda y Tradici\u00f3n: Los Sabores Michelin del Duero', excerpt: 'La revoluci\u00f3n gastron\u00f3mica que est\u00e1 transformando el valle.', date: '25 de abril de 2026', category: 'Gastronom\u00eda', image: '/images/blog/2026/gastronomy.jpg', readTime: '4 min de lectura', bookable: true, fullContent: [{ type: 'p', text: 'El Duero siempre fue tierra de sabores intensos. Ahora una nueva generaci\u00f3n de chefs reinventa esta herencia con t\u00e9cnica de alta gastronom\u00eda.' }, { type: 'blockquote', text: 'Cocinar en el Duero es escuchar la tierra. Cada ingrediente cuenta una historia de siglos.' }, { type: 'p', text: 'En nuestros tours gastron\u00f3micos incluimos almuerzos en quintas seleccionadas con men\u00fas exclusivos.' }] },
-                { slug: 'vindima-douro-tradicao-viva', title: 'La Vendimia en el Duero: Una Tradici\u00f3n Viva', excerpt: 'Septiembre en el Duero es m\u00e1gico. El valle se transforma en una fiesta de colores y tradiciones ancestrales.', date: '15 de abril de 2026', category: 'Tradici\u00f3n', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de lectura', bookable: true, fullContent: [{ type: 'p', text: 'Cuando septiembre llega al Duero, los bancales estallan en paletas de dorado, rojo y \u00e1mbar. Es la vendimia, tradici\u00f3n que data del siglo XII.' }, { type: 'blockquote', text: 'Participar en una vendimia en el Duero es tocar el alma de Portugal.' }, { type: 'p', text: 'De septiembre a octubre organizamos tours especiales de vendimia. Una experiencia aut\u00e9ntica e irrepetible.' }] }
-            ],
+                {
+                    slug: 'melhor-vinho-do-ano-douro', title: '"El Mejor Vino del Año" es un Tinto del Duero', excerpt: 'El prestigioso premio fue para un vino del Duero, reafirmando la excepcional calidad de la región.', date: '13 de mayo de 2026', category: 'Premios', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lectura', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'La crítica especializada ha vuelto a premiar la excelencia del Duero. El título de "Mejor Vino del Año" fue otorgado a un tinto duriense, una distinción que refuerza el prestigio internacional de la región demarcada más antigua del mundo.' },
+                        { type: 'p', text: 'En North Scape Tours, brindamos a nuestros clientes catas premium que incluyen cosechas premiadas en las mejores fincas de la región. Venga a degustar la excelencia con nosotros.' }
+                    ]
+                },
+                {
+                    slug: 'napa-valley-para-o-douro', title: 'De Napa Valley al Duero: Inversión de 10 Millones en Enoturismo', excerpt: 'Un empresario estadounidense eligió el Duero para un proyecto de lujo centrado en el vino y el turismo.', date: '16 de marzo de 2026', category: 'Noticias', image: '/images/blog/2026/quinta-estate.jpg', readTime: '4 min de lectura', bookable: false,
+                    fullContent: [
+                        { type: 'p', text: 'El Duero sigue atrayendo a los mayores inversores mundiales. Recientemente, un empresario de Napa Valley, California, invirtió cerca de 10 millones de euros en un nuevo proyecto de vino y turismo en la región.' },
+                        { type: 'p', text: 'Esta millonaria inversión es prueba de que el Valle del Duero es un destino de elección mundial para el enoturismo de lujo, rivalizando con las regiones vinícolas más famosas del mundo.' }
+                    ]
+                },
+                {
+                    slug: 'cimeira-mundial-enoturismo', title: 'Portugal acoge la Cumbre Mundial de Enoturismo', excerpt: 'Nuestro país refuerza su posición de liderazgo al acoger el mayor evento mundial dedicado al turismo del vino.', date: '11 de mayo de 2026', category: 'Eventos', image: '/images/blog/2026/gastronomy.jpg', readTime: '3 min de lectura', bookable: false,
+                    fullContent: [
+                        { type: 'p', text: 'Portugal sigue haciendo historia en el turismo mundial. El país fue elegido para albergar la Cumbre Mundial de Enoturismo, un hito que subraya nuestra dedicación a la cultura del vino y la excelencia en hospitalidad.' },
+                        { type: 'p', text: 'Siendo el Duero el principal escaparate del enoturismo nacional, celebramos este reconocimiento mundial y seguimos comprometidos en ofrecer experiencias inolvidables.' }
+                    ]
+                },
+                {
+                    slug: 'quinta-renasce-experiencias', title: 'Experiencias Sensoriales "Pies en la Tierra" en las Quintas', excerpt: 'El enoturismo en Portugal evoluciona hacia experiencias inmersivas, donde el visitante interactúa directamente con la tierra y el vino.', date: '6 de abril de 2026', category: 'Tendencias', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de lectura', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'La tendencia actual en el enoturismo es la autenticidad. Los visitantes ya no solo buscan probar el vino, sino comprender el terruño, participar en la vendimia y disfrutar de experiencias "pies en la tierra".' },
+                        { type: 'p', text: 'Nuestros tours a medida en el Duero están diseñados precisamente con este propósito: conectar a nuestros clientes con la verdadera esencia de la cultura y la tradición portuguesas.' }
+                    ]
+                }
+            ]
         },
         contact: {
             title: '¿Listo para embarcar?',
@@ -943,24 +915,44 @@ export const CONTENT = {
                 { q: 'Est-ce adapté aux familles avec enfants ?', a: 'Oui ! Le Douro Tour est idéal pour les familles. Les enfants sont les bienvenus et nous avons des sièges bébé disponibles pour les transferts. Des options de menu enfant sont disponibles dans les restaurants.' },
                 { q: 'Puis-je personnaliser l\'expérience ?', a: 'Absolument. Nous proposons des visites privées où vous pouvez adapter l\'itinéraire, choisir des domaines viticoles spécifiques ou ajouter des arrêts supplémentaires. Contactez-nous pour une visite sur mesure.' },
                 { q: 'Quelle est la politique d\'annulation ?', a: 'Annulation gratuite jusqu\'à 48 heures avant la date de la visite. Passé ce délai, le tarif plein s\'applique.' },
-                { q: 'Y a-t-il des options végétariennes ou des adaptations alimentaires ?', a: 'Oui. Nos restaurants partenaires proposent des options végétariennes, végétaliennes et adaptées aux allergies. Veuillez nous en informer au moment de la réservation.' },
-                { q: 'Les tours fonctionnent-ils toute l\'année ?', a: 'Oui, les visites ont lieu toute l\'année. Chaque saison offre un paysage différent : vignes vertes au printemps, vendanges en automne et terrasses dorées en hiver.' },
-                { q: 'Comment fonctionne le transfert exécutif ?', a: 'Le chauffeur arrive avant l\'heure prévue. Pour les transferts aéroport, nous suivons votre vol en temps réel. Véhicule exécutif d\'une capacité allant jusqu\'à 8 passagers.' },
-                { q: 'Dans quelles langues les visites sont-elles disponibles ?', a: 'Nos guides parlent couramment le portugais et l\'anglais. Pour d\'autres langues, veuillez nous contacter pour vérifier les disponibilités.' },
-                { q: 'Comment puis-je réserver ?', a: 'Vous pouvez réserver directement via notre site web, par WhatsApp ou par e-mail. Nous confirmons votre réservation en moins de 2 heures.' },
-            ],
-        },
-        blog: {
+                { q: 'Y a-t-il des options végétariennes ou des adaptations alimentaires ?', a: 'Oui. Nos restaurants partenaires proposent des options végétariennes, végé        blog: {
             badge: 'Journal',
             title: 'Journal du Douro',
-            subtitle: 'Histoires, secrets et exp\u00e9riences de la plus belle vall\u00e9e du monde.',
+            subtitle: 'Actualités, secrets et les dernières nouveautés de l\'oenotourisme au Portugal.',
             readMore: 'Lire l\'Histoire',
-            bookCta: 'R\u00e9server cette exp\u00e9rience',
+            bookCta: 'Réserver cette expérience',
             readTimeDefault: '3 min de lecture',
             items: [
-                { slug: 'golden-hour-science-douro', title: 'La Science de l\'Heure Dor\u00e9e : Pourquoi le Douro Brille au Coucher du Soleil', excerpt: 'La lumi\u00e8re du coucher de soleil dans le Douro alt\u00e8re la perception du vin et transforme chaque d\u00e9gustation.', date: '10 mai 2026', category: 'Exp\u00e9riences', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 min de lecture', bookable: true, fullContent: [{ type: 'p', text: 'Il y a un moment chaque jour dans la vall\u00e9e du Douro que les viticulteurs appellent l\'heure dor\u00e9e. La lumi\u00e8re devient ambre et toute la vall\u00e9e semble br\u00fbler d\'une flamme douce.' }, { type: 'h3', text: 'L\'Exp\u00e9rience North Scape' }, { type: 'p', text: 'Lors de nos circuits priv\u00e9s, nous chronom\u00e9trons chaque moment pour que la d\u00e9gustation principale co\u00efncide avec l\'heure dor\u00e9e.' }] },
-                { slug: 'quintas-secretas-douro', title: 'Le Douro Invisible : Quintas Ferm\u00e9es au Public', excerpt: 'D\u00e9couvrez les propri\u00e9t\u00e9s historiques du Douro accessibles uniquement sur rendez-vous priv\u00e9.', date: '3 mai 2026', category: 'Exclusif', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 min de lecture', bookable: true, fullContent: [{ type: 'p', text: 'Le Haut Douro Viticole abrite plus de 40 000 propri\u00e9t\u00e9s viticoles. Les plus exclusives fonctionnent uniquement sur invitation priv\u00e9e.' }, { type: 'blockquote', text: 'Le vrai luxe dans le Douro ne s\'ach\u00e8te pas. Il se conquiert avec du temps et de la curiosit\u00e9.' }, { type: 'p', text: 'Chez North Scape Tours, nous organisons des visites exclusives dans des quintas priv\u00e9es. Contactez-nous pour cr\u00e9er votre exp\u00e9rience.' }] },
-                { slug: 'gastronomia-michelin-douro', title: 'Haute Gastronomie et Tradition : Les Saveurs Michelin du Douro', excerpt: 'La r\u00e9volution gastronomique qui transforme la vall\u00e9e.', date: '25 avril 2026', category: 'Gastronomie', image: '/images/blog/2026/gastronomy.jpg', readTime: '4 min de lecture', bookable: true, fullContent: [{ type: 'p', text: 'Le Douro a toujours \u00e9t\u00e9 une terre de saveurs intenses. Aujourd\'hui, une nouvelle g\u00e9n\u00e9ration de chefs r\u00e9invente cet h\u00e9ritage avec des techniques de haute gastronomie.' }, { type: 'blockquote', text: 'Cuisiner dans le Douro, c\'est \u00e9couter la terre. Chaque ingr\u00e9dient raconte une histoire de si\u00e8cles.' }, { type: 'p', text: 'Dans nos circuits gastronomiques, nous incluons des d\u00e9jeuners dans des quintas s\u00e9lectionn\u00e9es avec des menus exclusifs.' }] },
+                {
+                    slug: 'melhor-vinho-do-ano-douro', title: '"Le Meilleur Vin de l\'Année" est un Rouge du Douro', excerpt: 'Le prix prestigieux a été décerné à un vin du Douro, réaffirmant la qualité exceptionnelle de la région.', date: '13 mai 2026', category: 'Prix', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lecture', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'La critique spécialisée a une fois de plus récompensé l\'excellence du Douro. Le titre de "Meilleur Vin de l\'Année" a été attribué à un rouge du Douro, une distinction qui renforce le prestige international de la plus ancienne région délimitée au monde.' },
+                        { type: 'p', text: 'Chez North Scape Tours, nous offrons à nos clients des dégustations premium qui incluent des millésimes primés dans les meilleurs domaines de la région. Venez déguster l\'excellence avec nous.' }
+                    ]
+                },
+                {
+                    slug: 'napa-valley-para-o-douro', title: 'De la Napa Valley au Douro : 10 Millions d\'Investissement dans l\'Oenotourisme', excerpt: 'Un entrepreneur américain a choisi le Douro pour un projet de luxe axé sur le vin et le tourisme.', date: '16 mars 2026', category: 'Actualités', image: '/images/blog/2026/quinta-estate.jpg', readTime: '4 min de lecture', bookable: false,
+                    fullContent: [
+                        { type: 'p', text: 'Le Douro continue d\'attirer les plus grands investisseurs mondiaux. Récemment, un entrepreneur de la Napa Valley en Californie a investi près de 10 millions d\'euros dans un nouveau projet viticole et touristique dans la région.' },
+                        { type: 'p', text: 'Cet investissement millionnaire prouve que la vallée du Douro est une destination mondiale de choix pour l\'oenotourisme de luxe, rivalisant avec les régions viticoles les plus célèbres au monde.' }
+                    ]
+                },
+                {
+                    slug: 'cimeira-mundial-enoturismo', title: 'Le Portugal accueille le Sommet Mondial de l\'Oenotourisme', excerpt: 'Notre pays renforce sa position de leader en accueillant le plus grand événement mondial dédié au tourisme du vin.', date: '11 mai 2026', category: 'Événements', image: '/images/blog/2026/gastronomy.jpg', readTime: '3 min de lecture', bookable: false,
+                    fullContent: [
+                        { type: 'p', text: 'Le Portugal continue d\'écrire l\'histoire du tourisme mondial. Le pays a été choisi pour accueillir le Sommet Mondial de l\'Oenotourisme, une étape importante qui souligne notre dévouement à la culture du vin et à l\'excellence de l\'hospitalité.' },
+                        { type: 'p', text: 'Le Douro étant la principale vitrine de l\'oenotourisme national, nous célébrons cette reconnaissance mondiale et restons déterminés à offrir des expériences inoubliables.' }
+                    ]
+                },
+                {
+                    slug: 'quinta-renasce-experiencias', title: 'Expériences Sensorielles "Les Pieds dans la Terre" dans les Quintas', excerpt: 'L\'oenotourisme au Portugal évolue vers des expériences immersives, où le visiteur interagit directement avec la terre et le vin.', date: '6 avril 2026', category: 'Tendances', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de lecture', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'La tendance actuelle de l\'oenotourisme est l\'authenticité. Les visiteurs ne cherchent plus seulement à déguster du vin, mais à comprendre le terroir, à participer aux vendanges et à profiter d\'expériences "les pieds dans la terre".' },
+                        { type: 'p', text: 'Nos circuits sur mesure dans le Douro sont conçus précisément dans ce but : connecter nos clients avec la véritable essence de la culture et de la tradition portugaises.' }
+                    ]
+                }
+            ]
+        },es.' }, { type: 'p', text: 'Dans nos circuits gastronomiques, nous incluons des d\u00e9jeuners dans des quintas s\u00e9lectionn\u00e9es avec des menus exclusifs.' }] },
                 { slug: 'vindima-douro-tradicao-viva', title: 'Les Vendanges du Douro : Une Tradition Vivante', excerpt: 'Septembre dans le Douro est magique. La vall\u00e9e se transforme en une f\u00eate de couleurs et de traditions ancestrales.', date: '15 avril 2026', category: 'Tradition', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de lecture', bookable: true, fullContent: [{ type: 'p', text: 'Quand septembre arrive dans le Douro, les terrasses explosent en palettes d\'or, de rouge et d\'ambre. C\'est la vindima, tradition qui remonte au XIIe si\u00e8cle.' }, { type: 'blockquote', text: 'Participer \u00e0 des vendanges dans le Douro, c\'est toucher l\'\u00e2me du Portugal.' }, { type: 'p', text: 'De septembre \u00e0 mi-octobre, nous organisons des circuits sp\u00e9ciaux de vendanges. Une exp\u00e9rience authentique et unique.' }] }
             ],
         },

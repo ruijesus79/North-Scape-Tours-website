@@ -401,7 +401,7 @@ export default function App() {
               exit={{ opacity: 0, scale: 0.98, filter: 'blur(5px)' }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <BlogPost lang={resolvedLang} />
+              <BlogPost lang={lang} />
             </motion.div>
           } />
 
