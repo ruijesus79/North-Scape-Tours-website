@@ -1012,8 +1012,8 @@ export default function App() {
               </section>
             </motion.div>
           } />
-          <Route path="/termos" element={<motion.div key="/termos" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Terms /></motion.div>} />
-          <Route path="/privacidade" element={<motion.div key="/privacidade" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Privacy /></motion.div>} />
+          <Route path="/termos" element={<motion.div key="/termos" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Terms lang={lang} /></motion.div>} />
+          <Route path="/privacidade" element={<motion.div key="/privacidade" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.5 }}><Privacy lang={lang} /></motion.div>} />
         </Routes>
       </AnimatePresence>
 
