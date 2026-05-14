@@ -915,7 +915,14 @@ export const CONTENT = {
                 { q: 'Est-ce adapté aux familles avec enfants ?', a: 'Oui ! Le Douro Tour est idéal pour les familles. Les enfants sont les bienvenus et nous avons des sièges bébé disponibles pour les transferts. Des options de menu enfant sont disponibles dans les restaurants.' },
                 { q: 'Puis-je personnaliser l\'expérience ?', a: 'Absolument. Nous proposons des visites privées où vous pouvez adapter l\'itinéraire, choisir des domaines viticoles spécifiques ou ajouter des arrêts supplémentaires. Contactez-nous pour une visite sur mesure.' },
                 { q: 'Quelle est la politique d\'annulation ?', a: 'Annulation gratuite jusqu\'à 48 heures avant la date de la visite. Passé ce délai, le tarif plein s\'applique.' },
-                { q: 'Y a-t-il des options végétariennes ou des adaptations alimentaires ?', a: 'Oui. Nos restaurants partenaires proposent des options végétariennes, végé        blog: {
+                { q: 'Y a-t-il des options végétariennes ou des adaptations alimentaires ?', a: 'Oui. Nos restaurants partenaires proposent des options végétariennes, véganes et adaptées aux allergies. Veuillez nous informer lors de la réservation.' },
+                { q: 'Les tours fonctionnent-ils toute l\'année ?', a: 'Oui, les tours ont lieu toute l\'année. Chaque saison offre un paysage différent : vignes vertes au printemps, vendanges en automne et terrasses dorées en hiver.' },
+                { q: 'Comment fonctionne le transfert exécutif ?', a: 'Le chauffeur arrive avant l\'heure prévue. Pour les transferts aéroport, nous suivons votre vol en temps réel. Véhicule exécutif pouvant accueillir jusqu\'à 8 passagers.' },
+                { q: 'En quelles langues les tours sont-ils disponibles ?', a: 'Nos guides parlent couramment portugais et anglais. Pour d\'autres langues, contactez-nous pour vérifier la disponibilité.' },
+                { q: 'Comment puis-je réserver ?', a: 'Vous pouvez réserver directement sur notre site web, par WhatsApp ou par e-mail. Nous confirmons votre réservation dans les 2 heures.' },
+            ],
+        },
+        blog: {
             badge: 'Journal',
             title: 'Journal du Douro',
             subtitle: 'Actualités, secrets et les dernières nouveautés de l\'oenotourisme au Portugal.',
@@ -952,9 +959,6 @@ export const CONTENT = {
                     ]
                 }
             ]
-        },es.' }, { type: 'p', text: 'Dans nos circuits gastronomiques, nous incluons des d\u00e9jeuners dans des quintas s\u00e9lectionn\u00e9es avec des menus exclusifs.' }] },
-                { slug: 'vindima-douro-tradicao-viva', title: 'Les Vendanges du Douro : Une Tradition Vivante', excerpt: 'Septembre dans le Douro est magique. La vall\u00e9e se transforme en une f\u00eate de couleurs et de traditions ancestrales.', date: '15 avril 2026', category: 'Tradition', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de lecture', bookable: true, fullContent: [{ type: 'p', text: 'Quand septembre arrive dans le Douro, les terrasses explosent en palettes d\'or, de rouge et d\'ambre. C\'est la vindima, tradition qui remonte au XIIe si\u00e8cle.' }, { type: 'blockquote', text: 'Participer \u00e0 des vendanges dans le Douro, c\'est toucher l\'\u00e2me du Portugal.' }, { type: 'p', text: 'De septembre \u00e0 mi-octobre, nous organisons des circuits sp\u00e9ciaux de vendanges. Une exp\u00e9rience authentique et unique.' }] }
-            ],
         },
         contact: {
             title: 'Prêt à embarquer ?',
