@@ -52,7 +52,7 @@ export const CONTENT = {
                     bullets: [
                         'Experiência 100% privada sem grupos',
                         'Transporte executivo com motorista-guia especialista em vinhos',
-                        'Piquenique de luxo em vínicola selecionada',
+                        'Piquenique de luxo em vinícola selecionada',
                         'Passeio de barco no Rio Douro (privado ou em pequeno grupo)',
                         'Visita a quinta com prova de vinhos e degustação de mel e azeite regionais',
                         'Percurso panorâmico de comboio no Vale do Douro',
@@ -72,8 +72,8 @@ export const CONTENT = {
                         'Transporte executivo com motorista-guia especialista em vinhos',
                         'Percurso cénico pelo Vale do Douro (inclui troços da N222)',
                         'Almoço gastronómico em restaurante com Chef estrela Michelin, com harmonização vínica',
-                        'Cruzeiro no rio douro (privado ou em pequeno grupo) ao final do dia',
-                        'Prova de vinhos numa vínicola de referência com vista sobre o vale',
+                        'Cruzeiro no Rio Douro (privado ou em pequeno grupo) ao final do dia',
+                        'Prova de vinhos numa vinícola de referência com vista sobre o vale',
                     ],
                     pricePrivate: 1000,
                     priceShared: 850,
@@ -105,7 +105,7 @@ export const CONTENT = {
             intro: 'Oferecemos serviço de transfer executivo privado no Porto, com recolha e entrega no hotel, residência ou no Aeroporto Francisco Sá Carneiro. Um serviço pensado para viajantes exigentes.',
             features: [
                 { title: 'Pontualidade e Planeamento Premium', items: ['O seu tempo é valioso.', 'Monitorização de voo em tempo real', 'Motorista no local antes do horário', 'Tempo de espera incluído na chegada'] },
-                { title: 'Viatura Exectiva até 8 Passageiros', items: ['Interior confortável, silencioso e espaçoso', 'Amplo espaço para bagagem', 'Ar condicionado', 'Ideal para famílias ou executivos'] },
+                { title: 'Viatura Executiva até 8 Passageiros', items: ['Interior confortável, silencioso e espaçoso', 'Amplo espaço para bagagem', 'Ar condicionado', 'Ideal para famílias ou executivos'] },
                 { title: 'Segurança e Excelência', items: ['Motoristas experientes e trilíngues', 'Cadeirinha de bebé (mediante pedido)', 'Serviço totalmente licenciado e seguro'] },
             ],
             services: [
@@ -212,7 +212,7 @@ export const CONTENT = {
             badge: 'Experiências à Medida',
             title: 'Portugal. Your Way.',
             subtitle: 'Viagens privadas ao seu ritmo.',
-            desc: 'Podemos personalizar a sua viagem privada pelo Norte de Portugal, com la opção de estender a sua experiência até Lisboa.',
+            desc: 'Podemos personalizar a sua viagem privada pelo Norte de Portugal, com a opção de estender a sua experiência até Lisboa.',
             collection: 'North Premium Collection',
             collectionDesc: 'Experiências exclusivas nos destinos mais icónicos do norte de Portugal.',
             destinations: ['Amarante', 'Braga', 'Gerês', 'Guimarães', 'Porto', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisboa'],
