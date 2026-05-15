@@ -3,11 +3,12 @@ import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CustomCursor from '../components/CustomCursor';
-import { CONTENT, Language } from '../content';
+import { useLanguage } from '../contexts/LanguageContext';
 
-export default function Privacy({ lang }: { lang: Language }) {
-    const t = CONTENT[lang].privacy;
-    const common = CONTENT[lang].common;
+export default function Privacy() {
+    const { t: CONTENT } = useLanguage();
+    const t = CONTENT.privacy;
+    const common = CONTENT.common;
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' });

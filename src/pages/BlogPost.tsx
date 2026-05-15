@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar, ChevronRight } from 'lucide-react';
-import { CONTENT, Language } from '../content';
+import { useLanguage } from '../contexts/LanguageContext';
 
-export default function BlogPost({ lang }: { lang: Language }) {
+export default function BlogPost() {
     const { slug } = useParams();
-    const t = CONTENT[lang];
+    const { t } = useLanguage();
     const post = t.blog.items.find(p => p.slug === slug);
 
     // Scroll to top on mount

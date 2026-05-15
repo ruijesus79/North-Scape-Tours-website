@@ -3,10 +3,11 @@ import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CustomCursor from '../components/CustomCursor';
-import { CONTENT, Language } from '../content';
+import { useLanguage } from '../contexts/LanguageContext';
 
-export default function Terms({ lang }: { lang: Language }) {
-    const t = CONTENT[lang].terms;
+export default function Terms() {
+    const { t: CONTENT } = useLanguage();
+    const t = CONTENT.terms;
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' });
