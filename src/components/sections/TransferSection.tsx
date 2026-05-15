@@ -27,7 +27,7 @@ export default function TransferSection({ scrollTo }: { scrollTo: (id: string) =
         </div>
 
         <Reveal className="relative rounded-2xl overflow-hidden mb-14 md:mb-20">
-          <img src={IMG.transfer} alt="Executive Transfer in Portugal" className="w-full h-72 sm:h-80 md:h-[30rem] object-cover object-[center_65%] transition-transform duration-[2s] ease-out hover:scale-105" referrerPolicy="no-referrer" loading="lazy" />
+          <img src={IMG.transfer} alt="Executive Transfer in Portugal" className="w-full h-80 sm:h-96 md:h-[36rem] object-cover object-[center_40%] transition-transform duration-[2s] ease-out hover:scale-105" referrerPolicy="no-referrer" loading="lazy" />
           <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#0c0c0c] to-transparent pointer-events-none z-20" />
         </Reveal>
 
