@@ -40,6 +40,7 @@ export const CONTENT = {
                 shared: 'Barco Compartilhado',
                 extra: 'Pessoa Extra',
                 perPersonLabel: 'Por Pessoa',
+                pricingNote: 'para 2 pessoas',
                 book: 'Reservar',
                 whatsapp: 'WhatsApp',
             },
@@ -60,7 +61,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 900,
                     priceExtra: 150,
-                    capacityLabel: 'Até 4 pessoas',
+                    capacityLabel: 'Máximo: 4 pessoas',
                 },
                 {
                     id: 'golden-hour',
@@ -78,7 +79,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 850,
                     priceExtra: 150,
-                    capacityLabel: 'Até 4 pessoas',
+                    capacityLabel: 'Máximo: 4 pessoas',
                 },
                 {
                     id: 'douro-premium',
@@ -291,8 +292,9 @@ export const CONTENT = {
             labels: {
                 private: 'Private Boat',
                 shared: 'Shared Boat',
-                extra: 'Extra Person',
+                extra: 'Additional Guest',
                 perPersonLabel: 'Per Person',
+                pricingNote: 'for 2 people',
                 book: 'Book',
                 whatsapp: 'WhatsApp',
             },
@@ -313,7 +315,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 900,
                     priceExtra: 150,
-                    capacityLabel: 'Up to 4 people',
+                    capacityLabel: 'Maximum: 4 people',
                 },
                 {
                     id: 'golden-hour',
@@ -331,7 +333,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 850,
                     priceExtra: 150,
-                    capacityLabel: 'Up to 4 people',
+                    capacityLabel: 'Maximum: 4 people',
                 },
                 {
                     id: 'douro-premium',
@@ -544,8 +546,9 @@ export const CONTENT = {
             labels: {
                 private: 'Barco Privado',
                 shared: 'Barco Compartido',
-                extra: 'Persona Extra',
+                extra: 'Persona Adicional',
                 perPersonLabel: 'Por Persona',
+                pricingNote: 'para 2 personas',
                 book: 'Reservar',
                 whatsapp: 'WhatsApp',
             },
@@ -566,7 +569,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 900,
                     priceExtra: 150,
-                    capacityLabel: 'Hasta 4 personas',
+                    capacityLabel: 'Máximo: 4 personas',
                 },
                 {
                     id: 'golden-hour',
@@ -584,7 +587,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 850,
                     priceExtra: 150,
-                    capacityLabel: 'Hasta 4 personas',
+                    capacityLabel: 'Máximo: 4 personas',
                 },
                 {
                     id: 'douro-premium',
@@ -799,6 +802,7 @@ export const CONTENT = {
                 shared: 'Bateau Partagé',
                 extra: 'Personne Supplémentaire',
                 perPersonLabel: 'Par Personne',
+                pricingNote: 'pour 2 personnes',
                 book: 'Réserver',
                 whatsapp: 'WhatsApp',
             },
@@ -819,7 +823,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 900,
                     priceExtra: 150,
-                    capacityLabel: 'Jusqu\'à 4 personnes',
+                    capacityLabel: 'Maximum : 4 personnes',
                 },
                 {
                     id: 'golden-hour',
@@ -837,7 +841,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 850,
                     priceExtra: 150,
-                    capacityLabel: 'Jusqu\'à 4 personnes',
+                    capacityLabel: 'Maximum : 4 personnes',
                 },
                 {
                     id: 'douro-premium',
@@ -1050,8 +1054,9 @@ export const CONTENT = {
             labels: {
                 private: 'Privatboot',
                 shared: 'Geteiltes Boot',
-                extra: 'Zusatzperson',
+                extra: 'Zusätzlicher Gast',
                 perPersonLabel: 'Pro Person',
+                pricingNote: 'für 2 Personen',
                 book: 'Buchen',
                 whatsapp: 'WhatsApp',
             },
@@ -1072,7 +1077,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 900,
                     priceExtra: 150,
-                    capacityLabel: 'Bis zu 4 Personen',
+                    capacityLabel: 'Maximum: 4 Personen',
                 },
                 {
                     id: 'golden-hour',
@@ -1090,7 +1095,7 @@ export const CONTENT = {
                     pricePrivate: 1000,
                     priceShared: 850,
                     priceExtra: 150,
-                    capacityLabel: 'Bis zu 4 Personen',
+                    capacityLabel: 'Maximum: 4 Personen',
                 },
                 {
                     id: 'douro-premium',

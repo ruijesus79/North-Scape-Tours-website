@@ -74,14 +74,20 @@ export default function ToursSection({ scrollTo }: { scrollTo: (id: string) => v
                     ) : (
                       <>
                         <div className="flex items-baseline justify-between">
-                          <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.private}</span>
+                          <div className="flex flex-col">
+                            <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.private}</span>
+                            <span className="text-[10px] text-amber-400/70 font-medium tracking-wide">{t.tours.labels.pricingNote}</span>
+                          </div>
                           <span className="font-serif text-xl text-white">{tour.pricePrivate}€</span>
                         </div>
                         <div className="flex items-baseline justify-between">
-                          <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.shared}</span>
+                          <div className="flex flex-col">
+                            <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.shared}</span>
+                            <span className="text-[10px] text-amber-400/70 font-medium tracking-wide">{t.tours.labels.pricingNote}</span>
+                          </div>
                           <span className="font-serif text-xl text-white/85">{tour.priceShared}€</span>
                         </div>
-                        <div className="flex items-baseline justify-between">
+                        <div className="border-t border-white/5 pt-2.5 flex items-baseline justify-between">
                           <span className="text-xs uppercase tracking-[0.15em] text-white/45">{t.tours.labels.extra}</span>
                           <span className="font-serif text-xl text-white/85">{tour.priceExtra}€</span>
                         </div>
