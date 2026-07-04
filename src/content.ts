@@ -173,6 +173,24 @@ export const CONTENT = {
             readTimeDefault: '3 min de leitura',
             items: [
                 {
+                    slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: O Evento do Verão em Lamego', excerpt: 'Em pleno coração do Douro, Lamego foi, nos dias 3 e 4 de julho, o epicentro dos melhores vinhos portugueses, gastronomia de autor e música ao vivo.', date: '4 de Julho de 2026', category: 'Eventos', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min de leitura', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'O Douro tem calendário próprio. E no início de julho, Lamego transforma-se no epicentro do vinho português.' },
+                        { type: 'p', text: 'O Douro & Porto Wine Festival regressou nos dias 3 e 4 de julho ao Porto Comercial de Cambres, em Lamego, reunindo os melhores produtores da região num evento que combina, com elgância rara, a degustação de vinhos de excelência com gastronomia de autor e música ao vivo.' },
+                        { type: 'p', text: 'Para quem nos visita nesta época do ano, o festival representa uma oportunidade única: provar dezenas de referências durienses num único fim de semana, dialogar diretamente com enólogos e descobrir os vinhos que ainda não chegaram às prateleiras das lojas especializadas.' },
+                        { type: 'p', text: 'Na North Scape Tours, combinamos a experiência do festival com o nosso tour privado pelo vale — um dia que começa entre vinhas e termina com o rio a dourar ao pôr do sol. Reservas com antecedência recomendadas.' }
+                    ]
+                },
+                {
+                    slug: 'vindima-antecipada-douro-2026', title: 'Vindima 2026: A Colheita Começa Mais Cedo no Douro', excerpt: 'As alterações climáticas estão a reescrever o ritmo da vindima no Douro. Agosto é o novo setembro — e quem chegar primeiro vive a experiência mais autêntica.', date: '4 de Julho de 2026', category: 'Tendências', image: '/images/blog/2026/vindima-antecipada-2026.jpg', readTime: '4 min de leitura', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Há algo de silencioso e urgente no ar do Douro neste verão. Os cachos amadurecem mais depressa. As quintas preparam-se. E a vindima de 2026 promete chegar antes do esperado.' },
+                        { type: 'p', text: 'As alterações climáticas estão a redefinir o ritmo secular da colheita no Douro Vinhateiro. O que historicamente ocorria em outubro começa hoje, em muitas quintas, logo no início de agosto — por vezes até em julho. O calor intenso acelera a maturação das uvas, comprimindo uma janela de tempo que, outrora, permitia semanas de observação cuidadosa.' },
+                        { type: 'p', text: 'Para os produtores, este é um desafio técnico e humano de grande exigência. Para os viajantes, é uma oportunidade rara: estar no Douro quando a região está no seu momento mais vivo, mais autêntico e mais sensorial.' },
+                        { type: 'p', text: 'As experiências de vindima imersivas — colheita manual, pisa a pé em lagares de granito, almoços regionais com harmonização vínica — estão a esgotar-se rapidamente. A nossa recomendação: não esperes por setembro. O Douro de agosto é, cada vez mais, o Douro da vindima.' }
+                    ]
+                },
+                {
                     slug: 'melhor-vinho-do-ano-douro', title: '"O Melhor Vinho do Ano" é um tinto do Douro', excerpt: 'O prestigiado prémio foi para um vinho do Douro que custa 75 euros, reafirmando a qualidade excecional da região.', date: '13 de Maio de 2026', category: 'Prémios', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de leitura', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'A crítica especializada voltou a premiar a excelência do Douro. O título de "Melhor Vinho do Ano" foi atribuído a um tinto duriense, uma distinção que reforça o prestígio internacional da mais antiga região demarcada do mundo.' },
@@ -426,6 +444,24 @@ export const CONTENT = {
             bookCta: 'Book this experience',
             readTimeDefault: '3 min read',
             items: [
+                {
+                    slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: The Summer Event in Lamego', excerpt: 'At the heart of the Douro, Lamego was, on July 3rd and 4th, the epicentre of the finest Portuguese wines, chef cuisine and live music.', date: 'July 4, 2026', category: 'Events', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min read', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'The Douro has its own calendar. And in early July, Lamego becomes the epicentre of Portuguese wine.' },
+                        { type: 'p', text: 'The Douro & Porto Wine Festival returned on July 3rd and 4th to the Porto Comercial de Cambres in Lamego, bringing together the region\'s finest producers in an event that combines, with rare elegance, exceptional wine tastings with chef cuisine and live music.' },
+                        { type: 'p', text: 'For those visiting at this time of year, the festival represents a unique opportunity: to taste dozens of Douro references in a single weekend, speak directly with winemakers, and discover wines yet to reach specialist shop shelves.' },
+                        { type: 'p', text: 'At North Scape Tours, we combine the festival experience with our private tour of the valley — a day that begins among vineyards and ends with the river glowing gold at sunset. Advance bookings recommended.' }
+                    ]
+                },
+                {
+                    slug: 'vindima-antecipada-douro-2026', title: 'Harvest 2026: Picking Starts Earlier in the Douro', excerpt: 'Climate change is rewriting the rhythm of the harvest in the Douro. August is the new September — and those who arrive first live the most authentic experience.', date: 'July 4, 2026', category: 'Trends', image: '/images/blog/2026/vindima-antecipada-2026.jpg', readTime: '4 min read', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'There is something silent and urgent in the Douro air this summer. The clusters ripen faster. The estates prepare. And the 2026 harvest promises to arrive sooner than expected.' },
+                        { type: 'p', text: 'Climate change is redefining the age-old rhythm of the harvest in the Douro Valley. What historically took place in October now begins, at many estates, as early as August — sometimes even July. The intense heat accelerates grape ripening, compressing a window of time that once allowed weeks of careful observation.' },
+                        { type: 'p', text: 'For producers, this is a major technical and human challenge. For travellers, it is a rare opportunity: to be in the Douro when the region is at its most alive, most authentic and most sensorial.' },
+                        { type: 'p', text: 'Immersive harvest experiences — hand-picking grapes, treading by foot in granite lagares, regional lunches with wine pairings — are filling up fast. Our recommendation: don\'t wait for September. August in the Douro is, increasingly, harvest season.' }
+                    ]
+                },
                 {
                     slug: 'melhor-vinho-do-ano-douro', title: '"The Best Wine of the Year" is a Douro Red', excerpt: 'The prestigious award went to a Douro wine, reaffirming the exceptional quality of the region.', date: 'May 13, 2026', category: 'Awards', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min read', bookable: true,
                     fullContent: [
@@ -681,6 +717,24 @@ export const CONTENT = {
             readTimeDefault: '3 min de lectura',
             items: [
                 {
+                    slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: El Evento del Verano en Lamego', excerpt: 'En el corazón del Duero, Lamego fue, los días 3 y 4 de julio, el epicentro de los mejores vinos portugueses, gastronomía de autor y música en vivo.', date: '4 de julio de 2026', category: 'Eventos', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min de lectura', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'El Duero tiene su propio calendario. Y a principios de julio, Lamego se convierte en el epicentro del vino portugués.' },
+                        { type: 'p', text: 'El Douro & Porto Wine Festival regresó los días 3 y 4 de julio al Porto Comercial de Cambres, en Lamego, reuniendo a los mejores productores de la región en un evento que combina, con rara elegancia, catas de vinos excepcionales con gastronomía de autor y música en vivo.' },
+                        { type: 'p', text: 'Para quienes nos visitan en esta época del año, el festival representa una oportunidad única: degustar docenas de referencias del Duero en un solo fin de semana, dialogar directamente con enólogos y descubrir vinos que aún no han llegado a las tiendas especializadas.' },
+                        { type: 'p', text: 'En North Scape Tours, combinamos la experiencia del festival con nuestro tour privado por el valle — un día que comienza entre viñas y termina con el río dorándose al atardecer. Se recomienda reservar con antelación.' }
+                    ]
+                },
+                {
+                    slug: 'vindima-antecipada-douro-2026', title: 'Vendimia 2026: La Cosecha Comienza Más Temprano en el Duero', excerpt: 'El cambio climático está reescribiendo el ritmo de la vendimia en el Duero. Agosto es el nuevo septiembre — y quien llega primero vive la experiencia más auténtica.', date: '4 de julio de 2026', category: 'Tendencias', image: '/images/blog/2026/vindima-antecipada-2026.jpg', readTime: '4 min de lectura', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Hay algo silencioso y urgente en el aire del Duero este verano. Los racimos maduran más deprisa. Las fincas se preparan. Y la vendimia de 2026 promete llegar antes de lo esperado.' },
+                        { type: 'p', text: 'El cambio climático está redefiniendo el ritmo secular de la cosecha en el Valle del Duero. Lo que históricamente ocurría en octubre comienza hoy, en muchas fincas, ya a principios de agosto — a veces incluso en julio. El intenso calor acelera la maduración de las uvas, comprimiendo una ventana de tiempo que, antes, permitía semanas de observación cuidadosa.' },
+                        { type: 'p', text: 'Para los productores, este es un gran reto técnico y humano. Para los viajeros, es una oportunidad única: estar en el Duero cuando la región está en su momento más vivo, más auténtico y más sensorial.' },
+                        { type: 'p', text: 'Las experiencias de vendimia inmersivas — recolección manual, pisado en lagares de granito, almuerzos regionales con maridaje — se agotan rápidamente. Nuestra recomendación: no espere a septiembre. El Duero de agosto es, cada vez más, el Duero de la vendimia.' }
+                    ]
+                },
+                {
                     slug: 'melhor-vinho-do-ano-douro', title: '"El Mejor Vino del Año" es un Tinto del Duero', excerpt: 'El prestigioso premio fue para un vino del Duero, reafirmando la excepcional calidad de la región.', date: '13 de mayo de 2026', category: 'Premios', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lectura', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'La crítica especializada ha vuelto a premiar la excelencia del Duero. El título de "Mejor Vino del Año" fue otorgado a un tinto duriense, una distinción que refuerza el prestigio internacional de la región demarcada más antigua del mundo.' },
@@ -935,7 +989,24 @@ export const CONTENT = {
             readTimeDefault: '3 min de lecture',
             items: [
                 {
-                    slug: 'melhor-vinho-do-ano-douro', title: '"Le Meilleur Vin de l\'Année" est un Rouge du Douro', excerpt: 'Le prix prestigieux a été décerné à un vin du Douro, réaffirmant la qualité exceptionnelle de la région.', date: '13 mai 2026', category: 'Prix', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lecture', bookable: true,
+                    slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival : L\'Événement de l\'Eté à Lamego', excerpt: 'Au cœur du Douro, Lamego a été, les 3 et 4 juillet, l\'épicentre des meilleurs vins portugais, de la gastronomie d\'auteur et de la musique live.', date: '4 juillet 2026', category: 'Événements', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min de lecture', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Le Douro a son propre calendrier. Et au début du mois de juillet, Lamego devient l\'épicentre du vin portugais.' },
+                        { type: 'p', text: 'Le Douro & Porto Wine Festival est revenu les 3 et 4 juillet au Porto Comercial de Cambres, à Lamego, réunissant les meilleurs producteurs de la région dans un événement qui combine, avec une élégance rare, des dégustations de vins d\'exception, de la gastronomie d\'auteur et de la musique live.' },
+                        { type: 'p', text: 'Pour ceux qui nous rendent visite à cette époque de l\'année, le festival représente une opportunité unique : goûter des dizaines de références du Douro en un seul week-end, dialoguer directement avec des énologues et découvrir des vins qui n\'ont pas encore atteint les étagères des boutiques spécialisées.' },
+                        { type: 'p', text: 'Chez North Scape Tours, nous combinons l\'expérience du festival avec notre circuit privé dans la vallée — une journée qui commence entre les vignes et se termine avec le fleuve doré au coucher du soleil. Réservations anticipées recommandées.' }
+                    ]
+                },
+                {
+                    slug: 'vindima-antecipada-douro-2026', title: 'Vendanges 2026 : La Récolte Commence Plus Tôt dans le Douro', excerpt: 'Le changement climatique réécrit le rythme des vendanges dans le Douro. Août est le nouveau septembre — et qui arrive le premier vit l\'expérience la plus authentique.', date: '4 juillet 2026', category: 'Tendances', image: '/images/blog/2026/vindima-antecipada-2026.jpg', readTime: '4 min de lecture', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Il y a quelque chose de silencieux et d\'urgent dans l\'air du Douro cet été. Les grappes mûrissent plus vite. Les domaines se préparent. Et les vendanges 2026 promettent d\'arriver plus tôt que prévu.' },
+                        { type: 'p', text: 'Le changement climatique redéfinit le rythme séculaire de la récolte dans la vallée du Douro. Ce qui se passait historiquement en octobre commence aujourd\'hui, dans de nombreux domaines, dès le début du mois d\'août — parfois même en juillet. La chaleur intense accélère la maturation des raisins, réduisant une fenêtre de temps qui permettait autrefois des semaines d\'observation attentive.' },
+                        { type: 'p', text: 'Pour les producteurs, c\'est un défi technique et humain de grande ampleur. Pour les voyageurs, c\'est une opportunité rare : être dans le Douro quand la région est à son moment le plus vivant, le plus authentique et le plus sensoriel.' },
+                        { type: 'p', text: 'Les expériences de vendanges immersives — cueillette manuelle, foulage à pied dans des pressoirs en granit, déjeuners régionaux avec accords mets-vins — se remplissent rapidement. Notre recommandation : n\'attendez pas septembre. Le Douro d\'août est, de plus en plus, le Douro des vendanges.' }
+                    ]
+                },
+                { slug: 'melhor-vinho-do-ano-douro', title: '"Le Meilleur Vin de l\'Année" est un Rouge du Douro', excerpt: 'Le prix prestigieux a été décerné à un vin du Douro, réaffirmant la qualité exceptionnelle de la région.', date: '13 mai 2026', category: 'Prix', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lecture', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'La critique spécialisée a une fois de plus récompensé l\'excellence du Douro. Le titre de "Meilleur Vin de l\'Année" a été attribué à un rouge du Douro, une distinction qui renforce le prestige international de la plus ancienne région délimitée au monde.' },
                         { type: 'p', text: 'Chez North Scape Tours, nous offrons à nos clients des dégustations premium qui incluent des millésimes primés dans les meilleurs domaines de la région. Venez déguster l\'excellence avec nous.' }
@@ -1188,6 +1259,24 @@ export const CONTENT = {
             bookCta: 'Dieses Erlebnis buchen',
             readTimeDefault: '3 Min. Lesezeit',
             items: [
+                {
+                    slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: Das Weinfest des Sommers in Lamego', excerpt: 'Im Herzen des Douro war Lamego am 3. und 4. Juli das Epizentrum der besten portugiesischen Weine, der Sterneküche und Live-Musik.', date: '4. Juli 2026', category: 'Veranstaltungen', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 Min. Lesezeit', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Das Douro hat seinen eigenen Kalender. Und Anfang Juli wird Lamego zum Epizentrum des portugiesischen Weins.' },
+                        { type: 'p', text: 'Das Douro & Porto Wine Festival kehrte am 3. und 4. Juli in den Porto Comercial de Cambres in Lamego zurück und versammelte die besten Produzenten der Region in einer Veranstaltung, die mit seltener Eleganz außergewöhnliche Weinproben mit Küche und Live-Musik verbindet.' },
+                        { type: 'p', text: 'Für alle, die uns zu dieser Jahreszeit besuchen, bietet das Festival eine einzigartige Gelegenheit: Dutzende von Douro-Referenzen an einem einzigen Wochenende zu probieren, direkt mit Winzern zu sprechen und Weine zu entdecken, die noch nicht in den Fachgeschäften angekommen sind.' },
+                        { type: 'p', text: 'Bei North Scape Tours verbinden wir das Festivalerlebnis mit unserer privaten Tour durch das Tal — ein Tag, der zwischen den Weinbergen beginnt und mit dem im Sonnenuntergang golden leuchtenden Fluss endet. Frühzeitige Buchungen werden empfohlen.' }
+                    ]
+                },
+                {
+                    slug: 'vindima-antecipada-douro-2026', title: 'Weinlese 2026: Die Ernte Beginnt Früher im Douro', excerpt: 'Der Klimawandel schreibt den Rhythmus der Weinlese im Douro neu. August ist das neue September — und wer zuerst kommt, erlebt das authentischste Erlebnis.', date: '4. Juli 2026', category: 'Trends', image: '/images/blog/2026/vindima-antecipada-2026.jpg', readTime: '4 Min. Lesezeit', bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Es liegt etwas Stilles und Drängendes in der Luft des Douro in diesem Sommer. Die Trauben reifen schneller. Die Güter bereiten sich vor. Und die Weinlese 2026 verspricht früher als erwartet zu kommen.' },
+                        { type: 'p', text: 'Der Klimawandel verändert den jahrhundertealten Rhythmus der Ernte im Douro-Weintal. Was historisch im Oktober stattfand, beginnt heute in vielen Gütern bereits Anfang August — manchmal sogar im Juli. Die intensive Hitze beschleunigt die Traubenreife und verkürzt ein Zeitfenster, das früher wochenlange sorgfältige Beobachtung ermöglichte.' },
+                        { type: 'p', text: 'Für die Winzer ist dies eine große technische und menschliche Herausforderung. Für Reisende ist es eine seltene Gelegenheit: im Douro zu sein, wenn die Region in ihrer lebendigsten, authentischsten und sinnlichsten Phase ist.' },
+                        { type: 'p', text: 'Immersive Weinernte-Erlebnisse — Handlese, Fußtretung in Granitkeltern, regionale Mittagessen mit Weinbegleitung — füllen sich schnell. Unsere Empfehlung: Warten Sie nicht bis September. Der Douro im August ist zunehmend Weinterrassen-Zeit.' }
+                    ]
+                },
                 { slug: 'golden-hour-science-douro', title: 'Die Wissenschaft der Goldenen Stunde: Warum das Douro-Tal im Abendlicht leuchtet', excerpt: 'Das Abendlicht im Douro ver\u00e4ndert die Weinwahrnehmung und verwandelt jede Verkostung in ein einzigartiges Sinneserlebnis.', date: '10. Mai 2026', category: 'Erlebnisse', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Es gibt einen Moment an jedem Tag im Douro-Tal, den die Winzer die goldene Stunde nennen. Das Licht wird bernsteinfarben und das gesamte Tal scheint in sanfter Flamme zu brennen.' }, { type: 'h3', text: 'Das North Scape Erlebnis' }, { type: 'p', text: 'Bei unseren privaten Touren planen wir jeden Moment so, dass die Hauptverkostung mit der goldenen Stunde zusammenf\u00e4llt.' }] },
                 { slug: 'quintas-secretas-douro', title: 'Das Unsichtbare Douro: Private Quintas', excerpt: 'Entdecken Sie die historischen Douro-Anwesen, die nur auf private Einladung zug\u00e4nglich sind.', date: '3. Mai 2026', category: 'Exklusiv', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Das Alto Douro Weingebiet beherbergt \u00fcber 40.000 Weingüter. Die exklusivsten funktionieren nur auf private Einladung.' }, { type: 'blockquote', text: 'Wahrer Luxus im Douro l\u00e4sst sich nicht kaufen. Er wird mit Zeit und Neugier erobert.' }, { type: 'p', text: 'Bei North Scape Tours organisieren wir exklusive Besuche in privaten Quintas. Kontaktieren Sie uns für Ihr personalisiertes Erlebnis.' }] },
                 { slug: 'gastronomia-michelin-douro', title: 'Haute Cuisine trifft Tradition: Die Michelin-Aromen des Douro', excerpt: 'Die gastronomische Revolution, die das Tal transformiert.', date: '25. April 2026', category: 'Gastronomie', image: '/images/blog/2026/gastronomy.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Das Douro-Weingebiet war schon immer ein Land intensiver Aromen. Jetzt erfindet eine neue Generation von K\u00f6chen dieses Erbe mit Haute-Cuisine-Technik neu.' }, { type: 'blockquote', text: 'Im Douro zu kochen bedeutet, der Erde zuzuh\u00f6ren. Jede Zutat erz\u00e4hlt eine jahrhundertealte Geschichte.' }, { type: 'p', text: 'Bei unseren gastronomischen Touren bieten wir Mittagessen in ausgew\u00e4hlten Quintas mit exklusiven Men\u00fcs.' }] },
