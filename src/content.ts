@@ -1,26 +1,26 @@
 export type Language = 'pt' | 'en' | 'es' | 'fr' | 'de';
+import { ALL_17_TOURS, VIP_EXTRAS, type TourItem, type VipExtraItem, type TourPricingTier } from './data/toursData';
+export type { TourItem, VipExtraItem, TourPricingTier };
 
 export const WHATSAPP_NUMBER = '351911923499';
-export const WHATSAPP_MESSAGE = 'Olá North Scape Tours! Gostaria de mais informações sobre os vossos tours no Douro.';
+export const WHATSAPP_MESSAGE = 'Olá NORTHÉ! Gostaria de mais informações sobre os vossos tours privados no Douro e Norte de Portugal.';
 export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-export const EMAIL = 'manager@northscapetours.pt';
+export const EMAIL = 'info@northetours.com';
 export const FACEBOOK_PAGE = 'https://www.facebook.com/profile.php?id=61583598036171';
-export const TIKTOK_PAGE = 'https://www.tiktok.com/@north.scape.tours';
-export const YOUTUBE_PAGE = 'https://www.youtube.com/@NorthScapeTours';
+export const TIKTOK_PAGE = 'https://www.tiktok.com/@northe.tours';
+export const YOUTUBE_PAGE = 'https://www.youtube.com/@NorthETours';
 export const GETYOURGUIDE_LINK = 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/';
-
 export const CONTENT = {
     pt: {
         nav: {
-            home: 'Início', tours: 'Tours',
-            transfer: 'Transfer', about: 'Sobre Nós', reviews: 'Avaliações',
+            home: 'Início', tours: 'Private Tours', douro: 'Douro Valley', north: 'Northern Portugal', porto: 'Porto Experiences', about: 'Sobre a NORTHÉ', reviews: 'Avaliações',
             blog: 'Blog', contact: 'Contacto', book: 'Reservar', bookNow: 'Reservar Agora',
         },
         hero: {
             subtitle: 'Experiências Exclusivas no Norte de Portugal',
-            title1: 'Experiências exclusivas no Douro',
-            title2: 'com degustação de vinhos e passeio de barco.',
-            desc: 'Saídas do Porto com transfer confortável e atendimento personalizado.',
+            title1: 'Experiências Privadas de Excelência',
+            title2: 'Douro Valley · Porto · Northern Portugal',
+            desc: 'Tours 100% privados a partir do Porto com transporte executivo e motorista-guia especialista em vinhos.',
             cta: 'Ver Experiências',
             ctaWhatsapp: 'Falar via WhatsApp',
             trustLine: 'Serviço licenciado · Cancelamento gratuito até 48h · Guias trilíngues',
@@ -31,73 +31,61 @@ export const CONTENT = {
             author: 'Miguel Torga',
         },
         tours: {
-            badge: 'Experiências no Rio',
-            title: 'Tours & Preços',
-            subtitle: 'Três experiências exclusivas a bordo, desenhadas para o entardecer mágico do Douro.',
-            discount: 'Desconto de 20% para crianças (0-8 anos)',
-            labels: {
-                private: 'Barco Privado',
-                shared: 'Barco Compartilhado',
-                extra: 'Pessoa Extra',
-                perPersonLabel: 'Por Pessoa',
-                pricingNote: 'para 2 pessoas',
-                book: 'Reservar',
-                whatsapp: 'WhatsApp',
+            badge: '100% Private Touren',
+            title: 'Kollektion Privater Touren',
+            subtitle: '17 exklusive private Touren für Gruppen von 1 bis 8 Personen, in Ihrem eigenen Rhythmus.',
+            categories: {
+                all: 'Todos os Tours',
+                douro: 'Douro Valley',
+                north: 'Northern Portugal',
+                porto: 'Porto Experiences',
             },
-            items: [
-                {
-                    id: 'picnic-sunset',
-                    name: 'Piquenique de luxo, barco e comboio',
-                    tagline: 'A bordo · Pôr do sol',
-                    image: '/images/novo-picnic.jpg',
-                    bullets: [
-                        'Experiência 100% privada sem grupos',
-                        'Transporte executivo com motorista-guia especialista em vinhos',
-                        'Piquenique de luxo em vinícola selecionada',
-                        'Passeio de barco no Rio Douro (privado ou em pequeno grupo)',
-                        'Visita a quinta com prova de vinhos e degustação de mel e azeite regionais',
-                        'Percurso panorâmico de comboio no Vale do Douro',
-                    ],
-                    pricePrivate: 1000,
-                    priceShared: 900,
-                    priceExtra: 150,
-                    capacityLabel: 'Máximo: 4 pessoas',
-                },
-                {
-                    id: 'golden-hour',
-                    name: 'Douro Golden Hour',
-                    subtitle: 'Cruzeiro privado, almoço e degustação de vinhos.',
-                    tagline: 'Hora mágica · Luz cinematográfica',
-                    bullets: [
-                        'Experiência 100% privada sem grupos',
-                        'Transporte executivo com motorista-guia especialista em vinhos',
-                        'Percurso cénico pelo Vale do Douro (inclui troços da N222)',
-                        'Almoço gastronómico em restaurante com Chef estrela Michelin, com harmonização vínica',
-                        'Cruzeiro no Rio Douro (privado ou em pequeno grupo) ao final do dia',
-                        'Prova de vinhos numa vinícola de referência com vista sobre o vale',
-                    ],
-                    pricePrivate: 1000,
-                    priceShared: 850,
-                    priceExtra: 150,
-                    capacityLabel: 'Máximo: 4 pessoas',
-                },
-                {
-                    id: 'douro-premium',
-                    name: 'Douro Premium',
-                    subtitle: 'Wine master, Almoço, Cruzeiro e Comboio.',
-                    tagline: 'Assinatura · Grupo reduzido',
-                    image: '/images/douro-premium.jpg',
-                    bullets: [
-                        'Acompanhamento de Wine master especialista em vinhos do Douro',
-                        'Almoço tradicional com harmonização vínica',
-                        'Visita a quintas selecionadas com prova de vinhos e degustação de azeite, mel e queijos regionais',
-                        'Cruzeiro panorâmico de luxo no Rio Douro',
-                        'Passeio de comboio com vista sobre o vale',
-                    ],
-                    perPerson: 180,
-                    capacityLabel: 'Pequeno grupo até 8 pessoas',
-                },
-            ],
+            filterAll: 'Todos os Tours (17)',
+            searchPlaceholder: 'Pesquisar destino, vinhos, cruzeiro...',
+            labels: {
+                from: 'Desde',
+                groupSize: 'Grupo privado de 1 a 8 pessoas',
+                perGroup: 'por grupo',
+                viewTour: 'Ver Tour & Preços',
+                whatsapp: 'WhatsApp',
+                gygBadge: 'GetYourGuide Verified',
+                details: 'Ver Detalhes',
+                duration: 'Duração',
+                highlights: 'Destaques',
+                included: 'Incluído',
+                pricingNote: 'Preço total para grupo fechado',
+                freeCancel: 'Cancelamento gratuito até 48h',
+                customQuote: 'Pedir Orçamento',
+            },
+            extrasTitle: 'VIP Upgrades & Besondere Feiern',
+            extrasSubtitle: 'Machen Sie Ihren Tag mit exklusiven VIP-Zusatzleistungen für Ihre private Gruppe unvergesslich:',
+            extras: VIP_EXTRAS.map(e => ({
+                id: e.id,
+                name: e.name.en,
+                tagline: e.tagline.en,
+                desc: e.desc.en,
+                price: e.price,
+            })),
+            items: ALL_17_TOURS.map(t => ({
+                id: t.id,
+                code: t.code,
+                category: t.category,
+                categoryLabel: t.categoryLabel.en,
+                name: t.name.en,
+                subtitle: t.subtitle.en,
+                tagline: t.tagline.en,
+                shortDesc: t.shortDesc.en,
+                fullDesc: t.fullDesc.en,
+                duration: t.duration.en,
+                highlights: t.highlights.en,
+                included: t.included.en,
+                pricingTiers: t.pricingTiers,
+                startingPrice: t.startingPrice,
+                gygVerified: t.gygVerified,
+                gygUrl: t.gygUrl,
+                image: t.image,
+                gallery: t.gallery,
+            })),
         },
         transfer: {
             badge: 'Serviço Premium',
@@ -121,14 +109,14 @@ export const CONTENT = {
         },
         about: {
             badge: 'Sobre Nós',
-            title: 'Além do Horizonte: A Essência da North Scape Tours',
+            title: 'Além do Horizonte: A Essência da NORTHÉ',
             paragraphs: [
-                'Na North Scape Tours, acreditamos que o luxo não se define pelo que se vê, mas pelo que se sente. Nascemos da paixão por revelar o Douro invisível - aquele que não aparece nos mapas turísticos, mas que pulsa nas quintas privadas, no silêncio das águas ao entardecer e nos sabores de uma cozinha que honra a terra.',
+                'Na NORTHÉ, acreditamos que o luxo não se define pelo que se vê, mas pelo que se sente. Nascemos da paixão por revelar o Douro invisível - aquele que não aparece nos mapas turísticos, mas que pulsa nas quintas privadas, no silêncio das águas ao entardecer e nos sabores de uma cozinha que honra a terra.',
                 'A nossa missão é desenhar experiências, não apenas trajetos. Cada detalhe, desde o conforto dos nossos veículos executivos à escolha meticulosa de parceiros com Estrela Michelin, é pensado para quem valoriza o tempo, a privacidade e a autenticidade.',
                 'Não somos apenas guias; somos contadores de histórias e facilitadores de momentos. No banco de trás da nossa exclusividade, o Douro deixa de ser um destino para passar a ser uma memória eterna.',
-                'Bem-vindo ao Douro, no seu ritmo. Bem-vindo à North Scape.',
+                'Bem-vindo ao Douro, no seu ritmo. Bem-vindo à NORTHÉ.',
             ],
-            signature: 'North Scape Tours',
+            signature: 'NORTHÉ',
             imageAlt: 'Vale do Douro envolto em névoa matinal',
         },
         reviews: {
@@ -142,10 +130,10 @@ export const CONTENT = {
                 { text: 'Um dia mágico no Douro. O guia foi excelente, os vinhos soberbos e o almoço delicioso. Recomendo vivamente!', author: 'Marie Dubois', location: 'Paris, França', flag: '🇫🇷', stars: 4.5 },
                 { text: 'Melhor experiência de sempre no Douro! O passeio de barco ao pôr do sol foi inesquecível.', author: 'Carlos Mendes', location: 'São Paulo, Brasil', flag: '🇧🇷', stars: 5 },
                 { text: 'Um dia perfeito! A prova de vinhos foi de alto nível e a paisagem é de cortar a respiração.', author: 'Hannah Müller', location: 'Munique, Alemanha', flag: '🇩🇪', stars: 4.8 },
-                { text: 'Celebrámos o nosso aniversário com a North Scape e foi o ponto alto da nossa viagem. Luxo real.', author: 'Michael & Sarah Chen', location: 'Nova Iorque, EUA', flag: '🇺🇸', stars: 5 },
+                { text: 'Celebrámos o nosso aniversário com a NORTHÉ e foi o ponto alto da nossa viagem. Luxo real.', author: 'Michael & Sarah Chen', location: 'Nova Iorque, EUA', flag: '🇺🇸', stars: 5 },
                 { text: 'O guia sabia tudo sobre a história da região. Uma viagem imperdível para amantes de vinho.', author: 'Alessandro Rossi', location: 'Milão, Itália', flag: '🇮🇹', stars: 4.5 },
                 { text: 'Transfer impecável e tour ainda melhor. Serviço de primeira classe do início ao fim.', author: 'Lucía Fernández', location: 'Madrid, Espanha', flag: '🇪🇸', stars: 5 },
-                { text: 'Incrível! O Douro é mágico e a equipa da North Scape tornou tudo mais especial.', author: 'Daan van der Berg', location: 'Amesterdão, Holanda', flag: '🇳🇱', stars: 4.8 },
+                { text: 'Incrível! O Douro é mágico e a equipa da NORTHÉ tornou tudo mais especial.', author: 'Daan van der Berg', location: 'Amesterdão, Holanda', flag: '🇳🇱', stars: 4.8 },
             ],
         },
         faq: {
@@ -178,7 +166,7 @@ export const CONTENT = {
                         { type: 'p', text: 'O Douro tem calendário próprio. E no início de julho, Lamego transforma-se no epicentro do vinho português.' },
                         { type: 'p', text: 'O Douro & Porto Wine Festival regressou nos dias 3 e 4 de julho ao Porto Comercial de Cambres, em Lamego, reunindo os melhores produtores da região num evento que combina, com elgância rara, a degustação de vinhos de excelência com gastronomia de autor e música ao vivo.' },
                         { type: 'p', text: 'Para quem nos visita nesta época do ano, o festival representa uma oportunidade única: provar dezenas de referências durienses num único fim de semana, dialogar diretamente com enólogos e descobrir os vinhos que ainda não chegaram às prateleiras das lojas especializadas.' },
-                        { type: 'p', text: 'Na North Scape Tours, combinamos a experiência do festival com o nosso tour privado pelo vale — um dia que começa entre vinhas e termina com o rio a dourar ao pôr do sol. Reservas com antecedência recomendadas.' }
+                        { type: 'p', text: 'Na NORTHÉ, combinamos a experiência do festival com o nosso tour privado pelo vale — um dia que começa entre vinhas e termina com o rio a dourar ao pôr do sol. Reservas com antecedência recomendadas.' }
                     ]
                 },
                 {
@@ -194,7 +182,7 @@ export const CONTENT = {
                     slug: 'melhor-vinho-do-ano-douro', title: '"O Melhor Vinho do Ano" é um tinto do Douro', excerpt: 'O prestigiado prémio foi para um vinho do Douro que custa 75 euros, reafirmando a qualidade excecional da região.', date: '13 de Maio de 2026', category: 'Prémios', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de leitura', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'A crítica especializada voltou a premiar a excelência do Douro. O título de "Melhor Vinho do Ano" foi atribuído a um tinto duriense, uma distinção que reforça o prestígio internacional da mais antiga região demarcada do mundo.' },
-                        { type: 'p', text: 'Na North Scape Tours, proporcionamos aos nossos clientes degustações premium que incluem colheitas premiadas nas melhores quintas da região. Venha provar a excelência connosco.' }
+                        { type: 'p', text: 'Na NORTHÉ, proporcionamos aos nossos clientes degustações premium que incluem colheitas premiadas nas melhores quintas da região. Venha provar a excelência connosco.' }
                     ]
                 },
                 {
@@ -255,7 +243,7 @@ export const CONTENT = {
             title: 'Política de Privacidade',
             back: 'Voltar',
             sections: [
-                { title: '1. Identificação do Responsável de Tratamento', content: 'A entidade responsável pelo tratamento de dados é a "North Scape Tours" (NIPC: 518 190 145), com sede em Portugal. Comprometemo-nos com a proteção de dados pessoais, cumprindo estritamente as normativas do RGPD Europeu (Regulamento de Proteção de Dados de Caráter Pessoal).' },
+                { title: '1. Identificação do Responsável de Tratamento', content: 'A entidade responsável pelo tratamento de dados é a "NORTHÉ" (NIPC: 518 190 145), com sede em Portugal. Comprometemo-nos com a proteção de dados pessoais, cumprindo estritamente as normativas do RGPD Europeu (Regulamento de Proteção de Dados de Caráter Pessoal).' },
                 { title: '2. Recolha e Finalidade', content: 'Não dispomos de formulários de venda diretos. Os dados fornecidos aquando de reservas ou contacto via e-mail e WhatsApp (nome completo, número de telemóvel, preferências dietéticas) servem o exclusivo propósito de organizar as logísticas do tour de forma 100% personalizada por cliente.' },
                 { title: '3. Partilha Externa', content: 'Alguns dados essenciais poderão ser comunicados apenas aos parceiros logísticos (Quintas e Restaurantes) sob o critério de intolerâncias/alergias alimentares ou adaptações de viaturas.' },
                 { title: '4. Política de Cookies', content: 'O Website usa tecnologia Cookie, exclusivamente com propósito técnico e analítico (Google Analytics) para entendermos o perfil do nosso visitante. Na primeira visita, foi inquirido do seu consentimento explícito em concordância com a Diretiva CE/PE de proteção da e-Privacy. Pode remover este consentimento ou apagar o histórico de sessão no seu Web Browser a qualquer tempo.' },
@@ -266,10 +254,10 @@ export const CONTENT = {
             title: 'Termos e Condições',
             back: 'Voltar',
             sections: [
-                { title: '1. Âmbito e Objeto', content: 'Estes Termos e Condições aplicam-se a todos os serviços prestados pela North Scape Tours. Ao reservar connosco, o cliente declara conhecer e aceitar estas normas.' },
-                { title: '2. Reservas e Pagamentos', content: 'As reservas tornam-se efetivas após confirmação escrita por parte da North Scape Tours. Os pagamentos são realizados conforme o método acordado no momento da reserva.' },
+                { title: '1. Âmbito e Objeto', content: 'Estes Termos e Condições aplicam-se a todos os serviços prestados pela NORTHÉ. Ao reservar connosco, o cliente declara conhecer e aceitar estas normas.' },
+                { title: '2. Reservas e Pagamentos', content: 'As reservas tornam-se efetivas após confirmação escrita por parte da NORTHÉ. Os pagamentos são realizados conforme o método acordado no momento da reserva.' },
                 { title: '3. Política de Cancelamento', content: 'Cancelamento gratuito até 48 horas antes da data do tour. Após este período, será cobrado o valor total da reserva devido aos compromissos assumidos com parceiros locais.' },
-                { title: '4. Responsabilidade', content: 'A North Scape Tours detém todos os seguros obrigatórios por lei (Acidentes Pessoais e Responsabilidade Civil). Não nos responsabilizamos por perdas de bens pessoais durante as atividades.' },
+                { title: '4. Responsabilidade', content: 'A NORTHÉ detém todos os seguros obrigatórios por lei (Acidentes Pessoais e Responsabilidade Civil). Não nos responsabilizamos por perdas de bens pessoais durante as atividades.' },
                 { title: '5. Jurisdição', content: 'Para a resolução de qualquer litígio, é competente o tribunal da comarca do Porto, com renúncia a qualquer outro.' },
             ]
         },
@@ -284,15 +272,14 @@ export const CONTENT = {
     },
     en: {
         nav: {
-            home: 'Home', tours: 'Tours',
-            transfer: 'Transfer', about: 'About', reviews: 'Reviews',
+            home: 'Home', tours: 'Private Tours', douro: 'Douro Valley', north: 'Northern Portugal', porto: 'Porto Experiences', about: 'About NORTHÉ', reviews: 'Reviews',
             blog: 'Blog', contact: 'Contact', book: 'Book', bookNow: 'Book Now',
         },
         hero: {
             subtitle: 'Exclusive Experiences in Northern Portugal',
-            title1: 'Exclusive Douro experiences',
-            title2: 'with wine tasting and river cruise.',
-            desc: 'Departures from Porto with comfortable transfer and personalised service.',
+            title1: 'Exclusive Private Journeys',
+            title2: 'Douro Valley · Porto · Northern Portugal',
+            desc: '100% private bespoke tours departing from Porto with executive transport and wine-expert guide.',
             cta: 'View Experiences',
             ctaWhatsapp: 'Chat on WhatsApp',
             trustLine: 'Licensed service · Free cancellation up to 48h · Trilingual guides',
@@ -393,14 +380,14 @@ export const CONTENT = {
         },
         about: {
             badge: 'About Us',
-            title: 'Beyond the Horizon: The Essence of North Scape Tours',
+            title: 'Beyond the Horizon: The Essence of NORTHÉ',
             paragraphs: [
-                'At North Scape Tours, we believe that luxury is not defined by what you see, but by what you feel. We were born from a passion to reveal the invisible Douro - the one that does not appear on tourist maps, but that pulses in private estates, in the silence of the waters at dusk and in the flavors of a cuisine that honors the land.',
+                'At NORTHÉ, we believe that luxury is not defined by what you see, but by what you feel. We were born from a passion to reveal the invisible Douro - the one that does not appear on tourist maps, but that pulses in private estates, in the silence of the waters at dusk and in the flavors of a cuisine that honors the land.',
                 'Our mission is to design experiences, not just routes. Every detail, from the comfort of our executive vehicles to the meticulous choice of partners with Michelin Star, is thought for those who value time, privacy and authenticity.',
                 'We are not just guides; we are storytellers and facilitators of moments. In the back seat of our exclusivity, the Douro ceases to be a destination to become an eternal memory.',
-                'Welcome to the Douro, at your own pace. Welcome to North Scape.',
+                'Welcome to the Douro, at your own pace. Welcome to NORTHÉ.',
             ],
-            signature: 'North Scape Tours',
+            signature: 'NORTHÉ',
             imageAlt: 'Douro Valley shrouded in morning mist',
         },
         reviews: {
@@ -414,10 +401,10 @@ export const CONTENT = {
                 { text: 'A magical day in the Douro. The guide was excellent, the wines superb and the lunch delicious. Highly recommend!', author: 'Marie Dubois', location: 'Paris, France', flag: '🇫🇷', stars: 4.5 },
                 { text: 'Best experience ever in the Douro! The sunset boat ride was unforgettable.', author: 'Carlos Mendes', location: 'São Paulo, Brazil', flag: '🇧🇷', stars: 5 },
                 { text: 'A perfect day! The wine tasting was top notch and the landscape is breathtaking.', author: 'Hannah Müller', location: 'Munich, Germany', flag: '🇩🇪', stars: 4.8 },
-                { text: 'We celebrated our anniversary with North Scape and it was the highlight of our trip. Real luxury.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
+                { text: 'We celebrated our anniversary with NORTHÉ and it was the highlight of our trip. Real luxury.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
                 { text: 'The guide knew everything about the history of the region. A must-trip for wine lovers.', author: 'Alessandro Rossi', location: 'Milan, Italy', flag: '🇮🇹', stars: 4.5 },
                 { text: 'Impeccable transfer and even better tour. First class service from start to finish.', author: 'Lucía Fernández', location: 'Madrid, Spain', flag: '🇪🇸', stars: 5 },
-                { text: 'Amazing! The Douro is magical and the North Scape team made everything special.', author: 'Daan van der Berg', location: 'Amsterdam, Netherlands', flag: '🇳🇱', stars: 4.8 },
+                { text: 'Amazing! The Douro is magical and the NORTHÉ team made everything special.', author: 'Daan van der Berg', location: 'Amsterdam, Netherlands', flag: '🇳🇱', stars: 4.8 },
             ],
         },
         faq: {
@@ -450,7 +437,7 @@ export const CONTENT = {
                         { type: 'p', text: 'The Douro has its own calendar. And in early July, Lamego becomes the epicentre of Portuguese wine.' },
                         { type: 'p', text: 'The Douro & Porto Wine Festival returned on July 3rd and 4th to the Porto Comercial de Cambres in Lamego, bringing together the region\'s finest producers in an event that combines, with rare elegance, exceptional wine tastings with chef cuisine and live music.' },
                         { type: 'p', text: 'For those visiting at this time of year, the festival represents a unique opportunity: to taste dozens of Douro references in a single weekend, speak directly with winemakers, and discover wines yet to reach specialist shop shelves.' },
-                        { type: 'p', text: 'At North Scape Tours, we combine the festival experience with our private tour of the valley — a day that begins among vineyards and ends with the river glowing gold at sunset. Advance bookings recommended.' }
+                        { type: 'p', text: 'At NORTHÉ, we combine the festival experience with our private tour of the valley — a day that begins among vineyards and ends with the river glowing gold at sunset. Advance bookings recommended.' }
                     ]
                 },
                 {
@@ -466,7 +453,7 @@ export const CONTENT = {
                     slug: 'melhor-vinho-do-ano-douro', title: '"The Best Wine of the Year" is a Douro Red', excerpt: 'The prestigious award went to a Douro wine, reaffirming the exceptional quality of the region.', date: 'May 13, 2026', category: 'Awards', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min read', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'Specialized critics have once again rewarded the excellence of the Douro. The title of "Best Wine of the Year" was awarded to a Douro red, a distinction that reinforces the international prestige of the oldest demarcated region in the world.' },
-                        { type: 'p', text: 'At North Scape Tours, we provide our clients with premium tastings that include award-winning vintages at the best estates in the region. Come taste excellence with us.' }
+                        { type: 'p', text: 'At NORTHÉ, we provide our clients with premium tastings that include award-winning vintages at the best estates in the region. Come taste excellence with us.' }
                     ]
                 },
                 {
@@ -527,7 +514,7 @@ export const CONTENT = {
             title: 'Privacy Policy',
             back: 'Back',
             sections: [
-                { title: '1. Identification of the Data Controller', content: 'The entity responsible for data processing is "North Scape Tours" (NIPC: 518 190 145), based in Portugal. We are committed to the protection of personal data, strictly complying with the EU GDPR (General Data Protection Regulation) standards.' },
+                { title: '1. Identification of the Data Controller', content: 'The entity responsible for data processing is "NORTHÉ" (NIPC: 518 190 145), based in Portugal. We are committed to the protection of personal data, strictly complying with the EU GDPR (General Data Protection Regulation) standards.' },
                 { title: '2. Collection and Purpose', content: 'We do not have direct sales forms. Data provided during bookings or contact via email and WhatsApp (full name, mobile number, dietary preferences) serve the exclusive purpose of organizing tour logistics in a 100% personalized way per client.' },
                 { title: '3. External Sharing', content: 'Some essential data may be communicated only to logistics partners (Estates and Restaurants) under the criteria of food intolerances/allergies or vehicle adaptations.' },
                 { title: '4. Cookie Policy', content: 'The Website uses Cookie technology, exclusively for technical and analytical purposes (Google Analytics) to understand our visitor profile. On your first visit, your explicit consent was requested in accordance with the EC/PE Directive on e-Privacy protection. You can remove this consent or clear your session history in your Web Browser at any time.' },
@@ -538,10 +525,10 @@ export const CONTENT = {
             title: 'Terms and Conditions',
             back: 'Back',
             sections: [
-                { title: '1. Scope and Object', content: 'These Terms and Conditions apply to all services provided by North Scape Tours. By booking with us, the client declares they know and accept these rules.' },
-                { title: '2. Bookings and Payments', content: 'Bookings become effective after written confirmation from North Scape Tours. Payments are made according to the method agreed upon at the time of booking.' },
+                { title: '1. Scope and Object', content: 'These Terms and Conditions apply to all services provided by NORTHÉ. By booking with us, the client declares they know and accept these rules.' },
+                { title: '2. Bookings and Payments', content: 'Bookings become effective after written confirmation from NORTHÉ. Payments are made according to the method agreed upon at the time of booking.' },
                 { title: '3. Cancellation Policy', content: 'Free cancellation up to 48 hours before the tour date. After this period, the full booking value will be charged due to commitments made with local partners.' },
-                { title: '4. Responsibility', content: 'North Scape Tours holds all insurance required by law (Personal Accident and Civil Liability). We are not responsible for loss of personal belongings during activities.' },
+                { title: '4. Responsibility', content: 'NORTHÉ holds all insurance required by law (Personal Accident and Civil Liability). We are not responsible for loss of personal belongings during activities.' },
                 { title: '5. Jurisdiction', content: 'For the resolution of any dispute, the court of the district of Porto is competent, with the waiver of any other.' },
             ]
         },
@@ -665,14 +652,14 @@ export const CONTENT = {
         },
         about: {
             badge: 'Sobre Nosotros',
-            title: 'Más allá del horizonte: La esencia de North Scape Tours',
+            title: 'Más allá del horizonte: La esencia de NORTHÉ',
             paragraphs: [
-                'En North Scape Tours, creemos que el lujo no se define por lo que se ve, sino por lo que se siente. Nacimos de la pasión por revelar el Duero invisible: aquel que no aparece en los mapas turísticos, sino que late en las fincas privadas, en el silencio de las aguas al atardecer y en los sabores de una cocina que honra la tierra.',
+                'En NORTHÉ, creemos que el lujo no se define por lo que se ve, sino por lo que se siente. Nacimos de la pasión por revelar el Duero invisible: aquel que no aparece en los mapas turísticos, sino que late en las fincas privadas, en el silencio de las aguas al atardecer y en los sabores de una cocina que honra la tierra.',
                 'Nuestra misión es diseñar experiencias, no solo trayectos. Cada detalle, desde el confort de nuestros vehículos ejecutivos hasta la elección meticulosa de socios con Estrella Michelin, está pensado para quienes valoran el tiempo, la privacidad y la autenticidad.',
                 'No somos solo guías; somos contadores de historias y facilitadores de momentos. En el asiento trasero de nuestra exclusividad, el Duero deja de ser un destino para convertirse en un recuerdo eterno.',
-                'Bienvenido al Duero, a su propio ritmo. Bienvenido a North Scape.',
+                'Bienvenido al Duero, a su propio ritmo. Bienvenido a NORTHÉ.',
             ],
-            signature: 'North Scape Tours',
+            signature: 'NORTHÉ',
             imageAlt: 'Valle del Duero envuelto en niebla matinal',
         },
         reviews: {
@@ -686,10 +673,10 @@ export const CONTENT = {
                 { text: 'Un día mágico en el Duero. El guía fue excelente, los vinos soberbios y el almuerzo delicioso. ¡Muy recomendable!', author: 'Marie Dubois', location: 'París, Francia', flag: '🇫🇷', stars: 4.5 },
                 { text: '¡La mejor experiencia en el Duero! El paseo en barco al atardecer fue inolvidable.', author: 'Carlos Mendes', location: 'São Paulo, Brasil', flag: '🇧🇷', stars: 5 },
                 { text: '¡Un día perfecto! La cata de vinos fue de alto nivel y el paisaje es impresionante.', author: 'Hannah Müller', location: 'Múnich, Alemania', flag: '🇩🇪', stars: 4.8 },
-                { text: 'Celebramos nuestro aniversario con North Scape y fue lo mejor de nuestro viaje. Lujo real.', author: 'Michael & Sarah Chen', location: 'Nueva York, EE. UU.', flag: '🇺🇸', stars: 5 },
+                { text: 'Celebramos nuestro aniversario con NORTHÉ y fue lo mejor de nuestro viaje. Lujo real.', author: 'Michael & Sarah Chen', location: 'Nueva York, EE. UU.', flag: '🇺🇸', stars: 5 },
                 { text: 'El guía sabía todo sobre la historia della región. Un viaje imprescindible para los amantes del vino.', author: 'Alessandro Rossi', location: 'Milán, Italia', flag: '🇮🇹', stars: 4.5 },
                 { text: 'Traslado impecable y tour aún mejor. Servicio de primera clase de principio a fin.', author: 'Lucía Fernández', location: 'Madrid, España', flag: '🇪🇸', stars: 5 },
-                { text: '¡Increíble! El Duero es mágico y el equipo de North Scape hizo que todo fuera especial.', author: 'Daan van der Berg', location: 'Ámsterdam, Holanda', flag: '🇳🇱', stars: 4.8 },
+                { text: '¡Increíble! El Duero es mágico y el equipo de NORTHÉ hizo que todo fuera especial.', author: 'Daan van der Berg', location: 'Ámsterdam, Holanda', flag: '🇳🇱', stars: 4.8 },
             ],
         },
         faq: {
@@ -722,7 +709,7 @@ export const CONTENT = {
                         { type: 'p', text: 'El Duero tiene su propio calendario. Y a principios de julio, Lamego se convierte en el epicentro del vino portugués.' },
                         { type: 'p', text: 'El Douro & Porto Wine Festival regresó los días 3 y 4 de julio al Porto Comercial de Cambres, en Lamego, reuniendo a los mejores productores de la región en un evento que combina, con rara elegancia, catas de vinos excepcionales con gastronomía de autor y música en vivo.' },
                         { type: 'p', text: 'Para quienes nos visitan en esta época del año, el festival representa una oportunidad única: degustar docenas de referencias del Duero en un solo fin de semana, dialogar directamente con enólogos y descubrir vinos que aún no han llegado a las tiendas especializadas.' },
-                        { type: 'p', text: 'En North Scape Tours, combinamos la experiencia del festival con nuestro tour privado por el valle — un día que comienza entre viñas y termina con el río dorándose al atardecer. Se recomienda reservar con antelación.' }
+                        { type: 'p', text: 'En NORTHÉ, combinamos la experiencia del festival con nuestro tour privado por el valle — un día que comienza entre viñas y termina con el río dorándose al atardecer. Se recomienda reservar con antelación.' }
                     ]
                 },
                 {
@@ -738,7 +725,7 @@ export const CONTENT = {
                     slug: 'melhor-vinho-do-ano-douro', title: '"El Mejor Vino del Año" es un Tinto del Duero', excerpt: 'El prestigioso premio fue para un vino del Duero, reafirmando la excepcional calidad de la región.', date: '13 de mayo de 2026', category: 'Premios', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lectura', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'La crítica especializada ha vuelto a premiar la excelencia del Duero. El título de "Mejor Vino del Año" fue otorgado a un tinto duriense, una distinción que refuerza el prestigio internacional de la región demarcada más antigua del mundo.' },
-                        { type: 'p', text: 'En North Scape Tours, brindamos a nuestros clientes catas premium que incluyen cosechas premiadas en las mejores fincas de la región. Venga a degustar la excelencia con nosotros.' }
+                        { type: 'p', text: 'En NORTHÉ, brindamos a nuestros clientes catas premium que incluyen cosechas premiadas en las mejores fincas de la región. Venga a degustar la excelencia con nosotros.' }
                     ]
                 },
                 {
@@ -799,7 +786,7 @@ export const CONTENT = {
             title: 'Política de Privacidad',
             back: 'Volver',
             sections: [
-                { title: '1. Identificación del Responsable del Tratamiento', content: 'La entidad responsable del tratamiento de datos es "North Scape Tours" (NIPC: 518 190 145), con sede en Portugal. Nos comprometemos con la protección de datos personales, cumpliendo estrictamente con la normativa RGPD Europea.' },
+                { title: '1. Identificación del Responsable del Tratamiento', content: 'La entidad responsable del tratamiento de datos es "NORTHÉ" (NIPC: 518 190 145), con sede en Portugal. Nos comprometemos con la protección de datos personales, cumpliendo estrictamente con la normativa RGPD Europea.' },
                 { title: '2. Recogida y Finalidad', content: 'No disponemos de formularios de venta directa. Los datos proporcionados durante las reservas o el contacto por correo electrónico y WhatsApp sirven al propósito exclusivo de organizar la logística del tour de forma personalizada.' },
                 { title: '3. Intercambio Externo', content: 'Algunos datos esenciales pueden ser comunicados solo a socios logísticos (fincas y restaurantes) bajo el criterio de intolerancias alimentarias o adaptaciones de vehículos.' },
                 { title: '4. Política de Cookies', content: 'El sitio web utiliza tecnología de cookies, exclusivamente con fines técnicos y analíticos para comprender el perfil del visitante. Puede retirar su consentimiento en cualquier momento.' },
@@ -810,10 +797,10 @@ export const CONTENT = {
             title: 'Términos y Condiciones',
             back: 'Volver',
             sections: [
-                { title: '1. Alcance y Objeto', content: 'Estos Términos y Condiciones se aplican a todos los servicios prestados por North Scape Tours.' },
+                { title: '1. Alcance y Objeto', content: 'Estos Términos y Condiciones se aplican a todos los servicios prestados por NORTHÉ.' },
                 { title: '2. Reservas y Pagos', content: 'Las reservas se hacen efectivas tras la confirmación por escrito. Los pagos se realizan según el método acordado.' },
                 { title: '3. Política de Cancelación', content: 'Cancelación gratuita hasta 48 horas antes del tour. Después, se aplicará la tarifa completa.' },
-                { title: '4. Responsabilidad', content: 'North Scape Tours cuenta con todos los seguros obligatorios por ley. No nos responsabilizamos por la pérdida de bienes personales.' },
+                { title: '4. Responsabilidad', content: 'NORTHÉ cuenta con todos los seguros obligatorios por ley. No nos responsabilizamos por la pérdida de bienes personales.' },
                 { title: '5. Jurisdicción', content: 'Para la resolución de cualquier disputa, es competente el tribunal del distrito de Oporto.' },
             ]
         },
@@ -937,14 +924,14 @@ export const CONTENT = {
         },
         about: {
             badge: 'À Propos',
-            title: 'Au-delà de l\'horizon : L\'âme de North Scape Tours',
+            title: 'Au-delà de l\'horizon : L\'âme de NORTHÉ',
             paragraphs: [
-                'Chez North Scape Tours, nous croyons que le luxe ne se définit pas par ce que vous voyez, mais par ce que vous ressentez. Nous sommes nés d\'une passion pour révéler le Douro invisible - celui qui n\'apparaît pas sur les cartes touristiques, mais qui vibre au sein des domaines privés, dans le silence du fleuve au crépuscule et dans les saveurs d\'une cuisine qui honore la terre.',
+                'Chez NORTHÉ, nous croyons que le luxe ne se définit pas par ce que vous voyez, mais par ce que vous ressentez. Nous sommes nés d\'une passion pour révéler le Douro invisible - celui qui n\'apparaît pas sur les cartes touristiques, mais qui vibre au sein des domaines privés, dans le silence du fleuve au crépuscule et dans les saveurs d\'une cuisine qui honore la terre.',
                 'Notre mission est de concevoir des expériences, pas des itinéraires. Chaque détail, du confort de nos véhicules exécutifs à la sélection méticuleuse de partenaires étoilés au Michelin, est pensé pour ceux qui apprécient le temps, l\'intimité et l\'authenticité.',
                 'Nous ne sommes pas de simples guides ; nous sommes des conteurs et des curateurs de moments inoubliables. À l\'arrière de notre exclusivité, le Douro cesse d\'être une destination pour devenir un souvenir éternel.',
-                'Bienvenue dans le Douro, à votre propre rythme. Bienvenue chez North Scape.',
+                'Bienvenue dans le Douro, à votre propre rythme. Bienvenue chez NORTHÉ.',
             ],
-            signature: 'North Scape Tours',
+            signature: 'NORTHÉ',
             imageAlt: 'Vallée du Douro enveloppée dans la brume matinale',
         },
         reviews: {
@@ -956,9 +943,9 @@ export const CONTENT = {
                 { text: 'Une expérience qui transcende le tourisme. Nous nous sommes sentis comme des invités d\'honneur dans l\'une des plus belles régions du monde. Le guide était exceptionnel et l\'attention portée aux détails impressionnante.', author: 'Sofia Albuquerque', location: 'Lisbonne, Portugal', flag: '🇵🇹', stars: 5 },
                 { text: 'L\'attention portée aux détails était impeccable. De la balade en bateau privé aux dégustations de vins exclusives, tout était parfait. Hautement recommandé pour tous ceux qui visitent Porto.', author: 'James Sterling', location: 'Londres, Royaume-Uni', flag: '🇬🇧', stars: 5 },
                 { text: 'Une journée magique dans la vallée du Douro. Le guide était exceptionnel, les vins superbes et le déjeuner absolument délicieux. Une expérience incontournable !', author: 'Marie Dubois', location: 'Paris, France', flag: '🇫🇷', stars: 4.5 },
-                { text: 'Meilleure expérience jamais vécue dans le Douro ! La balade en bateau au coucher du soleil était inoubliable. Je recommande vivement North Scape Tours.', author: 'Carlos Mendes', location: 'São Paulo, Brésil', flag: '🇧🇷', stars: 5 },
+                { text: 'Meilleure expérience jamais vécue dans le Douro ! La balade en bateau au coucher du soleil était inoubliable. Je recommande vivement NORTHÉ.', author: 'Carlos Mendes', location: 'São Paulo, Brésil', flag: '🇧🇷', stars: 5 },
                 { text: 'Une journée parfaite dans la vallée du Douro ! La dégustation de vins était de premier ordre et le paysage à couper le souffle. Nous reviendrons sans hésiter.', author: 'Hannah Müller', location: 'Munich, Allemagne', flag: '🇩🇪', stars: 4.8 },
-                { text: 'Nous avons fêté notre anniversaire avec North Scape et ce fut le point fort de notre voyage. L\'expérience privée semblait vraiment exclusive. Ça en valait chaque centime.', author: 'Michael & Sarah Chen', location: 'New York, États-Unis', flag: '🇺🇸', stars: 5 },
+                { text: 'Nous avons fêté notre anniversaire avec NORTHÉ et ce fut le point fort de notre voyage. L\'expérience privée semblait vraiment exclusive. Ça en valait chaque centime.', author: 'Michael & Sarah Chen', location: 'New York, États-Unis', flag: '🇺🇸', stars: 5 },
                 { text: 'Le guide savait tout sur les vins et l\'histoire de la région. Un voyage inoubliable que je recommande à tous les amateurs de vin.', author: 'Alessandro Rossi', location: 'Milan, Italie', flag: '🇮🇹', stars: 4.5 },
                 { text: 'Le transfert depuis l\'aéroport était impeccable, et le tour le lendemain a dépassé toutes nos attentes. Un service de première classe tout au long.', author: 'Lucía Fernández', location: 'Madrid, Espagne', flag: '🇪🇸', stars: 5 },
                 { text: 'Expérience incroyable ! Le bateau sur le Douro au coucher du soleil était magique. Un service professionnel du début à la fin.', author: 'Daan van der Berg', location: 'Amsterdam, Pays-Bas', flag: '🇳🇱', stars: 4.8 },
@@ -994,7 +981,7 @@ export const CONTENT = {
                         { type: 'p', text: 'Le Douro a son propre calendrier. Et au début du mois de juillet, Lamego devient l\'épicentre du vin portugais.' },
                         { type: 'p', text: 'Le Douro & Porto Wine Festival est revenu les 3 et 4 juillet au Porto Comercial de Cambres, à Lamego, réunissant les meilleurs producteurs de la région dans un événement qui combine, avec une élégance rare, des dégustations de vins d\'exception, de la gastronomie d\'auteur et de la musique live.' },
                         { type: 'p', text: 'Pour ceux qui nous rendent visite à cette époque de l\'année, le festival représente une opportunité unique : goûter des dizaines de références du Douro en un seul week-end, dialoguer directement avec des énologues et découvrir des vins qui n\'ont pas encore atteint les étagères des boutiques spécialisées.' },
-                        { type: 'p', text: 'Chez North Scape Tours, nous combinons l\'expérience du festival avec notre circuit privé dans la vallée — une journée qui commence entre les vignes et se termine avec le fleuve doré au coucher du soleil. Réservations anticipées recommandées.' }
+                        { type: 'p', text: 'Chez NORTHÉ, nous combinons l\'expérience du festival avec notre circuit privé dans la vallée — une journée qui commence entre les vignes et se termine avec le fleuve doré au coucher du soleil. Réservations anticipées recommandées.' }
                     ]
                 },
                 {
@@ -1009,7 +996,7 @@ export const CONTENT = {
                 { slug: 'melhor-vinho-do-ano-douro', title: '"Le Meilleur Vin de l\'Année" est un Rouge du Douro', excerpt: 'Le prix prestigieux a été décerné à un vin du Douro, réaffirmant la qualité exceptionnelle de la région.', date: '13 mai 2026', category: 'Prix', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lecture', bookable: true,
                     fullContent: [
                         { type: 'p', text: 'La critique spécialisée a une fois de plus récompensé l\'excellence du Douro. Le titre de "Meilleur Vin de l\'Année" a été attribué à un rouge du Douro, une distinction qui renforce le prestige international de la plus ancienne région délimitée au monde.' },
-                        { type: 'p', text: 'Chez North Scape Tours, nous offrons à nos clients des dégustations premium qui incluent des millésimes primés dans les meilleurs domaines de la région. Venez déguster l\'excellence avec nous.' }
+                        { type: 'p', text: 'Chez NORTHÉ, nous offrons à nos clients des dégustations premium qui incluent des millésimes primés dans les meilleurs domaines de la région. Venez déguster l\'excellence avec nous.' }
                     ]
                 },
                 {
@@ -1070,7 +1057,7 @@ export const CONTENT = {
             title: 'Politique de Confidentialité',
             back: 'Retour',
             sections: [
-                { title: '1. Identification du Responsable du Traitement', content: 'L\'entité responsable du traitement des données est "North Scape Tours" (NIPC : 518 190 145), basée au Portugal. Nous nous engageons à protéger les données personnelles conformément au RGPD européen.' },
+                { title: '1. Identification du Responsable du Traitement', content: 'L\'entité responsable du traitement des données est "NORTHÉ" (NIPC : 518 190 145), basée au Portugal. Nous nous engageons à protéger les données personnelles conformément au RGPD européen.' },
                 { title: '2. Collecte et Finalité', content: 'Nous ne disposons pas de formulaires de vente directe. Les données fournies lors des réservations ou des contacts servent exclusivement à l\'organisation personnalisée du tour.' },
                 { title: '3. Partage Externe', content: 'Certaines données essentielles peuvent être communiquées uniquement aux partenaires logistiques pour des raisons d\'intolérances alimentaires ou d\'adaptation des véhicules.' },
                 { title: '4. Politique de Cookies', content: 'Le site utilise des cookies à des fins techniques et analytiques. Vous pouvez retirer votre consentement à tout moment.' },
@@ -1081,10 +1068,10 @@ export const CONTENT = {
             title: 'Conditions Générales',
             back: 'Retour',
             sections: [
-                { title: '1. Champ d\'Application', content: 'Ces conditions générales s\'appliquent à tous les services fournis par North Scape Tours.' },
+                { title: '1. Champ d\'Application', content: 'Ces conditions générales s\'appliquent à tous les services fournis par NORTHÉ.' },
                 { title: '2. Réservations et Paiements', content: 'Les réservations sont effectives après confirmation écrite. Les paiements sont effectués selon la méthode convenue.' },
                 { title: '3. Politique d\'Annulation', content: 'Annulation gratuite jusqu\'à 48 heures avant le tour. Au-delà, le tarif plein est appliqué.' },
-                { title: '4. Responsabilité', content: 'North Scape Tours détient toutes les assurances obligatoires. Nous ne sommes pas responsables de la perte de biens personnels.' },
+                { title: '4. Responsabilité', content: 'NORTHÉ détient toutes les assurances obligatoires. Nous ne sommes pas responsables de la perte de biens personnels.' },
                 { title: '5. Juridiction', content: 'Pour la résolution de tout litige, le tribunal du district de Porto est compétent.' },
             ]
         },
@@ -1208,14 +1195,14 @@ export const CONTENT = {
         },
         about: {
             badge: 'Über Uns',
-            title: 'Hinter dem Horizont: Die Seele von North Scape Tours',
+            title: 'Hinter dem Horizont: Die Seele von NORTHÉ',
             paragraphs: [
-                'Bei North Scape Tours glauben wir, dass Luxus nicht durch das definiert wird, was man sieht, sondern durch das, was man fühlt. Wir sind aus der Leidenschaft heraus entstanden, den unsichtbaren Douro zu enthüllen - den, der nicht auf Touristenkarten erscheint, sondern in privaten Weingütern, in der Stille des Flusses bei der Abenddämmerung und in den Aromen einer Küche, die das Land ehrt, pulsiert.',
+                'Bei NORTHÉ glauben wir, dass Luxus nicht durch das definiert wird, was man sieht, sondern durch das, was man fühlt. Wir sind aus der Leidenschaft heraus entstanden, den unsichtbaren Douro zu enthüllen - den, der nicht auf Touristenkarten erscheint, sondern in privaten Weingütern, in der Stille des Flusses bei der Abenddämmerung und in den Aromen einer Küche, die das Land ehrt, pulsiert.',
                 'Unsere Mission ist es, Erlebnisse zu gestalten, nicht Reiserouten. Jedes Detail, vom Komfort unserer exklusiven Fahrzeuge bis hin zur sorgfältigen Auswahl von Michelin-Sterne-Partnern, ist für diejenigen konzipiert, die Zeit, Privatsphäre und Authentizität schätzen.',
                 'Wir sind nicht einfach nur Reiseleiter; wir sind Geschichtenerzähler und Kuratoren unvergesslicher Momente. Auf dem Rücksitz unserer Exklusivität hört der Douro auf, ein Reiseziel zu sein, und wird zu einer ewigen Erinnerung.',
-                'Willkommen am Douro, in Ihrem eigenen Tempo. Willkommen bei North Scape.',
+                'Willkommen am Douro, in Ihrem eigenen Tempo. Willkommen bei NORTHÉ.',
             ],
-            signature: 'North Scape Tours',
+            signature: 'NORTHÉ',
             imageAlt: 'Douro-Tal in Morgennebel gehüllt',
         },
         reviews: {
@@ -1227,9 +1214,9 @@ export const CONTENT = {
                 { text: 'Ein Erlebnis, das über den Tourismus hinausgeht. Wir fühlten uns wie Ehrengäste in einer der schönsten Regionen der Welt. Der Guide war außergewöhnlich und die Liebe zum Detail beeindruckend.', author: 'Sofia Albuquerque', location: 'Lissabon, Portugal', flag: '🇵🇹', stars: 5 },
                 { text: 'Die Liebe zum Detail war tadellos. Von der privaten Bootsfahrt bis hin zu den exklusiven Weinproben war alles perfekt. Sehr empfehlenswert für jeden, der Porto besucht.', author: 'James Sterling', location: 'London, GB', flag: '🇬🇧', stars: 5 },
                 { text: 'Ein magischer Tag im Douro-Tal. Der Guide war außergewöhnlich, die Weine hervorragend und das Mittagessen absolut köstlich. Ein absolutes Muss!', author: 'Marie Dubois', location: 'Paris, Frankreich', flag: '🇫🇷', stars: 4.5 },
-                { text: 'Das beste Erlebnis, das ich je am Douro hatte! Die Bootsfahrt zum Sonnenuntergang war unvergesslich. Ich kann North Scape Tours nur wärmstens empfehlen.', author: 'Carlos Mendes', location: 'São Paulo, Brasilien', flag: '🇧🇷', stars: 5 },
+                { text: 'Das beste Erlebnis, das ich je am Douro hatte! Die Bootsfahrt zum Sonnenuntergang war unvergesslich. Ich kann NORTHÉ nur wärmstens empfehlen.', author: 'Carlos Mendes', location: 'São Paulo, Brasilien', flag: '🇧🇷', stars: 5 },
                 { text: 'Ein perfekter Tag im Douro-Tal! Die Weinprobe war erstklassig und die Landschaft atemberaubend. Wir werden auf jeden Fall wiederkommen.', author: 'Hannah Müller', location: 'München, Deutschland', flag: '🇩🇪', stars: 4.8 },
-                { text: 'Wir haben unser Jubiläum mit North Scape gefeiert und es war der Höhepunkt unserer Reise. Das private Erlebnis fühlte sich wirklich exklusiv an. Es war jeden Cent wert.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
+                { text: 'Wir haben unser Jubiläum mit NORTHÉ gefeiert und es war der Höhepunkt unserer Reise. Das private Erlebnis fühlte sich wirklich exklusiv an. Es war jeden Cent wert.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
                 { text: 'Der Guide wusste alles über die Weine und die Geschichte der Region. Ein unvergessliche Reise, die ich allen Weinliebhabern empfehle.', author: 'Alessandro Rossi', location: 'Mailand, Italien', flag: '🇮🇹', stars: 4.5 },
                 { text: 'Der Flughafen-Transfer war makellos, und die Tour am nächsten Tag hat alle unsere Erwartungen übertroffen. Erstklassiger Service in jeder Hinsicht.', author: 'Lucía Fernández', location: 'Madrid, Spanien', flag: '🇪🇸', stars: 5 },
                 { text: 'Tolle Erfahrung! Das Boot auf dem Douro bei Sonnenuntergang war magisch. Professioneller Service von Anfang bis Ende.', author: 'Daan van der Berg', location: 'Amsterdam, Niederlande', flag: '🇳🇱', stars: 4.8 },
@@ -1265,7 +1252,7 @@ export const CONTENT = {
                         { type: 'p', text: 'Das Douro hat seinen eigenen Kalender. Und Anfang Juli wird Lamego zum Epizentrum des portugiesischen Weins.' },
                         { type: 'p', text: 'Das Douro & Porto Wine Festival kehrte am 3. und 4. Juli in den Porto Comercial de Cambres in Lamego zurück und versammelte die besten Produzenten der Region in einer Veranstaltung, die mit seltener Eleganz außergewöhnliche Weinproben mit Küche und Live-Musik verbindet.' },
                         { type: 'p', text: 'Für alle, die uns zu dieser Jahreszeit besuchen, bietet das Festival eine einzigartige Gelegenheit: Dutzende von Douro-Referenzen an einem einzigen Wochenende zu probieren, direkt mit Winzern zu sprechen und Weine zu entdecken, die noch nicht in den Fachgeschäften angekommen sind.' },
-                        { type: 'p', text: 'Bei North Scape Tours verbinden wir das Festivalerlebnis mit unserer privaten Tour durch das Tal — ein Tag, der zwischen den Weinbergen beginnt und mit dem im Sonnenuntergang golden leuchtenden Fluss endet. Frühzeitige Buchungen werden empfohlen.' }
+                        { type: 'p', text: 'Bei NORTHÉ verbinden wir das Festivalerlebnis mit unserer privaten Tour durch das Tal — ein Tag, der zwischen den Weinbergen beginnt und mit dem im Sonnenuntergang golden leuchtenden Fluss endet. Frühzeitige Buchungen werden empfohlen.' }
                     ]
                 },
                 {
@@ -1277,8 +1264,8 @@ export const CONTENT = {
                         { type: 'p', text: 'Immersive Weinernte-Erlebnisse — Handlese, Fußtretung in Granitkeltern, regionale Mittagessen mit Weinbegleitung — füllen sich schnell. Unsere Empfehlung: Warten Sie nicht bis September. Der Douro im August ist zunehmend Weinterrassen-Zeit.' }
                     ]
                 },
-                { slug: 'golden-hour-science-douro', title: 'Die Wissenschaft der Goldenen Stunde: Warum das Douro-Tal im Abendlicht leuchtet', excerpt: 'Das Abendlicht im Douro ver\u00e4ndert die Weinwahrnehmung und verwandelt jede Verkostung in ein einzigartiges Sinneserlebnis.', date: '10. Mai 2026', category: 'Erlebnisse', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Es gibt einen Moment an jedem Tag im Douro-Tal, den die Winzer die goldene Stunde nennen. Das Licht wird bernsteinfarben und das gesamte Tal scheint in sanfter Flamme zu brennen.' }, { type: 'h3', text: 'Das North Scape Erlebnis' }, { type: 'p', text: 'Bei unseren privaten Touren planen wir jeden Moment so, dass die Hauptverkostung mit der goldenen Stunde zusammenf\u00e4llt.' }] },
-                { slug: 'quintas-secretas-douro', title: 'Das Unsichtbare Douro: Private Quintas', excerpt: 'Entdecken Sie die historischen Douro-Anwesen, die nur auf private Einladung zug\u00e4nglich sind.', date: '3. Mai 2026', category: 'Exklusiv', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Das Alto Douro Weingebiet beherbergt \u00fcber 40.000 Weingüter. Die exklusivsten funktionieren nur auf private Einladung.' }, { type: 'blockquote', text: 'Wahrer Luxus im Douro l\u00e4sst sich nicht kaufen. Er wird mit Zeit und Neugier erobert.' }, { type: 'p', text: 'Bei North Scape Tours organisieren wir exklusive Besuche in privaten Quintas. Kontaktieren Sie uns für Ihr personalisiertes Erlebnis.' }] },
+                { slug: 'golden-hour-science-douro', title: 'Die Wissenschaft der Goldenen Stunde: Warum das Douro-Tal im Abendlicht leuchtet', excerpt: 'Das Abendlicht im Douro ver\u00e4ndert die Weinwahrnehmung und verwandelt jede Verkostung in ein einzigartiges Sinneserlebnis.', date: '10. Mai 2026', category: 'Erlebnisse', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Es gibt einen Moment an jedem Tag im Douro-Tal, den die Winzer die goldene Stunde nennen. Das Licht wird bernsteinfarben und das gesamte Tal scheint in sanfter Flamme zu brennen.' }, { type: 'h3', text: 'Das NORTHÉ Erlebnis' }, { type: 'p', text: 'Bei unseren privaten Touren planen wir jeden Moment so, dass die Hauptverkostung mit der goldenen Stunde zusammenf\u00e4llt.' }] },
+                { slug: 'quintas-secretas-douro', title: 'Das Unsichtbare Douro: Private Quintas', excerpt: 'Entdecken Sie die historischen Douro-Anwesen, die nur auf private Einladung zug\u00e4nglich sind.', date: '3. Mai 2026', category: 'Exklusiv', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Das Alto Douro Weingebiet beherbergt \u00fcber 40.000 Weingüter. Die exklusivsten funktionieren nur auf private Einladung.' }, { type: 'blockquote', text: 'Wahrer Luxus im Douro l\u00e4sst sich nicht kaufen. Er wird mit Zeit und Neugier erobert.' }, { type: 'p', text: 'Bei NORTHÉ organisieren wir exklusive Besuche in privaten Quintas. Kontaktieren Sie uns für Ihr personalisiertes Erlebnis.' }] },
                 { slug: 'gastronomia-michelin-douro', title: 'Haute Cuisine trifft Tradition: Die Michelin-Aromen des Douro', excerpt: 'Die gastronomische Revolution, die das Tal transformiert.', date: '25. April 2026', category: 'Gastronomie', image: '/images/blog/2026/gastronomy.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Das Douro-Weingebiet war schon immer ein Land intensiver Aromen. Jetzt erfindet eine neue Generation von K\u00f6chen dieses Erbe mit Haute-Cuisine-Technik neu.' }, { type: 'blockquote', text: 'Im Douro zu kochen bedeutet, der Erde zuzuh\u00f6ren. Jede Zutat erz\u00e4hlt eine jahrhundertealte Geschichte.' }, { type: 'p', text: 'Bei unseren gastronomischen Touren bieten wir Mittagessen in ausgew\u00e4hlten Quintas mit exklusiven Men\u00fcs.' }] },
                 { slug: 'vindima-douro-tradicao-viva', title: 'Die Douro-Weinlese: Eine Lebendige Tradition', excerpt: 'September im Douro ist magisch. Das Tal verwandelt sich in ein Fest der Farben und uralten Traditionen.', date: '15. April 2026', category: 'Tradition', image: '/images/blog/2026/harvest.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Wenn der September im Douro ankommt, explodieren die Terrassen in Paletten aus Gold, Rot und Bernstein. Es ist die Vindima, eine Tradition aus dem 12. Jahrhundert.' }, { type: 'blockquote', text: 'An einer Weinlese im Douro teilzunehmen bedeutet, die Seele Portugals zu berühren.' }, { type: 'p', text: 'Von September bis Mitte Oktober organisieren wir spezielle Weinlese-Touren. Ein authentisches und einmaliges Erlebnis.' }] }
             ],
@@ -1318,7 +1305,7 @@ export const CONTENT = {
             title: 'Datenschutzerklärung',
             back: 'Zurück',
             sections: [
-                { title: '1. Identifizierung des Verantwortlichen', content: 'Verantwortlich für die Datenverarbeitung ist "North Scape Tours" (NIPC: 518 190 145) mit Sitz in Portugal. Wir verpflichten uns zum Schutz personenbezogener Daten gemäß der DSGVO.' },
+                { title: '1. Identifizierung des Verantwortlichen', content: 'Verantwortlich für die Datenverarbeitung ist "NORTHÉ" (NIPC: 518 190 145) mit Sitz in Portugal. Wir verpflichten uns zum Schutz personenbezogener Daten gemäß der DSGVO.' },
                 { title: '2. Erhebung und Zweck', content: 'Wir haben keine direkten Verkaufsformulare. Daten aus Buchungen dienen ausschließlich der Organisation der Tour.' },
                 { title: '3. Externe Weitergabe', content: 'Daten werden nur bei Notwendigkeit an Logistikpartner (Weingüter/Restaurants) weitergegeben (z.B. Allergien).' },
                 { title: '4. Cookie-Richtlinie', content: 'Die Website verwendet Cookies zu technischen und analytischen Zwecken. Sie können Ihre Einwilligung jederzeit widerrufen.' },
@@ -1329,7 +1316,7 @@ export const CONTENT = {
             title: 'Allgemeine Geschäftsbedingungen',
             back: 'Zurück',
             sections: [
-                { title: '1. Geltungsbereich', content: 'Diese Bedingungen gelten für alle Dienstleistungen von North Scape Tours.' },
+                { title: '1. Geltungsbereich', content: 'Diese Bedingungen gelten für alle Dienstleistungen von NORTHÉ.' },
                 { title: '2. Buchung und Zahlung', content: 'Buchungen sind nach schriftlicher Bestätigung wirksam. Zahlungen erfolgen nach Vereinbarung.' },
                 { title: '3. Stornierung', content: 'Kostenlose Stornierung bis 48 Stunden vor dem Termin. Danach wird der volle Preis berechnet.' },
                 { title: '4. Haftung', content: 'Wir verfügen über alle gesetzlich vorgeschriebenen Versicherungen. Keine Haftung für den Verlust persönlicher Gegenstände.' },

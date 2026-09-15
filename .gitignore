@@ -6,3 +6,8 @@ coverage/
 *.log
 .env*
 !.env.example
+scratch/
+scratch_*
+*.docx
+*.pdf
+WhatsApp*
