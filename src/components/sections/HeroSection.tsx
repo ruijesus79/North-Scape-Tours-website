@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, Shield, Car, Check } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import MagneticButton from '../MagneticButton';
 import { IMG, Reveal, AmbientGlow } from '../../utils/shared';
@@ -10,43 +10,103 @@ import { WHATSAPP_LINK } from '../../content';
 const LazyVantaFog = lazy(() => import('../VantaFog'));
 
 export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => void }) {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 1000], ['0%', '20%']);
   const heroOpacity = useTransform(scrollY, [0, 600], [1, 0]);
 
   return (
     <>
-      <section id="home" className="relative h-screen w-full overflow-hidden flex items-end pb-24 md:items-center md:pb-0 bg-[#0c0c0c]">
+      <section id="home" className="relative h-screen w-full overflow-hidden flex items-end pb-20 md:items-center md:pb-0 bg-[#0c0c0c]">
         <motion.div className="absolute inset-0 w-full h-full" style={{ y: heroY, opacity: heroOpacity }}>
           <motion.div initial={{ scale: 1.15 }} animate={{ scale: 1 }} transition={{ duration: 14, ease: 'easeOut' }} className="w-full h-full">
             <img src={IMG.hero} alt="Vista panorâmica dos socalcos e vinhas do Vale do Douro" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
           </motion.div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-[#0c0c0c]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-[#0c0c0c]/95" />
         </motion.div>
         <Suspense fallback={null}><LazyVantaFog /></Suspense>
         <div className="hero-glow absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 w-full md:text-center md:mt-16">
-          <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }} className="inline-block mb-5 text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-white/50">
-            {t.hero.subtitle}
-          </motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }} className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.12] mb-6 tracking-tight">
-            <span className="text-gradient-animate">{t.hero.title1}</span><br />
-            <span className="italic text-white/60">{t.hero.title2}</span>
+        <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-8 w-full md:text-center md:mt-12">
+          {/* Main Headline - Refined Luxury Typography */}
+          <motion.h1
+            initial={{ opacity: 0, y: 25, filter: 'blur(6px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-white font-normal leading-[1.18] mb-3 tracking-tight drop-shadow-lg text-balance"
+          >
+            {t.hero.title1}
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }} className="max-w-xl md:mx-auto text-base sm:text-lg text-white/40 mb-10 font-light leading-relaxed">
+
+          {/* Elegant Subtitle - Geographic Highlights */}
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="font-serif italic text-lg sm:text-xl md:text-2xl text-white/80 font-normal tracking-wide mb-5 drop-shadow-md"
+          >
+            {t.hero.title2}
+          </motion.p>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-xl md:mx-auto text-sm sm:text-base text-white/70 mb-8 font-light leading-relaxed drop-shadow-sm"
+          >
             {t.hero.desc}
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.1, ease: [0.22, 1, 0.36, 1] }} className="flex flex-col sm:flex-row sm:justify-center items-start sm:items-center gap-3 mb-8">
-            <MagneticButton onClick={() => scrollTo('tours')} className="cta-glow border-beam btn-press cursor-pointer px-7 py-3.5 rounded-full bg-white text-black font-medium">
-              <span className="flex items-center gap-3">{t.hero.cta} <ArrowRight size={18} /></span>
+
+          {/* Action CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col sm:flex-row sm:justify-center items-start sm:items-center gap-3.5 mb-7"
+          >
+            <MagneticButton
+              onClick={() => scrollTo('tours')}
+              className="cta-glow border-beam btn-press cursor-pointer px-7 py-3.5 rounded-full bg-white text-black font-semibold text-xs sm:text-sm tracking-wider uppercase shadow-[0_4px_20px_rgba(255,255,255,0.18)] hover:bg-white/95 transition-all"
+            >
+              <span className="flex items-center gap-2.5">
+                {t.hero.cta} <ArrowRight size={16} />
+              </span>
             </MagneticButton>
-            <MagneticButton href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="btn-press cursor-pointer px-6 py-3.5 rounded-full border border-white/15 text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300">
-              <span className="flex items-center gap-2"><MessageCircle size={16} /> {t.hero.ctaWhatsapp}</span>
+            <MagneticButton
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-press cursor-pointer px-6 py-3.5 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md text-white/80 hover:text-white hover:bg-white/10 hover:border-emerald-500/40 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300"
+            >
+              <span className="flex items-center gap-2">
+                <MessageCircle size={15} className="text-emerald-400" /> {t.hero.ctaWhatsapp}
+              </span>
             </MagneticButton>
           </motion.div>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.4 }} className="text-[11px] text-white/20 tracking-wide">{t.hero.trustLine}</motion.p>
+
+          {/* Reassurance Micro-Badges */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.1 }}
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] sm:text-xs text-white/60 font-light"
+          >
+            <span className="flex items-center gap-1.5">
+              <Shield size={13} className="text-amber-400/90 flex-shrink-0" />
+              {lang === 'pt' ? '100% Tours Privados (1 a 8 pax)' : '100% Private Tours (1 to 8 pax)'}
+            </span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <span className="flex items-center gap-1.5">
+              <Car size={13} className="text-amber-400/90 flex-shrink-0" />
+              {lang === 'pt' ? 'Frota Executiva Mercedes-Benz' : 'Executive Mercedes-Benz Fleet'}
+            </span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <span className="flex items-center gap-1.5">
+              <Check size={13} className="text-emerald-400/90 flex-shrink-0" />
+              {lang === 'pt' ? 'Cancelamento Gratuito até 48h' : 'Free Cancellation up to 48h'}
+            </span>
+          </motion.div>
         </div>
       </section>
 
@@ -72,9 +132,9 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
 
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
           <Reveal>
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.12] mb-8 tracking-tight drop-shadow-2xl">
-              <span className="text-gradient-animate">{t.quote.text1}</span><br />
-              <span className="italic text-white/60">{t.quote.text2}</span>
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.25] mb-6 tracking-tight drop-shadow-xl text-balance">
+              <span className="text-white/95">{t.quote.text1}</span><br />
+              <span className="italic text-amber-200/80 font-normal">{t.quote.text2}</span>
             </h2>
             <div className="flex items-center justify-center gap-4 drop-shadow-md">
               <div className="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent to-amber-500/50" />
