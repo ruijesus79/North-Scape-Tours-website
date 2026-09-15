@@ -146,8 +146,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 549,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: '/images/douro_boat_tour_1771612994491.png',
-    gallery: ['/images/douro_boat_tour_1771612994491.png', '/images/novo-picnic.jpg', '/images/douro-premium.jpg']
+    image: '/images/tours/north_001_ponte_de_lima.jpg',
+    gallery: ['/images/tours/north_001_ponte_de_lima.jpg', '/images/douro_boat_tour_1771612994491.png', '/images/douro-premium.jpg']
   },
   {
     id: 'douro-wine-gastronomy',
@@ -298,8 +298,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 530,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_003_palacio_mateus.jpg',
+    gallery: ['/images/tours/north_003_palacio_mateus.jpg', '/images/douro-premium.jpg', '/images/douro_boat_tour_1771612994491.png']
   },
   {
     id: 'lamego-douro',
@@ -373,8 +373,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 540,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_004_lamego_remedios.jpg',
+    gallery: ['/images/tours/north_004_lamego_remedios.jpg', '/images/douro-premium.jpg', '/images/cinematic-style-couple-vineyard.jpg']
   },
   {
     id: 'douro-private-celebration',
@@ -525,8 +525,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 520,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1585208798174-6cedd86e019a?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_006_aveiro_moliceiro.jpg',
+    gallery: ['/images/tours/north_006_aveiro_moliceiro.jpg']
   },
   {
     id: 'barcelos-braga-guimaraes',
@@ -598,8 +598,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 490,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_007_castelo_guimaraes.jpg',
+    gallery: ['/images/tours/north_007_castelo_guimaraes.jpg']
   },
   {
     id: 'fatima-batalha-tomar',
@@ -671,8 +671,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 560,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_008_mosteiro_batalha.jpg',
+    gallery: ['/images/tours/north_008_mosteiro_batalha.jpg']
   },
   {
     id: 'obidos-alcobaca',
@@ -746,8 +746,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 560,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1578637387939-43c525550085?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_009_obidos_medieval.jpg',
+    gallery: ['/images/tours/north_009_obidos_medieval.jpg']
   },
   {
     id: 'porto-highlights-ocean',
@@ -819,8 +819,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 420,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1569959220744-ff553533f492?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1569959220744-ff553533f492?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_010_porto_teleferico.jpg',
+    gallery: ['/images/tours/north_010_porto_teleferico.jpg', '/images/northe_experience_portrait.jpg']
   },
   {
     id: 'geres-mountain-villages',
@@ -894,8 +894,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 549,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_011_geres_national_park.jpg',
+    gallery: ['/images/tours/north_011_geres_national_park.jpg']
   },
   {
     id: 'porto-filigree-gourmet',
@@ -969,8 +969,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 460,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_012_porto_filigrana.jpg',
+    gallery: ['/images/tours/north_012_porto_filigrana.jpg', '/images/northe_experience_square.jpg']
   },
   {
     id: 'douro-blind-tasting-blend',
@@ -1123,8 +1123,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 550,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_014_nazare_farol.jpg',
+    gallery: ['/images/tours/north_014_nazare_farol.jpg']
   },
   {
     id: 'arouca-santa-maria-feira',
@@ -1198,8 +1198,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 510,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80',
-    gallery: ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80']
+    image: '/images/tours/north_015_arouca_516.jpg',
+    gallery: ['/images/tours/north_015_arouca_516.jpg']
   },
   {
     id: 'historic-quinta-bucheiro-douro',
