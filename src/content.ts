@@ -139,17 +139,40 @@ export const CONTENT = {
         faq: {
             badge: 'FAQ',
             title: 'Tudo o que precisa de saber',
+            subtitle: 'Respostas claras e transparentes às dúvidas mais frequentes sobre os nossos tours 100% privados, comodidades, reservas e cancelamentos.',
             items: [
-                { q: 'Quais os 3 tours no Douro e o que muda em cada um?', a: 'Oferecemos 3 tours distintos: o mais simples inclui visita a 1 quinta com almoço, passeio de barco, prova de vinhos e comboio panorâmico. Todos acompanhados por guia trilíngue.' },
-                { q: 'Quanto tempo dura a experiência?', a: 'O Douro Tour é uma experiência de dia inteiro, entre 8 a 9 horas.' },
-                { q: 'É adequado para famílias com crianças?', a: 'Sim! Temos cadeirinhas e menus infantis disponíveis nos restaurantes parceiros.' },
-                { q: 'Posso personalizar a experiência?', a: 'Sim, somos especialistas em tours privados à medida.' },
-                { q: 'Pode-se cancelar a reserva?', a: 'Cancelamento gratuito até 48 horas antes da data do tour.' },
-                { q: 'Existem opções vegetarianas?', a: 'Sim, todos os nossos restaurantes parceiros oferecem alternativas vegetarianas e vegans.' },
-                { q: 'Os tours funcionam todo o ano?', a: 'Sim, cada estação no Douro tem o seu encanto único.' },
-                { q: 'Como funciona o transfer executivo?', a: 'Motorista privado com monitorização de voo em tempo real.' },
-                { q: 'Em que línguas estão disponíveis os tours?', a: 'Português e Inglês são garantidos. Outras línguas sob consulta.' },
-                { q: 'Como posso reservar?', a: 'Diretamente pelo site, WhatsApp ou e-mail.' },
+                {
+                    q: 'Os tours são mesmo 100% privados ou tenho de partilhar a carrinha com outras pessoas?',
+                    a: 'Todos os tours da NORTHÉ são rigorosamente 100% privados e exclusivos para si e para o seu grupo (de 1 a 8 pessoas). Nunca juntamos desconhecidos na mesma viatura. O veículo executivo Mercedes-Benz e o motorista-guia especialista em vinhos estarão inteiramente ao vosso serviço, permitindo desfrutar de cada paragem e paisagem ao vosso próprio ritmo.'
+                },
+                {
+                    q: 'O que está incluído no valor apresentado? Existem custos adicionais ocultos?',
+                    a: 'Não existem quaisquer custos ocultos. O valor inclui: transporte executivo exclusivo porta-a-porta (recolha e entrega no hotel/alojamento no Porto ou Gaia), motorista-guia certificado multilingue, água mineral a bordo, Wi-Fi, portagens e todos os seguros legais (RNAAT 284/2026). Consoante o tour selecionado, estão também incluídas as visitas guiadas às quintas com provas de vinhos DOC e do Porto, almoços regionais completos com harmonização vínica e cruzeiros em barco rabelo privado.'
+                },
+                {
+                    q: 'Qual é o tamanho máximo do grupo e como funciona o preço por pessoa?',
+                    a: 'A nossa frota executiva acomoda com o máximo conforto de 1 até 8 passageiros por viatura. O valor base é apresentado por veículo/grupo privado, o que significa que para famílias ou pequenos grupos (4 a 8 pessoas), o custo por pessoa fica extremamente vantajoso (a partir de ~€49 a €65 por pessoa), mantendo o padrão inigualável de um serviço de luxo 100% privado.'
+                },
+                {
+                    q: 'Onde e a que horas é feita a recolha (pick-up) e o regresso?',
+                    a: 'Recolhemos o seu grupo diretamente no átrio do seu hotel, apartamento, Airbnb ou residência na cidade do Porto e Vila Nova de Gaia, habitualmente entre as 08h30 e as 09h00 (ou num horário alternativo à sua escolha). No final do dia (cerca das 18h00 - 18h30), regressamos comodamente ao mesmo local ou deixamo-lo num restaurante à sua escolha para o jantar.'
+                },
+                {
+                    q: 'Qual é a política de cancelamento e de alteração de datas?',
+                    a: 'Oferecemos cancelamento gratuito e reembolso integral para cancelamentos solicitados até 48 horas antes da hora de início do tour. Caso os seus planos de voo sofram alterações ou surja algum imprevisto, ajustamos a data do seu tour sem qualquer custo adicional, sujeito à disponibilidade de calendário.'
+                },
+                {
+                    q: 'Os tours são adequados para famílias com crianças ou bebés?',
+                    a: 'Com certeza. Sendo uma viagem 100% privada, temos total flexibilidade para fazer pausas sempre que necessário. Disponibilizamos gratuitamente cadeirinhas auto homologadas e assentos elevatórios para bebés e crianças (basta indicar as idades na reserva). Os nossos parceiros dispõem de menus infantis e opções acolhedoras para toda a família.'
+                },
+                {
+                    q: 'Posso personalizar o roteiro, visitar quintas específicas ou celebrar uma ocasião especial?',
+                    a: 'Sim! A personalização é uma das maiores marcas da NORTHÉ. Caso pretenda visitar uma quinta de renome específica, realizar uma sessão fotográfica com fotógrafo profissional, celebrar uma lua-de-mel, aniversário ou pedido de casamento nas vinhas, criamos um itinerário sob medida e cuidamos de todos os pormenores.'
+                },
+                {
+                    q: 'Como posso reservar e quais as formas de pagamento seguras disponíveis?',
+                    a: 'A reserva é simples, rápida e segura. Pode iniciar o pedido diretamente através do nosso WhatsApp oficial (+351 911 923 499) para atendimento imediato ou preenchendo o formulário de cotação no nosso site. Aceitamos pagamentos por transferência bancária (SEPA/SWIFT), cartões de crédito/débito internacionais (Visa, Mastercard, Amex), MB Way e numerário, sempre com emissão de fatura oficial.'
+                },
             ],
         },
         blog: {
@@ -410,17 +433,40 @@ export const CONTENT = {
         faq: {
             badge: 'FAQ',
             title: 'Everything you need to know',
+            subtitle: 'Clear, transparent answers about our 100% private tours, premium amenities, booking process, and flexible cancellations.',
             items: [
-                { q: 'What are the 3 Douro tours and what changes in each?', a: 'We offer 3 distinct tours: the simplest includes a visit to 1 estate with lunch, boat ride, wine tasting and scenic train. All accompanied by a trilingual guide.' },
-                { q: 'How long does the experience last?', a: 'The Douro Tour is a full day experience, between 8 to 9 hours.' },
-                { q: 'Is it suitable for families with children?', a: 'Yes! We have baby seats and children\'s menus available at partner restaurants.' },
-                { q: 'Can I customize the experience?', a: 'Yes, we are experts in tailor-made private tours.' },
-                { q: 'Can the booking be cancelled?', a: 'Free cancellation up to 48 hours before the tour date.' },
-                { q: 'Are there vegetarian options?', a: 'Yes, all our partner restaurants offer vegetarian and vegan alternatives.' },
-                { q: 'Do the tours work all year round?', a: 'Yes, each season in the Douro has its unique charm.' },
-                { q: 'How does the executive transfer work?', a: 'Private driver with real-time flight monitoring.' },
-                { q: 'In which languages are the tours available?', a: 'Portuguese and English are guaranteed. Other languages on request.' },
-                { q: 'How can I book?', a: 'Directly through the website, WhatsApp or email.' },
+                {
+                    q: 'Are the tours strictly 100% private, or will we share the vehicle with strangers?',
+                    a: 'Every NORTHÉ experience is strictly 100% private and reserved exclusively for you and your party (from 1 to 8 guests). We never combine separate bookings in the same vehicle. Your luxury Mercedes-Benz executive van and certified wine-expert driver-guide are at your sole disposal throughout the entire day, allowing you to enjoy each scenic stop and winery at your own leisure.'
+                },
+                {
+                    q: 'What is included in the quoted price? Are there any hidden fees?',
+                    a: 'There are absolutely zero hidden fees. The price includes: private door-to-door executive transport (pickup and drop-off at your hotel or apartment in Porto/Vila Nova de Gaia), certified multilingual wine guide, bottled water onboard, Wi-Fi, highway tolls, and all mandatory official passenger insurance (RNAAT 284/2026). Depending on the selected tour, winery visits with premium DOC & Port tastings, gourmet regional lunches with wine pairings, and private river cruises are fully included.'
+                },
+                {
+                    q: 'What is the maximum party size and how does pricing work per person?',
+                    a: 'Our executive fleet comfortably accommodates from 1 to 8 guests per vehicle. The pricing is structured per private party/vehicle, which means that for families or groups of 4 to 8 guests, the cost per person becomes exceptionally attractive (starting from ~€49 to €65 per person) while guaranteeing the supreme comfort and exclusivity of a high-end private journey.'
+                },
+                {
+                    q: 'Where and what time is hotel pickup and drop-off?',
+                    a: 'We pick your group up directly at your hotel lobby, Airbnb, or residence in Porto or Vila Nova de Gaia, typically between 8:30 AM and 9:00 AM (or at a customized time of your choosing). At the end of the day (around 6:00 PM – 6:30 PM), we return you comfortably to your accommodation or drop you off at a dinner restaurant of your choice.'
+                },
+                {
+                    q: 'What is your cancellation and date reschedule policy?',
+                    a: 'We offer full 100% refunds for cancellations requested up to 48 hours prior to the scheduled tour start time, no questions asked. Should your travel or flight dates shift unexpectedly, we will gladly reschedule your booking to another available date without any penalty or rebooking fees.'
+                },
+                {
+                    q: 'Are the tours suitable for families with young children or infants?',
+                    a: 'Absolutely. Because your tour is completely private, you set the pace and we can pause whenever your family needs a break. We provide certified baby seats and child booster seats free of charge upon request (please indicate children\'s ages when inquiring). Partner estates and restaurants offer welcoming spaces and dedicated children\'s menus.'
+                },
+                {
+                    q: 'Can I customize the itinerary, visit specific estates, or celebrate a milestone?',
+                    a: 'Yes! Bespoke tailoring is NORTHÉ\'s trademark. Whether you have a dream winery on your bucket list, wish to hire a professional photographer, celebrate a romantic honeymoon, anniversary, or orchestrate a surprise marriage proposal among the vineyard terraces, our team will orchestrate every detail flawlessly.'
+                },
+                {
+                    q: 'How do I book and what secure payment methods are accepted?',
+                    a: 'Booking is swift and effortless. You can message us directly on official WhatsApp (+351 911 923 499) for immediate confirmation or submit our online inquiry form. We accept SEPA/SWIFT bank wire transfers, major international debit/credit cards (Visa, Mastercard, Amex), MB Way, and cash, always backed by an official invoice and booking voucher.'
+                },
             ],
         },
         blog: {
@@ -682,17 +728,40 @@ export const CONTENT = {
         faq: {
             badge: 'FAQ',
             title: 'Todo lo que necesita saber',
+            subtitle: 'Respuestas claras y transparentes sobre nuestros tours 100% privados, comodidades, reservas y cancelaciones.',
             items: [
-                { q: '¿Cuáles son los 3 tours en el Duero y qué cambia en cada uno?', a: 'Ofrecemos 3 tours distintos: el más sencillo incluye visita a 1 bodega con almuerzo, paseo en barco, cata de vinos y tren panorámico. Todos acompañados por guía trilingüe.' },
-                { q: '¿Cuánto dura la experiencia?', a: 'El Douro Tour es una experiencia de día completo, entre 8 y 9 horas.' },
-                { q: '¿Es adecuado para familias con niños?', a: '¡Sí! Tenemos sillas de bebé y menús infantiles disponibles en los restaurantes asociados.' },
-                { q: '¿Puedo personalizar la experiencia?', a: 'Sí, somos expertos en tours privados a medida.' },
-                { q: '¿Se puede cancelar la reserva?', a: 'Cancelación gratuita hasta 48 horas antes de la fecha del tour.' },
-                { q: '¿Hay opciones vegetarianas?', a: 'Sí, todos nuestros restaurantes asociados ofrecen alternativas vegetarianas y veganas.' },
-                { q: '¿Los tours funcionan todo el año?', a: 'Sí, cada estación en el Duero tiene su encanto único.' },
-                { q: '¿Cómo funciona el traslado ejecutivo?', a: 'Conductor privado con seguimiento de vuelo en tiempo real.' },
-                { q: '¿En qué idiomas están disponibles los tours?', a: 'Portugués e inglés garantizados. Otros bajo consulta.' },
-                { q: '¿Cómo puedo reservar?', a: 'Directamente por la web, WhatsApp o email.' },
+                {
+                    q: '¿Los tours son realmente 100% privados o se comparte el vehículo con desconocidos?',
+                    a: 'Todos los tours de NORTHÉ son estrictamente 100% privados y exclusivos para usted y su grupo (de 1 a 8 personas). Nunca mezclamos reservas distintas en el mismo vehículo. El vehículo ejecutivo Mercedes-Benz y el guía sumiller están dedicados únicamente a ustedes durante toda la jornada, adaptando las paradas y el ritmo a sus preferencias.'
+                },
+                {
+                    q: '¿Qué incluye el precio indicado? ¿Existen costes adicionales ocultos?',
+                    a: 'No existen costes ocultos. El precio incluye transporte ejecutivo privado puerta a puerta (recogida y regreso al hotel en Oporto o Vila Nova de Gaia), guía sumiller certificado multilingüe, agua mineral, Wi-Fi, peajes y seguros oficiales (RNAAT 284/2026). Según el tour seleccionado, incluye visitas guiadas a bodegas con catas de vinos DOC y Oporto, almuerzos tradicionales maridados y paseos en barco rabelo privado.'
+                },
+                {
+                    q: '¿Cuál es el tamaño máximo del grupo y cómo funciona el precio por persona?',
+                    a: 'Nuestra flota ejecutiva tiene capacidad para 1 a 8 pasajeros por vehículo con máxima comodidad. El precio se cotiza por vehículo/grupo privado, por lo que para familias o grupos de 4 a 8 personas el coste por persona resulta muy ventajoso (desde ~€49 a €65 por persona), disfrutando del lujo inigualable de la máxima privacidad.'
+                },
+                {
+                    q: '¿Dónde y a qué hora se realiza la recogida y el regreso?',
+                    a: 'Recogemos a su grupo directamente en la recepción de su hotel, apartamento o alojamiento en Oporto o Vila Nova de Gaia, habitualmente entre las 08:30 y las 09:00 (o en el horario que usted elija). Al finalizar el día (sobre las 18:00 - 18:30), regresamos al punto de partida o le dejamos en el restaurante que prefiera para cenar.'
+                },
+                {
+                    q: '¿Cuál es la política de cancelación y cambio de fecha?',
+                    a: 'Ofrecemos cancelación gratuita y reembolso del 100% para cancelaciones realizadas hasta 48 horas antes del inicio del tour. Si sus vuelos o planes sufren cambios imprevistos, reprogramamos la fecha de su tour sin recargo alguno, según disponibilidad.'
+                },
+                {
+                    q: '¿Los tours son adecuados para familias con niños o bebés?',
+                    a: 'Por supuesto. Al ser un tour 100% privado, adaptamos el ritmo a las necesidades de su familia. Proporcionamos sillas de coche y elevadores infantiles homologados de forma gratuita (indique las edades al reservar). Nuestros restaurantes colaboradores ofrecen menús infantiles y espacios acogedores.'
+                },
+                {
+                    q: '¿Puedo personalizar el itinerario, visitar bodegas concretas o celebrar una ocasión especial?',
+                    a: '¡Sí! La personalización es el sello de NORTHÉ. Si desea visitar una bodega icónica en particular, contratar un fotógrafo profesional, celebrar un aniversario, luna de miel o planear una pedida de mano sorpresa en los viñedos, diseñamos su itinerario a medida cuidando cada detalle.'
+                },
+                {
+                    q: '¿Cómo puedo reservar y qué métodos de pago seguros aceptan?',
+                    a: 'Reservar es rápido y seguro. Puede contactarnos directamente por nuestro WhatsApp oficial (+351 911 923 499) para confirmación inmediata o enviar el formulario web. Aceptamos transferencias bancarias, tarjetas de crédito/débito internacionales (Visa, Mastercard, Amex), MB Way y efectivo, con factura oficial.'
+                },
             ],
         },
         blog: {
@@ -954,17 +1023,40 @@ export const CONTENT = {
         faq: {
             badge: 'FAQ',
             title: 'Tout Ce Que Vous Devez Savoir',
+            subtitle: 'Des réponses claires et transparentes sur nos visites 100% privées, nos équipements, nos réservations et nos annulations.',
             items: [
-                { q: 'Quels sont les 3 tours dans le Douro et qu\'est-ce qui change dans chacun d\'eux ?', a: 'Nous proposons 3 tours distincts dans le Douro, chacun avec des expériences différentes. Le tour le plus simple comprend : Visite d\'un domaine viticole avec déjeuner accompagné de vins, balade en bateau, visite de domaine avec dégustation de vins, huile d\'olive et miel, promenade dans les vignes et trajet panoramique en train. Tous nos tours sont accompagnés d\'un guide trilingue (PT/EN/FR).' },
-                { q: 'Combien de temps dure l\'expérience ?', a: 'Le Douro Tour est une expérience d\'une journée complète de 8 à 9 heures. L\'expérience Douro à Deux a la même durée.' },
-                { q: 'Est-ce adapté aux familles avec enfants ?', a: 'Oui ! Le Douro Tour est idéal pour les familles. Les enfants sont les bienvenus et nous avons des sièges bébé disponibles pour les transferts. Des options de menu enfant sont disponibles dans les restaurants.' },
-                { q: 'Puis-je personnaliser l\'expérience ?', a: 'Absolument. Nous proposons des visites privées où vous pouvez adapter l\'itinéraire, choisir des domaines viticoles spécifiques ou ajouter des arrêts supplémentaires. Contactez-nous pour une visite sur mesure.' },
-                { q: 'Quelle est la politique d\'annulation ?', a: 'Annulation gratuite jusqu\'à 48 heures avant la date de la visite. Passé ce délai, le tarif plein s\'applique.' },
-                { q: 'Y a-t-il des options végétariennes ou des adaptations alimentaires ?', a: 'Oui. Nos restaurants partenaires proposent des options végétariennes, véganes et adaptées aux allergies. Veuillez nous informer lors de la réservation.' },
-                { q: 'Les tours fonctionnent-ils toute l\'année ?', a: 'Oui, les tours ont lieu toute l\'année. Chaque saison offre un paysage différent : vignes vertes au printemps, vendanges en automne et terrasses dorées en hiver.' },
-                { q: 'Comment fonctionne le transfert exécutif ?', a: 'Le chauffeur arrive avant l\'heure prévue. Pour les transferts aéroport, nous suivons votre vol en temps réel. Véhicule exécutif pouvant accueillir jusqu\'à 8 passagers.' },
-                { q: 'En quelles langues les tours sont-ils disponibles ?', a: 'Nos guides parlent couramment portugais et anglais. Pour d\'autres langues, contactez-nous pour vérifier la disponibilité.' },
-                { q: 'Comment puis-je réserver ?', a: 'Vous pouvez réserver directement sur notre site web, par WhatsApp ou par e-mail. Nous confirmons votre réservation dans les 2 heures.' },
+                {
+                    q: 'Les circuits sont-ils vraiment 100% privés ou devons-nous partager le van avec d\'autres clients ?',
+                    a: 'Toutes les expériences NORTHÉ sont rigoureusement 100% privées et réservées exclusivement à votre groupe (de 1 à 8 personnes). Nous ne regroupons jamais d\'inconnus dans le même véhicule. Le van exécutif Mercedes-Benz et votre chauffeur-guide sommelier sont entièrement dédiés à votre groupe tout au long de la journée, vous permettant de savourer chaque halte à votre propre rythme.'
+                },
+                {
+                    q: 'Qu\'est-ce qui est inclus dans le tarif ? Y a-t-il des frais cachés ?',
+                    a: 'Aucun frais caché. Le tarif comprend : la prise en charge et le retour privés porte-à-porte à votre hôtel ou appartement à Porto ou Gaia, un guide sommelier certifié multilingue, eau minérale à bord, Wi-Fi, péages d\'autoroute et assurances légales passagers (RNAAT 284/2026). Selon le circuit choisi, les visites guidées de domaines avec dégustations de vins DOC et de Porto, déjeuners gastronomiques complets et croisières privées en bateau rabelo sont totalement inclus.'
+                },
+                {
+                    q: 'Quelle est la taille maximale du groupe et comment fonctionne le tarif par personne ?',
+                    a: 'Notre flotte exécutive accueille de 1 à 8 passagers par véhicule avec un confort de premier ordre. Le tarif est fixé par véhicule/groupe privé : pour les familles ou groupes de 4 à 8 personnes, le coût par personne s\'avère particulièrement avantageux (dès ~49 € à 65 € par personne), tout en conservant le privilège exclusif d\'un service haut de gamme sur mesure.'
+                },
+                {
+                    q: 'Où et à quelle heure s\'effectuent la prise en charge et le retour ?',
+                    a: 'Nous venons chercher votre groupe directement dans le hall de votre hôtel, appartement ou Airbnb à Porto ou Vila Nova de Gaia, généralement entre 8h30 et 9h00 (ou à un horaire personnalisé selon vos souhaits). En fin de journée (vers 18h00 - 18h30), nous vous raccompagnons confortablement à votre hébergement ou au restaurant de votre choix pour le dîner.'
+                },
+                {
+                    q: 'Quelle est votre politique d\'annulation et de modification de date ?',
+                    a: 'Nous offrons une annulation gratuite avec remboursement intégral à 100% pour toute demande effectuée jusqu\'à 48 heures avant le début de la visite. En cas d\'imprévu ou de modification de vos horaires de vol, nous reprogrammons volontiers votre expérience sans aucuns frais additionnels, selon les disponibilités.'
+                },
+                {
+                    q: 'Les circuits sont-ils adaptés aux familles avec enfants ou bébés ?',
+                    a: 'Tout à fait. Votre journée étant 100% privée, nous adaptons le rythme et effectuons des pauses à votre convenance. Nous mettons gratuitement à disposition des sièges auto et rehausseurs homologués pour bébés et enfants (veuillez préciser leurs âges lors de la demande). Nos domaines et restaurants partenaires proposent des espaces chaleureux et des menus enfants.'
+                },
+                {
+                    q: 'Puis-je personnaliser l\'itinéraire, visiter un domaine spécifique ou fêter un événement ?',
+                    a: 'Oui ! Le sur-mesure est l\'ADN de NORTHÉ. Que vous souhaitiez visiter un domaine réputé précis, faire appel à un photographe professionnel, célébrer une lune de miel, un anniversaire ou organiser une demande en mariage surprise au milieu des vignes, notre équipe concrétise chaque détail à la perfection.'
+                },
+                {
+                    q: 'Comment réserver et quels moyens de paiement sécurisés sont acceptés ?',
+                    a: 'La réservation est simple, rapide et sécurisée. Vous pouvez nous contacter directement sur notre WhatsApp officiel (+351 911 923 499) pour une confirmation immédiate ou remplir le formulaire en ligne. Nous acceptons les virements bancaires (SEPA/SWIFT), cartes de débit/crédit internationales (Visa, Mastercard, Amex), MB Way et espèces, avec facture officielle.'
+                },
             ],
         },
         blog: {
@@ -1225,17 +1317,40 @@ export const CONTENT = {
         faq: {
             badge: 'FAQ',
             title: 'Alles, Was Sie Wissen Müssen',
+            subtitle: 'Transparente und detaillierte Antworten zu unseren 100% privaten Touren, Annehmlichkeiten, Buchungen und flexiblen Stornierungen.',
             items: [
-                { q: 'Welche sind die 3 Douro-Touren und was ist bei jeder anders?', a: 'Wir bieten 3 verschiedene Touren am Douro an: Die einfachste Tour beinhaltet Besuch von 1 Weingut mit Mittagessen, Bootsfahrt, Weinprobe und Panoramazugfahrt. Alle unsere Touren werden von einem dreisprachigen Guide (PT/EN/FR) begleitet.' },
-                { q: 'Wie lange dauert das Erlebnis?', a: 'Die Douro-Tour ist ein ganztägiges Erlebnis von 8 bis 9 Stunden. Das Douro-zu-zweit-Erlebnis hat die gleiche Dauer.' },
-                { q: 'Ist es für Familien mit Kindern geeignet?', a: 'Ja! Die Douro-Tour ist ideal für Familien. Kinder sind willkommen und wir haben Babysitze für Transfers zur Verfügung. Kindermenüs sind in den Restaurants erhältlich.' },
-                { q: 'Kann ich das Erlebnis individuell gestalten?', a: 'Absolut. Wir bieten private Touren an, bei denen Sie die Reiseroute anpassen, bestimmte Weingüter auswählen oder zusätzliche Stopps hinzufügen können. Kontaktieren Sie uns für eine maßgeschneiderte Tour.' },
-                { q: 'Wie lauten die Stornierungsbedingungen?', a: 'Kostenlose Stornierung bis zu 48 Stunden vor dem Tourtermin. Nach dieser Frist wird der volle Preis berechnet.' },
-                { q: 'Gibt es vegetarische Optionen oder Ernährungsanpassungen?', a: 'Ja. Unsere Partnerrestaurants bieten vegetarische, vegane und allergikerfreundliche Optionen an. Bitte informieren Sie uns bei der Buchung.' },
-                { q: 'Finden die Touren das ganze Jahr über statt?', a: 'Ja, die Touren finden das ganze Jahr über statt. Jede Jahreszeit bietet eine andere Landschaft: grüne Reben im Frühling, Ernte im Herbst und goldene Terrassen im Winter.' },
-                { q: 'Wie funktioniert der exklusive Transfer?', a: 'Der Fahrer trifft vor der geplanten Zeit ein. Bei Flughafen-Transfers überwachen wir Ihren Flug in Echtzeit. Exklusives Fahrzeug mit einer Kapazität für bis zu 8 Passagiere.' },
-                { q: 'In welchen Sprachen werden die Touren angeboten?', a: 'Unsere Guides sprechen fließend Portugiesisch und Englisch. Für andere Sprachen kontaktieren Sie uns bitte, um die Verfügbarkeit zu prüfen.' },
-                { q: 'Wie kann ich buchen?', a: 'Sie können direkt über unsere Website, per WhatsApp oder per E-Mail buchen. Wir bestätigen Ihre Buchung innerhalb von 2 Stunden.' },
+                {
+                    q: 'Sind die Touren wirklich 100% privat oder teilen wir das Fahrzeug mit anderen Gästen?',
+                    a: 'Jede Reise mit NORTHÉ ist ausnahmslos 100% privat und exklusiv für Sie und Ihre persönliche Reisegruppe (1 bis 8 Personen) reserviert. Wir kombinieren niemals Buchungen von fremden Personen. Der exklusive Mercedes-Benz Van und Ihr zertifizierter Sommelier-Guide stehen während des gesamten Tages ausschließlich Ihnen zur Verfügung, sodass Sie jeden Zwischenstopp in Ihrem eigenen Rhythmus genießen.'
+                },
+                {
+                    q: 'Was ist im Preis inbegriffen? Gibt es versteckte Zusatzkosten?',
+                    a: 'Es gibt absolut keine versteckten Kosten. Der Preis beinhaltet: exklusiven Tür-zu-Tür-Transfer (Abholung und Rückfahrt am Hotel in Porto oder Gaia), zertifizierten mehrsprachigen Weinguide, Mineralwasser an Bord, Wi-Fi, Autobahnmaut und gesetzlich vorgeschriebene Passagierversicherungen (RNAAT 284/2026). Je nach gewählter Tour sind Weingutbesichtigungen mit DOC- und Portweinverkostungen, mehrgängige Gourmet-Mittagessen mit Weinbegleitung und private Rabelo-Bootsfahrten vollständig enthalten.'
+                },
+                {
+                    q: 'Wie groß ist die maximale Gruppengröße und wie staffelt sich der Preis pro Person?',
+                    a: 'Unsere Executive-Flotte bietet 1 bis 8 Gästen pro Fahrzeug erstklassigen Komfort. Der Grundpreis gilt pro Privatfahrzeug/Gruppe. Für Familien oder befreundete Paare (4 bis 8 Personen) ergibt sich dadurch ein besonders attraktiver Pro-Kopf-Preis (ab ca. €49 bis €65 pro Person) – kombiniert mit dem unvergleichlichen Luxus absoluter Privatsphäre.'
+                },
+                {
+                    q: 'Wo und zu welcher Uhrzeit erfolgt die Abholung und die Rückkehr?',
+                    a: 'Wir holen Ihre Gruppe direkt in der Lobby Ihres Hotels, Apartments oder Ferienunterkunft in Porto oder Vila Nova de Gaia ab – üblicherweise zwischen 8:30 und 9:00 Uhr (oder zu einer individuell vereinbarten Wunschzeit). Am späten Nachmittag (ca. 18:00 – 18:30 Uhr) bringen wir Sie entspannt zurück zu Ihrer Unterkunft oder setzen Sie an einem Wunschrestaurant zum Abendessen ab.'
+                },
+                {
+                    q: 'Wie lauten Ihre Stornierungs- und Umbuchungsbedingungen?',
+                    a: 'Wir bieten eine kostenlose Stornierung mit 100% voller Rückerstattung bis zu 48 Stunden vor Tourbeginn – unkompliziert und ohne Rückfragen. Sollten sich Ihre Flug- oder Reisezeiten kurzfristig ändern, passen wir Ihren Termin bei Verfügbarkeit ohne zusätzliche Gebühren flexibel an.'
+                },
+                {
+                    q: 'Sind die Touren für Familien mit Kindern oder Kleinkindern geeignet?',
+                    a: 'Ganz bestimmt. Da Ihre Tour 100% privat ist, bestimmen Sie das Reisetempo und wir legen Pausen nach Ihren Bedürfnissen ein. Homologierte Babyschalen und Kindersitze stellen wir auf Anfrage kostenfrei bereit (bitte das Alter der Kinder bei der Anfrage angeben). Partnerweingüter und Restaurants bieten familienfreundliche Räumlichkeiten und spezielle Kindermenüs.'
+                },
+                {
+                    q: 'Kann ich die Reiseroute anpassen, bestimmte Weingüter besuchen oder besondere Anlässe feiern?',
+                    a: 'Ja! Maßgeschneiderte Erlebnisse sind die Kernkompetenz von NORTHÉ. Ob Besuch eines bestimmten Wunschweinguts, Begleitung durch einen professionellen Fotografen, Feier eines Jubiläums, Flitterwochen oder ein romantischer Heiratsantrag in den Weinbergen: Unser Team plant jedes Detail exakt nach Ihren Wünschen.'
+                },
+                {
+                    q: 'Wie buche ich und welche sicheren Zahlungsmethoden stehen zur Verfügung?',
+                    a: 'Die Buchung ist schnell und zuverlässig. Sie können direkt über unseren offiziellen WhatsApp-Service (+351 911 923 499) anfragen oder das Online-Formular nutzen. Wir akzeptieren Banküberweisungen (SEPA/SWIFT), internationale Kredit-/Debitkarten (Visa, Mastercard, Amex), MB Way und Barzahlung, stets mit offizieller Rechnung.'
+                },
             ],
         },
         blog: {
