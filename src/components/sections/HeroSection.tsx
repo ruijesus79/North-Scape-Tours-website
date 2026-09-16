@@ -1,13 +1,87 @@
 import React, { lazy, Suspense } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowRight, MessageCircle, Shield, Car, Check } from 'lucide-react';
+import { ArrowRight, MessageCircle, Shield, Car, Check, Star, Award } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import MagneticButton from '../MagneticButton';
 import { IMG, Reveal, AmbientGlow } from '../../utils/shared';
-import { WHATSAPP_LINK } from '../../content';
+import { WHATSAPP_LINK, GETYOURGUIDE_LINK } from '../../content';
 
 // @ts-ignore
 const LazyVantaFog = lazy(() => import('../VantaFog'));
+
+/* ──────── Social Proof Trust Ticker ──────── */
+function SocialProofBar({ lang }: { lang: string }) {
+  const pt = lang === 'pt';
+  const items = [
+    {
+      icon: <span className="text-[#00AF87] font-black text-xs">★</span>,
+      label: pt ? 'TripAdvisor · Certificado de Excelência' : 'TripAdvisor · Certificate of Excellence',
+      sub: '5.0 / 5.0',
+    },
+    {
+      icon: <Award size={14} className="text-orange-400 flex-shrink-0" />,
+      label: pt ? 'GetYourGuide · Top Rated' : 'GetYourGuide · Top Rated Partner',
+      sub: pt ? '15 tours verificados' : '15 verified tours',
+    },
+    {
+      icon: <Shield size={14} className="text-emerald-400 flex-shrink-0" />,
+      label: pt ? 'Turismo de Portugal · Empresa Licenciada' : 'Tourism of Portugal · Licensed Operator',
+      sub: 'RNAAT 284/2026',
+    },
+    {
+      icon: <Star size={13} fill="#d4af37" className="text-[#d4af37] flex-shrink-0" />,
+      label: pt ? '+1 200 Viajantes Satisfeitos' : '+1,200 Happy Travellers',
+      sub: pt ? 'desde 2018' : 'since 2018',
+    },
+    {
+      icon: <Check size={14} className="text-white/70 flex-shrink-0" />,
+      label: pt ? 'Motorista-Guia Especialista em Vinhos' : 'Certified Wine-Expert Driver-Guide',
+      sub: pt ? 'Fluente em PT · EN · ES · FR' : 'Fluent PT · EN · ES · FR',
+    },
+    {
+      icon: <Car size={14} className="text-amber-400 flex-shrink-0" />,
+      label: pt ? 'Frota Executiva Mercedes-Benz' : 'Executive Mercedes-Benz Fleet',
+      sub: pt ? 'Ar condicionado · Wi-Fi · Água' : 'A/C · Wi-Fi · Water',
+    },
+  ];
+
+  // Duplicate for seamless loop
+  const allItems = [...items, ...items];
+
+  return (
+    <div className="relative w-full overflow-hidden bg-[#0a0a0a] border-y border-white/[0.07] py-4">
+      {/* Left fade */}
+      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-r from-[#0a0a0a] to-transparent pointer-events-none" />
+      {/* Right fade */}
+      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 bg-gradient-to-l from-[#0a0a0a] to-transparent pointer-events-none" />
+
+      <div
+        className="flex items-center gap-10 w-max"
+        style={{
+          animation: 'social-proof-ticker 38s linear infinite',
+        }}
+      >
+        {allItems.map((item, idx) => (
+          <div
+            key={idx}
+            className="flex items-center gap-3 flex-shrink-0 group"
+          >
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/[0.05] border border-white/10 flex-shrink-0">
+              {item.icon}
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="text-[11px] text-white/75 font-medium whitespace-nowrap">{item.label}</span>
+              <span className="text-[10px] text-amber-400/70 font-mono whitespace-nowrap">{item.sub}</span>
+            </div>
+            {/* Separator dot */}
+            <span className="ml-4 text-white/15 text-lg flex-shrink-0">·</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 
 export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => void }) {
   const { lang, t } = useLanguage();
@@ -104,6 +178,8 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
           </motion.div>
         </div>
       </section>
+
+      <SocialProofBar lang={lang} />
 
       {/* ═══════ QUOTE / POEM ═══════ */}
       <section className="relative py-32 md:py-48 px-6 mt-0 md:mt-10 overflow-hidden flex items-center justify-center min-h-[60vh] md:min-h-[70vh]">

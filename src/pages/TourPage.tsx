@@ -104,21 +104,21 @@ export default function TourPage() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSent(true);
-    const subject = encodeURIComponent(`Pedido de Cotação: ${tour.code} - ${tourName} (${selectedPax} pax)`);
-    const body = encodeURIComponent(
-      `Olá NORTHÉ,\n\n` +
-      `Gostaria de solicitar informações/reserva para:\n` +
+    // Build a rich WhatsApp inquiry message that includes all form data
+    const formMessage =
+      `Olá NORTHÉ! Tenho interesse no seguinte tour privado:\n\n` +
       `• Tour: ${tour.code} - ${tourName}\n` +
       `• Nome: ${guestName}\n` +
       `• E-mail: ${guestEmail}\n` +
-      `• Número de Pessoas: ${selectedPax} pax (Privado)\n` +
+      `• Nº Pessoas: ${selectedPax} pax (100% Privado)\n` +
       `• Valor Estimado: €${totalPrice}\n` +
-      (travelDate ? `• Data Pretendida: ${travelDate}\n` : '') +
+      (travelDate ? `• Data Preferencial: ${travelDate}\n` : '') +
       (extraNames ? `• Upgrades VIP: ${extraNames}\n` : '') +
-      (guestNotes ? `• Mensagem/Notas: ${guestNotes}\n` : '')
-    );
-    window.location.href = `mailto:info@northetours.com?subject=${subject}&body=${body}`;
+      (guestNotes ? `• Notas / Pedidos Especiais: ${guestNotes}\n` : '') +
+      `\nPoderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
+    const formWhatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(formMessage)}`;
+    window.open(formWhatsappUrl, '_blank', 'noopener,noreferrer');
+    setFormSent(true);
   };
 
   // Related tours in same region
@@ -338,7 +338,7 @@ export default function TourPage() {
                 <span className="px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 inline-block">
                   {lang === 'pt' ? '100% Privado' : '100% Private'}
                 </span>
-                <p className="text-[10px] text-white/40 mt-1">
+                <p className="text-[10px] text-white/60 mt-1">
                   {lang === 'pt' ? 'Sem grupos externos' : 'No shared guests'}
                 </p>
               </div>
@@ -445,10 +445,12 @@ export default function TourPage() {
           {/* Quick Contact Form */}
           <div className="bg-white/[0.02] border border-white/10 rounded-3xl p-6 sm:p-7 backdrop-blur-sm">
             <h3 className="font-serif text-xl mb-1 text-white">
-              {lang === 'pt' ? 'Prefere contacto por e-mail?' : 'Prefer email contact?'}
+              {lang === 'pt' ? 'Pedido de Cotação Detalhado' : 'Detailed Quote Request'}
             </h3>
-            <p className="text-xs text-white/50 mb-5 font-light">
-              {lang === 'pt' ? 'Respondemos ao seu pedido em menos de 2 horas úteis.' : 'We reply to all bespoke requests within 2 business hours.'}
+            <p className="text-xs text-white/65 mb-5 font-light">
+              {lang === 'pt'
+                ? 'Preencha os seus dados e enviaremos a cotação pelo WhatsApp. Respondemos em menos de 2 horas.'
+                : 'Fill in your details and we\'ll send your quote via WhatsApp. We respond within 2 hours.'}
             </p>
 
             {formSent ? (
@@ -456,8 +458,8 @@ export default function TourPage() {
                 <CheckCircle2 size={18} />
                 <span>
                   {lang === 'pt'
-                    ? 'Mensagem enviada com sucesso! A equipa NORTHÉ entrará em contacto brevemente.'
-                    : 'Message sent! The NORTHÉ team will contact you shortly.'}
+                    ? 'Pedido enviado pelo WhatsApp! A equipa NORTHÉ responde em breve.'
+                    : 'Request sent via WhatsApp! The NORTHÉ team will reply shortly.'}
                 </span>
               </div>
             ) : (
@@ -469,7 +471,7 @@ export default function TourPage() {
                     placeholder={lang === 'pt' ? 'O seu nome completo' : 'Your full name'}
                     value={guestName}
                     onChange={(e) => setGuestName(e.target.value)}
-                    className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-colors placeholder:text-white/30"
+                    className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-colors placeholder:text-white/50"
                   />
                 </div>
                 <div>
@@ -479,7 +481,7 @@ export default function TourPage() {
                     placeholder={lang === 'pt' ? 'O seu e-mail de contacto' : 'Your email address'}
                     value={guestEmail}
                     onChange={(e) => setGuestEmail(e.target.value)}
-                    className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-colors placeholder:text-white/30"
+                    className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-colors placeholder:text-white/50"
                   />
                 </div>
                 <div>
@@ -488,15 +490,15 @@ export default function TourPage() {
                     placeholder={lang === 'pt' ? 'Notas adicionais ou pedidos especiais...' : 'Additional notes or special requests...'}
                     value={guestNotes}
                     onChange={(e) => setGuestNotes(e.target.value)}
-                    className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-colors placeholder:text-white/30 resize-none"
+                    className="w-full bg-white/[0.04] border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 transition-colors placeholder:text-white/50 resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3 bg-white text-black font-semibold rounded-xl text-xs hover:bg-white/90 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-xl text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-[0_4px_20px_rgba(16,185,129,0.25)]"
                 >
-                  <Send size={13} />
-                  <span>{lang === 'pt' ? 'Enviar Pedido de Cotação' : 'Send Inquiry Request'}</span>
+                  <MessageCircle size={13} />
+                  <span>{lang === 'pt' ? 'Enviar Pedido pelo WhatsApp' : 'Send Request via WhatsApp'}</span>
                 </button>
               </form>
             )}

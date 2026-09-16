@@ -28,6 +28,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
   const { lang, t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<'all' | 'douro' | 'north' | 'porto'>(initialCategory);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [showAll, setShowAll] = useState(false);
 
   // Synchronize when initialCategory changes from outside navigation
   useEffect(() => {
@@ -141,7 +142,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
               placeholder={lang === 'pt' ? 'Pesquisar destino, vinhos, cruzeiro...' : 'Search by destination, wine, cruise...'}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-xs text-white placeholder:text-white/35 focus:outline-none focus:border-amber-400/50 transition-colors"
+              className="w-full pl-11 pr-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-xs text-white placeholder:text-white/50 focus:outline-none focus:border-amber-400/50 transition-colors"
             />
           </div>
         </div>
@@ -164,19 +165,22 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
             </button>
           </div>
         ) : (
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-            {filteredTours.map((tour) => {
-              const tourName = tour.name[lKey] || tour.name.pt;
-              const tourSubtitle = tour.subtitle[lKey] || tour.subtitle.pt;
-              const tourDuration = tour.duration[lKey] || tour.duration.pt;
+          <>
+            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+              {filteredTours.map((tour, tourIndex) => {
+                // On mobile (controlled via state), hide cards beyond index 5 when showAll=false
+                const isMobileHidden = !showAll && tourIndex >= 6;
+                const tourName = tour.name[lKey] || tour.name.pt;
+                const tourSubtitle = tour.subtitle[lKey] || tour.subtitle.pt;
+                const tourDuration = tour.duration[lKey] || tour.duration.pt;
 
-              const quickMsg = `Olá NORTHÉ! Gostaria de saber mais sobre o tour privado: ${tour.code} - ${tourName}.`;
-              const quickWhatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(quickMsg)}`;
+                const quickMsg = `Olá NORTHÉ! Gostaria de saber mais sobre o tour privado: ${tour.code} - ${tourName}.`;
+                const quickWhatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(quickMsg)}`;
 
-              return (
-                <StaggerItem
-                  key={tour.id}
-                  className="group relative flex flex-col rounded-3xl overflow-hidden bg-white/[0.03] border border-white/8 backdrop-blur-sm hover:border-amber-500/40 hover:shadow-[0_10px_35px_rgba(0,0,0,0.5)] transition-all duration-500"
+                return (
+                  <StaggerItem
+                    key={tour.id}
+                    className={`group relative flex flex-col rounded-3xl overflow-hidden bg-white/[0.03] border border-white/8 backdrop-blur-sm hover:border-amber-500/40 hover:shadow-[0_10px_35px_rgba(0,0,0,0.5)] transition-all duration-500${isMobileHidden ? ' hidden md:flex' : ''}`}
                 >
                   {/* Photo Container */}
                   <div className="relative h-60 overflow-hidden">
@@ -221,7 +225,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                       {tourName}
                     </h3>
 
-                    <p className="text-xs text-white/55 font-light leading-relaxed line-clamp-2 mb-6">
+                    <p className="text-xs text-white/65 font-light leading-relaxed line-clamp-2 mb-6">
                       {tourSubtitle}
                     </p>
 
@@ -239,12 +243,19 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                     <div className="pt-4 border-t border-white/8 mt-auto">
                       <div className="flex items-baseline justify-between mb-4">
                         <div>
-                          <span className="text-[10px] uppercase tracking-widest text-white/40 block">
-                            {lang === 'pt' ? 'Grupo Privado (1 a 8 pax)' : 'Private Group (1-8 pax)'}
+                          <span className="text-[10px] uppercase tracking-widest text-white/50 block">
+                            {lang === 'pt' ? 'Viatura Privada (1-8 pax)' : 'Private Vehicle (1-8 pax)'}
                           </span>
-                          <span className="text-xs text-white/60">
-                            {lang === 'pt' ? 'A partir de' : 'Starting from'}{' '}
-                            <strong className="font-serif text-2xl text-white">€{tour.startingPrice}</strong>
+                          <div className="flex items-baseline gap-2">
+                            <span className="text-xs text-white/65">
+                              {lang === 'pt' ? 'A partir de' : 'From'}{' '}
+                              <strong className="font-serif text-2xl text-white">€{tour.startingPrice}</strong>
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-amber-400/60 font-mono">
+                            {lang === 'pt'
+                              ? `≈ €${Math.ceil(tour.startingPrice / 8)}/pessoa (8 pax)`
+                              : `≈ €${Math.ceil(tour.startingPrice / 8)}/person (8 pax)`}
                           </span>
                         </div>
                         {tour.gygVerified && (
@@ -278,6 +289,23 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
               );
             })}
           </StaggerContainer>
+
+          {/* Mobile "Show more" button — only visible on mobile when not all cards are shown */}
+          {filteredTours.length > 6 && !showAll && (
+            <div className="mt-10 flex justify-center md:hidden">
+              <button
+                onClick={() => setShowAll(true)}
+                className="cursor-pointer px-7 py-3.5 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md text-white/80 hover:text-white hover:bg-white/10 hover:border-amber-500/40 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 flex items-center gap-2.5"
+              >
+                <span>
+                  {lang === 'pt'
+                    ? `Ver mais ${filteredTours.length - 6} tours →`
+                    : `Show ${filteredTours.length - 6} more tours →`}
+                </span>
+              </button>
+            </div>
+          )}
+          </>
         )}
 
         {/* ═══════ VIP EXTRAS & BESPOKE UPGRADES ═══════ */}
