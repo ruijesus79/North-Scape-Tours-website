@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import {
   Search,
@@ -114,7 +115,10 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
               return (
                 <button
                   key={tab.key}
-                  onClick={() => setActiveCategory(tab.key as any)}
+                  onClick={() => {
+                    setActiveCategory(tab.key as any);
+                    setShowAll(false);
+                  }}
                   className={`cursor-pointer px-4 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 flex items-center gap-2 border ${
                     isSelected
                       ? 'bg-white text-black border-white shadow-[0_4px_20px_rgba(255,255,255,0.15)] scale-[1.02]'
@@ -166,7 +170,13 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
           </div>
         ) : (
           <>
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+            <motion.div
+              key={`${activeCategory}-${searchQuery}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.25 }}
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-7"
+            >
               {filteredTours.map((tour, tourIndex) => {
                 // On mobile (controlled via state), hide cards beyond index 5 when showAll=false
                 const isMobileHidden = !showAll && tourIndex >= 6;
@@ -178,10 +188,13 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                 const quickWhatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(quickMsg)}`;
 
                 return (
-                  <StaggerItem
+                  <motion.div
                     key={tour.id}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.35, delay: Math.min(tourIndex * 0.03, 0.2) }}
                     className={`group relative flex flex-col rounded-3xl overflow-hidden bg-white/[0.03] border border-white/8 backdrop-blur-sm hover:border-amber-500/40 hover:shadow-[0_10px_35px_rgba(0,0,0,0.5)] transition-all duration-500${isMobileHidden ? ' hidden md:flex' : ''}`}
-                >
+                  >
                   {/* Photo Container */}
                   <div className="relative h-60 overflow-hidden">
                     <img
@@ -285,10 +298,10 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                       </div>
                     </div>
                   </div>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
 
           {/* Mobile "Show more" button — only visible on mobile when not all cards are shown */}
           {filteredTours.length > 6 && !showAll && (
