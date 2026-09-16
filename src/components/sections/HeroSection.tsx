@@ -27,33 +27,28 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
         <Suspense fallback={null}><LazyVantaFog /></Suspense>
         <div className="hero-glow absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]" />
 
-        <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-8 w-full md:text-center md:mt-12">
-          {/* Main Headline - Refined Luxury Typography */}
+        <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 w-full md:text-center md:mt-12">
+          {/* Main Headline - Refined Luxury Typography with Shimmering Gradient */}
           <motion.h1
-            initial={{ opacity: 0, y: 25, filter: 'blur(6px)' }}
+            initial={{ opacity: 0, y: 25, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[50px] text-white font-normal leading-[1.18] mb-3 tracking-tight drop-shadow-lg text-balance"
+            transition={{ duration: 1.1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-[1.14] mb-4 tracking-[-0.01em] drop-shadow-[0_4px_30px_rgba(0,0,0,0.85)]"
           >
-            {t.hero.title1}
+            <span className="text-gradient-animate font-medium block">
+              {t.hero.title1}
+            </span>
+            <span className="block mt-2 sm:mt-1.5 font-serif italic text-xl sm:text-2xl md:text-3xl text-amber-100/85 font-normal tracking-wide drop-shadow-md">
+              {t.hero.title2}
+            </span>
           </motion.h1>
-
-          {/* Elegant Subtitle - Geographic Highlights */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif italic text-lg sm:text-xl md:text-2xl text-white/80 font-normal tracking-wide mb-5 drop-shadow-md"
-          >
-            {t.hero.title2}
-          </motion.p>
 
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-xl md:mx-auto text-sm sm:text-base text-white/70 mb-8 font-light leading-relaxed drop-shadow-sm"
+            transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-xl md:mx-auto text-sm sm:text-base text-white/75 mb-8 font-light leading-relaxed drop-shadow-sm"
           >
             {t.hero.desc}
           </motion.p>

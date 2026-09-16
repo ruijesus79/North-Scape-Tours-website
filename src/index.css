@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-serif: "Playfair Display", "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 body {
@@ -51,9 +51,10 @@ body {
 .text-gradient-animate {
   background: linear-gradient(120deg,
       #ffffff 0%,
-      #d4af37 25%,
-      #ffffff 50%,
-      #c9a84c 75%,
+      #fef3c7 20%,
+      #d4af37 42%,
+      #ffffff 62%,
+      #e6c86e 82%,
       #ffffff 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
