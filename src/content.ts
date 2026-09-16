@@ -181,8 +181,40 @@ export const CONTENT = {
             subtitle: 'Notícias, segredos e as últimas do enoturismo em Portugal.',
             readMore: 'Ler História',
             bookCta: 'Reservar esta experiência',
-            readTimeDefault: '3 min de leitura',
+            readTimeDefault: '4 min de leitura',
             items: [
+                {
+                    slug: 'vindimas-outono-douro-lagares-2026',
+                    title: 'Vindimas no Douro: A Magia dos Lagares de Granito e as Provas Exclusivas de Outono',
+                    excerpt: 'Quando as vinhas em socalcos ganham tonalidades douradas e acobreadas, o Douro entra na sua época mais apaixonante. Um convite privado para viver a pisa a pé, almoços nas vinhas e colheitas raras.',
+                    date: '15 de Setembro de 2026',
+                    category: 'Vindimas & Tradição',
+                    image: '/images/blog/2026/harvest.jpg',
+                    readTime: '4 min de leitura',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Setembro e outubro trazem ao Vale do Douro uma luz única e o perfume inconfundível do mosto em fermentação. É a temporada dourada da colheita, o momento em que séculos de saber-fazer ganham vida nas encostas esculpidas pelos rios Douro e Pinhão.' },
+                        { type: 'p', text: 'Longe das multidões das excursões turísticas convencionais, a experiência de vindima com a NORTHÉ é desenhada sob o signo da privacidade absoluta. O seu grupo é recebido por enólogos e famílias produtoras em quintas boutique de acesso reservado, onde a hospitalidade duriense é vivida com autenticidade desarmante.' },
+                        { type: 'p', text: 'Entre o ritual secular da pisa a pé nos lagares de granito, ao som de cantares tradicionais, e almoços harmonizados servidos nos terraços com vista panorâmica sobre o rio, cada momento é um tributo à gastronomia e aos grandes vinhos de mesa e do Porto.' },
+                        { type: 'p', text: 'Para celebrar esta época especial, a NORTHÉ disponibiliza roteiros de dia inteiro (Tour North-001 e North-002) com transporte executivo a partir do Porto, permitindo vivenciar as vindimas tardias e as primeiras prensagens com todo o conforto e exclusividade.' }
+                    ]
+                },
+                {
+                    slug: 'rota-secreta-minho-alvarinho-palacios-2026',
+                    title: 'Além do Douro: A Rota Secreta do Vinho Alvarinho e os Palácios do Minho',
+                    excerpt: 'Descubra a nobreza do Norte de Portugal entre os solares barrocos de Ponte de Lima, os castelos medievais de Guimarães e as quintas onde nasce o Alvarinho mais elegante do mundo.',
+                    date: '8 de Setembro de 2026',
+                    category: 'Norte de Portugal',
+                    image: '/images/blog/2026/quinta-estate.jpg',
+                    readTime: '4 min de leitura',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Se o Douro é o coração do vinho fortificado e dos tintos monumentais, o Minho é a alma verde, fresca e aristocrática do Norte de Portugal. Uma região de solares de granito com brasões seculares, jardins labirínticos e vinhedos que produzem brancos de craveira internacional.' },
+                        { type: 'p', text: 'Numa viagem privada com partida do Porto em viatura executiva, a NORTHÉ conduz o seu grupo pelas estradas cénicas do Alto Minho, explorando a sub-região de Monção e Melgaço, berço consagrado da casta nobre Alvarinho, caracterizada pela sua mineralidade vibrante e aromas florais inebriantes.' },
+                        { type: 'p', text: 'O itinerário conjuga visitas privadas a palácios históricos e quintas familiares com almoços gastronómicos onde o peixe fresco da costa, os arrozes de fumeiro e a doçaria conventual são servidos com o refinamento que a região exige.' },
+                        { type: 'p', text: 'Uma proposta perfeita para quem deseja alargar os horizontes para lá do Vale do Douro, descobrindo o património da UNESCO em Guimarães e Braga ou a beleza intemporal de Ponte de Lima com o nosso Tour Privado Minho & Vinhos Verdes.' }
+                    ]
+                },
                 {
                     slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: O Evento do Verão em Lamego', excerpt: 'Em pleno coração do Douro, Lamego foi, nos dias 3 e 4 de julho, o epicentro dos melhores vinhos portugueses, gastronomia de autor e música ao vivo.', date: '4 de Julho de 2026', category: 'Eventos', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min de leitura', bookable: true,
                     fullContent: [
@@ -475,8 +507,40 @@ export const CONTENT = {
             subtitle: 'News, secrets and the latest from wine tourism in Portugal.',
             readMore: 'Read Story',
             bookCta: 'Book this experience',
-            readTimeDefault: '3 min read',
+            readTimeDefault: '4 min read',
             items: [
+                {
+                    slug: 'vindimas-outono-douro-lagares-2026',
+                    title: 'Douro Harvest: The Magic of Granite Lagares & Exclusive Autumn Wine Tastings',
+                    excerpt: 'As terraced vineyards turn shades of deep gold and amber, the Douro enters its most passionate season. An exclusive private invitation to experience foot treading, vineyard lunches, and rare vintage releases.',
+                    date: 'September 15, 2026',
+                    category: 'Harvest & Tradition',
+                    image: '/images/blog/2026/harvest.jpg',
+                    readTime: '4 min read',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'September and October bestow upon the Douro Valley a luminous autumn light and the unmistakable aroma of fermenting must. It is the golden harvest season, when centuries of winemaking heritage come vibrantly alive across steep schist hillsides carved by the Douro and Pinhão rivers.' },
+                        { type: 'p', text: 'Far from crowded standard coach tours, harvest experiences with NORTHÉ are curated with absolute privacy and intimacy. Your party is hosted by estate winemakers and heritage families at secluded boutique quintas, where warm Portuguese hospitality is lived in its purest, most authentic form.' },
+                        { type: 'p', text: 'From the time-honored ritual of foot treading inside granite lagares to the sound of traditional folk melodies, to gourmet estate lunches served on scenic panoramic terraces overlooking the valley, every moment is an ode to refined gastronomy and world-class DOC and Port wines.' },
+                        { type: 'p', text: 'To celebrate this momentous season, NORTHÉ offers tailored full-day private journeys (Tour North-001 and North-002) with executive Mercedes-Benz transport directly from Porto, allowing you to immerse in late harvests and early pressings in complete comfort and prestige.' }
+                    ]
+                },
+                {
+                    slug: 'rota-secreta-minho-alvarinho-palacios-2026',
+                    title: 'Beyond the Douro: The Secret Alvarinho Route & Aristocratic Palaces of Minho',
+                    excerpt: 'Explore Northern Portugal\'s noble soul through the baroque manor estates of Ponte de Lima, medieval castles of Guimarães, and boutique quintas producing the world\'s finest Alvarinho.',
+                    date: 'September 8, 2026',
+                    category: 'Northern Portugal',
+                    image: '/images/blog/2026/quinta-estate.jpg',
+                    readTime: '4 min read',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'While the Douro Valley reigns supreme for fortified Ports and monumental reds, the Minho province represents Portugal\'s fresh, lush, and aristocratic soul. A majestic territory of granite manor estates, ancient coat-of-arms gates, manicured gardens, and world-renowned white wines.' },
+                        { type: 'p', text: 'Traveling privately from Porto in an executive Mercedes-Benz van, NORTHÉ whisks your party along scenic routes to the prestigious Monção and Melgaço sub-region—the historic cradle of the noble Alvarinho grape, revered globally for its flinty minerality and captivating citrus-floral aromas.' },
+                        { type: 'p', text: 'The curated itinerary seamlessly blends private visits to historic estates with leisurely gastronomic lunches featuring fresh Atlantic seafood, regional delicacies, and centuries-old conventual pastries served with impeccable panache.' },
+                        { type: 'p', text: 'The ultimate getaway for discerning travelers wishing to extend their Portuguese stay beyond the Douro, discovering the UNESCO World Heritage centers of Guimarães and Braga or the timeless romance of Ponte de Lima on our Private Minho & Vinho Verde Tour.' }
+                    ]
+                },
                 {
                     slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: The Summer Event in Lamego', excerpt: 'At the heart of the Douro, Lamego was, on July 3rd and 4th, the epicentre of the finest Portuguese wines, chef cuisine and live music.', date: 'July 4, 2026', category: 'Events', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min read', bookable: true,
                     fullContent: [
@@ -770,8 +834,40 @@ export const CONTENT = {
             subtitle: 'Noticias, secretos y lo último en enoturismo en Portugal.',
             readMore: 'Leer Historia',
             bookCta: 'Reservar esta experiencia',
-            readTimeDefault: '3 min de lectura',
+            readTimeDefault: '4 min de lectura',
             items: [
+                {
+                    slug: 'vindimas-outono-douro-lagares-2026',
+                    title: 'Vendimia en el Duero: La Magia de los Lagares de Granito y Catas Exclusivas de Otoño',
+                    excerpt: 'Cuando las terrazas de viñedos se tiñen de dorado y cobre, el Duero entra en su temporada más apasionante. Una invitación privada para vivir el pisado de uva, almuerzos campestres y añadas de colección.',
+                    date: '15 de septiembre de 2026',
+                    category: 'Vendimia y Tradición',
+                    image: '/images/blog/2026/harvest.jpg',
+                    readTime: '4 min de lectura',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Septiembre y octubre regalan al Valle del Duero una luz dorada y el aroma embriagador del mosto en fermentación. Es la temporada culmen del año vitivinícola, cuando siglos de tradición cobran vida en las laderas pizarrosas esculpidas por el río.' },
+                        { type: 'p', text: 'Lejos de las aglomeraciones de los autobuses turísticos convencionales, la experiencia de vendimia con NORTHÉ se concibe con absoluta privacidad. Su grupo es recibido por enólogos y propietarios en fincas boutique de acceso restringido, donde la hospitalidad portuguesa se siente en su expresión más auténtica.' },
+                        { type: 'p', text: 'Desde el rito secular del pisado de la uva a pie en lagares de granito al son de melodías tradicionales, hasta almuerzos gastronómicos en terrazas panorámicas con vistas al río, cada instante rinde homenaje a la alta cocina regional y a los mejores vinos DOC y Oporto.' },
+                        { type: 'p', text: 'Para disfrutar de este momento único, NORTHÉ ofrece itinerarios privados de día completo (Tour North-001 y North-002) con transporte ejecutivo desde Oporto, permitiendo presenciar las vendimias tardías con todo el confort y distinción.' }
+                    ]
+                },
+                {
+                    slug: 'rota-secreta-minho-alvarinho-palacios-2026',
+                    title: 'Más Allá del Duero: La Ruta Secreta del Vino Alvarinho y los Palacios del Miño',
+                    excerpt: 'Descubra la nobleza del Norte de Portugal entre los pazos solariegos de Ponte de Lima, los castillos de Guimarães y las quintas donde nace el Alvarinho más cotizado del mundo.',
+                    date: '8 de septiembre de 2026',
+                    category: 'Norte de Portugal',
+                    image: '/images/blog/2026/quinta-estate.jpg',
+                    readTime: '4 min de lectura',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Si el Duero es la cuna del vino de Oporto y los tintos monumentales, el Miño es el alma verde, fresca y señorial del Norte de Portugal. Una tierra de pazos de granito con blasones centenarios, jardines laberínticos y viñedos de renombre universal.' },
+                        { type: 'p', text: 'Viajando en privado desde Oporto en una van ejecutiva Mercedes-Benz, NORTHÉ guía a su grupo por los paisajes bucólicos de Monção y Melgaço, subregión madre de la uva Alvarinho, famosa por su mineralidad vibrante y aromas cítricos y florales.' },
+                        { type: 'p', text: 'El recorrido combina visitas exclusivas a palacios históricos con comidas gastronómicas donde el marisco del Atlántico, las carnes autóctonas y los dulces conventuales se degustan con la máxima delicadeza.' },
+                        { type: 'p', text: 'Una escapada perfecta para quienes desean ampliar horizontes más allá del Duero, recorriendo los centros Patrimonio de la UNESCO de Guimarães y Braga o el encanto de Ponte de Lima con nuestro Tour Privado Miño & Vinos Verdes.' }
+                    ]
+                },
                 {
                     slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: El Evento del Verano en Lamego', excerpt: 'En el corazón del Duero, Lamego fue, los días 3 y 4 de julio, el epicentro de los mejores vinos portugueses, gastronomía de autor y música en vivo.', date: '4 de julio de 2026', category: 'Eventos', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min de lectura', bookable: true,
                     fullContent: [
@@ -1065,8 +1161,40 @@ export const CONTENT = {
             subtitle: 'Actualités, secrets et les dernières nouveautés de l\'oenotourisme au Portugal.',
             readMore: 'Lire l\'Histoire',
             bookCta: 'Réserver cette expérience',
-            readTimeDefault: '3 min de lecture',
+            readTimeDefault: '4 min de lecture',
             items: [
+                {
+                    slug: 'vindimas-outono-douro-lagares-2026',
+                    title: 'Vendanges dans le Douro : La Magie des Lagares en Granit et Dégustations d\'Automne',
+                    excerpt: 'Quand les terrasses viticoles se parent d\'or et de cuivre, le Douro entre dans sa saison la plus émouvante. Une invitation privée pour vivre le foulage au pied, les déjeuners aux vignes et les grands millésimes.',
+                    date: '15 septembre 2026',
+                    category: 'Vendanges & Tradition',
+                    image: '/images/blog/2026/harvest.jpg',
+                    readTime: '4 min de lecture',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Septembre et octobre confèrent à la vallée du Douro une lumière dorée incomparable et les parfums envoûtants du moût en fermentation. C\'est la saison royale des vendanges, où des siècles de tradition reprennent vie sur les pentes escarpées de schiste baignées par le fleuve.' },
+                        { type: 'p', text: 'Bien loin de l\'agitation des circuits touristiques en autocar, l\'immersion de vendange avec NORTHÉ est conçue sous le signe de l\'intimité absolue. Votre groupe est reçu par les maîtres de chais et familles vigneronnes dans des quintas de prestige privatisées, où l\'hospitalité portugaise s\'exprime avec une générosité sans égale.' },
+                        { type: 'p', text: 'Du rituel séculaire du foulage des raisins au pied dans les cuves en granit (lagares) au son d\'airs folkloriques, aux déjeuners gastronomiques dressés sur des terrasses panoramiques surplombant le fleuve, chaque instant célèbre l\'art de vivre et les grands vins de Porto et du Douro.' },
+                        { type: 'p', text: 'Pour célébrer cette saison exceptionnelle, NORTHÉ propose des circuits privés sur-mesure d\'une journée (Tour North-001 et North-002) avec transport exécutif au départ de Porto, vous permettant de savourer les vendanges tardives dans le plus grand des conforts.' }
+                    ]
+                },
+                {
+                    slug: 'rota-secreta-minho-alvarinho-palacios-2026',
+                    title: 'Au-delà du Douro : La Route Secrète de l\'Alvarinho et les Châteaux du Minho',
+                    excerpt: 'Découvrez la noblesse du Nord du Portugal entre les manoirs baroques de Ponte de Lima, les cités médiévales de Guimarães et les domaines où naît le meilleur vin blanc Alvarinho.',
+                    date: '8 septembre 2026',
+                    category: 'Nord du Portugal',
+                    image: '/images/blog/2026/quinta-estate.jpg',
+                    readTime: '4 min de lecture',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Si le Douro est le temple mondial des grands vins rouges et des Portos centenaires, le Minho incarne l\'âme verte, aristocratique et raffinée du Portugal. Une contrée de manoirs seigneuriaux en granit, de portails armoriés, de jardins romantiques et de vignes produisant des blancs de renommée planétaire.' },
+                        { type: 'p', text: 'En voyage privé au départ de Porto en van Mercedes-Benz exécutif, NORTHÉ vous guide à travers les paysages bucoliques du Haut Minho vers la sous-région de Monção et Melgaço, berceau mythique du cépage noble Alvarinho, célébré pour sa minéralité cristalline et ses notes d\'agrumes délicates.' },
+                        { type: 'p', text: 'Ce circuit d\'exception conjugue visites privées de palais historiques et de domaines familiaux avec des déjeuners gastronomiques où poissons frais de l\'Atlantique, viandes savoureuses et pâtisseries conventuelles s\'accordent avec majesté.' },
+                        { type: 'p', text: 'Une escapade idéale pour prolonger votre séjour portugais au-delà du Douro, en explorant le patrimoine mondial de l\'UNESCO à Guimarães et Braga ou la poésie de Ponte de Lima grâce à notre Tour Privé Minho & Vins Verts.' }
+                    ]
+                },
                 {
                     slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival : L\'Événement de l\'Eté à Lamego', excerpt: 'Au cœur du Douro, Lamego a été, les 3 et 4 juillet, l\'épicentre des meilleurs vins portugais, de la gastronomie d\'auteur et de la musique live.', date: '4 juillet 2026', category: 'Événements', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min de lecture', bookable: true,
                     fullContent: [
@@ -1359,8 +1487,40 @@ export const CONTENT = {
             subtitle: 'Geschichten, Geheimnisse und Erlebnisse aus dem sch\u00f6nsten Tal der Welt.',
             readMore: 'Geschichte lesen',
             bookCta: 'Dieses Erlebnis buchen',
-            readTimeDefault: '3 Min. Lesezeit',
+            readTimeDefault: '4 Min. Lesezeit',
             items: [
+                {
+                    slug: 'vindimas-outono-douro-lagares-2026',
+                    title: 'Weinlese im Douro-Tal: Die Magie der Granit-Lagares & Exklusive Herbst-Weinproben',
+                    excerpt: 'Wenn sich die terrassierten Weinberge in tiefes Gold und Kupfer hüllen, erlebt das Douro-Tal seine faszinierendste Jahreszeit. Eine exklusive private Einladung zum traditionellen Traubentreten und seltenen Jahrgangsverkostungen.',
+                    date: '15. September 2026',
+                    category: 'Weinlese & Tradition',
+                    image: '/images/blog/2026/harvest.jpg',
+                    readTime: '4 Min. Lesezeit',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'September und Oktober schenken dem Douro-Tal ein unvergleichliches, goldenes Herbstlicht und den berauschenden Duft von gärendem Most. Es ist der Höhepunkt des Weinjahres, in dem jahrhundertealte Traditionen an den steilen Schieferhängen der Flüsse Douro und Pinhão lebendig werden.' },
+                        { type: 'p', text: 'Fernab von den Menschenmassen herkömmlicher Reisebusse sind die Weinlese-Erlebnisse von NORTHÉ ganz auf absolute Privatsphäre und Exklusivität ausgelegt. Ihre Gruppe wird von Önologen und Inhaberfamilien auf ausgewählten Boutique-Weingütern mit herzlicher portugiesischer Gastfreundschaft empfangen.' },
+                        { type: 'p', text: 'Vom traditionsreichen Ritual des Traubentretens mit bloßen Füßen in Granit-Lagares zu traditioneller Musik bis hin zu mehrgängigen Gourmet-Mittagessen auf Panoramaterrassen über dem Fluss: Jeder Augenblick ist ein Fest für die Sinne und die weltberühmten DOC- und Portweine.' },
+                        { type: 'p', text: 'Um diese besondere Jahreszeit voll auszukosten, bietet NORTHÉ maßgeschneiderte ganztägige Privattouren (Tour North-001 und North-002) mit Executive-Transfer direkt ab Porto an – für ein unvergessliches Weinerlebnis in höchstem Komfort.' }
+                    ]
+                },
+                {
+                    slug: 'rota-secreta-minho-alvarinho-palacios-2026',
+                    title: 'Jenseits des Douro: Die Geheime Alvarinho-Route & die Paläste des Minho',
+                    excerpt: 'Entdecken Sie Nordportugals aristokratische Seele zwischen den Barock-Herrensitzen von Ponte de Lima, den Burgen von Guimarães und den Wiegen des weltbesten Alvarinho-Weißweins.',
+                    date: '8. September 2026',
+                    category: 'Nordportugal',
+                    image: '/images/blog/2026/quinta-estate.jpg',
+                    readTime: '4 Min. Lesezeit',
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: 'Während das Douro-Tal für monumentale Rotweine und Portweine weltberühmt ist, verkörpert die Minho-Region die grüne, erfrischende und vornehme Seele Nordportugals. Ein Landstrich voller jahrhundertealter Herrenhäuser aus Granit, verwunschener Gärten und Weine von internationalem Rang.' },
+                        { type: 'p', text: 'Auf einer privaten Fahrt ab Porto in einem luxuriösen Mercedes-Benz Van führt NORTHÉ Sie entlang malerischer Landstraßen in die renommierte Subregion Monção und Melgaço – die Wiege der edlen Alvarinho-Traube, die für ihre vibrierende Mineralität und feinen Zitrus- und Blütenaromen geschätzt wird.' },
+                        { type: 'p', text: 'Die Reiseroute verbindet exklusive Privatbesuche historischer Schlösser und Familiengüter mit kulinarischen Mittagessen, bei denen frischer Atlantikfisch, regionale Spezialitäten und traditionelle Klosterdesserts zelebriert werden.' },
+                        { type: 'p', text: 'Eine ideale Tour für anspruchsvolle Reisende, die ihren Aufenthalt über das Douro-Tal hinaus erweitern möchten, um das UNESCO-Weltkulturerbe von Guimarães und Braga oder den zeitlosen Zauber von Ponte de Lima mit unserer Privattour Minho & Vinho Verde zu erleben.' }
+                    ]
+                },
                 {
                     slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: Das Weinfest des Sommers in Lamego', excerpt: 'Im Herzen des Douro war Lamego am 3. und 4. Juli das Epizentrum der besten portugiesischen Weine, der Sterneküche und Live-Musik.', date: '4. Juli 2026', category: 'Veranstaltungen', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 Min. Lesezeit', bookable: true,
                     fullContent: [

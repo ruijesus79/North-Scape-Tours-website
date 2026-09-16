@@ -1,0 +1,52 @@
+﻿name: Monthly Editorial Blog Publisher
+
+on:
+  schedule:
+    # Runs at 09:00 UTC on the 1st day of every month
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+    inputs:
+      custom_topic:
+        description: 'Tema personalizado para o artigo (opcional):'
+        required: false
+        default: ''
+
+jobs:
+  publish-blog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Generate monthly blog article with Gemini AI
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BLOG_TOPIC: ${{ github.event.inputs.custom_topic }}
+        run: |
+          python scripts/generate_monthly_blog.py
+
+      - name: Install dependencies & verify build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Commit & push to main (triggers Vercel deploy)
+        run: |
+          git config --local user.email "bot@northetours.com"
+          git config --local user.name "NORTHÉ Editorial Bot"
+          git add src/content.ts
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-Editorial Blog: novo artigo mensal publicado [skip ci]" && git push origin main)
