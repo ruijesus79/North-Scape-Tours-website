@@ -450,8 +450,8 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 649,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: '/images/northe_landscape_douro.jpg',
-    gallery: ['/images/northe_landscape_douro.jpg', '/images/douro_boat_tour_1771612994491.png']
+    image: '/images/tours/north_005_douro_celebration.jpg',
+    gallery: ['/images/tours/north_005_douro_celebration.jpg', '/images/douro_boat_tour_1771612994491.png', '/images/novo-picnic.jpg']
   },
   {
     id: 'coimbra-aveiro',
@@ -1273,8 +1273,13 @@ export const ALL_17_TOURS: TourItem[] = [
     startingPrice: 560,
     gygVerified: true,
     gygUrl: 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/',
-    image: '/images/northe_experience_square.jpg',
-    gallery: ['/images/northe_experience_square.jpg', '/images/douro_boat_tour_1771612994491.png']
+    image: '/images/tours/north_016_quinta_do_bucheiro.jpg',
+    gallery: [
+      '/images/tours/north_016_quinta_do_bucheiro.jpg',
+      '/images/tours/north_016_bucheiro_courtyard.jpg',
+      '/images/tours/north_016_bucheiro_cellar.jpg',
+      '/images/douro_boat_tour_1771612994491.png'
+    ]
   },
   {
     id: 'douro-luxury-picnic',
