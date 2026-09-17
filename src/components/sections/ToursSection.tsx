@@ -25,11 +25,101 @@ interface ToursSectionProps {
   initialCategory?: 'all' | 'douro' | 'north' | 'porto';
 }
 
+const SECTION_UI = {
+  pt: {
+    exclusiveBadge: '100% Tours Privados Exclusivos',
+    title: 'Coleção de Tours Privados',
+    subtitle: '17 experiências concebidas exclusivamente para grupos de 1 a 8 pessoas. Sem partilha com desconhecidos, em viaturas executivas e ao seu próprio ritmo.',
+    allTab: 'Todos os Tours',
+    searchPlaceholder: 'Pesquisar destino, vinhos, cruzeiro...',
+    noMatch: 'Nenhum tour encontrado para esta pesquisa.',
+    resetFilters: 'Limpar filtros',
+    privateBadge: '100% Privado',
+    pickup: 'Porto Pickup',
+    paxNote: 'Viatura Privada (1-8 pax)',
+    from: 'Desde',
+    details: 'Ver Tour',
+    whatsappQuick: 'WhatsApp',
+    viewAllMobile: 'Ver Todos os 17 Tours Privados',
+    showLessMobile: 'Mostrar Menos',
+  },
+  en: {
+    exclusiveBadge: '100% Exclusive Private Tours',
+    title: 'Private Tours Collection',
+    subtitle: '17 signature journeys curated exclusively for private parties of 1 to 8 guests. No shared crowds, in executive vehicles with a dedicated wine-expert guide.',
+    allTab: 'All Tours',
+    searchPlaceholder: 'Search by destination, wine, cruise...',
+    noMatch: 'No tours matched your search criteria.',
+    resetFilters: 'Reset filters',
+    privateBadge: '100% Private',
+    pickup: 'Porto Pickup',
+    paxNote: 'Private Vehicle (1-8 pax)',
+    from: 'From',
+    details: 'Explore',
+    whatsappQuick: 'WhatsApp',
+    viewAllMobile: 'View All 17 Private Tours',
+    showLessMobile: 'Show Less',
+  },
+  es: {
+    exclusiveBadge: '100% Tours Privados Exclusivos',
+    title: 'Colección de Tours Privados',
+    subtitle: '17 experiencias diseñadas exclusivamente para grupos de 1 a 8 personas. Sin compartir con desconocidos, en vehículos ejecutivos y a su propio ritmo.',
+    allTab: 'Todos los Tours',
+    searchPlaceholder: 'Buscar destino, vinos, crucero...',
+    noMatch: 'No se encontraron tours para esta búsqueda.',
+    resetFilters: 'Restablecer filtros',
+    privateBadge: '100% Privado',
+    pickup: 'Recogida Oporto',
+    paxNote: 'Vehículo Privado (1-8 pax)',
+    from: 'Desde',
+    details: 'Ver Tour',
+    whatsappQuick: 'WhatsApp',
+    viewAllMobile: 'Ver Todos los 17 Tours Privados',
+    showLessMobile: 'Mostrar Menos',
+  },
+  fr: {
+    exclusiveBadge: '100% Circuits Privés Exclusifs',
+    title: 'Collection de Circuits Privés',
+    subtitle: '17 expériences conçues exclusivement pour des groupes privés de 1 à 8 personnes. Sans partage, en véhicules exécutifs et à votre propre rythme.',
+    allTab: 'Tous les Circuits',
+    searchPlaceholder: 'Rechercher destination, vins, croisière...',
+    noMatch: 'Aucun circuit trouvé pour cette recherche.',
+    resetFilters: 'Réinitialiser les filtres',
+    privateBadge: '100% Privé',
+    pickup: 'Prise en charge Porto',
+    paxNote: 'Véhicule Privé (1-8 pax)',
+    from: 'À partir de',
+    details: 'Découvrir',
+    whatsappQuick: 'WhatsApp',
+    viewAllMobile: 'Voir Tous les 17 Circuits Privés',
+    showLessMobile: 'Afficher Moins',
+  },
+  de: {
+    exclusiveBadge: '100% Exklusive Private Touren',
+    title: 'Kollektion Privater Touren',
+    subtitle: '17 Erlebnisse exklusiv für geschlossene Gruppen von 1 bis 8 Personen. Keine fremden Gäste, in Executive-Fahrzeugen und in Ihrem eigenen Tempo.',
+    allTab: 'Alle Touren',
+    searchPlaceholder: 'Nach Ziel, Weinen oder Bootsfahrt suchen...',
+    noMatch: 'Keine Touren für diese Suche gefunden.',
+    resetFilters: 'Filter zurücksetzen',
+    privateBadge: '100% Privat',
+    pickup: 'Abholung Porto',
+    paxNote: 'Privatfahrzeug (1-8 pax)',
+    from: 'Ab',
+    details: 'Tour Ansehen',
+    whatsappQuick: 'WhatsApp',
+    viewAllMobile: 'Alle 17 Privaten Touren Anzeigen',
+    showLessMobile: 'Weniger Anzeigen',
+  }
+};
+
 export default function ToursSection({ scrollTo, initialCategory = 'all' }: ToursSectionProps) {
   const { lang, t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<'all' | 'douro' | 'north' | 'porto'>(initialCategory);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [showAll, setShowAll] = useState(false);
+
+  const ui = SECTION_UI[lang as keyof typeof SECTION_UI] || SECTION_UI.en;
 
   // Synchronize when initialCategory changes from outside navigation
   useEffect(() => {
@@ -49,8 +139,6 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
     return () => window.removeEventListener('northe_select_category' as any, handleCategorySelect as any);
   }, []);
 
-  const lKey = lang === 'pt' ? 'pt' : 'en';
-
   // Category counts
   const counts = useMemo(() => {
     return {
@@ -61,7 +149,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
     };
   }, []);
 
-  // Filtered tours based on category and search query
+  // Filtered tours based on category and search query (multilingual search)
   const filteredTours = useMemo(() => {
     return ALL_17_TOURS.filter((tour) => {
       // Category filter
@@ -71,12 +159,20 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
       // Search query filter
       if (!searchQuery.trim()) return true;
       const query = searchQuery.toLowerCase();
-      const name = (tour.name[lKey] || tour.name.pt).toLowerCase();
-      const subtitle = (tour.subtitle[lKey] || tour.subtitle.pt).toLowerCase();
+      const name = (tour.name[lang] || tour.name['en'] || tour.name.pt).toLowerCase();
+      const subtitle = (tour.subtitle[lang] || tour.subtitle['en'] || tour.subtitle.pt).toLowerCase();
+      const ptName = tour.name.pt.toLowerCase();
+      const ptSubtitle = tour.subtitle.pt.toLowerCase();
       const code = tour.code.toLowerCase();
-      return name.includes(query) || subtitle.includes(query) || code.includes(query);
+      return (
+        name.includes(query) ||
+        subtitle.includes(query) ||
+        ptName.includes(query) ||
+        ptSubtitle.includes(query) ||
+        code.includes(query)
+      );
     });
-  }, [activeCategory, searchQuery, lKey]);
+  }, [activeCategory, searchQuery, lang]);
 
   return (
     <section id="tours" className="py-24 md:py-36 px-6 md:px-12 relative overflow-hidden bg-[#0a0a0a]">
@@ -89,15 +185,13 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
         <Reveal className="mb-12 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-amber-500/25 rounded-full text-[11px] tracking-[0.2em] uppercase text-amber-300/80 mb-4 bg-amber-500/[0.04]">
             <Shield size={12} className="text-amber-400" />
-            <span>{lang === 'pt' ? '100% Tours Privados Exclusivos' : '100% Exclusive Private Tours'}</span>
+            <span>{ui.exclusiveBadge}</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 tracking-tight leading-[1.1]">
-            <TextReveal text={lang === 'pt' ? 'Coleção de Tours Privados' : 'Private Tours Collection'} />
+            <TextReveal text={ui.title} />
           </h2>
           <p className="text-white/50 text-base sm:text-lg font-light leading-relaxed">
-            {lang === 'pt'
-              ? '17 experiências concebidas exclusivamente para grupos de 1 a 8 pessoas. Sem partilha com desconhecidos, em viaturas executivas e ao seu próprio ritmo.'
-              : '17 signature journeys curated exclusively for private parties of 1 to 8 guests. No shared crowds, in executive vehicles with a dedicated wine-expert guide.'}
+            {ui.subtitle}
           </p>
         </Reveal>
 
@@ -106,7 +200,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             {[
-              { key: 'all', label: lang === 'pt' ? 'Todos os Tours' : 'All Tours', count: counts.all },
+              { key: 'all', label: ui.allTab, count: counts.all },
               { key: 'douro', label: 'Douro Valley', count: counts.douro },
               { key: 'north', label: 'Northern Portugal', count: counts.north },
               { key: 'porto', label: 'Porto Experiences', count: counts.porto },
@@ -143,7 +237,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" />
             <input
               type="text"
-              placeholder={lang === 'pt' ? 'Pesquisar destino, vinhos, cruzeiro...' : 'Search by destination, wine, cruise...'}
+              placeholder={ui.searchPlaceholder}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-11 pr-4 py-2.5 rounded-full bg-white/[0.04] border border-white/10 text-xs text-white placeholder:text-white/50 focus:outline-none focus:border-amber-400/50 transition-colors"
@@ -156,7 +250,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
           <div className="text-center py-16 bg-white/[0.02] border border-white/8 rounded-3xl">
             <Compass size={32} className="mx-auto text-amber-400/60 mb-3" />
             <p className="text-white/60 text-sm">
-              {lang === 'pt' ? 'Nenhum tour encontrado para esta pesquisa.' : 'No tours matched your search criteria.'}
+              {ui.noMatch}
             </p>
             <button
               onClick={() => {
@@ -165,7 +259,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
               }}
               className="mt-4 text-xs font-semibold text-amber-300 underline cursor-pointer"
             >
-              {lang === 'pt' ? 'Limpar filtros' : 'Reset filters'}
+              {ui.resetFilters}
             </button>
           </div>
         ) : (
@@ -180,11 +274,15 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
               {filteredTours.map((tour, tourIndex) => {
                 // On mobile (controlled via state), hide cards beyond index 5 when showAll=false
                 const isMobileHidden = !showAll && tourIndex >= 6;
-                const tourName = tour.name[lKey] || tour.name.pt;
-                const tourSubtitle = tour.subtitle[lKey] || tour.subtitle.pt;
-                const tourDuration = tour.duration[lKey] || tour.duration.pt;
+                const tourName = tour.name[lang] || tour.name['en'] || tour.name.pt;
+                const tourSubtitle = tour.subtitle[lang] || tour.subtitle['en'] || tour.subtitle.pt;
+                const tourCategory = tour.categoryLabel[lang] || tour.categoryLabel['en'] || tour.categoryLabel.pt;
+                const tourDuration = tour.duration[lang] || tour.duration['en'] || tour.duration.pt;
+                const tourHighlights = tour.highlights[lang] || tour.highlights['en'] || tour.highlights.pt;
+                const boatBadge = tour.boatBadge ? (tour.boatBadge[lang] || tour.boatBadge['en'] || tour.boatBadge.pt) : undefined;
+                const experienceBadge = tour.experienceBadge ? (tour.experienceBadge[lang] || tour.experienceBadge['en'] || tour.experienceBadge.pt) : undefined;
 
-                const quickMsg = `Olá NORTHÉ! Gostaria de saber mais sobre o tour privado: ${tour.code} - ${tourName}.`;
+                const quickMsg = `Olá NORTHÉ! Gostaria de saber mais sobre o tour privado: ${tour.code} - ${tourName} (${lang.toUpperCase()}).`;
                 const quickWhatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(quickMsg)}`;
 
                 return (
@@ -211,7 +309,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                         {tour.code}
                       </span>
                       <span className="text-[10px] px-2.5 py-1 bg-emerald-500/20 text-emerald-300 backdrop-blur-md rounded-full border border-emerald-500/30 uppercase tracking-widest font-semibold flex items-center gap-1">
-                        <Shield size={10} /> {lang === 'pt' ? '100% Privado' : 'Private'}
+                        <Shield size={10} /> {ui.privateBadge}
                       </span>
                     </div>
 
@@ -223,20 +321,38 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                       </div>
                       <div className="flex items-center gap-1.5">
                         <Car size={13} className="text-amber-400" />
-                        <span>Porto Pickup</span>
+                        <span>{ui.pickup}</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Body Content */}
                   <div className="p-6 sm:p-7 flex flex-col flex-1">
-                    <div className="text-[10px] uppercase tracking-[0.2em] text-amber-400/80 font-medium mb-1.5">
-                      {tour.categoryLabel[lKey] || tour.categoryLabel.pt}
+                    <div className="flex items-center justify-between gap-2 mb-1.5">
+                      <div className="text-[10px] uppercase tracking-[0.2em] text-amber-400/80 font-medium">
+                        {tourCategory}
+                      </div>
                     </div>
 
                     <h3 className="font-serif text-xl sm:text-2xl text-white mb-2 leading-snug group-hover:text-amber-200 transition-colors">
                       {tourName}
                     </h3>
+
+                    {/* Rich Badges (Boat & Special Experience) */}
+                    {(boatBadge || experienceBadge) && (
+                      <div className="flex flex-wrap items-center gap-1.5 mb-3">
+                        {boatBadge && (
+                          <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-sky-500/15 text-sky-200 border border-sky-500/30 inline-flex items-center gap-1 font-medium">
+                            <Sparkles size={10} className="text-sky-300" /> {boatBadge}
+                          </span>
+                        )}
+                        {experienceBadge && (
+                          <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-200 border border-purple-500/30 inline-flex items-center gap-1 font-medium">
+                            <Award size={10} className="text-purple-300" /> {experienceBadge}
+                          </span>
+                        )}
+                      </div>
+                    )}
 
                     <p className="text-xs text-white/65 font-light leading-relaxed line-clamp-2 mb-6">
                       {tourSubtitle}
@@ -244,7 +360,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
 
                     {/* Key Highlights preview */}
                     <div className="space-y-2 mb-6 pt-4 border-t border-white/5 flex-1">
-                      {(tour.highlights[lKey] || tour.highlights.pt).slice(0, 3).map((hl, idx) => (
+                      {tourHighlights.slice(0, 3).map((hl, idx) => (
                         <div key={idx} className="flex items-start gap-2 text-xs text-white/70 font-light">
                           <Check size={13} className="text-amber-400/80 flex-shrink-0 mt-0.5" />
                           <span className="line-clamp-1">{hl}</span>
@@ -257,117 +373,63 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                       <div className="flex items-baseline justify-between mb-4">
                         <div>
                           <span className="text-[10px] uppercase tracking-widest text-white/50 block">
-                            {lang === 'pt' ? 'Viatura Privada (1-8 pax)' : 'Private Vehicle (1-8 pax)'}
+                            {ui.paxNote}
                           </span>
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-xs text-white/65">
-                              {lang === 'pt' ? 'A partir de' : 'From'}{' '}
-                              <strong className="font-serif text-2xl text-white">€{tour.startingPrice}</strong>
+                          <div className="flex items-baseline gap-1.5 mt-0.5">
+                            <span className="text-xs text-white/60">{ui.from}</span>
+                            <span className="font-serif text-2xl sm:text-3xl text-white font-normal">
+                              €{tour.startingPrice}
                             </span>
                           </div>
-                          <span className="text-[10px] text-amber-400/60 font-mono">
-                            {lang === 'pt'
-                              ? `≈ €${Math.ceil(tour.startingPrice / 8)}/pessoa (8 pax)`
-                              : `≈ €${Math.ceil(tour.startingPrice / 8)}/person (8 pax)`}
-                          </span>
                         </div>
+
                         {tour.gygVerified && (
-                          <span className="text-[10px] px-2 py-0.5 bg-orange-500/15 text-orange-300 border border-orange-500/25 rounded-full flex items-center gap-1">
-                            <Award size={11} /> GetYourGuide
+                          <span className="text-[10px] text-orange-300 bg-orange-500/10 border border-orange-500/20 px-2 py-0.5 rounded-full flex items-center gap-1">
+                            <Award size={10} /> GetYourGuide
                           </span>
                         )}
                       </div>
 
-                      <div className="grid grid-cols-2 gap-2.5">
+                      {/* CTAs: Details + Quick WhatsApp */}
+                      <div className="grid grid-cols-2 gap-2">
                         <Link
                           to={`/tours/${tour.id}`}
-                          className="w-full py-3 px-3 rounded-xl bg-white text-black font-semibold text-xs text-center hover:bg-white/90 transition-colors flex items-center justify-center gap-1.5"
+                          className="w-full py-2.5 px-3 rounded-full bg-white text-black font-semibold text-xs text-center hover:bg-amber-300 transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm group/btn"
                         >
-                          <span>{lang === 'pt' ? 'Ver Tour' : 'View Tour'}</span>
-                          <ArrowRight size={13} />
+                          <span>{ui.details}</span>
+                          <ArrowRight size={13} className="group-hover/btn:translate-x-0.5 transition-transform" />
                         </Link>
+
                         <a
                           href={quickWhatsappUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full py-3 px-3 rounded-xl border border-white/15 hover:border-emerald-500/40 hover:bg-emerald-500/10 text-white/80 hover:text-white text-xs font-medium text-center transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                          className="w-full py-2.5 px-3 rounded-full bg-emerald-600/90 hover:bg-emerald-500 text-white font-medium text-xs text-center transition-all duration-300 flex items-center justify-center gap-1.5 border border-emerald-500/30"
                         >
-                          <MessageCircle size={14} className="text-emerald-400" />
-                          <span>WhatsApp</span>
+                          <MessageCircle size={13} />
+                          <span>{ui.whatsappQuick}</span>
                         </a>
                       </div>
                     </div>
                   </div>
-                  </motion.div>
+                </motion.div>
                 );
               })}
             </motion.div>
 
-          {/* Mobile "Show more" button — only visible on mobile when not all cards are shown */}
-          {filteredTours.length > 6 && !showAll && (
-            <div className="mt-10 flex justify-center md:hidden">
-              <button
-                onClick={() => setShowAll(true)}
-                className="cursor-pointer px-7 py-3.5 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md text-white/80 hover:text-white hover:bg-white/10 hover:border-amber-500/40 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 flex items-center gap-2.5"
-              >
-                <span>
-                  {lang === 'pt'
-                    ? `Ver mais ${filteredTours.length - 6} tours →`
-                    : `Show ${filteredTours.length - 6} more tours →`}
-                </span>
-              </button>
-            </div>
-          )}
+            {/* Mobile "Show More" button if more than 6 tours exist */}
+            {filteredTours.length > 6 && (
+              <div className="mt-10 text-center md:hidden">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold uppercase tracking-widest border border-white/15 transition-all"
+                >
+                  {showAll ? ui.showLessMobile : `${ui.viewAllMobile} (${filteredTours.length})`}
+                </button>
+              </div>
+            )}
           </>
         )}
-
-        {/* ═══════ VIP EXTRAS & BESPOKE UPGRADES ═══════ */}
-        <div className="mt-24 pt-16 border-t border-white/10">
-          <Reveal className="mb-12 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-amber-500/25 rounded-full text-[11px] tracking-[0.2em] uppercase text-amber-300/80 mb-3 bg-amber-500/[0.04]">
-              <Sparkles size={12} className="text-amber-400" />
-              <span>{lang === 'pt' ? 'Upgrades Exclusivos' : 'Bespoke VIP Upgrades'}</span>
-            </div>
-            <h3 className="font-serif text-3xl sm:text-4xl text-white mb-3">
-              {lang === 'pt' ? 'Personalize o Seu Tour Privado' : 'Elevate Your Private Experience'}
-            </h3>
-            <p className="text-sm sm:text-base text-white/50 font-light leading-relaxed">
-              {lang === 'pt'
-                ? 'Para ocasiões marcantes, luas-de-mel, aniversários ou pedidos de casamento, a NORTHÉ disponibiliza serviços VIP dedicados para tornar o seu dia inesquecível:'
-                : 'For milestone moments, honeymoons, birthdays or marriage proposals, NORTHÉ provides dedicated VIP enhancements to elevate your day:'}
-            </p>
-          </Reveal>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {VIP_EXTRAS.map((extra) => (
-              <div
-                key={extra.id}
-                className="bg-white/[0.02] border border-white/8 hover:border-amber-500/30 rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-300 flex items-center justify-center mb-5 border border-amber-500/20">
-                    <Sparkles size={20} />
-                  </div>
-                  <h4 className="font-serif text-xl text-white mb-1.5">
-                    {extra.name[lKey] || extra.name.pt}
-                  </h4>
-                  <p className="text-xs text-amber-300/80 font-mono mb-3">
-                    {extra.tagline[lKey] || extra.tagline.pt}
-                  </p>
-                  <p className="text-xs text-white/55 font-light leading-relaxed mb-6">
-                    {extra.desc[lKey] || extra.desc.pt}
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-white/5 flex items-baseline justify-between">
-                  <span className="text-[11px] uppercase tracking-wider text-white/40">
-                    {lang === 'pt' ? 'Adicional desde' : 'Upgrade from'}
-                  </span>
-                  <span className="font-serif text-xl text-amber-300">+€{extra.price}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
