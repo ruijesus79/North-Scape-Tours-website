@@ -366,6 +366,8 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
         title={`${tourName} | NORTHÉ Private Tours`}
         description={tour.shortDesc[lang] || tour.shortDesc['en'] || tour.shortDesc.pt}
         lang={lang}
+        image={tour.image}
+        url={`https://northetours.com/tours/${tour.id}`}
       />
 
       {/* Top Breadcrumbs & Back */}

@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEO from '../components/SEO';
 
 export default function BlogPost() {
     const { slug } = useParams();
-    const { t } = useLanguage();
+    const { lang, t } = useLanguage();
     const post = t.blog.items.find(p => p.slug === slug);
 
     // Scroll to top on mount
@@ -28,6 +29,13 @@ export default function BlogPost() {
 
     return (
         <article className="pt-24 pb-20 fade-in">
+            <SEO
+                title={`${post.title} | NORTHÉ Magazine`}
+                description={post.excerpt}
+                lang={lang}
+                image={post.image}
+                url={`https://northetours.com/blog/${post.slug}`}
+            />
             {/* Article Hero */}
             <header className="relative w-full min-h-[60vh] flex flex-col justify-end pt-32 pb-16 lg:pb-20 border-b border-white/5">
                 <div className="absolute inset-0">

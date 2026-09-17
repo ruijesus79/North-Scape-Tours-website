@@ -24,7 +24,13 @@ export default function Footer({ scrollTo }: { scrollTo: (id: string) => void })
           />
           <p className="font-serif italic text-white/40 text-sm sm:text-base max-w-lg mb-2">
             {lang === 'pt'
-              ? 'Private Experiences from Porto · Douro Valley · Northern Portugal'
+              ? 'Experiências Privadas a partir do Porto · Douro Valley · Norte de Portugal'
+              : lang === 'es'
+              ? 'Experiencias Privadas desde Oporto · Valle del Duero · Norte de Portugal'
+              : lang === 'fr'
+              ? 'Expériences Privées au départ de Porto · Vallée du Douro · Nord du Portugal'
+              : lang === 'de'
+              ? 'Private Erlebnisse ab Porto · Douro-Tal · Nordportugal'
               : 'Private Experiences from Porto · Douro Valley · Northern Portugal'}
           </p>
           <p className="text-xs font-mono text-white/30 tracking-widest uppercase mb-6">
@@ -46,31 +52,31 @@ export default function Footer({ scrollTo }: { scrollTo: (id: string) => void })
             onClick={() => handleCategoryNav('all')}
             className="cursor-pointer hover:text-amber-300 transition-colors"
           >
-            Private Tours
+            {t.nav.tours}
           </button>
           <button
             onClick={() => handleCategoryNav('douro')}
             className="cursor-pointer hover:text-amber-300 transition-colors"
           >
-            Douro Valley
+            {t.nav.douro || 'Douro Valley'}
           </button>
           <button
             onClick={() => handleCategoryNav('north')}
             className="cursor-pointer hover:text-amber-300 transition-colors"
           >
-            Northern Portugal
+            {t.nav.north || 'Northern Portugal'}
           </button>
           <button
             onClick={() => handleCategoryNav('porto')}
             className="cursor-pointer hover:text-amber-300 transition-colors"
           >
-            Porto Experiences
+            {t.nav.porto || 'Porto Experiences'}
           </button>
           <button
             onClick={() => scrollTo('sobre-nos')}
             className="cursor-pointer hover:text-amber-300 transition-colors"
           >
-            About NORTHÉ
+            {t.nav.about}
           </button>
           <button
             onClick={() => scrollTo('contacto')}

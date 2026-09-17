@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Routes, Route, useLocation, useNavigate, Link } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate, Link, Navigate } from 'react-router-dom';
 import { Menu, X, Globe, ChevronDown, MessageCircle, Shield } from 'lucide-react';
 
 const BlogPost = lazy(() => import('./pages/BlogPost'));
@@ -11,7 +11,7 @@ import CustomCursor from './components/CustomCursor';
 import SEO from './components/SEO';
 
 import { useLanguage } from './contexts/LanguageContext';
-import { WHATSAPP_LINK, type Language } from './content';
+import { WHATSAPP_LINK, getWhatsAppLink, type Language } from './content';
 
 import HeroSection from './components/sections/HeroSection';
 import ToursSection from './components/sections/ToursSection';
@@ -118,6 +118,8 @@ export default function App() {
         title="NORTHÉ | Luxury Private Tours & Experiences from Porto"
         description="Exclusive 100% private tours in Douro Valley, Porto, and Northern Portugal. Certified wine-master guides, executive vehicles, and bespoke itineraries."
         lang={lang}
+        image="/logo-white.png"
+        url="https://northetours.com"
       />
 
       {/* ═══════ SCROLL PROGRESS BAR ═══════ */}
@@ -228,7 +230,7 @@ export default function App() {
 
             {/* WhatsApp Direct */}
             <a
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink(lang)}
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-emerald-500/10 hover:border-emerald-500/40 transition-all duration-300 normal-case tracking-normal text-white/80 hover:text-white text-[12px] font-medium"
@@ -319,7 +321,7 @@ export default function App() {
 
           <div className="mt-8 flex flex-col items-center gap-3 w-full max-w-xs">
             <a
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink(lang)}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full cursor-pointer flex items-center justify-center gap-2 py-3.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-400 font-sans text-sm font-semibold"
@@ -431,6 +433,8 @@ export default function App() {
                 </motion.div>
               }
             />
+            {/* Catch-all Not Found Route: safely redirect to home */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
       </AnimatePresence>
@@ -440,7 +444,7 @@ export default function App() {
       {/* ═══════ FIXED MOBILE BAR ═══════ */}
       <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#111]/95 backdrop-blur-md border-t border-white/10 p-3 flex gap-2.5 shadow-2xl">
         <a
-          href={WHATSAPP_LINK}
+          href={getWhatsAppLink(lang)}
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer flex-1 flex items-center justify-center gap-2 py-3 bg-emerald-600 text-white rounded-full font-medium text-xs hover:bg-emerald-500 transition-colors duration-300"

@@ -5,6 +5,19 @@ export type { TourItem, VipExtraItem, TourPricingTier };
 export const WHATSAPP_NUMBER = '351911923499';
 export const WHATSAPP_MESSAGE = 'Olá NORTHÉ! Gostaria de mais informações sobre os vossos tours privados no Douro e Norte de Portugal.';
 export const WHATSAPP_LINK = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
+export const WHATSAPP_MESSAGES: Record<Language, string> = {
+    pt: 'Olá NORTHÉ! Gostaria de mais informações sobre os vossos tours privados no Douro e Norte de Portugal.',
+    en: 'Hello NORTHÉ! I would like more information regarding your private tours in the Douro Valley and Northern Portugal.',
+    es: '¡Hola NORTHÉ! Me gustaría más información sobre sus tours privados en el Valle del Duero y Norte de Portugal.',
+    fr: "Bonjour NORTHÉ ! J'aimerais avoir plus d'informations sur vos circuits privés dans la Vallée du Douro et le Nord du Portugal.",
+    de: 'Hallo NORTHÉ! Ich hätte gerne weitere Informationen zu Ihren privaten Touren im Douro-Tal und Nordportugal.',
+};
+
+export const getWhatsAppLink = (lang: Language = 'en', customMsg?: string) => {
+    const text = customMsg || WHATSAPP_MESSAGES[lang] || WHATSAPP_MESSAGES.en;
+    return `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(text)}`;
+};
 export const EMAIL = 'info@northetours.com';
 export const FACEBOOK_PAGE = 'https://www.facebook.com/profile.php?id=61583598036171';
 export const TIKTOK_PAGE = 'https://www.tiktok.com/@northe.tours';

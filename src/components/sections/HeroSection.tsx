@@ -4,44 +4,135 @@ import { ArrowRight, MessageCircle, Shield, Car, Check, Star, Award } from 'luci
 import { useLanguage } from '../../contexts/LanguageContext';
 import MagneticButton from '../MagneticButton';
 import { IMG, Reveal, AmbientGlow } from '../../utils/shared';
-import { WHATSAPP_LINK, GETYOURGUIDE_LINK } from '../../content';
+import { WHATSAPP_LINK, getWhatsAppLink, GETYOURGUIDE_LINK } from '../../content';
 
 // @ts-ignore
 const LazyVantaFog = lazy(() => import('../VantaFog'));
 
+const SOCIAL_PROOF_TEXT = {
+  pt: {
+    tripAdvisor: 'TripAdvisor · Certificado de Excelência',
+    gyg: 'GetYourGuide · Top Rated',
+    gygSub: '15 tours verificados',
+    license: 'Turismo de Portugal · Empresa Licenciada',
+    travelers: '+1 200 Viajantes Satisfeitos',
+    travelersSub: 'desde 2018',
+    driver: 'Motorista-Guia Especialista em Vinhos',
+    driverSub: 'Fluente em PT · EN · ES · FR · DE',
+    fleet: 'Frota Executiva Mercedes-Benz',
+    fleetSub: 'Ar condicionado · Wi-Fi · Água',
+  },
+  en: {
+    tripAdvisor: 'TripAdvisor · Certificate of Excellence',
+    gyg: 'GetYourGuide · Top Rated Partner',
+    gygSub: '15 verified tours',
+    license: 'Tourism of Portugal · Licensed Operator',
+    travelers: '+1,200 Happy Travellers',
+    travelersSub: 'since 2018',
+    driver: 'Certified Wine-Expert Driver-Guide',
+    driverSub: 'Fluent PT · EN · ES · FR · DE',
+    fleet: 'Executive Mercedes-Benz Fleet',
+    fleetSub: 'A/C · Wi-Fi · Water',
+  },
+  es: {
+    tripAdvisor: 'TripAdvisor · Certificado de Excelencia',
+    gyg: 'GetYourGuide · Operador Mejor Valorado',
+    gygSub: '15 tours verificados',
+    license: 'Turismo de Portugal · Empresa Licenciada',
+    travelers: '+1.200 Viajeros Satisfechos',
+    travelersSub: 'desde 2018',
+    driver: 'Chófer-Guía Experto en Vinos',
+    driverSub: 'Fluido en PT · EN · ES · FR · DE',
+    fleet: 'Flota Ejecutiva Mercedes-Benz',
+    fleetSub: 'Climatización · Wi-Fi · Agua',
+  },
+  fr: {
+    tripAdvisor: "TripAdvisor · Certificat d'Excellence",
+    gyg: 'GetYourGuide · Partenaire Mieux Noté',
+    gygSub: '15 circuits vérifiés',
+    license: 'Tourisme du Portugal · Agence Agréée',
+    travelers: '+1 200 Voyageurs Satisfaits',
+    travelersSub: 'depuis 2018',
+    driver: 'Chauffeur-Guide Sommelier Expert',
+    driverSub: 'Parlant couramment PT · EN · ES · FR · DE',
+    fleet: 'Flotte Exécutive Mercedes-Benz',
+    fleetSub: 'Climatisation · Wi-Fi · Eau',
+  },
+  de: {
+    tripAdvisor: 'TripAdvisor · Zertifikat für Exzellenz',
+    gyg: 'GetYourGuide · Bestbewerteter Partner',
+    gygSub: '15 verifizierte Touren',
+    license: 'Tourismus Portugal · Lizenzierter Anbieter',
+    travelers: '+1.200 Begeisterte Gäste',
+    travelersSub: 'seit 2018',
+    driver: 'Zertifizierter Weinexperte & Chauffeur',
+    driverSub: 'Fließend in PT · EN · ES · FR · DE',
+    fleet: 'Executive Mercedes-Benz Flotte',
+    fleetSub: 'Klimaanlage · WLAN · Wasser',
+  },
+};
+
+const REASSURANCE_TEXT = {
+  pt: {
+    privateTour: '100% Tours Privados (1 a 8 pax)',
+    fleet: 'Frota Executiva Mercedes-Benz',
+    cancel: 'Cancelamento Gratuito até 48h',
+  },
+  en: {
+    privateTour: '100% Private Tours (1 to 8 guests)',
+    fleet: 'Executive Mercedes-Benz Fleet',
+    cancel: 'Free Cancellation up to 48h',
+  },
+  es: {
+    privateTour: '100% Tours Privados (1 a 8 personas)',
+    fleet: 'Flota Ejecutiva Mercedes-Benz',
+    cancel: 'Cancelación Gratuita hasta 48h',
+  },
+  fr: {
+    privateTour: '100% Circuits Privés (1 à 8 personnes)',
+    fleet: 'Flotte Exécutive Mercedes-Benz',
+    cancel: "Annulation Gratuite jusqu'à 48h",
+  },
+  de: {
+    privateTour: '100% Private Touren (1 bis 8 Personen)',
+    fleet: 'Executive Mercedes-Benz Flotte',
+    cancel: 'Kostenlose Stornierung bis 48h',
+  },
+};
+
 /* ──────── Social Proof Trust Ticker ──────── */
 function SocialProofBar({ lang }: { lang: string }) {
-  const pt = lang === 'pt';
+  const sp = SOCIAL_PROOF_TEXT[lang as keyof typeof SOCIAL_PROOF_TEXT] || SOCIAL_PROOF_TEXT.en;
   const items = [
     {
       icon: <span className="text-[#00AF87] font-black text-xs">★</span>,
-      label: pt ? 'TripAdvisor · Certificado de Excelência' : 'TripAdvisor · Certificate of Excellence',
+      label: sp.tripAdvisor,
       sub: '5.0 / 5.0',
     },
     {
       icon: <Award size={14} className="text-orange-400 flex-shrink-0" />,
-      label: pt ? 'GetYourGuide · Top Rated' : 'GetYourGuide · Top Rated Partner',
-      sub: pt ? '15 tours verificados' : '15 verified tours',
+      label: sp.gyg,
+      sub: sp.gygSub,
     },
     {
       icon: <Shield size={14} className="text-emerald-400 flex-shrink-0" />,
-      label: pt ? 'Turismo de Portugal · Empresa Licenciada' : 'Tourism of Portugal · Licensed Operator',
+      label: sp.license,
       sub: 'RNAAT 284/2026',
     },
     {
       icon: <Star size={13} fill="#d4af37" className="text-[#d4af37] flex-shrink-0" />,
-      label: pt ? '+1 200 Viajantes Satisfeitos' : '+1,200 Happy Travellers',
-      sub: pt ? 'desde 2018' : 'since 2018',
+      label: sp.travelers,
+      sub: sp.travelersSub,
     },
     {
       icon: <Check size={14} className="text-white/70 flex-shrink-0" />,
-      label: pt ? 'Motorista-Guia Especialista em Vinhos' : 'Certified Wine-Expert Driver-Guide',
-      sub: pt ? 'Fluente em PT · EN · ES · FR' : 'Fluent PT · EN · ES · FR',
+      label: sp.driver,
+      sub: sp.driverSub,
     },
     {
       icon: <Car size={14} className="text-amber-400 flex-shrink-0" />,
-      label: pt ? 'Frota Executiva Mercedes-Benz' : 'Executive Mercedes-Benz Fleet',
-      sub: pt ? 'Ar condicionado · Wi-Fi · Água' : 'A/C · Wi-Fi · Water',
+      label: sp.fleet,
+      sub: sp.fleetSub,
     },
   ];
 
@@ -143,7 +234,7 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
               </span>
             </MagneticButton>
             <MagneticButton
-              href={WHATSAPP_LINK}
+              href={getWhatsAppLink(lang)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-press cursor-pointer px-6 py-3.5 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md text-white/80 hover:text-white hover:bg-white/10 hover:border-emerald-500/40 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300"
@@ -163,17 +254,17 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
           >
             <span className="flex items-center gap-1.5">
               <Shield size={13} className="text-amber-400/90 flex-shrink-0" />
-              {lang === 'pt' ? '100% Tours Privados (1 a 8 pax)' : '100% Private Tours (1 to 8 pax)'}
+              {(REASSURANCE_TEXT[lang as keyof typeof REASSURANCE_TEXT] || REASSURANCE_TEXT.en).privateTour}
             </span>
             <span className="hidden sm:inline text-white/20">•</span>
             <span className="flex items-center gap-1.5">
               <Car size={13} className="text-amber-400/90 flex-shrink-0" />
-              {lang === 'pt' ? 'Frota Executiva Mercedes-Benz' : 'Executive Mercedes-Benz Fleet'}
+              {(REASSURANCE_TEXT[lang as keyof typeof REASSURANCE_TEXT] || REASSURANCE_TEXT.en).fleet}
             </span>
             <span className="hidden sm:inline text-white/20">•</span>
             <span className="flex items-center gap-1.5">
               <Check size={13} className="text-emerald-400/90 flex-shrink-0" />
-              {lang === 'pt' ? 'Cancelamento Gratuito até 48h' : 'Free Cancellation up to 48h'}
+              {(REASSURANCE_TEXT[lang as keyof typeof REASSURANCE_TEXT] || REASSURANCE_TEXT.en).cancel}
             </span>
           </motion.div>
         </div>
