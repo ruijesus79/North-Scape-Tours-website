@@ -21,9 +21,9 @@ export default function AboutSection() {
         {/* IMAGE — top on mobile, right on desktop */}
         <div className="relative order-1 lg:order-2 aspect-[4/5] sm:aspect-[5/4] lg:aspect-auto lg:min-h-[90vh] overflow-hidden">
           <img
-            src="/images/about/misty-douro-bw.jpg"
+            src="/images/about/northe-porto-wine-dining.webp"
             alt={t.about.imageAlt}
-            className="absolute inset-0 w-full h-full object-cover grayscale contrast-[1.05]"
+            className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-1000 ease-out hover:scale-[1.02]"
             referrerPolicy="no-referrer"
             loading="lazy"
           />
@@ -32,12 +32,12 @@ export default function AboutSection() {
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#f6f2ea] to-transparent hidden lg:block" />
 
           {/* Editorial plate */}
-          <div className="absolute bottom-6 right-6 sm:bottom-10 sm:right-10 max-w-[230px] text-right hidden md:block">
-            <span className="text-[10px] tracking-[0.35em] uppercase text-white/80 font-medium">
-              Douro Valley
+          <div className="absolute bottom-6 right-6 sm:bottom-10 sm:right-10 max-w-[240px] text-right hidden md:block bg-black/40 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15">
+            <span className="text-[10px] tracking-[0.35em] uppercase text-white/95 font-semibold">
+              Porto & Douro
             </span>
-            <span className="block text-[10px] tracking-[0.2em] uppercase text-white/55 mt-1">
-              Portugal · Est. 2024
+            <span className="block text-[10px] tracking-[0.2em] uppercase text-white/75 mt-1 font-light">
+              Portugal · Experiências Privadas
             </span>
           </div>
         </div>

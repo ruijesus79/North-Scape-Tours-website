@@ -88,8 +88,14 @@ export default function BlogSection({ scrollTo }: { scrollTo: (id: string) => vo
               onClick={() => setShowAll(true)}
               className="cursor-pointer px-8 py-3.5 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md text-white/80 hover:text-white hover:bg-white/10 hover:border-amber-500/40 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300"
             >
-              {isPt
-                ? `Ver mais ${t.blog.items.length - 4} histórias do Douro →`
+              {lang === 'pt'
+                ? `Ver mais ${t.blog.items.length - 4} artigos e guias →`
+                : lang === 'es'
+                ? `Ver ${t.blog.items.length - 4} artículos más →`
+                : lang === 'fr'
+                ? `Découvrir ${t.blog.items.length - 4} autres articles →`
+                : lang === 'de'
+                ? `${t.blog.items.length - 4} weitere Artikel entdecken →`
                 : `Discover ${t.blog.items.length - 4} more stories →`}
             </button>
           </div>
