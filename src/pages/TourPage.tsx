@@ -370,6 +370,35 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
         url={`https://northetours.com/tours/${tour.id}`}
       />
 
+      {/* Schema.org TouristTrip structured data for Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": tourName,
+            "description": tour.shortDesc[lang] || tour.shortDesc.en || tour.shortDesc.pt,
+            "touristType": "Private Group (1-8 pax)",
+            "image": `https://northetours.com${tour.image}`,
+            "offers": {
+              "@type": "AggregateOffer",
+              "lowPrice": tour.startingPrice.toString(),
+              "highPrice": (tour.pricingTiers[tour.pricingTiers.length - 1]?.price || tour.startingPrice).toString(),
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "url": `https://northetours.com/tours/${tour.id}`
+            },
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "NORTHÉ",
+              "url": "https://northetours.com",
+              "telephone": `+${WHATSAPP_NUMBER}`
+            }
+          })
+        }}
+      />
+
       {/* Top Breadcrumbs & Back */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         <Link

@@ -1,0 +1,6 @@
+# robots.txt for NORTHÉ Private Tours
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://northetours.com/sitemap.xml
