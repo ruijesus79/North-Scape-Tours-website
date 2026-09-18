@@ -22,5 +22,6 @@
     },
     "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "exclude": ["scratch", "dist", "node_modules"]
 }
