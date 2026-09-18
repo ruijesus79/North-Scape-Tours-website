@@ -120,15 +120,18 @@ export const CONTENT = {
             ctaBook: 'Solicitar Cotação Personalizada',
             ctaWhatsapp: 'Reservar via WhatsApp',
         },
-                        about: {
-            badge: "Sobre NORTHÉ",
-            title: "Experiencias privadas, creadas para descubrir Portugal de una forma más personal.",
+                        
+        about: {
+            badge: "Sobre a NORTHÉ",
+            title: "Experiências privadas, criadas para descobrir Portugal de uma forma mais pessoal.",
             paragraphs: [
-                "NORTHÉ nació en Oporto con una idea simple: transformar cada viaje en una experiencia con verdadero significado. Creamos rutas privadas por el Duero, Oporto y el Norte de Portugal, combinando paisajes, vinos, gastronomía, cultura y lugares cuidadosamente seleccionados.",
-                "Cada experiencia está pensada para su grupo, con comodidad, flexibilidad y esmero en los detalles — porque conocer un destino no tiene que seguir un itinerario idéntico para todos.",
+                "A NORTHÉ nasceu no Porto com uma ideia simples: transformar cada passeio em uma experiência que tenha significado. Criamos viagens privadas pelo Douro, Porto e Norte de Portugal, combinando paisagens, vinhos, gastronomia, cultura e lugares cuidadosamente selecionados.",
+                "Cada experiência é pensada para o seu grupo, com conforto, flexibilidade e atenção aos detalhes — porque conhecer um destino não precisa seguir um roteiro igual para todos.",
             ],
             signature: "NORTHÉ",
-            imageAlt: "Restaurante vinícola con vistas panorámicas al atardecer sobre el río Duero y Oporto",
+            subsignature: "Private Tours & Bespoke Journeys",
+            stat: "100%",
+            statLabel: "Privado e Personalizado",
         },
         reviews: {
             badge: 'Avaliações',
@@ -147,7 +150,1155 @@ export const CONTENT = {
                 { text: 'Incrível! O Douro é mágico e a equipa da NORTHÉ tornou tudo mais especial.', author: 'Daan van der Berg', location: 'Amesterdão, Holanda', flag: '🇳🇱', stars: 4.8 },
             ],
         },
-                        faq: {
+                        
+        faq: {
+            badge: "FAQ",
+            title: "Perguntas Frequentes",
+            subtitle: "Respostas claras e transparentes às dúvidas mais frequentes antes de reservar a sua experiência privada.",
+            searchPlaceholder: "Pesquisar dúvidas (ex: barco, pick-up, crianças, cancelamento)...",
+            noResults: "Não foram encontradas perguntas para esta pesquisa.",
+            clearSearch: "Limpar pesquisa",
+            whatsappTitle: "Ainda tem alguma dúvida sobre a sua experiência?",
+            whatsappSubtitle: "Fale diretamente com a NORTHÉ. Teremos todo o gosto em ajudar a desenhar a experiência e itinerário ideais para o seu grupo.",
+            whatsappBtn: "Falar pelo WhatsApp",
+            categories: [
+                { id: "all", label: "Todas as Perguntas" },
+                { id: "reservas", label: "Reservas e Preços" },
+                { id: "transporte", label: "Pick-up e Transporte" },
+                { id: "douro", label: "Vale do Douro" },
+                { id: "barco", label: "Passeios de Barco" },
+                { id: "familias", label: "Famílias e Acessibilidade" },
+                { id: "gastronomia", label: "Alimentação e Dietas" },
+                { id: "cancelamentos", label: "Cancelamentos e Flexibilidade" },
+                { id: "especiais", label: "Ocasiões Especiais" },
+            ],
+            items: [
+                {
+                    category: "reservas",
+                    q: "Como posso reservar uma experiência privada com a NORTHÉ?",
+                    a: "Pode solicitar a sua experiência diretamente através do nosso site, WhatsApp ou pelos canais de contacto da NORTHÉ. Envie-nos a data pretendida, número de pessoas e a experiência de interesse. A nossa equipa confirmará a disponibilidade e todos os detalhes antes da reserva.",
+                },
+                {
+                    category: "reservas",
+                    q: "Com quanta antecedência devo fazer a minha reserva?",
+                    a: "Recomendamos reservar com antecedência, especialmente para experiências no Douro, passeios de barco, visitas a quintas e datas de maior procura. Reservas de última hora podem ser possíveis, mediante disponibilidade.",
+                },
+                {
+                    category: "reservas",
+                    q: "Os tours da NORTHÉ são 100% privados?",
+                    a: "Sim. A NORTHÉ é especializada em experiências privadas. O seu grupo viaja e vive a experiência com exclusividade, sem partilhar a van com outros clientes.",
+                },
+                {
+                    category: "reservas",
+                    q: "Como funciona o preço de uma experiência privada?",
+                    a: "O preço depende da experiência escolhida, do número de participantes, do itinerário e dos serviços incluídos. Cada experiência apresenta as respetivas condições e preço antes da reserva.",
+                },
+                {
+                    category: "reservas",
+                    q: "O valor apresentado é por pessoa ou por grupo?",
+                    a: "O valor apresentado é por grupo privado, e não por pessoa. As experiências da NORTHÉ podem ser reservadas para grupos de 1 a 8 pessoas, mantendo a exclusividade do serviço para o seu grupo. O valor varia de acordo com a experiência escolhida e, quando aplicável, com o número de participantes.",
+                },
+                {
+                    category: "reservas",
+                    q: "O que está incluído no valor? Existem custos adicionais?",
+                    a: "Cada experiência apresenta claramente o que está incluído. Quando existem serviços opcionais, entradas, refeições, provas, passeios de barco ou outros extras não incluídos, estes serão identificados previamente.",
+                },
+                {
+                    category: "reservas",
+                    q: "Quais são as formas de pagamento disponíveis?",
+                    a: "As opções de pagamento disponíveis são informadas no momento da reserva. O pagamento é realizado através de meios seguros e os detalhes são confirmados antes da experiência.",
+                },
+                {
+                    category: "reservas",
+                    q: "Posso solicitar uma experiência personalizada?",
+                    a: "Sim. A personalização é uma das características das experiências privadas da NORTHÉ. Podemos adaptar o ritmo, o itinerário e determinados elementos da experiência de acordo com os interesses e necessidades do seu grupo, sempre que operacionalmente possível.",
+                },
+                {
+                    category: "transporte",
+                    q: "Onde é feita a recolha (pick-up) e o regresso?",
+                    a: "O pick-up e o regresso são combinados previamente de acordo com o local indicado na reserva. Para experiências com partida no Porto, podemos organizar a recolha no local previamente acordado.",
+                },
+                {
+                    category: "transporte",
+                    q: "A NORTHÉ oferece pick-up e drop-off em hotéis no Porto?",
+                    a: "Recolhemos o seu grupo diretamente no átrio do seu hotel, apartamento, Airbnb ou residência na cidade do Porto e Vila Nova de Gaia, habitualmente entre as 08h30 e as 09h00 (ou num horário alternativo à sua escolha). No final do dia (cerca das 18h00 - 18h30), regressamos comodamente ao mesmo local ou deixamo-lo num restaurante à sua escolha para o jantar.",
+                },
+                {
+                    category: "transporte",
+                    q: "É possível fazer pick-up no Aeroporto do Porto?",
+                    a: "Sim. O serviço deve ser solicitado no momento da reserva para que possamos confirmar a logística e o horário adequado.",
+                },
+                {
+                    category: "transporte",
+                    q: "Posso solicitar pick-up fora do Porto?",
+                    a: "É possível avaliar pick-ups fora da área habitual, dependendo da localização, horário e experiência escolhida. Poderá existir um custo adicional, que será informado previamente.",
+                },
+                {
+                    category: "transporte",
+                    q: "O transporte durante o tour é exclusivamente privado?",
+                    a: "Sim. As experiências privadas da NORTHÉ são realizadas em transporte reservado exclusivamente para o seu grupo.",
+                },
+                {
+                    category: "douro",
+                    q: "Qual é a melhor forma de visitar o Douro a partir do Porto?",
+                    a: "Uma experiência privada permite explorar o Douro com maior liberdade, evitando um itinerário rígido e adaptando o ritmo aos interesses do seu grupo. A partir do Porto, é possível combinar paisagens, vinhos, gastronomia, quintas e momentos de descoberta ao longo do vale.",
+                },
+                {
+                    category: "douro",
+                    q: "Quanto tempo dura um tour privado pelo Douro?",
+                    a: "A duração varia de acordo com a experiência escolhida. As experiências da NORTHÉ são geralmente pensadas para proporcionar um dia completo de descoberta, e a duração específica é indicada na página de cada tour.",
+                },
+                {
+                    category: "douro",
+                    q: "O que posso visitar durante uma experiência privada no Douro?",
+                    a: "Dependendo do itinerário, poderá visitar quintas, vinhas, aldeias e cidades históricas, apreciar as paisagens do Douro e conhecer a cultura do vinho e da gastronomia da região.",
+                },
+                {
+                    category: "douro",
+                    q: "As provas de vinhos estão incluídas?",
+                    a: "Depende da experiência. Quando uma prova de vinhos faz parte do programa, isso é indicado na descrição do tour. Também podemos avaliar experiências personalizadas com provas específicas.",
+                },
+                {
+                    category: "douro",
+                    q: "Que tipos de vinhos posso provar no Douro?",
+                    a: "Dependendo da experiência, poderá conhecer diferentes expressões dos vinhos da região do Douro, incluindo vinhos do Douro e vinho do Porto.",
+                },
+                {
+                    category: "douro",
+                    q: "Posso visitar uma quinta específica no Douro?",
+                    a: "Podemos avaliar esse pedido e verificar a disponibilidade da quinta para a data pretendida. Algumas visitas dependem de reserva antecipada e disponibilidade do próprio local.",
+                },
+                {
+                    category: "douro",
+                    q: "Posso personalizar o roteiro do meu tour pelo Douro?",
+                    a: "Sim. As experiências privadas permitem maior flexibilidade do que um tour partilhado. Podemos conversar consigo sobre os locais que gostaria de conhecer e criar uma experiência adequada ao seu grupo, sempre respeitando os horários e a disponibilidade dos locais visitados.",
+                },
+                {
+                    category: "barco",
+                    q: "As experiências da NORTHÉ incluem passeio de barco no Douro?",
+                    a: "Algumas experiências incluem momentos no rio Douro. O tipo de passeio, duração e condições estão especificados na página de cada experiência.",
+                },
+                {
+                    category: "barco",
+                    q: "O passeio de barco é privado ou partilhado?",
+                    a: "Depende da experiência escolhida. A NORTHÉ disponibiliza experiências com diferentes modalidades de passeio de barco, incluindo opções privadas quando especificadas no programa.",
+                },
+                {
+                    category: "barco",
+                    q: "Quanto tempo dura o passeio de barco?",
+                    a: "A duração varia de acordo com a experiência reservada. O tempo previsto é indicado na descrição de cada tour.",
+                },
+                {
+                    category: "barco",
+                    q: "O que acontece se as condições meteorológicas impedirem o passeio de barco?",
+                    a: "A segurança dos nossos clientes é sempre prioritária. Se as condições meteorológicas ou operacionais impedirem a realização do passeio de barco, a situação será avaliada e serão apresentadas as alternativas possíveis de acordo com as condições da reserva e do operador.",
+                },
+                {
+                    category: "familias",
+                    q: "Os tours são adequados para famílias com crianças ou bebés?",
+                    a: "Muitas das nossas experiências podem ser realizadas por famílias. No entanto, a adequação depende do itinerário, duração e atividades incluídas. Recomendamos informar a idade das crianças no momento da reserva para podermos orientar a escolha da experiência.",
+                },
+                {
+                    category: "familias",
+                    q: "É possível disponibilizar cadeira para crianças?",
+                    a: "Sim. Esta necessidade deve ser indicada no momento da reserva.",
+                },
+                {
+                    category: "familias",
+                    q: "As experiências são adequadas para pessoas com mobilidade reduzida?",
+                    a: "A acessibilidade varia de acordo com o itinerário, veículo, quintas, restaurantes, monumentos e atividades incluídas. Se tiver necessidades específicas de mobilidade, informe-nos antes da reserva para avaliarmos a experiência mais adequada.",
+                },
+                {
+                    category: "gastronomia",
+                    q: "É possível adaptar as refeições a restrições alimentares?",
+                    a: "Sempre que possível, sim. As restrições alimentares devem ser comunicadas antecipadamente para que possamos verificar as opções disponíveis nos restaurantes, quintas ou experiências gastronómicas.",
+                },
+                {
+                    category: "gastronomia",
+                    q: "Existem opções vegetarianas, veganas ou sem glúten?",
+                    a: "Podem ser solicitadas opções vegetarianas, veganas ou adequadas a determinadas restrições alimentares, mediante disponibilidade dos locais selecionados. Recomendamos informar-nos no momento da reserva.",
+                },
+                {
+                    category: "gastronomia",
+                    q: "É necessário informar alergias ou restrições alimentares com antecedência?",
+                    a: "Sim. Esta informação deve ser comunicada antes da experiência. Quanto mais cedo recebermos essa informação, maior será a possibilidade de confirmar opções adequadas junto dos parceiros envolvidos.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Qual é a política de cancelamento e alteração de datas?",
+                    a: "Oferecemos cancelamento gratuito e reembolso integral para cancelamentos solicitados até 48 horas antes da hora de início do tour. Caso os seus planos de voo sofram alterações ou surja algum imprevisto, ajustamos a data do seu tour sem qualquer custo adicional, sujeito à disponibilidade de calendário.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Posso alterar a data da minha experiência depois de reservar?",
+                    a: "Os pedidos de alteração podem ser analisados de acordo com a disponibilidade para a nova data e as condições da reserva. Quanto mais cedo nos contactar, maior será a possibilidade de encontrarmos uma alternativa.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "O que acontece se as condições meteorológicas afetarem a experiência?",
+                    a: "Quando as condições meteorológicas podem comprometer uma atividade, como um passeio de barco, avaliamos a situação com os operadores envolvidos e procuramos a alternativa mais adequada, de acordo com as condições da experiência reservada.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "A NORTHÉ pode alterar o itinerário durante o tour?",
+                    a: "Em determinadas circunstâncias, pode ser necessário ajustar o itinerário devido a condições meteorológicas, horários, disponibilidade de locais ou outras situações operacionais. Qualquer alteração será feita procurando preservar a qualidade e a essência da experiência.",
+                },
+                {
+                    category: "especiais",
+                    q: "Posso organizar uma experiência para uma ocasião especial?",
+                    a: "Sim. Podemos criar experiências privadas para celebrar momentos especiais, adaptando determinados elementos da experiência às características da ocasião.",
+                },
+                {
+                    category: "especiais",
+                    q: "A NORTHÉ organiza aniversários, pedidos de casamento ou outras celebrações?",
+                    a: "Sim. Organizamos aniversários, aniversários de casamento, pedidos de casamento e outras celebrações privadas. Os detalhes devem ser combinados antecipadamente.",
+                },
+                {
+                    category: "especiais",
+                    q: "Posso adicionar um picnic, fotógrafo ou outros serviços à minha experiência?",
+                    a: "Algumas experiências podem ser complementadas com serviços ou elementos adicionais, como picnics, fotografia, decoração ou outros pedidos especiais. A disponibilidade e o valor são confirmados individualmente.",
+                },
+            ],
+        },
+
+        blog: {
+            badge: "Diário & Guias",
+            title: "Diário do Norte & Douro",
+            subtitle: "Guias autorizados, itinerários exclusivos e segredos do Norte de Portugal.",
+            readMore: "Ler Artigo",
+            bookCta: "Reservar esta experiência",
+            items: [
+                {
+                    slug: "8-melhores-passeios-a-partir-do-porto",
+                    title: "8 Melhores Passeios a partir do Porto",
+                    subtitle: "Descubra o Norte de Portugal além da cidade",
+                    excerpt: "O Porto é uma excelente base para descobrir outras regiões de Portugal. Em poucas horas, é possível sair do centro histórico e encontrar vinhedos, cidades medievais, palácios, montanhas, aldeias tradicionais e a costa atlântica.",
+                    date: "18 de Setembro de 2026",
+                    category: "Guia de Viagem",
+                    image: "/images/blog/8-melhores-passeios-porto.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "O Porto é uma excelente base para descobrir outras regiões de Portugal. Em poucas horas, é possível sair do centro histórico e encontrar vinhedos, cidades medievais, palácios, montanhas, aldeias tradicionais e a costa atlântica." },
+                        { type: "p", text: "Entre os passeios mais procurados estão o Vale do Douro, Braga, Guimarães e Aveiro. Para quem procura natureza, o Parque Nacional da Peneda-Gerês oferece uma paisagem completamente diferente, enquanto Arouca combina montanhas, rios e experiências ao ar livre. Amarante e Ponte de Lima são alternativas para quem prefere um ritmo mais tranquilo e uma experiência mais ligada à cultura local." },
+                        { type: "p", text: "A escolha depende do que você procura: vinho e gastronomia no Douro, história em Guimarães, arquitetura e patrimônio em Braga, canais e litoral em Aveiro ou natureza no Gerês." },
+                        { type: "p", text: "Mais do que simplesmente sair do Porto por um dia, explorar o Norte permite conhecer a diversidade de uma região onde história, gastronomia, vinho e paisagem estão profundamente ligados." },
+                        { type: "p", text: "Quer descobrir o Norte de Portugal a partir do Porto? Conheça as experiências privadas da NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "vale-do-douro-a-partir-do-porto",
+                    title: "Vale do Douro a partir do Porto",
+                    subtitle: "Vinhos, paisagens e uma das regiões mais emblemáticas de Portugal",
+                    excerpt: "O Vale do Douro é uma das experiências mais marcantes para quem visita o Porto. A região é conhecida pelas encostas cobertas de vinhas, pelo rio Douro e pela tradição secular ligada à produção de vinhos, incluindo o famoso Vinho do Porto.",
+                    date: "17 de Setembro de 2026",
+                    category: "Douro Valley",
+                    image: "/images/blog/douro-valley-vineyards.webp",
+                    readTime: "5 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "O Vale do Douro é uma das experiências mais marcantes para quem visita o Porto. A região é conhecida pelas encostas cobertas de vinhas, pelo rio Douro e pela tradição secular ligada à produção de vinhos, incluindo o famoso Vinho do Porto." },
+                        { type: "p", text: "Pinhão e Peso da Régua estão entre os principais pontos de referência para quem visita a região. Ao longo do caminho, quintas, miradouros e estradas panorâmicas revelam diferentes perspetivas da paisagem." },
+                        { type: "p", text: "Uma visita pode combinar uma quinta vinícola, degustação de vinhos, gastronomia regional e um passeio pelo rio. O percurso entre Porto e Douro é mais longo do que outros passeios próximos da cidade, por isso vale a pena planejar o dia com cuidado." },
+                        { type: "p", text: "O Douro também muda bastante ao longo do ano. A primavera traz diferentes tonalidades de verde, enquanto setembro e outubro transformam as vinhas durante a época das vindimas." },
+                        { type: "p", text: "Para quem está no Porto e quer conhecer a relação entre território, vinho e cultura portuguesa, o Douro é uma experiência que vai muito além de uma simples visita a uma região vinícola." },
+                        { type: "p", text: "Descubra o Douro com uma experiência privada NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "o-que-fazer-no-porto",
+                    title: "O que fazer no Porto",
+                    subtitle: "Uma cidade para descobrir sem pressa",
+                    excerpt: "O Porto reúne história, arquitetura, gastronomia, vinho e uma forte identidade cultural em uma área relativamente compacta.",
+                    date: "16 de Setembro de 2026",
+                    category: "Porto & Cultura",
+                    image: "/images/blog/o-que-fazer-porto.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "O Porto reúne história, arquitetura, gastronomia, vinho e uma forte identidade cultural em uma área relativamente compacta." },
+                        { type: "p", text: "O centro histórico, classificado como Patrimônio Mundial pela UNESCO, concentra alguns dos lugares mais conhecidos da cidade, como a Ribeira, a Sé, a Estação de São Bento e a Torre dos Clérigos. Do outro lado do rio, Vila Nova de Gaia oferece as tradicionais caves de vinho do Porto e uma das vistas mais conhecidas sobre a cidade." },
+                        { type: "p", text: "Mas o Porto também pode ser descoberto além dos principais monumentos. Mercados, restaurantes, cafés, bairros históricos, lojas tradicionais e a zona da Foz mostram diferentes lados da cidade." },
+                        { type: "p", text: "Para quem tem mais tempo, vale ainda explorar experiências gastronômicas, arquitetura, arte e os arredores do Porto." },
+                        { type: "p", text: "A melhor maneira de conhecer a cidade depende do seu ritmo e dos seus interesses. Algumas pessoas preferem seguir um roteiro clássico; outras procuram uma experiência mais personalizada e menos previsível." },
+                        { type: "p", text: "O importante é deixar espaço para descobrir a cidade sem transformar cada momento em uma lista de lugares para marcar." },
+                        { type: "p", text: "Explore o Porto de uma forma mais pessoal com a NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "braga-e-guimaraes-a-partir-do-porto",
+                    title: "Braga e Guimarães a partir do Porto",
+                    subtitle: "Dois destinos históricos no coração do Norte de Portugal",
+                    excerpt: "Braga e Guimarães estão entre os destinos mais interessantes para quem quer explorar o Norte de Portugal a partir do Porto.",
+                    date: "14 de Setembro de 2026",
+                    category: "História & Património",
+                    image: "/images/blog/braga-guimaraes-historical.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Braga e Guimarães estão entre os destinos mais interessantes para quem quer explorar o Norte de Portugal a partir do Porto." },
+                        { type: "p", text: "Braga combina um centro histórico marcado pela arquitetura religiosa com lugares como o Santuário do Bom Jesus do Monte, conhecido pela sua monumental escadaria e pelas vistas sobre a região." },
+                        { type: "p", text: "Guimarães apresenta uma atmosfera diferente. O centro histórico, classificado como Patrimônio Mundial da UNESCO, preserva ruas, praças e edifícios que ajudam a contar a história da formação de Portugal. A cidade está tradicionalmente associada às origens da nacionalidade portuguesa. ￼" },
+                        { type: "p", text: "As duas cidades podem ser visitadas no mesmo dia, mas é preciso aceitar um ritmo mais intenso. Para quem prefere explorar com mais calma, dedicar um dia inteiro a apenas uma delas permite apreciar melhor o patrimônio, a arquitetura e a gastronomia local." },
+                        { type: "p", text: "Braga é especialmente interessante para quem aprecia arquitetura e história religiosa. Guimarães pode agradar mais a quem procura um centro histórico compacto e uma atmosfera medieval." },
+                        { type: "p", text: "Duas cidades, duas perspetivas diferentes sobre a história do Norte de Portugal." },
+                    ],
+                },
+                {
+                    slug: "norte-de-portugal-lugares-alem-do-porto",
+                    title: "Norte de Portugal: Lugares para conhecer além do Porto",
+                    subtitle: "Uma região de paisagens, história, vinho e cultura",
+                    excerpt: "O Norte de Portugal é muito mais amplo do que o Porto e o Douro.",
+                    date: "12 de Setembro de 2026",
+                    category: "Norte de Portugal",
+                    image: "/images/blog/norte-de-portugal-natureza.webp",
+                    readTime: "5 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "O Norte de Portugal é muito mais amplo do que o Porto e o Douro." },
+                        { type: "p", text: "Ao norte e ao leste da cidade encontram-se destinos com características completamente diferentes. Guimarães preserva um dos centros históricos mais importantes da região. Braga combina patrimônio religioso e arquitetura. Ponte de Lima revela a tradição do Minho e a cultura do Vinho Verde." },
+                        { type: "p", text: "Mais ao norte, Viana do Castelo une patrimônio, montanha e litoral. No interior, o Parque Nacional da Peneda-Gerês oferece uma paisagem de montanhas, rios e aldeias tradicionais." },
+                        { type: "p", text: "Também existem destinos como Amarante e Arouca, que permitem conhecer uma faceta mais tranquila e natural do Norte." },
+                        { type: "p", text: "Essa diversidade é justamente uma das características mais interessantes da região: em uma mesma viagem é possível passar de uma cidade histórica para uma quinta vinícola, de uma aldeia tradicional para uma paisagem de montanha ou da serra para o Atlântico." },
+                        { type: "p", text: "Para quem está no Porto, explorar os arredores significa descobrir um território com diferentes ritmos, sabores e paisagens — muitas vezes além dos roteiros mais conhecidos." },
+                        { type: "p", text: "Descubra o Norte de Portugal através de experiências privadas a partir do Porto." },
+                    ],
+                },
+                {
+                    slug: "parque-nacional-peneda-geres-a-partir-do-porto",
+                    title: "Parque Nacional da Peneda-Gerês a partir do Porto",
+                    subtitle: "Natureza, montanhas e aldeias tradicionais",
+                    excerpt: "Para quem deseja conhecer um lado mais natural de Portugal, o Parque Nacional da Peneda-Gerês oferece uma experiência completamente diferente do ambiente urbano do Porto.",
+                    date: "10 de Setembro de 2026",
+                    category: "Natureza & Montanha",
+                    image: "/images/blog/geres-cascatas-natureza.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Para quem deseja conhecer um lado mais natural de Portugal, o Parque Nacional da Peneda-Gerês oferece uma experiência completamente diferente do ambiente urbano do Porto." },
+                        { type: "p", text: "Montanhas, rios, cascatas, florestas e aldeias tradicionais formam uma paisagem que muda ao longo das estações. Lugares como Soajo e Lindoso preservam elementos da arquitetura e das tradições rurais do Norte." },
+                        { type: "p", text: "Gerês também é procurado por quem gosta de caminhadas, fotografia e atividades ao ar livre. Nos meses mais quentes, as zonas de água natural tornam-se especialmente procuradas." },
+                        { type: "p", text: "Por ser uma região extensa e com muitos pontos de interesse espalhados, explorar Gerês exige mais planejamento do que um passeio convencional por uma cidade. Transporte, tempo disponível e escolha dos locais fazem diferença na experiência." },
+                        { type: "p", text: "Para quem parte do Porto, um dia permite conhecer alguns dos principais cenários da região, mas o ritmo deve ser planejado de acordo com os interesses do grupo." },
+                        { type: "p", text: "Gerês é uma escolha especialmente interessante para quem quer substituir monumentos e ruas movimentadas por montanhas, silêncio e natureza." },
+                        { type: "p", text: "Conheça o lado mais selvagem do Norte de Portugal com a NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "douro-ou-vinho-verde",
+                    title: "Douro ou Vinho Verde?",
+                    subtitle: "Duas experiências de vinho no Norte de Portugal",
+                    excerpt: "Douro e Vinho Verde representam duas das experiências vinícolas mais conhecidas do Norte de Portugal — mas oferecem atmosferas bastante diferentes.",
+                    date: "8 de Setembro de 2026",
+                    category: "Enoturismo & Vinhos",
+                    image: "/images/blog/vinho-verde-vs-douro.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Douro e Vinho Verde representam duas das experiências vinícolas mais conhecidas do Norte de Portugal — mas oferecem atmosferas bastante diferentes." },
+                        { type: "p", text: "O Douro é marcado pelas encostas íngremes cobertas de vinhas, pelo rio e pelas quintas que fazem parte da paisagem cultural da região. É um destino especialmente associado ao Vinho do Porto e aos vinhos do Douro." },
+                        { type: "p", text: "A região do Vinho Verde, por outro lado, estende-se principalmente pelo Minho e apresenta uma paisagem mais verde, com pequenas propriedades, quintas, rios e cidades históricas como Ponte de Lima." },
+                        { type: "p", text: "A diferença não está apenas no vinho. É também uma diferença de território e experiência." },
+                        { type: "p", text: "O Douro proporciona grandes paisagens de vale e rio. O Minho oferece uma atmosfera mais verde, rural e próxima das tradições locais." },
+                        { type: "p", text: "Para quem gosta de vinho, escolher entre os dois depende do tipo de viagem que procura — ou simplesmente da vontade de conhecer ambos." },
+                        { type: "p", text: "O Norte de Portugal permite justamente essa variedade: duas regiões vinícolas relativamente próximas, mas com paisagens, histórias e identidades próprias." },
+                        { type: "p", text: "Descubra os sabores do Norte de Portugal com uma experiência privada da NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "experiencias-privadas-a-partir-do-porto",
+                    title: "Experiências Privadas a partir do Porto",
+                    subtitle: "Conhecer Portugal no seu próprio ritmo",
+                    excerpt: "Nem toda viagem precisa seguir um roteiro fixo.",
+                    date: "5 de Setembro de 2026",
+                    category: "Experiências Privadas",
+                    image: "/images/blog/experiencias-privadas-douro-terrace.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Nem toda viagem precisa seguir um roteiro fixo." },
+                        { type: "p", text: "Uma experiência privada permite adaptar o dia aos interesses de cada grupo: dedicar mais tempo a uma quinta, escolher um almoço especial, fazer uma parada inesperada ou simplesmente passar mais tempo apreciando uma paisagem." },
+                        { type: "p", text: "A partir do Porto, as possibilidades são muito variadas. Um dia pode ser dedicado ao vinho e à gastronomia no Douro, à história de Braga e Guimarães, às paisagens do Gerês ou às tradições do Minho." },
+                        { type: "p", text: "Para casais, famílias ou pequenos grupos que viajam juntos, a privacidade também significa não dividir o veículo ou o ritmo do passeio com desconhecidos." },
+                        { type: "p", text: "Mais do que visitar vários lugares no mesmo dia, uma experiência privada permite escolher como você quer conhecer Portugal." },
+                        { type: "p", text: "É essa flexibilidade que transforma um passeio em uma experiência mais pessoal — seja para uma primeira viagem ao Norte, seja para quem já conhece o Porto e quer descobrir algo diferente." },
+                        { type: "p", text: "Na NORTHÉ, as experiências privadas partem do Porto e percorrem o Douro, o Porto e o Norte de Portugal, sempre com foco em privacidade, conforto e liberdade para aproveitar o destino no seu ritmo." },
+                        { type: "p", text: "Explore as experiências privadas da NORTHÉ." },
+                    ],
+                },
+            ],
+        },
+        contact: {
+            title: 'Vamos criar sua experiência em Portugal?',
+            desc: 'Conte-nos o que gostaria de viver. Criamos uma experiência privada à medida do seu grupo.',
+            ctaBook: 'Reservar Experiência', ctaWhatsapp: 'Falar via WhatsApp',
+            emailLabel: 'E-mail', email: EMAIL,
+            phoneLabel: 'Telefone', phone: '+351 911 923 499',
+        },
+        tailorMade: {
+            badge: 'Experiências à Medida',
+            title: 'Quer algo diferente?',
+            subtitle: 'Criamos experiências privadas personalizadas.',
+            desc: 'Criamos experiências privadas personalizadas de acordo com os seus interesses, ritmo e ocasião.',
+            collection: 'North Private Collection',
+            collectionDesc: 'Jantares privados, quintas históricas e momentos inesquecíveis.',
+            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisboa'],
+            cta: 'Criar Minha Experiência',
+        },
+        footer: {
+            rights: 'Todos os direitos reservados.',
+            terms: 'Termos e Condições', privacy: 'Política de Privacidade',
+            licensedIn: 'Serviço licenciado em Portugal · RNAAT 284/2026',
+            nif: 'NIPC: 518 190 145',
+            complaints: 'Livro de Reclamações Eletrónico'
+        },
+        cookieBanner: {
+            text: 'Utilizamos cookies para lhe proporcionar a melhor experiência possível. Ao continuar, consideramos que concorda com a nossa',
+            linkText: 'Política de Privacidade',
+            acceptBtn: 'Aceitar Todos',
+            essentialBtn: 'Apenas Essenciais',
+        },
+        mobileBar: { book: 'Reservar', whatsapp: 'WhatsApp' },
+        privacy: {
+            title: 'Política de Privacidade',
+            back: 'Voltar',
+            sections: [
+                { title: '1. Identificação do Responsável de Tratamento', content: 'A entidade responsável pelo tratamento de dados é a "NORTHÉ" (NIPC: 518 190 145), com sede em Portugal. Comprometemo-nos com a proteção de dados pessoais, cumprindo estritamente as normativas do RGPD Europeu (Regulamento de Proteção de Dados de Caráter Pessoal).' },
+                { title: '2. Recolha e Finalidade', content: 'Não dispomos de formulários de venda diretos. Os dados fornecidos aquando de reservas ou contacto via e-mail e WhatsApp (nome completo, número de telemóvel, preferências dietéticas) servem o exclusivo propósito de organizar as logísticas do tour de forma 100% personalizada por cliente.' },
+                { title: '3. Partilha Externa', content: 'Alguns dados essenciais poderão ser comunicados apenas aos parceiros logísticos (Quintas e Restaurantes) sob o critério de intolerâncias/alergias alimentares ou adaptações de viaturas.' },
+                { title: '4. Política de Cookies', content: 'O Website usa tecnologia Cookie, exclusivamente com propósito técnico e analítico (Google Analytics) para entendermos o perfil do nosso visitante. Na primeira visita, foi inquirido do seu consentimento explícito em concordância com a Diretiva CE/PE de proteção da e-Privacy. Pode remover este consentimento ou apagar o histórico de sessão no seu Web Browser a qualquer tempo.' },
+                { title: '5. Retenção e Direitos', content: 'Mantemos a informação de clientes apenas durante o tempo útil do serviço ou mandato tributário de faturação obrigatório. O cliente tem direito de pedir Acesso, Portabilidade ou Apagamento.' },
+            ]
+        },
+        terms: {
+            title: 'Termos e Condições',
+            back: 'Voltar',
+            sections: [
+                { title: '1. Âmbito e Objeto', content: 'Estes Termos e Condições aplicam-se a todos os serviços prestados pela NORTHÉ. Ao reservar connosco, o cliente declara conhecer e aceitar estas normas.' },
+                { title: '2. Reservas e Pagamentos', content: 'As reservas tornam-se efetivas após confirmação escrita por parte da NORTHÉ. Os pagamentos são realizados conforme o método acordado no momento da reserva.' },
+                { title: '3. Política de Cancelamento', content: 'Cancelamento gratuito até 48 horas antes da data do tour. Após este período, será cobrado o valor total da reserva devido aos compromissos assumidos com parceiros locais.' },
+                { title: '4. Responsabilidade', content: 'A NORTHÉ detém todos os seguros obrigatórios por lei (Acidentes Pessoais e Responsabilidade Civil). Não nos responsabilizamos por perdas de bens pessoais durante as atividades.' },
+                { title: '5. Jurisdição', content: 'Para a resolução de qualquer litígio, é competente o tribunal da comarca do Porto, com renúncia a qualquer outro.' },
+            ]
+        },
+        common: {
+            back: 'Voltar',
+            backHome: 'Voltar ao início',
+            notFound: 'Artigo não encontrado',
+            enjoyed: 'Gostou deste artigo?',
+            enjoyedDesc: 'Descubra estas paisagens ao vivo connosco, numa experiência totalmente exclusiva e desenhada à sua medida.',
+            exclusiveExp: 'Experiências exclusivas no Norte de Portugal',
+        },
+    },
+    en: {
+        nav: {
+            home: 'Home', tours: 'Private Tours', douro: 'Douro Valley', north: 'Northern Portugal', porto: 'Porto Experiences', about: 'About NORTHÉ', reviews: 'Reviews',
+            blog: 'Blog', contact: 'Contact', book: 'Book', bookNow: 'Book Now',
+        },
+        hero: {
+            subtitle: 'Exclusive Experiences in Northern Portugal',
+            title1: 'Private Experiences Departing from Porto',
+            title2: 'Douro Valley · Porto · Northern Portugal',
+            desc: 'Private bespoke experiences throughout Douro Valley, Porto, and Northern Portugal, with executive transport and carefully curated itineraries for each group.',
+            cta: 'Explore Experiences',
+            ctaWhatsapp: 'Chat on WhatsApp',
+            trustLine: '100% Private · 1–8 Guests · Executive Transport · Free Cancellation up to 48h',
+        },
+        quote: {
+            text1: '"The Douro is not a landscape,',
+            text2: 'it is a geological poem."',
+            author: 'Miguel Torga',
+        },
+        tours: {
+            badge: 'River Experiences',
+            title: 'Tours & Prices',
+            subtitle: 'Three exclusive on-board experiences, designed for the Douro\'s magical sunset.',
+            discount: '20% discount for children (0-8 years)',
+            labels: {
+                private: 'Private Boat',
+                shared: 'Shared Boat',
+                extra: 'Additional Guest',
+                perPersonLabel: 'Per Person',
+                pricingNote: 'for 2 people',
+                book: 'Book',
+                whatsapp: 'WhatsApp',
+            },
+            items: [
+                {
+                    id: 'picnic-sunset',
+                    name: 'Luxury Picnic, Boat & Train',
+                    tagline: 'On board · Sunset',
+                    image: '/images/novo-picnic.jpg',
+                    bullets: [
+                        '100% private experience, no groups',
+                        'Executive transport with wine expert driver-guide',
+                        'Luxury picnic at selected winery',
+                        'Douro river cruise (private or small group)',
+                        'Winery visit with wine tasting and regional honey and olive oil tasting',
+                        'Scenic train ride in the Douro Valley',
+                    ],
+                    pricePrivate: 1000,
+                    priceShared: 900,
+                    priceExtra: 150,
+                    capacityLabel: 'Maximum: 4 people',
+                },
+                {
+                    id: 'golden-hour',
+                    name: 'Douro Golden Hour',
+                    subtitle: 'Private cruise, lunch and wine tasting.',
+                    tagline: 'Magic hour · Cinematic light',
+                    bullets: [
+                        '100% private experience, no groups',
+                        'Executive transport with wine expert driver-guide',
+                        'Scenic route through the Douro Valley (includes N222 sections)',
+                        'Gastronomic lunch at Michelin-starred restaurant with wine pairing',
+                        'Douro river cruise (private or small group) at the end of the day',
+                        'Wine tasting at a reference winery with views over the valley',
+                    ],
+                    pricePrivate: 1000,
+                    priceShared: 850,
+                    priceExtra: 150,
+                    capacityLabel: 'Maximum: 4 people',
+                },
+                {
+                    id: 'douro-premium',
+                    name: 'Douro Premium',
+                    subtitle: 'Wine master, Lunch, Cruise and Train.',
+                    tagline: 'Signature · Small group',
+                    image: '/images/douro-premium.jpg',
+                    bullets: [
+                        'Accompanied by a Douro wine master',
+                        'Traditional lunch with wine pairing',
+                        'Visit to selected estates with wine tasting and regional products',
+                        'Luxury scenic cruise on the Douro River',
+                        'Train ride with views over the valley',
+                    ],
+                    perPerson: 180,
+                    capacityLabel: 'Small group up to 8 people',
+                },
+            ],
+        },
+        transfer: {
+            badge: 'Premium Service',
+            title: 'Executive Transfer in Porto',
+            subtitle: 'Comfort, Punctuality and Excellence in Every Detail',
+            intro: 'We offer private executive transfer service in Porto, with pickup and delivery at hotel, residence or Francisco Sá Carneiro Airport. A service designed for demanding travellers.',
+            features: [
+                { title: 'Punctuality and Premium Planning', items: ['Your time is valuable.', 'Real-time flight monitoring', 'Driver on site before the time', 'Waiting time included on arrival'] },
+                { title: 'Executive Vehicle up to 8 Passengers', items: ['Comfortable, quiet and spacious interior', 'Ample space for luggage', 'Air conditioning', 'Ideal for families or executives'] },
+                { title: 'Safety and Excellence', items: ['Experienced and trilingual drivers', 'Baby seat (on request)', 'Fully licensed and safe service'] },
+            ],
+            services: [
+                { title: 'Airport \u2192 Hotel Transfer', desc: 'Flight tracking, reception at arrivals, total luggage assistance and direct transport to your destination.' },
+                { title: 'Hotel \u2192 Airport Transfer', desc: 'Punctual pickup at hotel or accommodation with proper planning to ensure timely arrival at the airport.' },
+            ],
+            price: '45',
+            priceLabel: 'From',
+            priceUnit: '€/transfer',
+            ctaBook: 'Request Personalized Quote',
+            ctaWhatsapp: 'Book via WhatsApp',
+        },
+                        
+        about: {
+            badge: "About NORTHÉ",
+            title: "Private experiences, crafted to discover Portugal in a more personal way.",
+            paragraphs: [
+                "NORTHÉ was born in Porto with a simple idea: to transform every journey into a meaningful experience. We create private journeys across the Douro, Porto, and Northern Portugal, combining landscapes, fine wines, gastronomy, culture, and carefully curated destinations.",
+                "Every experience is thoughtfully tailored for your group, with comfort, flexibility, and passionate attention to detail — because discovering a destination should never follow a generic itinerary.",
+            ],
+            signature: "NORTHÉ",
+            subsignature: "Private Tours & Bespoke Journeys",
+            stat: "100%",
+            statLabel: "Private & Tailor-Made",
+        },
+        reviews: {
+            badge: 'Reviews',
+            title: 'What Our Clients Say',
+            subtitle: 'Every review is a true story of those who lived the experience.',
+            rating: '4.9', totalReviews: '127',
+            items: [
+                { text: 'An experience that transcends tourism. We felt like guest of honor in one of the most beautiful regions in the world. The guide was exceptional and the attention to detail impressive.', author: 'Sofia Albuquerque', location: 'Lisbon, Portugal', flag: '🇵🇹', stars: 5 },
+                { text: 'The attention to detail was impeccable. From the private boat ride to the exclusive wine tastings, everything was perfect. Highly recommended for anyone visiting Porto.', author: 'James Sterling', location: 'London, UK', flag: '🇬🇧', stars: 5 },
+                { text: 'A magical day in the Douro. The guide was excellent, the wines superb and the lunch delicious. Highly recommend!', author: 'Marie Dubois', location: 'Paris, France', flag: '🇫🇷', stars: 4.5 },
+                { text: 'Best experience ever in the Douro! The sunset boat ride was unforgettable.', author: 'Carlos Mendes', location: 'São Paulo, Brazil', flag: '🇧🇷', stars: 5 },
+                { text: 'A perfect day! The wine tasting was top notch and the landscape is breathtaking.', author: 'Hannah Müller', location: 'Munich, Germany', flag: '🇩🇪', stars: 4.8 },
+                { text: 'We celebrated our anniversary with NORTHÉ and it was the highlight of our trip. Real luxury.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
+                { text: 'The guide knew everything about the history of the region. A must-trip for wine lovers.', author: 'Alessandro Rossi', location: 'Milan, Italy', flag: '🇮🇹', stars: 4.5 },
+                { text: 'Impeccable transfer and even better tour. First class service from start to finish.', author: 'Lucía Fernández', location: 'Madrid, Spain', flag: '🇪🇸', stars: 5 },
+                { text: 'Amazing! The Douro is magical and the NORTHÉ team made everything special.', author: 'Daan van der Berg', location: 'Amsterdam, Netherlands', flag: '🇳🇱', stars: 4.8 },
+            ],
+        },
+                        
+        faq: {
+            badge: "FAQ",
+            title: "Everything You Need to Know",
+            subtitle: "Clear and transparent answers to the most common questions before booking your private experience.",
+            searchPlaceholder: "Search questions (e.g., boat, pick-up, children, cancellation)...",
+            noResults: "No questions found matching your search.",
+            clearSearch: "Clear search",
+            whatsappTitle: "Still have questions about your experience?",
+            whatsappSubtitle: "Speak directly with NORTHÉ. We will be delighted to help design the ideal experience and itinerary for your group.",
+            whatsappBtn: "Chat on WhatsApp",
+            categories: [
+                { id: "all", label: "All Questions" },
+                { id: "reservas", label: "Bookings & Pricing" },
+                { id: "transporte", label: "Pick-up & Transport" },
+                { id: "douro", label: "Douro Valley" },
+                { id: "barco", label: "Boat Cruises" },
+                { id: "familias", label: "Families & Accessibility" },
+                { id: "gastronomia", label: "Dining & Diets" },
+                { id: "cancelamentos", label: "Cancellations & Flexibility" },
+                { id: "especiais", label: "Special Occasions" },
+            ],
+            items: [
+                {
+                    category: "reservas",
+                    q: "How can I book a private experience with NORTHÉ?",
+                    a: "You can request your experience directly via our website, WhatsApp, or through NORTHÉ's official contact channels. Simply share your preferred date, party size, and the journey that interests you. Our concierge team will confirm availability and all customized details prior to reservation.",
+                },
+                {
+                    category: "reservas",
+                    q: "How far in advance should I make my reservation?",
+                    a: "We recommend reserving well in advance, particularly for Douro Valley journeys, private boat cruises, exclusive wine estate visits, and peak season travel dates. Last-minute reservations may be accommodated depending on calendar availability.",
+                },
+                {
+                    category: "reservas",
+                    q: "Are NORTHÉ tours 100% private?",
+                    a: "Yes. NORTHÉ specializes exclusively in 100% private experiences. Your party travels and enjoys the journey with complete exclusivity, never sharing the vehicle or itinerary with strangers.",
+                },
+                {
+                    category: "reservas",
+                    q: "How is the pricing of a private experience structured?",
+                    a: "Pricing depends on the chosen experience, party size, custom itinerary, and premium services included. Each experience clearly outlines its inclusions and pricing prior to reservation.",
+                },
+                {
+                    category: "reservas",
+                    q: "Is the displayed price per person or per group?",
+                    a: "Prices are presented per private group, not per person. NORTHÉ private experiences can be booked for parties of 1 to 8 guests, maintaining total exclusivity. Pricing varies based on the experience and party size.",
+                },
+                {
+                    category: "reservas",
+                    q: "What is included in the price? Are there any hidden costs?",
+                    a: "Every experience details its exact inclusions with absolute transparency. Whenever optional upgrades, monument entrances, private dining, rare vintage tastings, or yacht charters are chosen, they are clearly identified in advance.",
+                },
+                {
+                    category: "reservas",
+                    q: "What payment methods are available?",
+                    a: "Available payment methods are shared upon booking. Payments are processed through secure channels (bank transfer, credit/debit cards, and payment links), with all transaction details confirmed prior to the experience.",
+                },
+                {
+                    category: "reservas",
+                    q: "Can I request a fully customized tailor-made experience?",
+                    a: "Yes. Bespoke customization is the hallmark of NORTHÉ. We can tailor the pace, itinerary, and exclusive moments to match your group's unique passions, subject to operational feasibility.",
+                },
+                {
+                    category: "transporte",
+                    q: "Where does pick-up and drop-off take place?",
+                    a: "Pick-up and drop-off are arranged directly at your preferred location. For experiences departing from Porto, we coordinate seamless collection right at your doorstep.",
+                },
+                {
+                    category: "transporte",
+                    q: "Does NORTHÉ offer pick-up and drop-off at Porto hotels?",
+                    a: "We collect your party directly from the lobby of your hotel, boutique apartment, Airbnb, or private villa in Porto and Vila Nova de Gaia, typically between 08:30 and 09:00 (or at your preferred timing). At the end of the day (~18:00 - 18:30), we return you comfortably to your accommodation or drop you at a restaurant of your choice for dinner.",
+                },
+                {
+                    category: "transporte",
+                    q: "Is pick-up available directly at Porto Airport (OPO)?",
+                    a: "Yes. Airport collection can be arranged upon booking, allowing our chauffeur to monitor your incoming flight and coordinate a seamless VIP transition.",
+                },
+                {
+                    category: "transporte",
+                    q: "Can I request pick-up outside of Porto?",
+                    a: "Pick-ups outside our standard area can be arranged depending on location, timing, and chosen experience. A distance supplement may apply, clearly communicated in advance.",
+                },
+                {
+                    category: "transporte",
+                    q: "Is vehicle transport during the tour exclusively private?",
+                    a: "Yes. All NORTHÉ journeys are conducted in executive Mercedes-Benz vehicles reserved exclusively for your party.",
+                },
+                {
+                    category: "douro",
+                    q: "What is the best way to explore Douro Valley from Porto?",
+                    a: "A private experience is the most refined and rewarding way to explore the Douro, avoiding rigid tour bus schedules and adapting the day to your personal pace. Departing from Porto, it combines breathtaking viewpoints, historic quintas, regional gourmet dining, and private river navigation.",
+                },
+                {
+                    category: "douro",
+                    q: "How long does a private Douro Valley tour last?",
+                    a: "Duration varies by itinerary. NORTHÉ signature day journeys are curated for a comprehensive full-day discovery (approx. 8 to 9 hours), with exact timings outlined on each experience page.",
+                },
+                {
+                    category: "douro",
+                    q: "What will I visit during a private Douro experience?",
+                    a: "Depending on the itinerary, you will explore historic wine estates (quintas), terraced vineyards, riverside villages such as Pinhão, panoramic viewpoints, and delve deeply into the world of Douro DOC and Port wine heritage.",
+                },
+                {
+                    category: "douro",
+                    q: "Are wine tastings included in the experience?",
+                    a: "Depending on the selected tour, wine tastings and estate visits are included in the programme as detailed on each tour page. We can also arrange bespoke tastings of rare vintages upon request.",
+                },
+                {
+                    category: "douro",
+                    q: "What varieties of wine will I taste in the Douro?",
+                    a: "You will experience both world-renowned Port Wines (Tawny, Ruby, Vintage) and exceptional Douro DOC whites and reds from indigenous grape varieties.",
+                },
+                {
+                    category: "douro",
+                    q: "Can I request a visit to a specific Douro winery (quinta)?",
+                    a: "Yes. We are happy to evaluate specific winery requests and confirm private host availability for your selected date.",
+                },
+                {
+                    category: "douro",
+                    q: "Can I customize the Douro itinerary to our liking?",
+                    a: "Yes. Private journeys offer unparalleled flexibility. We can align with you on preferred stops, balancing visits, and dining to craft an experience suited to your party.",
+                },
+                {
+                    category: "barco",
+                    q: "Do NORTHÉ experiences include a Douro river boat cruise?",
+                    a: "Selected signature journeys feature time on the Douro River. Cruise type, duration, and vessel specifications are detailed on each tour page.",
+                },
+                {
+                    category: "barco",
+                    q: "Is the boat cruise private or shared?",
+                    a: "NORTHÉ offers experiences with private classic wooden boats or vintage rabelo vessels. Each tour page clearly indicates whether the cruise is private or shared.",
+                },
+                {
+                    category: "barco",
+                    q: "How long does the boat cruise typically last?",
+                    a: "Cruises typically range from 1 to 2 hours, perfectly balanced within the day's itinerary as specified in the tour details.",
+                },
+                {
+                    category: "barco",
+                    q: "What happens if weather conditions prevent the boat cruise?",
+                    a: "Guest safety and comfort are always paramount. If weather conditions prevent safe river navigation, we coordinate with operators to provide premium terrestrial alternatives or estate experiences.",
+                },
+                {
+                    category: "familias",
+                    q: "Are the tours suitable for families traveling with children or infants?",
+                    a: "Many of our private experiences are ideal for families. We adapt travel pacing and comfort accordingly. We recommend sharing children's ages during booking so we can tailor the best itinerary.",
+                },
+                {
+                    category: "familias",
+                    q: "Are certified child seats and boosters provided?",
+                    a: "Yes. Certified ISOFIX infant seats and booster seats are provided complimentary upon advance notice.",
+                },
+                {
+                    category: "familias",
+                    q: "Are the experiences accessible for guests with reduced mobility?",
+                    a: "Accessibility varies by estate, terrain, and historic cobblestone settings. Please inform us of any mobility requirements so we can curate a smooth, step-free itinerary.",
+                },
+                {
+                    category: "gastronomia",
+                    q: "Can meals be adapted for dietary restrictions or allergies?",
+                    a: "Yes. Dietary requirements (vegetarian, vegan, gluten-free, lactose-free, or specific allergies) can be accommodated at our partner restaurants and estates with advance notice.",
+                },
+                {
+                    category: "gastronomia",
+                    q: "Are vegetarian, vegan, or gluten-free options available?",
+                    a: "Yes. We partner with top-tier culinary teams capable of crafting exceptional vegetarian, vegan, and gluten-free menus.",
+                },
+                {
+                    category: "gastronomia",
+                    q: "Is advance notice required for dietary preferences?",
+                    a: "Yes. Kindly inform us at the time of reservation to ensure our culinary partners prepare appropriate bespoke courses.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "What is the cancellation and rescheduling policy?",
+                    a: "We offer free cancellation with a 100% full refund for requests made up to 48 hours before tour departure. If your flight schedules shift or unexpected events arise, we happily adjust your tour date at no additional fee, subject to calendar availability.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Can I reschedule my experience date after booking?",
+                    a: "Yes. Date changes can be accommodated subject to calendar availability. The earlier you notify us, the smoother the transition.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "What occurs if adverse weather affects the experience?",
+                    a: "When weather impacts outdoor activities like boat cruises, we adapt the itinerary to indoor private cellars, tasting rooms, and covered viewpoints, ensuring the luxury experience remains unforgettable.",
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Can NORTHÉ adjust the itinerary during the tour?",
+                    a: "If unexpected weather or local road closures arise, our professional chauffeur-guide may adjust the route to preserve safety, quality, and uninterrupted pleasure.",
+                },
+                {
+                    category: "especiais",
+                    q: "Can I arrange an experience for a special celebration?",
+                    a: "Yes. We frequently curate bespoke private experiences for birthdays, anniversaries, proposals, and VIP milestones.",
+                },
+                {
+                    category: "especiais",
+                    q: "Does NORTHÉ organize marriage proposals, birthdays, or celebrations?",
+                    a: "Yes. We specialize in intimate marriage proposals, milestone birthdays, and wedding anniversaries, coordinating flowers, champagne, and private musicians.",
+                },
+                {
+                    category: "especiais",
+                    q: "Can I add private picnics, professional photography, or bespoke extras?",
+                    a: "Yes. Experiences can be enhanced with private vineyard picnics, personal photographers, or custom decorations upon request.",
+                },
+            ],
+        },
+
+        blog: {
+            badge: "Journal & Travel Guides",
+            title: "Douro & Northern Portugal Journal",
+            subtitle: "Curated guides, exclusive itineraries, and insider secrets of Northern Portugal.",
+            readMore: "Read Article",
+            bookCta: "Book this experience",
+            items: [
+                {
+                    slug: "8-melhores-passeios-a-partir-do-porto",
+                    title: "8 Best Day Trips from Porto",
+                    subtitle: "Discover Northern Portugal Beyond the City",
+                    excerpt: "Porto is an exceptional base for exploring other regions of Portugal. Within a few hours, you can leave the historic city center behind and find terraced vineyards, medieval towns, palaces, mountains, and the Atlantic coast.",
+                    date: "September 18, 2026",
+                    category: "Travel Guide",
+                    image: "/images/blog/8-melhores-passeios-porto.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Porto is an exceptional base for exploring other regions of Portugal. Within a few hours, you can leave the historic city center behind and find terraced vineyards, medieval towns, palaces, mountains, traditional villages, and the Atlantic coast." },
+                        { type: "p", text: "Among the most sought-after journeys are Douro Valley, Braga, Guimarães, and Aveiro. For nature lovers, Peneda-Gerês National Park offers a completely distinct mountain landscape, while Arouca combines suspension bridges, rivers, and outdoor adventure. Amarante and Ponte de Lima offer serene alternatives intimately connected with local Minho heritage." },
+                        { type: "p", text: "The choice depends entirely on your desires: world-class wine and gastronomy in the Douro, founding history in Guimarães, monumental religious architecture in Braga, serene canals in Aveiro, or pristine wilderness in Gerês." },
+                        { type: "p", text: "Far more than a simple day excursion, exploring the North unlocks a land where history, culinary excellence, wine craftsmanship, and landscape are deeply intertwined." },
+                        { type: "p", text: "Looking to discover Northern Portugal from Porto? Explore NORTHÉ private bespoke experiences." },
+                    ],
+                },
+                {
+                    slug: "vale-do-douro-a-partir-do-porto",
+                    title: "Douro Valley from Porto",
+                    subtitle: "Wines, Landscapes, and One of Portugal's Most Iconic Regions",
+                    excerpt: "The Douro Valley is one of the most memorable journeys for anyone visiting Porto. The region is celebrated worldwide for its hand-carved schist vineyard terraces, the winding Douro River, and a centuries-old winemaking heritage.",
+                    date: "September 17, 2026",
+                    category: "Douro Valley",
+                    image: "/images/blog/douro-valley-vineyards.webp",
+                    readTime: "5 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "The Douro Valley is one of the most memorable journeys for anyone visiting Porto. The region is celebrated worldwide for its hand-carved schist vineyard terraces, the winding Douro River, and a centuries-old winemaking heritage deeply linked to Port Wine." },
+                        { type: "p", text: "Pinhão and Peso da Régua are central focal points for visitors. Along the journey, historic quintas (wine estates), viewpoints, and scenic roads reveal stunning vistas across the canyon." },
+                        { type: "p", text: "A day trip seamlessly combines an exclusive boutique winery, sommelier-guided tastings, regional gastronomy, and a private wooden boat cruise. Because the drive is more extensive than other destinations near Porto, thoughtful itinerary planning is essential." },
+                        { type: "p", text: "The Douro also transforms dramatically across the seasons: spring carpets the valley in vivid greens, while September and October ignite the slopes in deep gold and amber during the harvest (vindima)." },
+                        { type: "p", text: "For travelers in Porto who wish to understand the living harmony between terroir, wine, and Portuguese soul, the Douro is an experience that transcends conventional travel." },
+                        { type: "p", text: "Discover the Douro through an exclusive NORTHÉ private journey." },
+                    ],
+                },
+                {
+                    slug: "o-que-fazer-no-porto",
+                    title: "What to Do in Porto",
+                    subtitle: "A City to Discover at Your Own Pace",
+                    excerpt: "Porto blends timeless history, noble architecture, culinary excellence, renowned wines, and a vibrant cultural identity into a remarkably intimate setting.",
+                    date: "September 16, 2026",
+                    category: "Porto & Culture",
+                    image: "/images/blog/o-que-fazer-porto.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Porto blends timeless history, noble architecture, culinary excellence, renowned wines, and a vibrant cultural identity into a remarkably intimate setting." },
+                        { type: "p", text: "Its historic center, a UNESCO World Heritage site, gathers iconic landmarks such as Ribeira, Sé Cathedral, São Bento Station with its intricate azulejos, and the Clérigos Tower. Across the river, Vila Nova de Gaia hosts historic Port wine lodges and breathtaking panoramic views over the skyline." },
+                        { type: "p", text: "Yet Porto reveals its true charm when explored beyond the headline monuments. Local food markets, cozy taverns, historic residential quarters, and the ocean promenade of Foz do Douro display authentic layers of local life." },
+                        { type: "p", text: "For travelers with extra time, private culinary discoveries, contemporary architecture, and boutique museums are well worth delving into." },
+                        { type: "p", text: "The finest way to experience Porto is at your personal rhythm: leaving space for spontaneous beauty rather than turning your holiday into a rushed checklist." },
+                        { type: "p", text: "Experience Porto in a more personal way with NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "braga-e-guimaraes-a-partir-do-porto",
+                    title: "Braga & Guimarães from Porto",
+                    subtitle: "Two Historic Capitals in the Heart of Northern Portugal",
+                    excerpt: "Braga and Guimarães stand among the most compelling cultural day trips for travelers exploring Northern Portugal from Porto.",
+                    date: "September 14, 2026",
+                    category: "History & Heritage",
+                    image: "/images/blog/braga-guimaraes-historical.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Braga and Guimarães stand among the most compelling cultural day trips for travelers exploring Northern Portugal from Porto." },
+                        { type: "p", text: "Braga blends an ancient historic quarter shaped by noble ecclesiastical architecture with icons like Bom Jesus do Monte, famed for its monumental Baroque stairway and commanding regional vistas." },
+                        { type: "p", text: "Guimarães, recognized as the birthplace of the Portuguese nation, presents an enchanting medieval atmosphere. Its UNESCO-listed historic center preserves stone lanes, grand squares, and the imposing 10th-century castle." },
+                        { type: "p", text: "Both cities can be visited in a single day, or explored individually with relaxed leisure, allowing deeper immersion into regional architecture and culinary traditions." },
+                        { type: "p", text: "Braga resonates with lovers of grand architecture and sacred heritage, while Guimarães captivates those who cherish romantic medieval intimacy." },
+                        { type: "p", text: "Two cities, two distinct perspectives on Portugal's foundational spirit." },
+                    ],
+                },
+                {
+                    slug: "norte-de-portugal-lugares-alem-do-porto",
+                    title: "Northern Portugal Beyond Porto",
+                    subtitle: "A Land of Breathtaking Landscapes, Wine, and Living Heritage",
+                    excerpt: "Northern Portugal is far richer and more diverse than just Porto and the Douro.",
+                    date: "September 12, 2026",
+                    category: "Northern Portugal",
+                    image: "/images/blog/norte-de-portugal-natureza.webp",
+                    readTime: "5 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Northern Portugal extends far beyond the borders of Porto and the Douro." },
+                        { type: "p", text: "To the north and east lie destinations of distinct character: Guimarães preserves medieval majesty, Braga showcases Baroque splendor, and Ponte de Lima embodies the aristocratic manor houses and Vinho Verde traditions of the Minho." },
+                        { type: "p", text: "Further north, Viana do Castelo unites mountain grandeur, folklore, and coastal beaches. Inland, Peneda-Gerês National Park provides dramatic granitic mountains and ancient villages." },
+                        { type: "p", text: "Hidden gems like Amarante and Arouca reveal an unhurried, pastoral side of Northern Portugal." },
+                        { type: "p", text: "This striking variety allows travelers to transition effortlessly from a historic fortress to an exclusive vineyard, or from mountain peaks to Atlantic waves, all within a single journey." },
+                        { type: "p", text: "Discover Northern Portugal through private signature journeys departing from Porto." },
+                    ],
+                },
+                {
+                    slug: "parque-nacional-peneda-geres-a-partir-do-porto",
+                    title: "Peneda-Gerês National Park from Porto",
+                    subtitle: "Untamed Nature, Granite Mountains, and Ancient Villages",
+                    excerpt: "For those seeking Portugal's pristine wilderness, Peneda-Gerês National Park offers a completely different world from the urban charm of Porto.",
+                    date: "September 10, 2026",
+                    category: "Nature & Wilderness",
+                    image: "/images/blog/geres-cascatas-natureza.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "For those seeking Portugal's pristine wilderness, Peneda-Gerês National Park offers a completely different world from the urban charm of Porto." },
+                        { type: "p", text: "Granitic peaks, crystal waterfalls, secluded natural lagoons, and centuries-old granite villages create a timeless sanctuary that shifts beauty across each season. Villages like Soajo and Lindoso preserve ancient espigueiros (granaries) and living pastoral traditions." },
+                        { type: "p", text: "Gerês is a haven for private hiking, photography, and refreshing dips in crystal-clear mountain waters during summer months." },
+                        { type: "p", text: "Because the park is vast, exploring Gerês requires professional navigation and executive transport to connect the most scenic spots seamlessly." },
+                        { type: "p", text: "Gerês is the perfect choice for travelers seeking silence, mountain majesty, and authentic nature." },
+                        { type: "p", text: "Experience Portugal's only National Park with NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "douro-ou-vinho-verde",
+                    title: "Douro Valley or Vinho Verde?",
+                    subtitle: "Two Contrasting Wine Expressions in Northern Portugal",
+                    excerpt: "Douro and Vinho Verde represent Portugal's two most renowned northern wine regions, each offering a fascinatingly distinct terroir and atmosphere.",
+                    date: "September 8, 2026",
+                    category: "Wine & Terroir",
+                    image: "/images/blog/vinho-verde-vs-douro.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Douro and Vinho Verde represent Portugal's two most renowned northern wine regions, each offering a fascinatingly distinct terroir and atmosphere." },
+                        { type: "p", text: "The Douro is distinguished by dramatic slate terraced hillsides, hot dry microclimates, and rich, full-bodied reds alongside iconic Ports." },
+                        { type: "p", text: "In contrast, the Vinho Verde denomination spans the lush, green Minho region, characterized by family-run manors, pergola-trained vines, and fresh, aromatic whites such as premium Alvarinho." },
+                        { type: "p", text: "The contrast is evident in both the glass and the landscape: monumental canyons versus pastoral aristocratic gardens." },
+                        { type: "p", text: "Choosing between them depends on the ambiance you seek — or the joy of experiencing both on separate days." },
+                        { type: "p", text: "Explore the diverse wine cultures of Northern Portugal with NORTHÉ." },
+                    ],
+                },
+                {
+                    slug: "experiencias-privadas-a-partir-do-porto",
+                    title: "Private Experiences Departing from Porto",
+                    subtitle: "Discovering Portugal at Your Own Rhythm",
+                    excerpt: "Travel should never be confined to rigid bus schedules or crowded tour groups.",
+                    date: "September 5, 2026",
+                    category: "Private Experiences",
+                    image: "/images/blog/experiencias-privadas-douro-terrace.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Travel should never be confined to rigid bus schedules or crowded tour groups." },
+                        { type: "p", text: "A private experience gives you the freedom to shape the day around what your party loves most: lingering over a private tasting, enjoying a relaxed riverside lunch, or pausing at an unexpected viewpoint." },
+                        { type: "p", text: "Departing from Porto, possibilities abound: from the terraced vineyards of the Douro to historic Braga and Guimarães, the waterfalls of Gerês, or the manor estates of the Minho." },
+                        { type: "p", text: "For couples, families, and intimate groups, privacy ensures absolute comfort in executive vehicles without sharing your day with strangers." },
+                        { type: "p", text: "More than checking off monuments, a private journey lets you choose how you wish to experience Portugal." },
+                        { type: "p", text: "At NORTHÉ, we curate bespoke private journeys from Porto with certified chauffeur-guides, executive Mercedes-Benz transport, and passionate attention to detail." },
+                        { type: "p", text: "Explore NORTHÉ private signature collection." },
+                    ],
+                },
+            ],
+        },
+        contact: {
+            title: 'Shall we create your experience in Portugal?',
+            desc: 'Tell us what you would love to experience. We craft a private journey tailored exclusively for your group.',
+            ctaBook: 'Book Experience', ctaWhatsapp: 'Chat on WhatsApp',
+            emailLabel: 'Email', email: EMAIL,
+            phoneLabel: 'Phone', phone: '+351 911 923 499',
+        },
+        tailorMade: {
+            badge: 'Tailor-Made Experiences',
+            title: 'Looking for something unique?',
+            subtitle: 'We craft personalized private experiences.',
+            desc: 'We create bespoke private experiences designed around your personal interests, preferred pace, and special occasions.',
+            collection: 'North Private Collection',
+            collectionDesc: 'Private dining, historic wine estates, and unforgettable scenic journeys.',
+            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisbon'],
+            cta: 'Design My Experience',
+        },
+        footer: {
+            rights: 'All rights reserved.',
+            terms: 'Terms and Conditions', privacy: 'Privacy Policy',
+            licensedIn: 'Licensed service in Portugal · RNAAT 284/2026',
+            nif: 'NIPC: 518 190 145',
+            complaints: 'Electronic Complaints Book'
+        },
+        cookieBanner: {
+            text: 'We use cookies to ensure you get the best experience on our website. By continuing, you agree to our',
+            linkText: 'Privacy Policy',
+            acceptBtn: 'Accept All',
+            essentialBtn: 'Essential Only',
+        },
+        mobileBar: { book: 'Book Now', whatsapp: 'WhatsApp' },
+        privacy: {
+            title: 'Privacy Policy',
+            back: 'Back',
+            sections: [
+                { title: '1. Identification of the Data Controller', content: 'The entity responsible for data processing is "NORTHÉ" (NIPC: 518 190 145), based in Portugal. We are committed to the protection of personal data, strictly complying with the EU GDPR (General Data Protection Regulation) standards.' },
+                { title: '2. Collection and Purpose', content: 'We do not have direct sales forms. Data provided during bookings or contact via email and WhatsApp (full name, mobile number, dietary preferences) serve the exclusive purpose of organizing tour logistics in a 100% personalized way per client.' },
+                { title: '3. External Sharing', content: 'Some essential data may be communicated only to logistics partners (Estates and Restaurants) under the criteria of food intolerances/allergies or vehicle adaptations.' },
+                { title: '4. Cookie Policy', content: 'The Website uses Cookie technology, exclusively for technical and analytical purposes (Google Analytics) to understand our visitor profile. On your first visit, your explicit consent was requested in accordance with the EC/PE Directive on e-Privacy protection. You can remove this consent or clear your session history in your Web Browser at any time.' },
+                { title: '5. Retention and Rights', content: 'We keep client information only for the useful time of the service or mandatory tax invoicing period. The client has the right to request Access, Portability or Erasure.' },
+            ]
+        },
+        terms: {
+            title: 'Terms and Conditions',
+            back: 'Back',
+            sections: [
+                { title: '1. Scope and Object', content: 'These Terms and Conditions apply to all services provided by NORTHÉ. By booking with us, the client declares they know and accept these rules.' },
+                { title: '2. Bookings and Payments', content: 'Bookings become effective after written confirmation from NORTHÉ. Payments are made according to the method agreed upon at the time of booking.' },
+                { title: '3. Cancellation Policy', content: 'Free cancellation up to 48 hours before the tour date. After this period, the full booking value will be charged due to commitments made with local partners.' },
+                { title: '4. Responsibility', content: 'NORTHÉ holds all insurance required by law (Personal Accident and Civil Liability). We are not responsible for loss of personal belongings during activities.' },
+                { title: '5. Jurisdiction', content: 'For the resolution of any dispute, the court of the district of Porto is competent, with the waiver of any other.' },
+            ]
+        },
+        common: {
+            back: 'Back',
+            backHome: 'Back Home',
+            notFound: 'Article not found',
+            enjoyed: 'Enjoyed this article?',
+            enjoyedDesc: 'Discover these landscapes live with us, in a fully exclusive and tailor-made experience.',
+            exclusiveExp: 'Exclusive experiences in Northern Portugal',
+        },
+    },
+    es: {
+        nav: {
+            home: 'Inicio', tours: 'Tours',
+            transfer: 'Traslado', about: 'Sobre Nosotros', reviews: 'Reseñas',
+            blog: 'Blog', contact: 'Contacto', book: 'Reservar', bookNow: 'Reservar Ahora',
+        },
+        hero: {
+            subtitle: 'Experiencias Exclusivas en el Norte de Portugal',
+            title1: 'Experiencias Privadas desde Oporto',
+            title2: 'Douro Valley · Porto · Northern Portugal',
+            desc: 'Experiencias privadas por el Duero, Oporto y el Norte de Portugal, con transporte ejecutivo e itinerarios cuidadosamente pensados para cada grupo.',
+            cta: 'Explorar Experiencias',
+            ctaWhatsapp: 'Hablar por WhatsApp',
+            trustLine: '100% Privado · 1–8 Personas · Transporte Ejecutivo · Cancelación Gratuita hasta 48h',
+        },
+        quote: {
+            text1: '"El Duero no es un paisaje,',
+            text2: 'es un poema geológico."',
+            author: 'Miguel Torga',
+        },
+        tours: {
+            badge: 'Experiencias en el Río',
+            title: 'Tours y Precios',
+            subtitle: 'Tres experiencias exclusivas a bordo, diseñadas para el atardecer mágico del Duero.',
+            discount: 'Descuento del 20% para niños (0-8 años)',
+            labels: {
+                private: 'Barco Privado',
+                shared: 'Barco Compartido',
+                extra: 'Persona Adicional',
+                perPersonLabel: 'Por Persona',
+                pricingNote: 'para 2 personas',
+                book: 'Reservar',
+                whatsapp: 'WhatsApp',
+            },
+            items: [
+                {
+                    id: 'picnic-sunset',
+                    name: 'Picnic de lujo, barco y tren',
+                    tagline: 'A bordo · Puesta de sol',
+                    image: '/images/novo-picnic.jpg',
+                    bullets: [
+                        'Experiencia 100% privada sin grupos',
+                        'Transporte ejecutivo con guía-conductor experto en vinos',
+                        'Picnic de lujo en bodega seleccionada',
+                        'Paseo en barco por el río Duero (privado o en grupo pequeño)',
+                        'Visita a bodega con cata de vinos y degustación de miel y aceite regionales',
+                        'Recorrido panorámico en tren por el valle del Duero',
+                    ],
+                    pricePrivate: 1000,
+                    priceShared: 900,
+                    priceExtra: 150,
+                    capacityLabel: 'Máximo: 4 personas',
+                },
+                {
+                    id: 'golden-hour',
+                    name: 'Douro Golden Hour',
+                    subtitle: 'Crucero privado, almuerzo y cata de vinos.',
+                    tagline: 'Hora mágica · Luz cinematográfica',
+                    bullets: [
+                        'Experiencia 100% privada sin grupos',
+                        'Transporte ejecutivo con guía-conductor experto en vinos',
+                        'Ruta escénica por el valle del Duero (incluye tramos de la N222)',
+                        'Almuerzo gastronómico en restaurante con Chef estrella Michelin, con maridaje',
+                        'Crucero por el río Duero (privado o en grupo pequeño) al final del día',
+                        'Cata de vinos en una bodega de referencia con vistas sobre el valle',
+                    ],
+                    pricePrivate: 1000,
+                    priceShared: 850,
+                    priceExtra: 150,
+                    capacityLabel: 'Máximo: 4 personas',
+                },
+                {
+                    id: 'douro-premium',
+                    name: 'Douro Premium',
+                    subtitle: 'Wine master, Almuerzo, Crucero y Tren.',
+                    tagline: 'Firma · Grupo reducido',
+                    image: '/images/douro-premium.jpg',
+                    bullets: [
+                        'Acompañado por un Wine master experto en vinos del Duero',
+                        'Almuerzo tradicional con maridaje',
+                        'Visita a bodegas seleccionadas con cata de vinos y productos regionales',
+                        'Crucero panorámico de lujo en el río Duero',
+                        'Paseo en tren con vistas sobre el valle',
+                    ],
+                    perPerson: 180,
+                    capacityLabel: 'Grupo pequeño hasta 8 personas',
+                },
+            ],
+        },
+        transfer: {
+            badge: 'Servicio Premium',
+            title: 'Transfer Ejecutivo en Oporto',
+            subtitle: 'Confort, Puntualidad y Excelencia en Cada Detalle',
+            intro: 'Ofrecemos servicio de transfer ejecutivo privado en Oporto, con recogida y entrega en hotel, residencia o Aeropuerto Francisco Sá Carneiro. Un servicio diseñado para viajeros exigentes.',
+            features: [
+                { title: 'Puntualidad y Planificación Premium', items: ['Su tiempo es valioso.', 'Seguimiento de vuelos en tiempo real', 'Conductor en el lugar antes de la hora', 'Tiempo de espera incluido a la llegada'] },
+                { title: 'Vehículo Ejecutivo hasta 8 Pasajeros', items: ['Interior cómodo, silencioso y espacioso', 'Amplio espacio para equipaje', 'Aire acondicionado', 'Ideal para familias o ejecutivos'] },
+                { title: 'Seguridad y Excelencia', items: ['Conductores experimentados y trilingües', 'Silla de bebé (bajo petición)', 'Servicio totalmente licenciado y seguro'] },
+            ],
+            services: [
+                { title: 'Traslado Aeropuerto \u2192 Hotel', desc: 'Seguimiento de vuelo, recepción en llegadas, asistencia total con el equipaje y transporte directo a su destino.' },
+                { title: 'Traslado Hotel \u2192 Aeropuerto', desc: 'Recogida puntual en el hotel o alojamiento con planificación adecuada para garantizar la llegada a tiempo al aeropuerto.' },
+            ],
+            price: '45',
+            priceLabel: 'Desde',
+            priceUnit: '€/traslado',
+            ctaBook: 'Solicitar Presupuesto Personalizado',
+            ctaWhatsapp: 'Reservar por WhatsApp',
+        },
+about: {
+            badge: "Sobre NORTHÉ",
+            title: "Experiencias privadas, creadas para descubrir Portugal de una forma más personal.",
+            paragraphs: [
+                "NORTHÉ nació en Oporto con una idea simple: transformar cada viaje en una experiencia con verdadero significado. Creamos rutas privadas por el Duero, Oporto y el Norte de Portugal, combinando paisajes, vinos, gastronomía, cultura y lugares cuidadosamente seleccionados.",
+                "Cada experiencia está pensada para su grupo, con comodidad, flexibilidad y esmero en los detalles — porque conocer un destino no tiene que seguir un itinerario idéntico para todos.",
+            ],
+            signature: "NORTHÉ",
+            imageAlt: "Restaurante vinícola con vistas panorámicas al atardecer sobre el río Duero y Oporto",
+        },
+        reviews: {
+            badge: 'Reseñas',
+            title: 'Lo que dicen nuestros clientes',
+            subtitle: 'Cada reseña es una historia real de quien vivió la experiencia.',
+            rating: '4.9', totalReviews: '127',
+            items: [
+                { text: 'Una experiencia que trasciende el turismo. Nos sentimos como invitados de honor en una de las regiones más bellas del mundo. El guía fue excepcional y la atención al detalle impresionante.', author: 'Sofia Albuquerque', location: 'Lisboa, Portugal', flag: '🇵🇹', stars: 5 },
+                { text: 'The attention to detail was impeccable. From the private boat ride to the exclusive wine tastings, everything was perfect. Highly recommended for anyone visiting Porto.', author: 'James Sterling', location: 'London, UK', flag: '🇬🇧', stars: 5 },
+                { text: 'Un día mágico en el Duero. El guía fue excelente, los vinos soberbios y el almuerzo delicioso. ¡Muy recomendable!', author: 'Marie Dubois', location: 'París, Francia', flag: '🇫🇷', stars: 4.5 },
+                { text: '¡La mejor experiencia en el Duero! El paseo en barco al atardecer fue inolvidable.', author: 'Carlos Mendes', location: 'São Paulo, Brasil', flag: '🇧🇷', stars: 5 },
+                { text: '¡Un día perfecto! La cata de vinos fue de alto nivel y el paisaje es impresionante.', author: 'Hannah Müller', location: 'Múnich, Alemania', flag: '🇩🇪', stars: 4.8 },
+                { text: 'Celebramos nuestro aniversario con NORTHÉ y fue lo mejor de nuestro viaje. Lujo real.', author: 'Michael & Sarah Chen', location: 'Nueva York, EE. UU.', flag: '🇺🇸', stars: 5 },
+                { text: 'El guía sabía todo sobre la historia della región. Un viaje imprescindible para los amantes del vino.', author: 'Alessandro Rossi', location: 'Milán, Italia', flag: '🇮🇹', stars: 4.5 },
+                { text: 'Traslado impecable y tour aún mejor. Servicio de primera clase de principio a fin.', author: 'Lucía Fernández', location: 'Madrid, España', flag: '🇪🇸', stars: 5 },
+                { text: '¡Increíble! El Duero es mágico y el equipo de NORTHÉ hizo que todo fuera especial.', author: 'Daan van der Berg', location: 'Ámsterdam, Holanda', flag: '🇳🇱', stars: 4.8 },
+            ],
+        },
+faq: {
             badge: "FAQ",
             title: "Todo lo que necesita saber",
             subtitle: "Respuestas claras y transparentes a las dudas más frecuentes antes de reservar su experiencia privada.",
@@ -356,7 +1507,7 @@ export const CONTENT = {
                 },
             ],
         },
-                        blog: {
+blog: {
             badge: "Diario y Guías",
             title: "Diario del Norte y Duero",
             subtitle: "Guías autorizadas, itinerarios exclusivos y secretos del Norte de Portugal.",
@@ -521,905 +1672,6 @@ export const CONTENT = {
                     ]
                 },
             ],
-        },
-        contact: {
-            title: 'Vamos criar sua experiência em Portugal?',
-            desc: 'Conte-nos o que gostaria de viver. Criamos uma experiência privada à medida do seu grupo.',
-            ctaBook: 'Reservar Experiência', ctaWhatsapp: 'Falar via WhatsApp',
-            emailLabel: 'E-mail', email: EMAIL,
-            phoneLabel: 'Telefone', phone: '+351 911 923 499',
-        },
-        tailorMade: {
-            badge: 'Experiências à Medida',
-            title: 'Quer algo diferente?',
-            subtitle: 'Criamos experiências privadas personalizadas.',
-            desc: 'Criamos experiências privadas personalizadas de acordo com os seus interesses, ritmo e ocasião.',
-            collection: 'North Private Collection',
-            collectionDesc: 'Jantares privados, quintas históricas e momentos inesquecíveis.',
-            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisboa'],
-            cta: 'Criar Minha Experiência',
-        },
-        footer: {
-            rights: 'Todos os direitos reservados.',
-            terms: 'Termos e Condições', privacy: 'Política de Privacidade',
-            licensedIn: 'Serviço licenciado em Portugal · RNAAT 284/2026',
-            nif: 'NIPC: 518 190 145',
-            complaints: 'Livro de Reclamações Eletrónico'
-        },
-        cookieBanner: {
-            text: 'Utilizamos cookies para lhe proporcionar a melhor experiência possível. Ao continuar, consideramos que concorda com a nossa',
-            linkText: 'Política de Privacidade',
-            acceptBtn: 'Aceitar Todos',
-            essentialBtn: 'Apenas Essenciais',
-        },
-        mobileBar: { book: 'Reservar', whatsapp: 'WhatsApp' },
-        privacy: {
-            title: 'Política de Privacidade',
-            back: 'Voltar',
-            sections: [
-                { title: '1. Identificação do Responsável de Tratamento', content: 'A entidade responsável pelo tratamento de dados é a "NORTHÉ" (NIPC: 518 190 145), com sede em Portugal. Comprometemo-nos com a proteção de dados pessoais, cumprindo estritamente as normativas do RGPD Europeu (Regulamento de Proteção de Dados de Caráter Pessoal).' },
-                { title: '2. Recolha e Finalidade', content: 'Não dispomos de formulários de venda diretos. Os dados fornecidos aquando de reservas ou contacto via e-mail e WhatsApp (nome completo, número de telemóvel, preferências dietéticas) servem o exclusivo propósito de organizar as logísticas do tour de forma 100% personalizada por cliente.' },
-                { title: '3. Partilha Externa', content: 'Alguns dados essenciais poderão ser comunicados apenas aos parceiros logísticos (Quintas e Restaurantes) sob o critério de intolerâncias/alergias alimentares ou adaptações de viaturas.' },
-                { title: '4. Política de Cookies', content: 'O Website usa tecnologia Cookie, exclusivamente com propósito técnico e analítico (Google Analytics) para entendermos o perfil do nosso visitante. Na primeira visita, foi inquirido do seu consentimento explícito em concordância com a Diretiva CE/PE de proteção da e-Privacy. Pode remover este consentimento ou apagar o histórico de sessão no seu Web Browser a qualquer tempo.' },
-                { title: '5. Retenção e Direitos', content: 'Mantemos a informação de clientes apenas durante o tempo útil do serviço ou mandato tributário de faturação obrigatório. O cliente tem direito de pedir Acesso, Portabilidade ou Apagamento.' },
-            ]
-        },
-        terms: {
-            title: 'Termos e Condições',
-            back: 'Voltar',
-            sections: [
-                { title: '1. Âmbito e Objeto', content: 'Estes Termos e Condições aplicam-se a todos os serviços prestados pela NORTHÉ. Ao reservar connosco, o cliente declara conhecer e aceitar estas normas.' },
-                { title: '2. Reservas e Pagamentos', content: 'As reservas tornam-se efetivas após confirmação escrita por parte da NORTHÉ. Os pagamentos são realizados conforme o método acordado no momento da reserva.' },
-                { title: '3. Política de Cancelamento', content: 'Cancelamento gratuito até 48 horas antes da data do tour. Após este período, será cobrado o valor total da reserva devido aos compromissos assumidos com parceiros locais.' },
-                { title: '4. Responsabilidade', content: 'A NORTHÉ detém todos os seguros obrigatórios por lei (Acidentes Pessoais e Responsabilidade Civil). Não nos responsabilizamos por perdas de bens pessoais durante as atividades.' },
-                { title: '5. Jurisdição', content: 'Para a resolução de qualquer litígio, é competente o tribunal da comarca do Porto, com renúncia a qualquer outro.' },
-            ]
-        },
-        common: {
-            back: 'Voltar',
-            backHome: 'Voltar ao início',
-            notFound: 'Artigo não encontrado',
-            enjoyed: 'Gostou deste artigo?',
-            enjoyedDesc: 'Descubra estas paisagens ao vivo connosco, numa experiência totalmente exclusiva e desenhada à sua medida.',
-            exclusiveExp: 'Experiências exclusivas no Norte de Portugal',
-        },
-    },
-    en: {
-        nav: {
-            home: 'Home', tours: 'Private Tours', douro: 'Douro Valley', north: 'Northern Portugal', porto: 'Porto Experiences', about: 'About NORTHÉ', reviews: 'Reviews',
-            blog: 'Blog', contact: 'Contact', book: 'Book', bookNow: 'Book Now',
-        },
-        hero: {
-            subtitle: 'Exclusive Experiences in Northern Portugal',
-            title1: 'Private Experiences Departing from Porto',
-            title2: 'Douro Valley · Porto · Northern Portugal',
-            desc: 'Private bespoke experiences throughout Douro Valley, Porto, and Northern Portugal, with executive transport and carefully curated itineraries for each group.',
-            cta: 'Explore Experiences',
-            ctaWhatsapp: 'Chat on WhatsApp',
-            trustLine: '100% Private · 1–8 Guests · Executive Transport · Free Cancellation up to 48h',
-        },
-        quote: {
-            text1: '"The Douro is not a landscape,',
-            text2: 'it is a geological poem."',
-            author: 'Miguel Torga',
-        },
-        tours: {
-            badge: 'River Experiences',
-            title: 'Tours & Prices',
-            subtitle: 'Three exclusive on-board experiences, designed for the Douro\'s magical sunset.',
-            discount: '20% discount for children (0-8 years)',
-            labels: {
-                private: 'Private Boat',
-                shared: 'Shared Boat',
-                extra: 'Additional Guest',
-                perPersonLabel: 'Per Person',
-                pricingNote: 'for 2 people',
-                book: 'Book',
-                whatsapp: 'WhatsApp',
-            },
-            items: [
-                {
-                    id: 'picnic-sunset',
-                    name: 'Luxury Picnic, Boat & Train',
-                    tagline: 'On board · Sunset',
-                    image: '/images/novo-picnic.jpg',
-                    bullets: [
-                        '100% private experience, no groups',
-                        'Executive transport with wine expert driver-guide',
-                        'Luxury picnic at selected winery',
-                        'Douro river cruise (private or small group)',
-                        'Winery visit with wine tasting and regional honey and olive oil tasting',
-                        'Scenic train ride in the Douro Valley',
-                    ],
-                    pricePrivate: 1000,
-                    priceShared: 900,
-                    priceExtra: 150,
-                    capacityLabel: 'Maximum: 4 people',
-                },
-                {
-                    id: 'golden-hour',
-                    name: 'Douro Golden Hour',
-                    subtitle: 'Private cruise, lunch and wine tasting.',
-                    tagline: 'Magic hour · Cinematic light',
-                    bullets: [
-                        '100% private experience, no groups',
-                        'Executive transport with wine expert driver-guide',
-                        'Scenic route through the Douro Valley (includes N222 sections)',
-                        'Gastronomic lunch at Michelin-starred restaurant with wine pairing',
-                        'Douro river cruise (private or small group) at the end of the day',
-                        'Wine tasting at a reference winery with views over the valley',
-                    ],
-                    pricePrivate: 1000,
-                    priceShared: 850,
-                    priceExtra: 150,
-                    capacityLabel: 'Maximum: 4 people',
-                },
-                {
-                    id: 'douro-premium',
-                    name: 'Douro Premium',
-                    subtitle: 'Wine master, Lunch, Cruise and Train.',
-                    tagline: 'Signature · Small group',
-                    image: '/images/douro-premium.jpg',
-                    bullets: [
-                        'Accompanied by a Douro wine master',
-                        'Traditional lunch with wine pairing',
-                        'Visit to selected estates with wine tasting and regional products',
-                        'Luxury scenic cruise on the Douro River',
-                        'Train ride with views over the valley',
-                    ],
-                    perPerson: 180,
-                    capacityLabel: 'Small group up to 8 people',
-                },
-            ],
-        },
-        transfer: {
-            badge: 'Premium Service',
-            title: 'Executive Transfer in Porto',
-            subtitle: 'Comfort, Punctuality and Excellence in Every Detail',
-            intro: 'We offer private executive transfer service in Porto, with pickup and delivery at hotel, residence or Francisco Sá Carneiro Airport. A service designed for demanding travellers.',
-            features: [
-                { title: 'Punctuality and Premium Planning', items: ['Your time is valuable.', 'Real-time flight monitoring', 'Driver on site before the time', 'Waiting time included on arrival'] },
-                { title: 'Executive Vehicle up to 8 Passengers', items: ['Comfortable, quiet and spacious interior', 'Ample space for luggage', 'Air conditioning', 'Ideal for families or executives'] },
-                { title: 'Safety and Excellence', items: ['Experienced and trilingual drivers', 'Baby seat (on request)', 'Fully licensed and safe service'] },
-            ],
-            services: [
-                { title: 'Airport \u2192 Hotel Transfer', desc: 'Flight tracking, reception at arrivals, total luggage assistance and direct transport to your destination.' },
-                { title: 'Hotel \u2192 Airport Transfer', desc: 'Punctual pickup at hotel or accommodation with proper planning to ensure timely arrival at the airport.' },
-            ],
-            price: '45',
-            priceLabel: 'From',
-            priceUnit: '€/transfer',
-            ctaBook: 'Request Personalized Quote',
-            ctaWhatsapp: 'Book via WhatsApp',
-        },
-                        about: {
-            badge: "Über NORTHÉ",
-            title: "Private Erlebnisse, geschaffen, um Portugal auf persönlichere Weise zu entdecken.",
-            paragraphs: [
-                "NORTHÉ entstand in Porto aus einer klaren Vision: jede Reise in ein bedeutungsvolles Erlebnis zu verwandeln. Wir gestalten private Touren durch das Douro-Tal, Porto und Nordportugal, die faszinierende Landschaften, Weine, Gastronomie, Kultur und handverlesene Orte harmonisch vereinen.",
-                "Jedes Erlebnis wird maßgeschneidert für Ihre Gruppe konzipiert — mit höchstem Komfort, Flexibilität und Liebe zum Detail. Denn ein Reiseziel zu entdecken erfordert keinen Standardplan für jedermann.",
-            ],
-            signature: "NORTHÉ",
-            imageAlt: "Weinrestaurant mit Panoramablick bei Sonnenuntergang über den Fluss Douro und Porto",
-        },
-        reviews: {
-            badge: 'Reviews',
-            title: 'What Our Clients Say',
-            subtitle: 'Every review is a true story of those who lived the experience.',
-            rating: '4.9', totalReviews: '127',
-            items: [
-                { text: 'An experience that transcends tourism. We felt like guest of honor in one of the most beautiful regions in the world. The guide was exceptional and the attention to detail impressive.', author: 'Sofia Albuquerque', location: 'Lisbon, Portugal', flag: '🇵🇹', stars: 5 },
-                { text: 'The attention to detail was impeccable. From the private boat ride to the exclusive wine tastings, everything was perfect. Highly recommended for anyone visiting Porto.', author: 'James Sterling', location: 'London, UK', flag: '🇬🇧', stars: 5 },
-                { text: 'A magical day in the Douro. The guide was excellent, the wines superb and the lunch delicious. Highly recommend!', author: 'Marie Dubois', location: 'Paris, France', flag: '🇫🇷', stars: 4.5 },
-                { text: 'Best experience ever in the Douro! The sunset boat ride was unforgettable.', author: 'Carlos Mendes', location: 'São Paulo, Brazil', flag: '🇧🇷', stars: 5 },
-                { text: 'A perfect day! The wine tasting was top notch and the landscape is breathtaking.', author: 'Hannah Müller', location: 'Munich, Germany', flag: '🇩🇪', stars: 4.8 },
-                { text: 'We celebrated our anniversary with NORTHÉ and it was the highlight of our trip. Real luxury.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
-                { text: 'The guide knew everything about the history of the region. A must-trip for wine lovers.', author: 'Alessandro Rossi', location: 'Milan, Italy', flag: '🇮🇹', stars: 4.5 },
-                { text: 'Impeccable transfer and even better tour. First class service from start to finish.', author: 'Lucía Fernández', location: 'Madrid, Spain', flag: '🇪🇸', stars: 5 },
-                { text: 'Amazing! The Douro is magical and the NORTHÉ team made everything special.', author: 'Daan van der Berg', location: 'Amsterdam, Netherlands', flag: '🇳🇱', stars: 4.8 },
-            ],
-        },
-                        faq: {
-            badge: "FAQ",
-            title: "Alles, was Sie wissen müssen",
-            subtitle: "Klare und transparente Antworten auf die häufigsten Fragen vor der Buchung Ihres privaten Erlebnisses.",
-            searchPlaceholder: "Fragen durchsuchen (z.B. Boot, Abholung, Kinder, Stornierung)...",
-            noResults: "Keine passenden Fragen zu dieser Suche gefunden.",
-            clearSearch: "Suche zurücksetzen",
-            whatsappTitle: "Haben Sie noch Fragen zu Ihrem Erlebnis?",
-            whatsappSubtitle: "Sprechen Sie direkt mit NORTHÉ. Wir beraten Sie mit Freude bei der Wahl des perfekten Reiseplans für Ihre Gruppe.",
-            whatsappBtn: "Über WhatsApp kontaktieren",
-            categories: [
-                { id: "all", label: "Alle Fragen" },
-                { id: "reservas", label: "Buchung & Preise" },
-                { id: "transporte", label: "Abholung & Transfer" },
-                { id: "douro", label: "Douro-Tal" },
-                { id: "barco", label: "Bootsfahrten" },
-                { id: "familias", label: "Familien & Barrierefreiheit" },
-                { id: "gastronomia", label: "Essen & Diätwünsche" },
-                { id: "cancelamentos", label: "Stornierung & Flexibilität" },
-                { id: "especiais", label: "Besondere Anlässe" },
-            ],
-            items: [
-                {
-                    category: "reservas",
-                    q: "Wie kann ich ein privates Erlebnis bei NORTHÉ buchen?",
-                    a: "Sie können Ihre Anfrage direkt über unsere Website, per WhatsApp oder über die Kontaktkanäle von NORTHÉ stellen. Nennen Sie uns Ihr Wunschdatum, die Personenanzahl und die gewünschte Tour. Unser Team prüft umgehend die Verfügbarkeit und stimmt alle Details vor der Buchung mit Ihnen ab."
-                },
-                {
-                    category: "reservas",
-                    q: "Wie lange im Voraus sollte ich meine Buchung vornehmen?",
-                    a: "Wir empfehlen eine frühzeitige Buchung, besonders für Douro-Tal-Touren, private Bootsfahrten, renommierte Weingüter und die Hauptsaison. Kurzfristige Buchungen sind je nach Verfügbarkeit möglich."
-                },
-                {
-                    category: "reservas",
-                    q: "Sind die Touren von NORTHÉ zu 100 % privat?",
-                    a: "Ja. NORTHÉ ist ausschließlich auf 100 % private Touren spezialisiert. Ihre Gruppe reist und genießt das Erlebnis in absoluter Exklusivität, ohne das Fahrzeug mit anderen Gästen zu teilen."
-                },
-                {
-                    category: "reservas",
-                    q: "Wie setzt sich der Preis für ein privates Erlebnis zusammen?",
-                    a: "Der Preis richtet sich nach der gewählten Tour, der Teilnehmerzahl, der Reiseroute und den inkludierten Leistungen. Jede Tour weist vor der Buchung transparente Bedingungen und Preise aus."
-                },
-                {
-                    category: "reservas",
-                    q: "Gilt der angegebene Preis pro Person oder pro Gruppe?",
-                    a: "Der Preis versteht sich pro privater Gruppe und nicht pro Person. NORTHÉ-Touren können für Gruppen von 1 bis 8 Gästen gebucht werden, wobei die Exklusivität stets gewahrt bleibt."
-                },
-                {
-                    category: "reservas",
-                    q: "Was ist im Preis enthalten? Gibt es versteckte Kosten?",
-                    a: "Jede Tour listet alle Inklusivleistungen detailliert auf. Sollten optionale Extras, Eintrittsgelder, spezielle Weinproben oder Bootsupgrades nicht enthalten sein, werden diese im Vorfeld vollkommen transparent ausgewiesen."
-                },
-                {
-                    category: "reservas",
-                    q: "Welche Zahlungsmethoden stehen zur Verfügung?",
-                    a: "Die Zahlungsoptionen werden bei der Buchungsbestätigung mitgeteilt. Zahlungen erfolgen sicher per Banküberweisung (SEPA/SWIFT), gängigen Kreditkarten oder MB Way."
-                },
-                {
-                    category: "reservas",
-                    q: "Kann ich eine maßgeschneiderte Tour anfragen?",
-                    a: "Ja. Individuelle Flexibilität ist ein zentrales Merkmal von NORTHÉ. Wir passen Tempo, Route und Programm gerne an die Wünsche und Vorlieben Ihrer Gruppe an, soweit dies logistisch möglich ist."
-                },
-                {
-                    category: "transporte",
-                    q: "Wo finden Abholung (Pick-up) und Rückfahrt statt?",
-                    a: "Abholung und Rückfahrt werden vorab gemäß Ihren Buchungsangaben vereinbart. Bei Touren ab Porto holen wir Sie am vereinbarten Treffpunkt ab."
-                },
-                {
-                    category: "transporte",
-                    q: "Bietet NORTHÉ Abholung und Rückfahrt an Hotels in Porto an?",
-                    a: "Wir holen Ihre Gruppe direkt in der Lobby Ihres Hotels, Apartments, Airbnbs oder Ihrer Unterkunft in Porto und Vila Nova de Gaia ab – üblicherweise zwischen 08:30 und 09:00 Uhr (oder zu einer gewünschten Wunschzeit). Am Ende des Tages (~18:00 - 18:30 Uhr) bringen wir Sie entspannt zurück oder setzen Sie an einem Wunschrestaurant für das Abendessen ab."
-                },
-                {
-                    category: "transporte",
-                    q: "Ist eine Abholung direkt am Flughafen Porto möglich?",
-                    a: "Ja. Dieser Service muss bei der Buchung angefragt werden, damit wir Flugdaten und Fahrerkoordination exakt abstimmen können."
-                },
-                {
-                    category: "transporte",
-                    q: "Kann ich eine Abholung außerhalb von Porto anfragen?",
-                    a: "Abholungen außerhalb unseres regulären Gebiets können je nach Ort, Zeit und Tour geprüft werden. Ein möglicher Aufpreis wird vorab transparent mitgeteilt."
-                },
-                {
-                    category: "transporte",
-                    q: "Erfolgt die Beförderung während der gesamten Tour ausschließlich privat?",
-                    a: "Ja. Alle Erlebnisse von NORTHÉ finden in modernen Oberklasse-Fahrzeugen statt, die exklusiv für Ihre Reisegruppe reserviert sind."
-                },
-                {
-                    category: "douro",
-                    q: "Wie besichtigt man das Douro-Tal ab Porto am besten?",
-                    a: "Eine private Tagestour bietet maximale Freiheit, das Douro-Tal ohne Zeitdruck zu erkunden und das Tempo an Ihre Gruppe anzupassen. Ab Porto lassen sich atemberaubende Aussichtspunkte, Quintas, Kulinarik und Bootsfahrten ideal kombinieren."
-                },
-                {
-                    category: "douro",
-                    q: "Wie lange dauert eine private Douro-Tal-Tagestour?",
-                    a: "Die Dauer richtet sich nach dem gewählten Programm. NORTHÉ-Touren sind in der Regel als ganztägige Entdeckungsreisen (ca. 8 bis 9 Stunden) konzipiert; genaue Angaben finden sich auf der jeweiligen Tour-Seite."
-                },
-                {
-                    category: "douro",
-                    q: "Was besuche ich während einer privaten Douro-Tour?",
-                    a: "Je nach Route besichtigen Sie historische Weingüter (Quintas), terrassierte Weinberge, malerische Flussorte wie Pinhão, spektakuläre Aussichtspunkte und tauchen tief in die Weinkultur und Gastronomie ein."
-                },
-                {
-                    category: "douro",
-                    q: "Sind Weinverkostungen im Preis inbegriffen?",
-                    a: "Das hängt von der jeweiligen Tour ab. Wenn Weinproben Teil des Programms sind, ist dies in der Tour-Beschreibung ausdrücklich vermerkt. Auf Wunsch arrangieren wir auch exklusive Jahrgangsverkostungen."
-                },
-                {
-                    category: "douro",
-                    q: "Welche Weinsorten kann ich im Douro-Tal probieren?",
-                    a: "Je nach Route verkosten Sie das facettenreiche Spektrum der Region: frische DOC Douro-Weißweine, vollmundige Rotweine sowie legendäre Portweine (Tawny, Ruby, Colheitas)."
-                },
-                {
-                    category: "douro",
-                    q: "Kann ich ein bestimmtes Weingut im Douro-Tal besuchen?",
-                    a: "Gerne prüfen wir Ihre Wunsch-Quinta auf Verfügbarkeit am gewählten Datum. Manche namhafte Weingüter erfordern rechtzeitige Voranmeldung gemäß ihren internen Empfangszeiten."
-                },
-                {
-                    category: "douro",
-                    q: "Kann ich die Reiseroute meiner Douro-Tour individualisieren?",
-                    a: "Ja. Private Touren bieten höchste Flexibilität. Wir stimmen die Stationen mit Ihnen ab und kreieren ein individuelles Erlebnis unter Berücksichtigung der Fahrzeiten und Öffnungszeiten."
-                },
-                {
-                    category: "barco",
-                    q: "Beinhalten die NORTHÉ-Touren eine Bootsfahrt auf dem Douro?",
-                    a: "Mehrere unserer Touren beinhalten eine Flussfahrt auf dem Douro. Art, Dauer und Bootstyp sind auf der jeweiligen Tour-Seite detailliert beschrieben."
-                },
-                {
-                    category: "barco",
-                    q: "Ist die Bootsfahrt privat oder geteilt?",
-                    a: "Das hängt von der gewählten Tour ab. NORTHÉ bietet verschiedene Varianten, darunter auch 100 % private Holzrabelo-Charterfahrten, sofern im Programm aufgeführt."
-                },
-                {
-                    category: "barco",
-                    q: "Wie lange dauert die Bootsfahrt?",
-                    a: "Die Dauer variiert je nach Programm (meist 1 bis 2 Stunden) und ist in der Tour-Beschreibung genau angegeben."
-                },
-                {
-                    category: "barco",
-                    q: "Was passiert, wenn schlechtes Wetter die Bootsfahrt verhindert?",
-                    a: "Ihre Sicherheit und Ihr Wohlbefinden stehen immer an erster Stelle. Sollten Wetter- oder Flussbedingungen eine Fahrt unmöglich machen, bieten wir niveauvolle kulturelle oder weinbezogene Alternativen an."
-                },
-                {
-                    category: "familias",
-                    q: "Sind die Touren für Familien mit Kindern oder Babys geeignet?",
-                    a: "Viele unserer Touren eignen sich hervorragend für Familien. Die Eignung richtet sich nach Strecke, Dauer und Aktivitäten. Bitte geben Sie bei der Buchung das Alter der Kinder an, damit wir Sie optimal beraten."
-                },
-                {
-                    category: "familias",
-                    q: "Werden Kindersitze oder Sitzerhöhungen bereitgestellt?",
-                    a: "Ja. Zugelassene Babyschalen und Kindersitze stellen wir Ihnen auf Anfrage bei der Buchung kostenlos zur Verfügung."
-                },
-                {
-                    category: "familias",
-                    q: "Sind die Touren für Personen mit eingeschränkter Mobilität geeignet?",
-                    a: "Die Barrierefreiheit variiert je nach Weingut, historischem Gelände, Boot und Monument. Bitte informieren Sie uns vorab, damit wir eine barrierearme Route zusammenstellen können."
-                },
-                {
-                    category: "gastronomia",
-                    q: "Können Mahlzeiten an besondere Ernährungsweisen angepasst werden?",
-                    a: "Wann immer möglich, ja. Spezielle Ernährungswünsche sollten im Vorfeld mitgeteilt werden, damit wir diese mit unseren Partnerrestaurants abstimmen können."
-                },
-                {
-                    category: "gastronomia",
-                    q: "Gibt es vegetarische, vegane oder glutenfreie Optionen?",
-                    a: "Vegetarische, vegane oder glutenfreie Menüs können bei rechtzeitiger Voranmeldung bei der Buchung mit den ausgewählten Restaurants arrangiert werden."
-                },
-                {
-                    category: "gastronomia",
-                    q: "Müssen Allergien oder Unverträglichkeiten im Voraus gemeldet werden?",
-                    a: "Ja. Eine rechtzeitige Vorankündigung ermöglicht unseren Partnern eine erstklassige kulinarische Vorbereitung."
-                },
-                {
-                    category: "cancelamentos",
-                    q: "Wie lauten die Stornierungs- und Umbuchungsbedingungen?",
-                    a: "Wir bieten kostenlose Stornierung mit voller Rückerstattung bis zu 48 Stunden vor Tourbeginn. Sollte sich Ihr Flugplan ändern, passen wir das Tourdatum nach Verfügbarkeit kostenfrei an."
-                },
-                {
-                    category: "cancelamentos",
-                    q: "Kann ich das Datum meiner Tour nach der Buchung noch ändern?",
-                    a: "Umbuchungsanfragen werden nach Maßgabe der Terminverfügbarkeit flexibel geprüft. Je früher Sie uns kontaktieren, desto einfacher lässt sich ein Alternativtermin sichern."
-                },
-                {
-                    category: "cancelamentos",
-                    q: "Was passiert, wenn ungünstige Wetterbedingungen das Erlebnis beeinflussen?",
-                    a: "Sollte das Wetter Aktivitäten im Freien beeinträchtigen, passen wir die Route mit Schlossbesichtigungen und wettergeschützten Weinverkostungen an."
-                },
-                {
-                    category: "cancelamentos",
-                    q: "Kann NORTHÉ die Route während der Tour anpassen?",
-                    a: "In Ausnahmefällen (Wetterlage, Straßensperren, Öffnungszeiten) können routenbezogene Anpassungen vorgenommen werden, um Ihre Sicherheit und den hohen Qualitätsstandard zu gewährleisten."
-                },
-                {
-                    category: "especiais",
-                    q: "Kann ich eine Tour für einen besonderen Anlass arrangieren?",
-                    a: "Ja. Wir gestalten private Erlebnisse mit großer Sorgfalt für besondere Lebensmomente und Jubiläen."
-                },
-                {
-                    category: "especiais",
-                    q: "Organisiert NORTHÉ Geburtstage, Heiratsanträge oder Jubiläen?",
-                    a: "Ja. Wir organisieren regelmäßig Geburtstage, Heiratsanträge und private Feiern in traumhafter Kulisse, diskret und vorab abgestimmt."
-                },
-                {
-                    category: "especiais",
-                    q: "Kann ich ein Picknick, einen Fotografen oder Zusatzleistungen buchen?",
-                    a: "Ausgewählte Touren können mit Weinberg-Picknicks, professioneller Fotobegleitung, Blumendekorationen oder privatem Boot ergänzt werden. Details und Preise werden individuell bestätigt."
-                },
-            ],
-        },
-                        blog: {
-            badge: "Magazin & Reiseführer",
-            title: "Douro & Nordportugal Tagebuch",
-            subtitle: "Autorisierte Reiseführer, exklusive Routen und Geheimtipps für Nordportugal.",
-            readMore: "Artikel lesen",
-            bookCta: "Dieses Erlebnis anfragen",
-            items: [
-                {
-                    slug: "8-melhores-passeios-a-partir-do-porto",
-                    title: "Die 8 Besten Tagesausflüge ab Porto",
-                    subtitle: "Entdecken Sie Nordportugal jenseits der Stadtgrenzen",
-                    excerpt: "Porto ist der ideale Ausgangspunkt, um die vielfältigen Regionen Portugals zu erkunden. In wenigen Stunden erreichen Sie Weinberge, mittelalterliche Städte, historische Paläste, Gebirgszüge und die Atlantikküste.",
-                    date: "18. September 2026",
-                    category: "Reiseführer",
-                    image: "/images/blog/8-melhores-passeios-porto.webp",
-                    readTime: "4 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Porto ist der ideale Ausgangspunkt, um die vielfältigen Regionen Portugals zu erkunden. In wenigen Stunden erreichen Sie Weinberge, mittelalterliche Städte, historische Paläste, Gebirgszüge und die Atlantikküste." },
-                        { type: 'p', text: "Zu den beliebtesten Zielen gehören das Douro-Tal, Braga, Guimarães und Aveiro. Naturliebhaber zieht es in den Nationalpark Peneda-Gerês mit seinen Bergmassiven, während Arouca mit Flüssen und Hängebrücken begeistert. Amarante und Ponte de Lima sind charmante Oasen für Ruhesuchende." },
-                        { type: 'p', text: "Die Wahl richtet sich nach Ihren Vorlieben: Wein und Gastronomie im Douro, Landesgeschichte in Guimarães, sakrale Baukunst in Braga, Kanäle in Aveiro oder wilde Gebirgsnatur in Gerês." },
-                        { type: 'p', text: "Mehr als ein gewöhnlicher Tagesausflug: Eine Reise in den Norden offenbart ein facettenreiches Land, in dem Geschichte, Weinkultur und Natur tief verwurzelt sind." },
-                        { type: 'p', text: "Möchten Sie Nordportugal ab Porto erleben? Entdecken Sie die privaten Erlebnisse von NORTHÉ." },
-                    ]
-                },
-                {
-                    slug: "vale-do-douro-a-partir-do-porto",
-                    title: "Das Douro-Tal ab Porto",
-                    subtitle: "Spitzenweine, majestätische Landschaften und Jahrhunderte der Tradition",
-                    excerpt: "Das Douro-Tal zählt zu den eindrucksvollsten Erlebnissen jedes Portugal-Aufenthalts. Berühmt für seine steilen Weinterrassen, den gewundenen Fluss Douro und den weltbekannten Portwein.",
-                    date: "17. September 2026",
-                    category: "Douro-Tal",
-                    image: "/images/blog/douro-valley-vineyards.webp",
-                    readTime: "5 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Das Douro-Tal zählt zu den eindrucksvollsten Erlebnissen jedes Portugal-Aufenthalts. Berühmt für seine steilen Weinterrassen, den gewundenen Fluss Douro und den weltbekannten Portwein." },
-                        { type: 'p', text: "Pinhão und Peso da Régua bilden die zentralen Ausgangspunkte im Tal. Entlang spektakulärer Panoramastraßen eröffnen Weingüter (Quintas) und Aussichtspunkte atemberaubende Ausblicke." },
-                        { type: 'p', text: "Ein Tagesausflug verbindet private Kellerführungen, geführte Verkostungen, regionale Spitzenküche und eine entspannte Bootsfahrt. Da die Distanz ab Porto weiter ist als zu anderen Zielen, empfiehlt sich eine sorgfältig geplante Privattour." },
-                        { type: 'p', text: "Das Tal wandelt sich im Rhythmus der Jahreszeiten: Der Frühling hüllt die Hänge in sattes Grün, während der Herbst die Terrassen während der Weinlese in warmes Gold taucht." },
-                        { type: 'p', text: "Wer die tiefe Verbindung zwischen Land, Wein und portugiesischer Kultur spüren möchte, erlebt im Douro-Tal weit mehr als eine gewöhnliche Weinprobe." },
-                        { type: 'p', text: "Erleben Sie das Douro-Tal exklusiv mit einer privaten Tour von NORTHÉ." },
-                    ]
-                },
-                {
-                    slug: "o-que-fazer-no-porto",
-                    title: "Was Man in Porto Erleben Sollte",
-                    subtitle: "Eine faszinierende Stadt ohne Eile entdecken",
-                    excerpt: "Porto vereint reiche Geschichte, noble Architektur, hervorragende Kulinarik, Weinkultur und einen unverwechselbaren Charakter auf kompaktem Raum.",
-                    date: "16. September 2026",
-                    category: "Porto & Kultur",
-                    image: "/images/blog/o-que-fazer-porto.webp",
-                    readTime: "4 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Porto vereint reiche Geschichte, noble Architektur, hervorragende Kulinarik, Weinkultur und einen unverwechselbaren Charakter auf kompaktem Raum." },
-                        { type: 'p', text: "Die zum UNESCO-Welterbe zählende Altstadt umfasst Wahrzeichen wie die Ribeira, die Kathedrale Sé, den mit Azulejos verzierten Bahnhof São Bento und den Clérigos-Turm. Auf der anderen Flussseite in Vila Nova de Gaia laden historische Portweinkeller mit Panoramablick ein." },
-                        { type: 'p', text: "Doch Portos wahre Seele erschließt sich jenseits der bekannten Monumente: Lokale Märkte, charmante Cafés, Künstlerviertel und die Meerespromenade von Foz do Douro zeigen authentische Facetten." },
-                        { type: 'p', text: "Wer mehr Zeit mitbringt, vertieft seinen Besuch mit exzellenter Gastronomie, privater Kunstführung und architektonischen Entdeckungen." },
-                        { type: 'p', text: "Der schönste Weg, Porto zu erkunden, richtet sich ganz nach Ihrem eigenen Tempo — ob klassische Höhepunkte oder versteckte Lieblingsorte." },
-                        { type: 'p', text: "Wichtig ist, Raum für spontane Entdeckungen zu lassen, statt bloß eine Liste abzuarbeiten." },
-                        { type: 'p', text: "Erleben Sie Porto auf persönliche und stilvolle Weise mit NORTHÉ." },
-                    ]
-                },
-                {
-                    slug: "braga-e-guimaraes-a-partir-do-porto",
-                    title: "Braga und Guimarães ab Porto",
-                    subtitle: "Zwei historische Juwelen im Herzen Nordportugals",
-                    excerpt: "Braga und Guimarães gehören zu den faszinierendsten Kulturausflügen für Reisende, die von Porto aus den Norden erkunden möchten.",
-                    date: "14. September 2026",
-                    category: "Geschichte & Erbe",
-                    image: "/images/blog/braga-guimaraes-norte.webp",
-                    readTime: "4 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Braga und Guimarães gehören zu den faszinierendsten Kulturausflügen für Reisende, die von Porto aus den Norden erkunden möchten." },
-                        { type: 'p', text: "Braga besticht durch barocke Sakralarchitektur und monumentale Ensembles wie das Heiligtum Bom Jesus do Monte mit seiner weltberühmten Treppenanlage." },
-                        { type: 'p', text: "Guimarães verströmt mittelalterlichen Zauber. Das UNESCO-geschützte Zentrum bewahrt Plätze und Natursteinhäuser, die von den Ursprüngen Portugals als Wiege der Nation erzählen." },
-                        { type: 'p', text: "Beide Städte lassen sich an einem Tag kombinieren. Wer entspannt reisen möchte, nimmt sich Zeit, um das historische Ambiente und die nordportugiesische Küche in Ruhe zu genießen." },
-                        { type: 'p', text: "Braga begeistert Architektur- und Geschichtsliebhaber; Guimarães verzaubert all jene, die intime Gassen und ritterliche Geschichte suchen." },
-                        { type: 'p', text: "Zwei Städte, zwei eindrucksvolle Perspektiven auf das kulturelle Erbe Nordportugals." },
-                    ]
-                },
-                {
-                    slug: "norte-de-portugal-lugares-para-conhecer",
-                    title: "Nordportugal: Orte Jenseits von Porto Entdecken",
-                    subtitle: "Eine facettenreiche Region voll Landschaft, Geschichte und Wein",
-                    excerpt: "Nordportugal bietet weitaus mehr als die bekannten Ufer von Porto und dem Douro.",
-                    date: "12. September 2026",
-                    category: "Nordportugal",
-                    image: "/images/blog/ponte-de-lima-minho.webp",
-                    readTime: "5 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Nordportugal bietet weitaus mehr als die bekannten Ufer von Porto und dem Douro." },
-                        { type: 'p', text: "Nördlich und östlich der Stadt eröffnen sich kontrastreiche Welten: Guimarães bewahrt mittelalterlichen Glanz; Braga beeindruckt mit barocker Pracht; Ponte de Lima zelebriert die Idylle des Minho und die Frische des Vinho Verde." },
-                        { type: 'p', text: "Weiter nördlich verbindet Viana do Castelo Meer, Fluss und lebendige Seefahrertradition. Im Landesinneren eröffnet der Nationalpark Peneda-Gerês raue Granitberge und uralte Steindörfer." },
-                        { type: 'p', text: "Orte wie Amarante und Arouca laden zu erholsamen Naturbegegnungen abseits des Trubels ein." },
-                        { type: 'p', text: "Diese Vielfalt zeichnet den Norden aus: An einem einzigen Tag können Sie von einer UNESCO-Stadt zu einem Spitzenweingut oder vom Gebirgsmassiv an den tosenden Atlantik reisen." },
-                        { type: 'p', text: "Ein Ausflug ins Umland von Porto belohnt mit authentischen Aromen und unberührten Landschaften." },
-                        { type: 'p', text: "Entdecken Sie Nordportugal auf maßgeschneiderten privaten Touren mit NORTHÉ." },
-                    ]
-                },
-                {
-                    slug: "parque-nacional-peneda-geres-a-partir-do-porto",
-                    title: "Nationalpark Peneda-Gerês ab Porto",
-                    subtitle: "Wilde Natur, Granitberge und traditionelle Bergdörfer",
-                    excerpt: "Für Reisende, die Portugals unberührte Natur erleben möchten, bietet der Nationalpark Peneda-Gerês einen faszinierenden Kontrast zum urbanen Leben in Porto.",
-                    date: "10. September 2026",
-                    category: "Natur & Parks",
-                    image: "/images/blog/peneda-geres-lagoa-cascata.webp",
-                    readTime: "4 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Für Reisende, die Portugals unberührte Natur erleben möchten, bietet der Nationalpark Peneda-Gerês einen faszinierenden Kontrast zum urbanen Leben in Porto." },
-                        { type: 'p', text: "Granitfelsen, glasklare Gebirgsbäche, Wasserfälle und traditionelle Schäferdörfer prägen die Kulisse im Wandel der Jahreszeiten. Dörfer wie Soajo und Lindoso bewahren historische Getreidespeicher (Espigueiros)." },
-                        { type: 'p', text: "Gerês ist ein Paradies für Wanderungen, Landschaftsfotografie und tiefe Entspannung. Im Sommer laden smaragdgrüne Lagunen zu einer erfrischenden Pause ein." },
-                        { type: 'p', text: "Aufgrund der Weitläufigkeit des Parks und der abgelegenen Schätze macht ein privates Fahrzeug mit Ortskenntnis den entscheidenden Unterschied." },
-                        { type: 'p', text: "Ab Porto ermöglicht eine private Tagestour, die Höhepunkte des Parks entspannt und nach eigenen Vorlieben zu erkunden." },
-                        { type: 'p', text: "Gerês ist die vollendete Wahl, um Stadttrubel gegen Bergluft, Stille und Weite einzutauschen." },
-                        { type: 'p', text: "Erleben Sie die wilde Seite Nordportugals mit NORTHÉ." },
-                    ]
-                },
-                {
-                    slug: "douro-ou-vinho-verde",
-                    title: "Douro oder Vinho Verde?",
-                    subtitle: "Zwei außergewöhnliche Weinerlebnisse in Nordportugal",
-                    excerpt: "Das Douro-Tal und das Vinho Verde-Gebiet repräsentieren die beiden renommiertesten Weinregionen Nordportugals — mit herrlich unterschiedlichem Charakter.",
-                    date: "8. September 2026",
-                    category: "Portugiesischer Wein",
-                    image: "/images/blog/douro-ou-vinho-verde-amarante.webp",
-                    readTime: "4 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Das Douro-Tal und das Vinho Verde-Gebiet repräsentieren die beiden renommiertesten Weinregionen Nordportugals — mit herrlich unterschiedlichem Charakter." },
-                        { type: 'p', text: "Das Douro-Tal besticht durch steile Schieferterrassen entlang des Flusses, weltberühmt für körperreiche Rotweine und die legendären Portweine." },
-                        { type: 'p', text: "Die Vinho Verde-Region im saftig-grünen Minho zeichnet sich durch herrschaftliche Landgüter und historische Städtchen wie Ponte de Lima aus und bringt aromatische, mineralische Weißweine wie Alvarinho und Loureiro hervor." },
-                        { type: 'p', text: "Der Unterschied zeigt sich im Glas wie in der Landschaft: Der Douro bietet monumentale Canyons, das Minho ländlich-feine Eleganz." },
-                        { type: 'p', text: "Für Weinliebhaber hängt die Wahl von der gewünschten Atmosphäre ab — oder von der Freude, beide Regionen zu verkosten." },
-                        { type: 'p', text: "Nordportugal bietet diesen seltenen Luxus: zwei Weltklasse-Weinkulturen in bequemer Reichweite von Porto." },
-                        { type: 'p', text: "Entdecken Sie die Spitzenweine des Nordens auf einer privaten Tour mit NORTHÉ." },
-                    ]
-                },
-                {
-                    slug: "experiencias-privadas-a-partir-do-porto",
-                    title: "Private Erlebnisse ab Porto",
-                    subtitle: "Portugal im ganz eigenen Rhythmus entdecken",
-                    excerpt: "Nicht jede Reise muss einem starren Gruppenzeitplan folgen.",
-                    date: "5. September 2026",
-                    category: "Private Erlebnisse",
-                    image: "/images/blog/experiencias-privadas-douro-terrace.webp",
-                    readTime: "4 Min. Lesezeit",
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: "Nicht jede Reise muss einem starren Gruppenzeitplan folgen." },
-                        { type: 'p', text: "Ein maßgeschneidertes privates Erlebnis ermöglicht es Ihnen, den Tag nach Ihren Wünschen zu gestalten: länger auf einem Weingut verweilen, ein exzellentes Mittagessen genießen oder spontan an einem Aussichtspunkt halten." },
-                        { type: 'p', text: "Ab Porto sind die Möglichkeiten grenzenlos: Douro-Weine, mittelalterliche Geschichte in Guimarães, frische Bergluft in Gerês oder Herrenhäuser im Minho." },
-                        { type: 'p', text: "Für Paare, Familien und kleine Gruppen bedeutet Privatsphäre höchsten Komfort, ohne das Fahrzeug mit Fremden teilen zu müssen." },
-                        { type: 'p', text: "Statt Sehenswürdigkeiten im Minutentakt abzuhaken, erlaubt Ihnen eine private Tour, eine echte Verbindung zu Land und Leuten aufzubauen." },
-                        { type: 'p', text: "Diese Flexibilität macht aus einem gewöhnlichen Ausflug eine unvergessliche Erinnerung." },
-                        { type: 'p', text: "Bei NORTHÉ starten private Touren ab Porto durch das Douro-Tal und Nordportugal — stets fokussiert auf Komfort, Exklusivität und persönliche Freiheit." },
-                        { type: 'p', text: "Entdecken Sie die privaten Erlebnisse von NORTHÉ." },
-                    ]
-                },
-            ],
-        },
-        contact: {
-            title: 'Shall we create your experience in Portugal?',
-            desc: 'Tell us what you would love to experience. We craft a private journey tailored exclusively for your group.',
-            ctaBook: 'Book Experience', ctaWhatsapp: 'Chat on WhatsApp',
-            emailLabel: 'Email', email: EMAIL,
-            phoneLabel: 'Phone', phone: '+351 911 923 499',
-        },
-        tailorMade: {
-            badge: 'Tailor-Made Experiences',
-            title: 'Looking for something unique?',
-            subtitle: 'We craft personalized private experiences.',
-            desc: 'We create bespoke private experiences designed around your personal interests, preferred pace, and special occasions.',
-            collection: 'North Private Collection',
-            collectionDesc: 'Private dining, historic wine estates, and unforgettable scenic journeys.',
-            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisbon'],
-            cta: 'Design My Experience',
-        },
-        footer: {
-            rights: 'All rights reserved.',
-            terms: 'Terms and Conditions', privacy: 'Privacy Policy',
-            licensedIn: 'Licensed service in Portugal · RNAAT 284/2026',
-            nif: 'NIPC: 518 190 145',
-            complaints: 'Electronic Complaints Book'
-        },
-        cookieBanner: {
-            text: 'We use cookies to ensure you get the best experience on our website. By continuing, you agree to our',
-            linkText: 'Privacy Policy',
-            acceptBtn: 'Accept All',
-            essentialBtn: 'Essential Only',
-        },
-        mobileBar: { book: 'Book Now', whatsapp: 'WhatsApp' },
-        privacy: {
-            title: 'Privacy Policy',
-            back: 'Back',
-            sections: [
-                { title: '1. Identification of the Data Controller', content: 'The entity responsible for data processing is "NORTHÉ" (NIPC: 518 190 145), based in Portugal. We are committed to the protection of personal data, strictly complying with the EU GDPR (General Data Protection Regulation) standards.' },
-                { title: '2. Collection and Purpose', content: 'We do not have direct sales forms. Data provided during bookings or contact via email and WhatsApp (full name, mobile number, dietary preferences) serve the exclusive purpose of organizing tour logistics in a 100% personalized way per client.' },
-                { title: '3. External Sharing', content: 'Some essential data may be communicated only to logistics partners (Estates and Restaurants) under the criteria of food intolerances/allergies or vehicle adaptations.' },
-                { title: '4. Cookie Policy', content: 'The Website uses Cookie technology, exclusively for technical and analytical purposes (Google Analytics) to understand our visitor profile. On your first visit, your explicit consent was requested in accordance with the EC/PE Directive on e-Privacy protection. You can remove this consent or clear your session history in your Web Browser at any time.' },
-                { title: '5. Retention and Rights', content: 'We keep client information only for the useful time of the service or mandatory tax invoicing period. The client has the right to request Access, Portability or Erasure.' },
-            ]
-        },
-        terms: {
-            title: 'Terms and Conditions',
-            back: 'Back',
-            sections: [
-                { title: '1. Scope and Object', content: 'These Terms and Conditions apply to all services provided by NORTHÉ. By booking with us, the client declares they know and accept these rules.' },
-                { title: '2. Bookings and Payments', content: 'Bookings become effective after written confirmation from NORTHÉ. Payments are made according to the method agreed upon at the time of booking.' },
-                { title: '3. Cancellation Policy', content: 'Free cancellation up to 48 hours before the tour date. After this period, the full booking value will be charged due to commitments made with local partners.' },
-                { title: '4. Responsibility', content: 'NORTHÉ holds all insurance required by law (Personal Accident and Civil Liability). We are not responsible for loss of personal belongings during activities.' },
-                { title: '5. Jurisdiction', content: 'For the resolution of any dispute, the court of the district of Porto is competent, with the waiver of any other.' },
-            ]
-        },
-        common: {
-            back: 'Back',
-            backHome: 'Back Home',
-            notFound: 'Article not found',
-            enjoyed: 'Enjoyed this article?',
-            enjoyedDesc: 'Discover these landscapes live with us, in a fully exclusive and tailor-made experience.',
-            exclusiveExp: 'Exclusive experiences in Northern Portugal',
-        },
-    },
-    es: {
-        nav: {
-            home: 'Inicio', tours: 'Tours',
-            transfer: 'Traslado', about: 'Sobre Nosotros', reviews: 'Reseñas',
-            blog: 'Blog', contact: 'Contacto', book: 'Reservar', bookNow: 'Reservar Ahora',
-        },
-        hero: {
-            subtitle: 'Experiencias Exclusivas en el Norte de Portugal',
-            title1: 'Experiencias Privadas desde Oporto',
-            title2: 'Douro Valley · Porto · Northern Portugal',
-            desc: 'Experiencias privadas por el Duero, Oporto y el Norte de Portugal, con transporte ejecutivo e itinerarios cuidadosamente pensados para cada grupo.',
-            cta: 'Explorar Experiencias',
-            ctaWhatsapp: 'Hablar por WhatsApp',
-            trustLine: '100% Privado · 1–8 Personas · Transporte Ejecutivo · Cancelación Gratuita hasta 48h',
-        },
-        quote: {
-            text1: '"El Duero no es un paisaje,',
-            text2: 'es un poema geológico."',
-            author: 'Miguel Torga',
-        },
-        tours: {
-            badge: 'Experiencias en el Río',
-            title: 'Tours y Precios',
-            subtitle: 'Tres experiencias exclusivas a bordo, diseñadas para el atardecer mágico del Duero.',
-            discount: 'Descuento del 20% para niños (0-8 años)',
-            labels: {
-                private: 'Barco Privado',
-                shared: 'Barco Compartido',
-                extra: 'Persona Adicional',
-                perPersonLabel: 'Por Persona',
-                pricingNote: 'para 2 personas',
-                book: 'Reservar',
-                whatsapp: 'WhatsApp',
-            },
-            items: [
-                {
-                    id: 'picnic-sunset',
-                    name: 'Picnic de lujo, barco y tren',
-                    tagline: 'A bordo · Puesta de sol',
-                    image: '/images/novo-picnic.jpg',
-                    bullets: [
-                        'Experiencia 100% privada sin grupos',
-                        'Transporte ejecutivo con guía-conductor experto en vinos',
-                        'Picnic de lujo en bodega seleccionada',
-                        'Paseo en barco por el río Duero (privado o en grupo pequeño)',
-                        'Visita a bodega con cata de vinos y degustación de miel y aceite regionales',
-                        'Recorrido panorámico en tren por el valle del Duero',
-                    ],
-                    pricePrivate: 1000,
-                    priceShared: 900,
-                    priceExtra: 150,
-                    capacityLabel: 'Máximo: 4 personas',
-                },
-                {
-                    id: 'golden-hour',
-                    name: 'Douro Golden Hour',
-                    subtitle: 'Crucero privado, almuerzo y cata de vinos.',
-                    tagline: 'Hora mágica · Luz cinematográfica',
-                    bullets: [
-                        'Experiencia 100% privada sin grupos',
-                        'Transporte ejecutivo con guía-conductor experto en vinos',
-                        'Ruta escénica por el valle del Duero (incluye tramos de la N222)',
-                        'Almuerzo gastronómico en restaurante con Chef estrella Michelin, con maridaje',
-                        'Crucero por el río Duero (privado o en grupo pequeño) al final del día',
-                        'Cata de vinos en una bodega de referencia con vistas sobre el valle',
-                    ],
-                    pricePrivate: 1000,
-                    priceShared: 850,
-                    priceExtra: 150,
-                    capacityLabel: 'Máximo: 4 personas',
-                },
-                {
-                    id: 'douro-premium',
-                    name: 'Douro Premium',
-                    subtitle: 'Wine master, Almuerzo, Crucero y Tren.',
-                    tagline: 'Firma · Grupo reducido',
-                    image: '/images/douro-premium.jpg',
-                    bullets: [
-                        'Acompañado por un Wine master experto en vinos del Duero',
-                        'Almuerzo tradicional con maridaje',
-                        'Visita a bodegas seleccionadas con cata de vinos y productos regionales',
-                        'Crucero panorámico de lujo en el río Duero',
-                        'Paseo en tren con vistas sobre el valle',
-                    ],
-                    perPerson: 180,
-                    capacityLabel: 'Grupo pequeño hasta 8 personas',
-                },
-            ],
-        },
-        transfer: {
-            badge: 'Servicio Premium',
-            title: 'Transfer Ejecutivo en Oporto',
-            subtitle: 'Confort, Puntualidad y Excelencia en Cada Detalle',
-            intro: 'Ofrecemos servicio de transfer ejecutivo privado en Oporto, con recogida y entrega en hotel, residencia o Aeropuerto Francisco Sá Carneiro. Un servicio diseñado para viajeros exigentes.',
-            features: [
-                { title: 'Puntualidad y Planificación Premium', items: ['Su tiempo es valioso.', 'Seguimiento de vuelos en tiempo real', 'Conductor en el lugar antes de la hora', 'Tiempo de espera incluido a la llegada'] },
-                { title: 'Vehículo Ejecutivo hasta 8 Pasajeros', items: ['Interior cómodo, silencioso y espacioso', 'Amplio espacio para equipaje', 'Aire acondicionado', 'Ideal para familias o ejecutivos'] },
-                { title: 'Seguridad y Excelencia', items: ['Conductores experimentados y trilingües', 'Silla de bebé (bajo petición)', 'Servicio totalmente licenciado y seguro'] },
-            ],
-            services: [
-                { title: 'Traslado Aeropuerto \u2192 Hotel', desc: 'Seguimiento de vuelo, recepción en llegadas, asistencia total con el equipaje y transporte directo a su destino.' },
-                { title: 'Traslado Hotel \u2192 Aeropuerto', desc: 'Recogida puntual en el hotel o alojamiento con planificación adecuada para garantizar la llegada a tiempo al aeropuerto.' },
-            ],
-            price: '45',
-            priceLabel: 'Desde',
-            priceUnit: '€/traslado',
-            ctaBook: 'Solicitar Presupuesto Personalizado',
-            ctaWhatsapp: 'Reservar por WhatsApp',
-        },
-        about: {
-            badge: 'Sobre Nosotros',
-            title: 'Más allá del horizonte: La esencia de NORTHÉ',
-            paragraphs: [
-                'En NORTHÉ, creemos que el lujo no se define por lo que se ve, sino por lo que se siente. Nacimos de la pasión por revelar el Duero invisible: aquel que no aparece en los mapas turísticos, sino que late en las fincas privadas, en el silencio de las aguas al atardecer y en los sabores de una cocina que honra la tierra.',
-                'Nuestra misión es diseñar experiencias, no solo trayectos. Cada detalle, desde el confort de nuestros vehículos ejecutivos hasta la elección meticulosa de socios con Estrella Michelin, está pensado para quienes valoran el tiempo, la privacidad y la autenticidad.',
-                'No somos solo guías; somos contadores de historias y facilitadores de momentos. En el asiento trasero de nuestra exclusividad, el Duero deja de ser un destino para convertirse en un recuerdo eterno.',
-                'Bienvenido al Duero, a su propio ritmo. Bienvenido a NORTHÉ.',
-            ],
-            signature: 'NORTHÉ',
-            imageAlt: 'Valle del Duero envuelto en niebla matinal',
-        },
-        reviews: {
-            badge: 'Reseñas',
-            title: 'Lo que dicen nuestros clientes',
-            subtitle: 'Cada reseña es una historia real de quien vivió la experiencia.',
-            rating: '4.9', totalReviews: '127',
-            items: [
-                { text: 'Una experiencia que trasciende el turismo. Nos sentimos como invitados de honor en una de las regiones más bellas del mundo. El guía fue excepcional y la atención al detalle impresionante.', author: 'Sofia Albuquerque', location: 'Lisboa, Portugal', flag: '🇵🇹', stars: 5 },
-                { text: 'The attention to detail was impeccable. From the private boat ride to the exclusive wine tastings, everything was perfect. Highly recommended for anyone visiting Porto.', author: 'James Sterling', location: 'London, UK', flag: '🇬🇧', stars: 5 },
-                { text: 'Un día mágico en el Duero. El guía fue excelente, los vinos soberbios y el almuerzo delicioso. ¡Muy recomendable!', author: 'Marie Dubois', location: 'París, Francia', flag: '🇫🇷', stars: 4.5 },
-                { text: '¡La mejor experiencia en el Duero! El paseo en barco al atardecer fue inolvidable.', author: 'Carlos Mendes', location: 'São Paulo, Brasil', flag: '🇧🇷', stars: 5 },
-                { text: '¡Un día perfecto! La cata de vinos fue de alto nivel y el paisaje es impresionante.', author: 'Hannah Müller', location: 'Múnich, Alemania', flag: '🇩🇪', stars: 4.8 },
-                { text: 'Celebramos nuestro aniversario con NORTHÉ y fue lo mejor de nuestro viaje. Lujo real.', author: 'Michael & Sarah Chen', location: 'Nueva York, EE. UU.', flag: '🇺🇸', stars: 5 },
-                { text: 'El guía sabía todo sobre la historia della región. Un viaje imprescindible para los amantes del vino.', author: 'Alessandro Rossi', location: 'Milán, Italia', flag: '🇮🇹', stars: 4.5 },
-                { text: 'Traslado impecable y tour aún mejor. Servicio de primera clase de principio a fin.', author: 'Lucía Fernández', location: 'Madrid, España', flag: '🇪🇸', stars: 5 },
-                { text: '¡Increíble! El Duero es mágico y el equipo de NORTHÉ hizo que todo fuera especial.', author: 'Daan van der Berg', location: 'Ámsterdam, Holanda', flag: '🇳🇱', stars: 4.8 },
-            ],
-        },
-        faq: {
-            badge: 'FAQ',
-            title: 'Todo lo que necesita saber',
-            subtitle: 'Respuestas claras y transparentes sobre nuestros tours 100% privados, comodidades, reservas y cancelaciones.',
-            items: [
-                {
-                    q: '¿Los tours son realmente 100% privados o se comparte el vehículo con desconocidos?',
-                    a: 'Todos los tours de NORTHÉ son estrictamente 100% privados y exclusivos para usted y su grupo (de 1 a 8 personas). Nunca mezclamos reservas distintas en el mismo vehículo. El vehículo ejecutivo Mercedes-Benz y el guía sumiller están dedicados únicamente a ustedes durante toda la jornada, adaptando las paradas y el ritmo a sus preferencias.'
-                },
-                {
-                    q: '¿Qué incluye el precio indicado? ¿Existen costes adicionales ocultos?',
-                    a: 'No existen costes ocultos. El precio incluye transporte ejecutivo privado puerta a puerta (recogida y regreso al hotel en Oporto o Vila Nova de Gaia), guía sumiller certificado multilingüe, agua mineral, Wi-Fi, peajes y seguros oficiales (RNAAT 284/2026). Según el tour seleccionado, incluye visitas guiadas a bodegas con catas de vinos DOC y Oporto, almuerzos tradicionales maridados y paseos en barco rabelo privado.'
-                },
-                {
-                    q: '¿Cuál es el tamaño máximo del grupo y cómo funciona el precio por persona?',
-                    a: 'Nuestra flota ejecutiva tiene capacidad para 1 a 8 pasajeros por vehículo con máxima comodidad. El precio se cotiza por vehículo/grupo privado, por lo que para familias o grupos de 4 a 8 personas el coste por persona resulta muy ventajoso (desde ~€49 a €65 por persona), disfrutando del lujo inigualable de la máxima privacidad.'
-                },
-                {
-                    q: '¿Dónde y a qué hora se realiza la recogida y el regreso?',
-                    a: 'Recogemos a su grupo directamente en la recepción de su hotel, apartamento o alojamiento en Oporto o Vila Nova de Gaia, habitualmente entre las 08:30 y las 09:00 (o en el horario que usted elija). Al finalizar el día (sobre las 18:00 - 18:30), regresamos al punto de partida o le dejamos en el restaurante que prefiera para cenar.'
-                },
-                {
-                    q: '¿Cuál es la política de cancelación y cambio de fecha?',
-                    a: 'Ofrecemos cancelación gratuita y reembolso del 100% para cancelaciones realizadas hasta 48 horas antes del inicio del tour. Si sus vuelos o planes sufren cambios imprevistos, reprogramamos la fecha de su tour sin recargo alguno, según disponibilidad.'
-                },
-                {
-                    q: '¿Los tours son adecuados para familias con niños o bebés?',
-                    a: 'Por supuesto. Al ser un tour 100% privado, adaptamos el ritmo a las necesidades de su familia. Proporcionamos sillas de coche y elevadores infantiles homologados de forma gratuita (indique las edades al reservar). Nuestros restaurantes colaboradores ofrecen menús infantiles y espacios acogedores.'
-                },
-                {
-                    q: '¿Puedo personalizar el itinerario, visitar bodegas concretas o celebrar una ocasión especial?',
-                    a: '¡Sí! La personalización es el sello de NORTHÉ. Si desea visitar una bodega icónica en particular, contratar un fotógrafo profesional, celebrar un aniversario, luna de miel o planear una pedida de mano sorpresa en los viñedos, diseñamos su itinerario a medida cuidando cada detalle.'
-                },
-                {
-                    q: '¿Cómo puedo reservar y qué métodos de pago seguros aceptan?',
-                    a: 'Reservar es rápido y seguro. Puede contactarnos directamente por nuestro WhatsApp oficial (+351 911 923 499) para confirmación inmediata o enviar el formulario web. Aceptamos transferencias bancarias, tarjetas de crédito/débito internacionales (Visa, Mastercard, Amex), MB Way y efectivo, con factura oficial.'
-                },
-            ],
-        },
-        blog: {
-            badge: 'Diario',
-            title: 'Diario del Duero',
-            subtitle: 'Noticias, secretos y lo último en enoturismo en Portugal.',
-            readMore: 'Leer Historia',
-            bookCta: 'Reservar esta experiencia',
-            readTimeDefault: '4 min de lectura',
-            items: [
-                {
-                    slug: 'vindimas-outono-douro-lagares-2026',
-                    title: 'Vendimia en el Duero: La Magia de los Lagares de Granito y Catas Exclusivas de Otoño',
-                    excerpt: 'Cuando las terrazas de viñedos se tiñen de dorado y cobre, el Duero entra en su temporada más apasionante. Una invitación privada para vivir el pisado de uva, almuerzos campestres y añadas de colección.',
-                    date: '15 de septiembre de 2026',
-                    category: 'Vendimia y Tradición',
-                    image: '/images/blog/2026/harvest.jpg',
-                    readTime: '4 min de lectura',
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: 'Septiembre y octubre regalan al Valle del Duero una luz dorada y el aroma embriagador del mosto en fermentación. Es la temporada culmen del año vitivinícola, cuando siglos de tradición cobran vida en las laderas pizarrosas esculpidas por el río.' },
-                        { type: 'p', text: 'Lejos de las aglomeraciones de los autobuses turísticos convencionales, la experiencia de vendimia con NORTHÉ se concibe con absoluta privacidad. Su grupo es recibido por enólogos y propietarios en fincas boutique de acceso restringido, donde la hospitalidad portuguesa se siente en su expresión más auténtica.' },
-                        { type: 'p', text: 'Desde el rito secular del pisado de la uva a pie en lagares de granito al son de melodías tradicionales, hasta almuerzos gastronómicos en terrazas panorámicas con vistas al río, cada instante rinde homenaje a la alta cocina regional y a los mejores vinos DOC y Oporto.' },
-                        { type: 'p', text: 'Para disfrutar de este momento único, NORTHÉ ofrece itinerarios privados de día completo (Tour North-001 y North-002) con transporte ejecutivo desde Oporto, permitiendo presenciar las vendimias tardías con todo el confort y distinción.' }
-                    ]
-                },
-                {
-                    slug: 'rota-secreta-minho-alvarinho-palacios-2026',
-                    title: 'Más Allá del Duero: La Ruta Secreta del Vino Alvarinho y los Palacios del Miño',
-                    excerpt: 'Descubra la nobleza del Norte de Portugal entre los pazos solariegos de Ponte de Lima, los castillos de Guimarães y las quintas donde nace el Alvarinho más cotizado del mundo.',
-                    date: '8 de septiembre de 2026',
-                    category: 'Norte de Portugal',
-                    image: '/images/blog/2026/quinta-estate.jpg',
-                    readTime: '4 min de lectura',
-                    bookable: true,
-                    fullContent: [
-                        { type: 'p', text: 'Si el Duero es la cuna del vino de Oporto y los tintos monumentales, el Miño es el alma verde, fresca y señorial del Norte de Portugal. Una tierra de pazos de granito con blasones centenarios, jardines laberínticos y viñedos de renombre universal.' },
-                        { type: 'p', text: 'Viajando en privado desde Oporto en una van ejecutiva Mercedes-Benz, NORTHÉ guía a su grupo por los paisajes bucólicos de Monção y Melgaço, subregión madre de la uva Alvarinho, famosa por su mineralidad vibrante y aromas cítricos y florales.' },
-                        { type: 'p', text: 'El recorrido combina visitas exclusivas a palacios históricos con comidas gastronómicas donde el marisco del Atlántico, las carnes autóctonas y los dulces conventuales se degustan con la máxima delicadeza.' },
-                        { type: 'p', text: 'Una escapada perfecta para quienes desean ampliar horizontes más allá del Duero, recorriendo los centros Patrimonio de la UNESCO de Guimarães y Braga o el encanto de Ponte de Lima con nuestro Tour Privado Miño & Vinos Verdes.' }
-                    ]
-                },
-                {
-                    slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: El Evento del Verano en Lamego', excerpt: 'En el corazón del Duero, Lamego fue, los días 3 y 4 de julio, el epicentro de los mejores vinos portugueses, gastronomía de autor y música en vivo.', date: '4 de julio de 2026', category: 'Eventos', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 min de lectura', bookable: true,
-                    fullContent: [
-                        { type: 'p', text: 'El Duero tiene su propio calendario. Y a principios de julio, Lamego se convierte en el epicentro del vino portugués.' },
-                        { type: 'p', text: 'El Douro & Porto Wine Festival regresó los días 3 y 4 de julio al Porto Comercial de Cambres, en Lamego, reuniendo a los mejores productores de la región en un evento que combina, con rara elegancia, catas de vinos excepcionales con gastronomía de autor y música en vivo.' },
-                        { type: 'p', text: 'Para quienes nos visitan en esta época del año, el festival representa una oportunidad única: degustar docenas de referencias del Duero en un solo fin de semana, dialogar directamente con enólogos y descubrir vinos que aún no han llegado a las tiendas especializadas.' },
-                        { type: 'p', text: 'En NORTHÉ, combinamos la experiencia del festival con nuestro tour privado por el valle — un día que comienza entre viñas y termina con el río dorándose al atardecer. Se recomienda reservar con antelación.' }
-                    ]
-                },
-                {
-                    slug: 'vindima-antecipada-douro-2026', title: 'Vendimia 2026: La Cosecha Comienza Más Temprano en el Duero', excerpt: 'El cambio climático está reescribiendo el ritmo de la vendimia en el Duero. Agosto es el nuevo septiembre — y quien llega primero vive la experiencia más auténtica.', date: '4 de julio de 2026', category: 'Tendencias', image: '/images/blog/2026/vindima-antecipada-2026.jpg', readTime: '4 min de lectura', bookable: true,
-                    fullContent: [
-                        { type: 'p', text: 'Hay algo silencioso y urgente en el aire del Duero este verano. Los racimos maduran más deprisa. Las fincas se preparan. Y la vendimia de 2026 promete llegar antes de lo esperado.' },
-                        { type: 'p', text: 'El cambio climático está redefiniendo el ritmo secular de la cosecha en el Valle del Duero. Lo que históricamente ocurría en octubre comienza hoy, en muchas fincas, ya a principios de agosto — a veces incluso en julio. El intenso calor acelera la maduración de las uvas, comprimiendo una ventana de tiempo que, antes, permitía semanas de observación cuidadosa.' },
-                        { type: 'p', text: 'Para los productores, este es un gran reto técnico y humano. Para los viajeros, es una oportunidad única: estar en el Duero cuando la región está en su momento más vivo, más auténtico y más sensorial.' },
-                        { type: 'p', text: 'Las experiencias de vendimia inmersivas — recolección manual, pisado en lagares de granito, almuerzos regionales con maridaje — se agotan rápidamente. Nuestra recomendación: no espere a septiembre. El Duero de agosto es, cada vez más, el Duero de la vendimia.' }
-                    ]
-                },
-                {
-                    slug: 'melhor-vinho-do-ano-douro', title: '"El Mejor Vino del Año" es un Tinto del Duero', excerpt: 'El prestigioso premio fue para un vino del Duero, reafirmando la excepcional calidad de la región.', date: '13 de mayo de 2026', category: 'Premios', image: '/images/blog/2026/golden-hour.jpg', readTime: '3 min de lectura', bookable: true,
-                    fullContent: [
-                        { type: 'p', text: 'La crítica especializada ha vuelto a premiar la excelencia del Duero. El título de "Mejor Vino del Año" fue otorgado a un tinto duriense, una distinción que refuerza el prestigio internacional de la región demarcada más antigua del mundo.' },
-                        { type: 'p', text: 'En NORTHÉ, brindamos a nuestros clientes catas premium que incluyen cosechas premiadas en las mejores fincas de la región. Venga a degustar la excelencia con nosotros.' }
-                    ]
-                },
-                {
-                    slug: 'napa-valley-para-o-douro', title: 'De Napa Valley al Duero: Inversión de 10 Millones en Enoturismo', excerpt: 'Un empresario estadounidense eligió el Duero para un proyecto de lujo centrado en el vino y el turismo.', date: '16 de marzo de 2026', category: 'Noticias', image: '/images/blog/2026/quinta-estate.jpg', readTime: '4 min de lectura', bookable: false,
-                    fullContent: [
-                        { type: 'p', text: 'El Duero sigue atrayendo a los mayores inversores mundiales. Recientemente, un empresario de Napa Valley, California, invirtió cerca de 10 millones de euros en un nuevo proyecto de vino y turismo en la región.' },
-                        { type: 'p', text: 'Esta millonaria inversión es prueba de que el Valle del Duero es un destino de elección mundial para el enoturismo de lujo, rivalizando con las regiones vinícolas más famosas del mundo.' }
-                    ]
-                },
-                {
-                    slug: 'cimeira-mundial-enoturismo', title: 'Portugal acoge la Cumbre Mundial de Enoturismo', excerpt: 'Nuestro país refuerza su posición de liderazgo al acoger el mayor evento mundial dedicado al turismo del vino.', date: '11 de mayo de 2026', category: 'Eventos', image: '/images/blog/2026/gastronomy.jpg', readTime: '3 min de lectura', bookable: false,
-                    fullContent: [
-                        { type: 'p', text: 'Portugal sigue haciendo historia en el turismo mundial. El país fue elegido para albergar la Cumbre Mundial de Enoturismo, un hito que subraya nuestra dedicación a la cultura del vino y la excelencia en hospitalidad.' },
-                        { type: 'p', text: 'Siendo el Duero el principal escaparate del enoturismo nacional, celebramos este reconocimiento mundial y seguimos comprometidos en ofrecer experiencias inolvidables.' }
-                    ]
-                },
-                {
-                    slug: 'quinta-renasce-experiencias', title: 'Experiencias Sensoriales "Pies en la Tierra" en las Quintas', excerpt: 'El enoturismo en Portugal evoluciona hacia experiencias inmersivas, donde el visitante interactúa directamente con la tierra y el vino.', date: '6 de abril de 2026', category: 'Tendencias', image: '/images/blog/2026/harvest.jpg', readTime: '4 min de lectura', bookable: true,
-                    fullContent: [
-                        { type: 'p', text: 'La tendencia actual en el enoturismo es la autenticidad. Los visitantes ya no solo buscan probar el vino, sino comprender el terruño, participar en la vendimia y disfrutar de experiencias "pies en la tierra".' },
-                        { type: 'p', text: 'Nuestros tours a medida en el Duero están diseñados precisamente con este propósito: conectar a nuestros clientes con la verdadera esencia de la cultura y la tradición portuguesas.' }
-                    ]
-                }
-            ]
         },
         contact: {
             title: '¿Creamos su experiencia en Portugal?',
@@ -2165,17 +2417,15 @@ export const CONTENT = {
             ctaBook: 'Individuelles Angebot Anfordern',
             ctaWhatsapp: 'Per WhatsApp Buchen',
         },
-        about: {
-            badge: 'Über Uns',
-            title: 'Hinter dem Horizont: Die Seele von NORTHÉ',
+about: {
+            badge: "Über NORTHÉ",
+            title: "Private Erlebnisse, geschaffen, um Portugal auf persönlichere Weise zu entdecken.",
             paragraphs: [
-                'Bei NORTHÉ glauben wir, dass Luxus nicht durch das definiert wird, was man sieht, sondern durch das, was man fühlt. Wir sind aus der Leidenschaft heraus entstanden, den unsichtbaren Douro zu enthüllen - den, der nicht auf Touristenkarten erscheint, sondern in privaten Weingütern, in der Stille des Flusses bei der Abenddämmerung und in den Aromen einer Küche, die das Land ehrt, pulsiert.',
-                'Unsere Mission ist es, Erlebnisse zu gestalten, nicht Reiserouten. Jedes Detail, vom Komfort unserer exklusiven Fahrzeuge bis hin zur sorgfältigen Auswahl von Michelin-Sterne-Partnern, ist für diejenigen konzipiert, die Zeit, Privatsphäre und Authentizität schätzen.',
-                'Wir sind nicht einfach nur Reiseleiter; wir sind Geschichtenerzähler und Kuratoren unvergesslicher Momente. Auf dem Rücksitz unserer Exklusivität hört der Douro auf, ein Reiseziel zu sein, und wird zu einer ewigen Erinnerung.',
-                'Willkommen am Douro, in Ihrem eigenen Tempo. Willkommen bei NORTHÉ.',
+                "NORTHÉ entstand in Porto aus einer klaren Vision: jede Reise in ein bedeutungsvolles Erlebnis zu verwandeln. Wir gestalten private Touren durch das Douro-Tal, Porto und Nordportugal, die faszinierende Landschaften, Weine, Gastronomie, Kultur und handverlesene Orte harmonisch vereinen.",
+                "Jedes Erlebnis wird maßgeschneidert für Ihre Gruppe konzipiert — mit höchstem Komfort, Flexibilität und Liebe zum Detail. Denn ein Reiseziel zu entdecken erfordert keinen Standardplan für jedermann.",
             ],
-            signature: 'NORTHÉ',
-            imageAlt: 'Douro-Tal in Morgennebel gehüllt',
+            signature: "NORTHÉ",
+            imageAlt: "Weinrestaurant mit Panoramablick bei Sonnenuntergang über den Fluss Douro und Porto",
         },
         reviews: {
             badge: 'Bewertungen',
@@ -2194,107 +2444,379 @@ export const CONTENT = {
                 { text: 'Tolle Erfahrung! Das Boot auf dem Douro bei Sonnenuntergang war magisch. Professioneller Service von Anfang bis Ende.', author: 'Daan van der Berg', location: 'Amsterdam, Niederlande', flag: '🇳🇱', stars: 4.8 },
             ],
         },
-        faq: {
-            badge: 'FAQ',
-            title: 'Alles, Was Sie Wissen Müssen',
-            subtitle: 'Transparente und detaillierte Antworten zu unseren 100% privaten Touren, Annehmlichkeiten, Buchungen und flexiblen Stornierungen.',
+faq: {
+            badge: "FAQ",
+            title: "Alles, was Sie wissen müssen",
+            subtitle: "Klare und transparente Antworten auf die häufigsten Fragen vor der Buchung Ihres privaten Erlebnisses.",
+            searchPlaceholder: "Fragen durchsuchen (z.B. Boot, Abholung, Kinder, Stornierung)...",
+            noResults: "Keine passenden Fragen zu dieser Suche gefunden.",
+            clearSearch: "Suche zurücksetzen",
+            whatsappTitle: "Haben Sie noch Fragen zu Ihrem Erlebnis?",
+            whatsappSubtitle: "Sprechen Sie direkt mit NORTHÉ. Wir beraten Sie mit Freude bei der Wahl des perfekten Reiseplans für Ihre Gruppe.",
+            whatsappBtn: "Über WhatsApp kontaktieren",
+            categories: [
+                { id: "all", label: "Alle Fragen" },
+                { id: "reservas", label: "Buchung & Preise" },
+                { id: "transporte", label: "Abholung & Transfer" },
+                { id: "douro", label: "Douro-Tal" },
+                { id: "barco", label: "Bootsfahrten" },
+                { id: "familias", label: "Familien & Barrierefreiheit" },
+                { id: "gastronomia", label: "Essen & Diätwünsche" },
+                { id: "cancelamentos", label: "Stornierung & Flexibilität" },
+                { id: "especiais", label: "Besondere Anlässe" },
+            ],
             items: [
                 {
-                    q: 'Sind die Touren wirklich 100% privat oder teilen wir das Fahrzeug mit anderen Gästen?',
-                    a: 'Jede Reise mit NORTHÉ ist ausnahmslos 100% privat und exklusiv für Sie und Ihre persönliche Reisegruppe (1 bis 8 Personen) reserviert. Wir kombinieren niemals Buchungen von fremden Personen. Der exklusive Mercedes-Benz Van und Ihr zertifizierter Sommelier-Guide stehen während des gesamten Tages ausschließlich Ihnen zur Verfügung, sodass Sie jeden Zwischenstopp in Ihrem eigenen Rhythmus genießen.'
+                    category: "reservas",
+                    q: "Wie kann ich ein privates Erlebnis bei NORTHÉ buchen?",
+                    a: "Sie können Ihre Anfrage direkt über unsere Website, per WhatsApp oder über die Kontaktkanäle von NORTHÉ stellen. Nennen Sie uns Ihr Wunschdatum, die Personenanzahl und die gewünschte Tour. Unser Team prüft umgehend die Verfügbarkeit und stimmt alle Details vor der Buchung mit Ihnen ab."
                 },
                 {
-                    q: 'Was ist im Preis inbegriffen? Gibt es versteckte Zusatzkosten?',
-                    a: 'Es gibt absolut keine versteckten Kosten. Der Preis beinhaltet: exklusiven Tür-zu-Tür-Transfer (Abholung und Rückfahrt am Hotel in Porto oder Gaia), zertifizierten mehrsprachigen Weinguide, Mineralwasser an Bord, Wi-Fi, Autobahnmaut und gesetzlich vorgeschriebene Passagierversicherungen (RNAAT 284/2026). Je nach gewählter Tour sind Weingutbesichtigungen mit DOC- und Portweinverkostungen, mehrgängige Gourmet-Mittagessen mit Weinbegleitung und private Rabelo-Bootsfahrten vollständig enthalten.'
+                    category: "reservas",
+                    q: "Wie lange im Voraus sollte ich meine Buchung vornehmen?",
+                    a: "Wir empfehlen eine frühzeitige Buchung, besonders für Douro-Tal-Touren, private Bootsfahrten, renommierte Weingüter und die Hauptsaison. Kurzfristige Buchungen sind je nach Verfügbarkeit möglich."
                 },
                 {
-                    q: 'Wie groß ist die maximale Gruppengröße und wie staffelt sich der Preis pro Person?',
-                    a: 'Unsere Executive-Flotte bietet 1 bis 8 Gästen pro Fahrzeug erstklassigen Komfort. Der Grundpreis gilt pro Privatfahrzeug/Gruppe. Für Familien oder befreundete Paare (4 bis 8 Personen) ergibt sich dadurch ein besonders attraktiver Pro-Kopf-Preis (ab ca. €49 bis €65 pro Person) – kombiniert mit dem unvergleichlichen Luxus absoluter Privatsphäre.'
+                    category: "reservas",
+                    q: "Sind die Touren von NORTHÉ zu 100 % privat?",
+                    a: "Ja. NORTHÉ ist ausschließlich auf 100 % private Touren spezialisiert. Ihre Gruppe reist und genießt das Erlebnis in absoluter Exklusivität, ohne das Fahrzeug mit anderen Gästen zu teilen."
                 },
                 {
-                    q: 'Wo und zu welcher Uhrzeit erfolgt die Abholung und die Rückkehr?',
-                    a: 'Wir holen Ihre Gruppe direkt in der Lobby Ihres Hotels, Apartments oder Ferienunterkunft in Porto oder Vila Nova de Gaia ab – üblicherweise zwischen 8:30 und 9:00 Uhr (oder zu einer individuell vereinbarten Wunschzeit). Am späten Nachmittag (ca. 18:00 – 18:30 Uhr) bringen wir Sie entspannt zurück zu Ihrer Unterkunft oder setzen Sie an einem Wunschrestaurant zum Abendessen ab.'
+                    category: "reservas",
+                    q: "Wie setzt sich der Preis für ein privates Erlebnis zusammen?",
+                    a: "Der Preis richtet sich nach der gewählten Tour, der Teilnehmerzahl, der Reiseroute und den inkludierten Leistungen. Jede Tour weist vor der Buchung transparente Bedingungen und Preise aus."
                 },
                 {
-                    q: 'Wie lauten Ihre Stornierungs- und Umbuchungsbedingungen?',
-                    a: 'Wir bieten eine kostenlose Stornierung mit 100% voller Rückerstattung bis zu 48 Stunden vor Tourbeginn – unkompliziert und ohne Rückfragen. Sollten sich Ihre Flug- oder Reisezeiten kurzfristig ändern, passen wir Ihren Termin bei Verfügbarkeit ohne zusätzliche Gebühren flexibel an.'
+                    category: "reservas",
+                    q: "Gilt der angegebene Preis pro Person oder pro Gruppe?",
+                    a: "Der Preis versteht sich pro privater Gruppe und nicht pro Person. NORTHÉ-Touren können für Gruppen von 1 bis 8 Gästen gebucht werden, wobei die Exklusivität stets gewahrt bleibt."
                 },
                 {
-                    q: 'Sind die Touren für Familien mit Kindern oder Kleinkindern geeignet?',
-                    a: 'Ganz bestimmt. Da Ihre Tour 100% privat ist, bestimmen Sie das Reisetempo und wir legen Pausen nach Ihren Bedürfnissen ein. Homologierte Babyschalen und Kindersitze stellen wir auf Anfrage kostenfrei bereit (bitte das Alter der Kinder bei der Anfrage angeben). Partnerweingüter und Restaurants bieten familienfreundliche Räumlichkeiten und spezielle Kindermenüs.'
+                    category: "reservas",
+                    q: "Was ist im Preis enthalten? Gibt es versteckte Kosten?",
+                    a: "Jede Tour listet alle Inklusivleistungen detailliert auf. Sollten optionale Extras, Eintrittsgelder, spezielle Weinproben oder Bootsupgrades nicht enthalten sein, werden diese im Vorfeld vollkommen transparent ausgewiesen."
                 },
                 {
-                    q: 'Kann ich die Reiseroute anpassen, bestimmte Weingüter besuchen oder besondere Anlässe feiern?',
-                    a: 'Ja! Maßgeschneiderte Erlebnisse sind die Kernkompetenz von NORTHÉ. Ob Besuch eines bestimmten Wunschweinguts, Begleitung durch einen professionellen Fotografen, Feier eines Jubiläums, Flitterwochen oder ein romantischer Heiratsantrag in den Weinbergen: Unser Team plant jedes Detail exakt nach Ihren Wünschen.'
+                    category: "reservas",
+                    q: "Welche Zahlungsmethoden stehen zur Verfügung?",
+                    a: "Die Zahlungsoptionen werden bei der Buchungsbestätigung mitgeteilt. Zahlungen erfolgen sicher per Banküberweisung (SEPA/SWIFT), gängigen Kreditkarten oder MB Way."
                 },
                 {
-                    q: 'Wie buche ich und welche sicheren Zahlungsmethoden stehen zur Verfügung?',
-                    a: 'Die Buchung ist schnell und zuverlässig. Sie können direkt über unseren offiziellen WhatsApp-Service (+351 911 923 499) anfragen oder das Online-Formular nutzen. Wir akzeptieren Banküberweisungen (SEPA/SWIFT), internationale Kredit-/Debitkarten (Visa, Mastercard, Amex), MB Way und Barzahlung, stets mit offizieller Rechnung.'
+                    category: "reservas",
+                    q: "Kann ich eine maßgeschneiderte Tour anfragen?",
+                    a: "Ja. Individuelle Flexibilität ist ein zentrales Merkmal von NORTHÉ. Wir passen Tempo, Route und Programm gerne an die Wünsche und Vorlieben Ihrer Gruppe an, soweit dies logistisch möglich ist."
+                },
+                {
+                    category: "transporte",
+                    q: "Wo finden Abholung (Pick-up) und Rückfahrt statt?",
+                    a: "Abholung und Rückfahrt werden vorab gemäß Ihren Buchungsangaben vereinbart. Bei Touren ab Porto holen wir Sie am vereinbarten Treffpunkt ab."
+                },
+                {
+                    category: "transporte",
+                    q: "Bietet NORTHÉ Abholung und Rückfahrt an Hotels in Porto an?",
+                    a: "Wir holen Ihre Gruppe direkt in der Lobby Ihres Hotels, Apartments, Airbnbs oder Ihrer Unterkunft in Porto und Vila Nova de Gaia ab – üblicherweise zwischen 08:30 und 09:00 Uhr (oder zu einer gewünschten Wunschzeit). Am Ende des Tages (~18:00 - 18:30 Uhr) bringen wir Sie entspannt zurück oder setzen Sie an einem Wunschrestaurant für das Abendessen ab."
+                },
+                {
+                    category: "transporte",
+                    q: "Ist eine Abholung direkt am Flughafen Porto möglich?",
+                    a: "Ja. Dieser Service muss bei der Buchung angefragt werden, damit wir Flugdaten und Fahrerkoordination exakt abstimmen können."
+                },
+                {
+                    category: "transporte",
+                    q: "Kann ich eine Abholung außerhalb von Porto anfragen?",
+                    a: "Abholungen außerhalb unseres regulären Gebiets können je nach Ort, Zeit und Tour geprüft werden. Ein möglicher Aufpreis wird vorab transparent mitgeteilt."
+                },
+                {
+                    category: "transporte",
+                    q: "Erfolgt die Beförderung während der gesamten Tour ausschließlich privat?",
+                    a: "Ja. Alle Erlebnisse von NORTHÉ finden in modernen Oberklasse-Fahrzeugen statt, die exklusiv für Ihre Reisegruppe reserviert sind."
+                },
+                {
+                    category: "douro",
+                    q: "Wie besichtigt man das Douro-Tal ab Porto am besten?",
+                    a: "Eine private Tagestour bietet maximale Freiheit, das Douro-Tal ohne Zeitdruck zu erkunden und das Tempo an Ihre Gruppe anzupassen. Ab Porto lassen sich atemberaubende Aussichtspunkte, Quintas, Kulinarik und Bootsfahrten ideal kombinieren."
+                },
+                {
+                    category: "douro",
+                    q: "Wie lange dauert eine private Douro-Tal-Tagestour?",
+                    a: "Die Dauer richtet sich nach dem gewählten Programm. NORTHÉ-Touren sind in der Regel als ganztägige Entdeckungsreisen (ca. 8 bis 9 Stunden) konzipiert; genaue Angaben finden sich auf der jeweiligen Tour-Seite."
+                },
+                {
+                    category: "douro",
+                    q: "Was besuche ich während einer privaten Douro-Tour?",
+                    a: "Je nach Route besichtigen Sie historische Weingüter (Quintas), terrassierte Weinberge, malerische Flussorte wie Pinhão, spektakuläre Aussichtspunkte und tauchen tief in die Weinkultur und Gastronomie ein."
+                },
+                {
+                    category: "douro",
+                    q: "Sind Weinverkostungen im Preis inbegriffen?",
+                    a: "Das hängt von der jeweiligen Tour ab. Wenn Weinproben Teil des Programms sind, ist dies in der Tour-Beschreibung ausdrücklich vermerkt. Auf Wunsch arrangieren wir auch exklusive Jahrgangsverkostungen."
+                },
+                {
+                    category: "douro",
+                    q: "Welche Weinsorten kann ich im Douro-Tal probieren?",
+                    a: "Je nach Route verkosten Sie das facettenreiche Spektrum der Region: frische DOC Douro-Weißweine, vollmundige Rotweine sowie legendäre Portweine (Tawny, Ruby, Colheitas)."
+                },
+                {
+                    category: "douro",
+                    q: "Kann ich ein bestimmtes Weingut im Douro-Tal besuchen?",
+                    a: "Gerne prüfen wir Ihre Wunsch-Quinta auf Verfügbarkeit am gewählten Datum. Manche namhafte Weingüter erfordern rechtzeitige Voranmeldung gemäß ihren internen Empfangszeiten."
+                },
+                {
+                    category: "douro",
+                    q: "Kann ich die Reiseroute meiner Douro-Tour individualisieren?",
+                    a: "Ja. Private Touren bieten höchste Flexibilität. Wir stimmen die Stationen mit Ihnen ab und kreieren ein individuelles Erlebnis unter Berücksichtigung der Fahrzeiten und Öffnungszeiten."
+                },
+                {
+                    category: "barco",
+                    q: "Beinhalten die NORTHÉ-Touren eine Bootsfahrt auf dem Douro?",
+                    a: "Mehrere unserer Touren beinhalten eine Flussfahrt auf dem Douro. Art, Dauer und Bootstyp sind auf der jeweiligen Tour-Seite detailliert beschrieben."
+                },
+                {
+                    category: "barco",
+                    q: "Ist die Bootsfahrt privat oder geteilt?",
+                    a: "Das hängt von der gewählten Tour ab. NORTHÉ bietet verschiedene Varianten, darunter auch 100 % private Holzrabelo-Charterfahrten, sofern im Programm aufgeführt."
+                },
+                {
+                    category: "barco",
+                    q: "Wie lange dauert die Bootsfahrt?",
+                    a: "Die Dauer variiert je nach Programm (meist 1 bis 2 Stunden) und ist in der Tour-Beschreibung genau angegeben."
+                },
+                {
+                    category: "barco",
+                    q: "Was passiert, wenn schlechtes Wetter die Bootsfahrt verhindert?",
+                    a: "Ihre Sicherheit und Ihr Wohlbefinden stehen immer an erster Stelle. Sollten Wetter- oder Flussbedingungen eine Fahrt unmöglich machen, bieten wir niveauvolle kulturelle oder weinbezogene Alternativen an."
+                },
+                {
+                    category: "familias",
+                    q: "Sind die Touren für Familien mit Kindern oder Babys geeignet?",
+                    a: "Viele unserer Touren eignen sich hervorragend für Familien. Die Eignung richtet sich nach Strecke, Dauer und Aktivitäten. Bitte geben Sie bei der Buchung das Alter der Kinder an, damit wir Sie optimal beraten."
+                },
+                {
+                    category: "familias",
+                    q: "Werden Kindersitze oder Sitzerhöhungen bereitgestellt?",
+                    a: "Ja. Zugelassene Babyschalen und Kindersitze stellen wir Ihnen auf Anfrage bei der Buchung kostenlos zur Verfügung."
+                },
+                {
+                    category: "familias",
+                    q: "Sind die Touren für Personen mit eingeschränkter Mobilität geeignet?",
+                    a: "Die Barrierefreiheit variiert je nach Weingut, historischem Gelände, Boot und Monument. Bitte informieren Sie uns vorab, damit wir eine barrierearme Route zusammenstellen können."
+                },
+                {
+                    category: "gastronomia",
+                    q: "Können Mahlzeiten an besondere Ernährungsweisen angepasst werden?",
+                    a: "Wann immer möglich, ja. Spezielle Ernährungswünsche sollten im Vorfeld mitgeteilt werden, damit wir diese mit unseren Partnerrestaurants abstimmen können."
+                },
+                {
+                    category: "gastronomia",
+                    q: "Gibt es vegetarische, vegane oder glutenfreie Optionen?",
+                    a: "Vegetarische, vegane oder glutenfreie Menüs können bei rechtzeitiger Voranmeldung bei der Buchung mit den ausgewählten Restaurants arrangiert werden."
+                },
+                {
+                    category: "gastronomia",
+                    q: "Müssen Allergien oder Unverträglichkeiten im Voraus gemeldet werden?",
+                    a: "Ja. Eine rechtzeitige Vorankündigung ermöglicht unseren Partnern eine erstklassige kulinarische Vorbereitung."
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Wie lauten die Stornierungs- und Umbuchungsbedingungen?",
+                    a: "Wir bieten kostenlose Stornierung mit voller Rückerstattung bis zu 48 Stunden vor Tourbeginn. Sollte sich Ihr Flugplan ändern, passen wir das Tourdatum nach Verfügbarkeit kostenfrei an."
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Kann ich das Datum meiner Tour nach der Buchung noch ändern?",
+                    a: "Umbuchungsanfragen werden nach Maßgabe der Terminverfügbarkeit flexibel geprüft. Je früher Sie uns kontaktieren, desto einfacher lässt sich ein Alternativtermin sichern."
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Was passiert, wenn ungünstige Wetterbedingungen das Erlebnis beeinflussen?",
+                    a: "Sollte das Wetter Aktivitäten im Freien beeinträchtigen, passen wir die Route mit Schlossbesichtigungen und wettergeschützten Weinverkostungen an."
+                },
+                {
+                    category: "cancelamentos",
+                    q: "Kann NORTHÉ die Route während der Tour anpassen?",
+                    a: "In Ausnahmefällen (Wetterlage, Straßensperren, Öffnungszeiten) können routenbezogene Anpassungen vorgenommen werden, um Ihre Sicherheit und den hohen Qualitätsstandard zu gewährleisten."
+                },
+                {
+                    category: "especiais",
+                    q: "Kann ich eine Tour für einen besonderen Anlass arrangieren?",
+                    a: "Ja. Wir gestalten private Erlebnisse mit großer Sorgfalt für besondere Lebensmomente und Jubiläen."
+                },
+                {
+                    category: "especiais",
+                    q: "Organisiert NORTHÉ Geburtstage, Heiratsanträge oder Jubiläen?",
+                    a: "Ja. Wir organisieren regelmäßig Geburtstage, Heiratsanträge und private Feiern in traumhafter Kulisse, diskret und vorab abgestimmt."
+                },
+                {
+                    category: "especiais",
+                    q: "Kann ich ein Picknick, einen Fotografen oder Zusatzleistungen buchen?",
+                    a: "Ausgewählte Touren können mit Weinberg-Picknicks, professioneller Fotobegleitung, Blumendekorationen oder privatem Boot ergänzt werden. Details und Preise werden individuell bestätigt."
                 },
             ],
         },
-        blog: {
-            badge: 'Journal',
-            title: 'Douro-Tagebuch',
-            subtitle: 'Geschichten, Geheimnisse und Erlebnisse aus dem sch\u00f6nsten Tal der Welt.',
-            readMore: 'Geschichte lesen',
-            bookCta: 'Dieses Erlebnis buchen',
-            readTimeDefault: '4 Min. Lesezeit',
+blog: {
+            badge: "Magazin & Reiseführer",
+            title: "Douro & Nordportugal Tagebuch",
+            subtitle: "Autorisierte Reiseführer, exklusive Routen und Geheimtipps für Nordportugal.",
+            readMore: "Artikel lesen",
+            bookCta: "Dieses Erlebnis anfragen",
             items: [
                 {
-                    slug: 'vindimas-outono-douro-lagares-2026',
-                    title: 'Weinlese im Douro-Tal: Die Magie der Granit-Lagares & Exklusive Herbst-Weinproben',
-                    excerpt: 'Wenn sich die terrassierten Weinberge in tiefes Gold und Kupfer hüllen, erlebt das Douro-Tal seine faszinierendste Jahreszeit. Eine exklusive private Einladung zum traditionellen Traubentreten und seltenen Jahrgangsverkostungen.',
-                    date: '15. September 2026',
-                    category: 'Weinlese & Tradition',
-                    image: '/images/blog/2026/harvest.jpg',
-                    readTime: '4 Min. Lesezeit',
+                    slug: "8-melhores-passeios-a-partir-do-porto",
+                    title: "Die 8 Besten Tagesausflüge ab Porto",
+                    subtitle: "Entdecken Sie Nordportugal jenseits der Stadtgrenzen",
+                    excerpt: "Porto ist der ideale Ausgangspunkt, um die vielfältigen Regionen Portugals zu erkunden. In wenigen Stunden erreichen Sie Weinberge, mittelalterliche Städte, historische Paläste, Gebirgszüge und die Atlantikküste.",
+                    date: "18. September 2026",
+                    category: "Reiseführer",
+                    image: "/images/blog/8-melhores-passeios-porto.webp",
+                    readTime: "4 Min. Lesezeit",
                     bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'September und Oktober schenken dem Douro-Tal ein unvergleichliches, goldenes Herbstlicht und den berauschenden Duft von gärendem Most. Es ist der Höhepunkt des Weinjahres, in dem jahrhundertealte Traditionen an den steilen Schieferhängen der Flüsse Douro und Pinhão lebendig werden.' },
-                        { type: 'p', text: 'Fernab von den Menschenmassen herkömmlicher Reisebusse sind die Weinlese-Erlebnisse von NORTHÉ ganz auf absolute Privatsphäre und Exklusivität ausgelegt. Ihre Gruppe wird von Önologen und Inhaberfamilien auf ausgewählten Boutique-Weingütern mit herzlicher portugiesischer Gastfreundschaft empfangen.' },
-                        { type: 'p', text: 'Vom traditionsreichen Ritual des Traubentretens mit bloßen Füßen in Granit-Lagares zu traditioneller Musik bis hin zu mehrgängigen Gourmet-Mittagessen auf Panoramaterrassen über dem Fluss: Jeder Augenblick ist ein Fest für die Sinne und die weltberühmten DOC- und Portweine.' },
-                        { type: 'p', text: 'Um diese besondere Jahreszeit voll auszukosten, bietet NORTHÉ maßgeschneiderte ganztägige Privattouren (Tour North-001 und North-002) mit Executive-Transfer direkt ab Porto an – für ein unvergessliches Weinerlebnis in höchstem Komfort.' }
+                        { type: 'p', text: "Porto ist der ideale Ausgangspunkt, um die vielfältigen Regionen Portugals zu erkunden. In wenigen Stunden erreichen Sie Weinberge, mittelalterliche Städte, historische Paläste, Gebirgszüge und die Atlantikküste." },
+                        { type: 'p', text: "Zu den beliebtesten Zielen gehören das Douro-Tal, Braga, Guimarães und Aveiro. Naturliebhaber zieht es in den Nationalpark Peneda-Gerês mit seinen Bergmassiven, während Arouca mit Flüssen und Hängebrücken begeistert. Amarante und Ponte de Lima sind charmante Oasen für Ruhesuchende." },
+                        { type: 'p', text: "Die Wahl richtet sich nach Ihren Vorlieben: Wein und Gastronomie im Douro, Landesgeschichte in Guimarães, sakrale Baukunst in Braga, Kanäle in Aveiro oder wilde Gebirgsnatur in Gerês." },
+                        { type: 'p', text: "Mehr als ein gewöhnlicher Tagesausflug: Eine Reise in den Norden offenbart ein facettenreiches Land, in dem Geschichte, Weinkultur und Natur tief verwurzelt sind." },
+                        { type: 'p', text: "Möchten Sie Nordportugal ab Porto erleben? Entdecken Sie die privaten Erlebnisse von NORTHÉ." },
                     ]
                 },
                 {
-                    slug: 'rota-secreta-minho-alvarinho-palacios-2026',
-                    title: 'Jenseits des Douro: Die Geheime Alvarinho-Route & die Paläste des Minho',
-                    excerpt: 'Entdecken Sie Nordportugals aristokratische Seele zwischen den Barock-Herrensitzen von Ponte de Lima, den Burgen von Guimarães und den Wiegen des weltbesten Alvarinho-Weißweins.',
-                    date: '8. September 2026',
-                    category: 'Nordportugal',
-                    image: '/images/blog/2026/quinta-estate.jpg',
-                    readTime: '4 Min. Lesezeit',
+                    slug: "vale-do-douro-a-partir-do-porto",
+                    title: "Das Douro-Tal ab Porto",
+                    subtitle: "Spitzenweine, majestätische Landschaften und Jahrhunderte der Tradition",
+                    excerpt: "Das Douro-Tal zählt zu den eindrucksvollsten Erlebnissen jedes Portugal-Aufenthalts. Berühmt für seine steilen Weinterrassen, den gewundenen Fluss Douro und den weltbekannten Portwein.",
+                    date: "17. September 2026",
+                    category: "Douro-Tal",
+                    image: "/images/blog/douro-valley-vineyards.webp",
+                    readTime: "5 Min. Lesezeit",
                     bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'Während das Douro-Tal für monumentale Rotweine und Portweine weltberühmt ist, verkörpert die Minho-Region die grüne, erfrischende und vornehme Seele Nordportugals. Ein Landstrich voller jahrhundertealter Herrenhäuser aus Granit, verwunschener Gärten und Weine von internationalem Rang.' },
-                        { type: 'p', text: 'Auf einer privaten Fahrt ab Porto in einem luxuriösen Mercedes-Benz Van führt NORTHÉ Sie entlang malerischer Landstraßen in die renommierte Subregion Monção und Melgaço – die Wiege der edlen Alvarinho-Traube, die für ihre vibrierende Mineralität und feinen Zitrus- und Blütenaromen geschätzt wird.' },
-                        { type: 'p', text: 'Die Reiseroute verbindet exklusive Privatbesuche historischer Schlösser und Familiengüter mit kulinarischen Mittagessen, bei denen frischer Atlantikfisch, regionale Spezialitäten und traditionelle Klosterdesserts zelebriert werden.' },
-                        { type: 'p', text: 'Eine ideale Tour für anspruchsvolle Reisende, die ihren Aufenthalt über das Douro-Tal hinaus erweitern möchten, um das UNESCO-Weltkulturerbe von Guimarães und Braga oder den zeitlosen Zauber von Ponte de Lima mit unserer Privattour Minho & Vinho Verde zu erleben.' }
+                        { type: 'p', text: "Das Douro-Tal zählt zu den eindrucksvollsten Erlebnissen jedes Portugal-Aufenthalts. Berühmt für seine steilen Weinterrassen, den gewundenen Fluss Douro und den weltbekannten Portwein." },
+                        { type: 'p', text: "Pinhão und Peso da Régua bilden die zentralen Ausgangspunkte im Tal. Entlang spektakulärer Panoramastraßen eröffnen Weingüter (Quintas) und Aussichtspunkte atemberaubende Ausblicke." },
+                        { type: 'p', text: "Ein Tagesausflug verbindet private Kellerführungen, geführte Verkostungen, regionale Spitzenküche und eine entspannte Bootsfahrt. Da die Distanz ab Porto weiter ist als zu anderen Zielen, empfiehlt sich eine sorgfältig geplante Privattour." },
+                        { type: 'p', text: "Das Tal wandelt sich im Rhythmus der Jahreszeiten: Der Frühling hüllt die Hänge in sattes Grün, während der Herbst die Terrassen während der Weinlese in warmes Gold taucht." },
+                        { type: 'p', text: "Wer die tiefe Verbindung zwischen Land, Wein und portugiesischer Kultur spüren möchte, erlebt im Douro-Tal weit mehr als eine gewöhnliche Weinprobe." },
+                        { type: 'p', text: "Erleben Sie das Douro-Tal exklusiv mit einer privaten Tour von NORTHÉ." },
                     ]
                 },
                 {
-                    slug: 'douro-porto-wine-festival-2026', title: 'Douro & Porto Wine Festival: Das Weinfest des Sommers in Lamego', excerpt: 'Im Herzen des Douro war Lamego am 3. und 4. Juli das Epizentrum der besten portugiesischen Weine, der Sterneküche und Live-Musik.', date: '4. Juli 2026', category: 'Veranstaltungen', image: '/images/blog/2026/wine-festival-julho-2026.jpg', readTime: '3 Min. Lesezeit', bookable: true,
+                    slug: "o-que-fazer-no-porto",
+                    title: "Was Man in Porto Erleben Sollte",
+                    subtitle: "Eine faszinierende Stadt ohne Eile entdecken",
+                    excerpt: "Porto vereint reiche Geschichte, noble Architektur, hervorragende Kulinarik, Weinkultur und einen unverwechselbaren Charakter auf kompaktem Raum.",
+                    date: "16. September 2026",
+                    category: "Porto & Kultur",
+                    image: "/images/blog/o-que-fazer-porto.webp",
+                    readTime: "4 Min. Lesezeit",
+                    bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'Das Douro hat seinen eigenen Kalender. Und Anfang Juli wird Lamego zum Epizentrum des portugiesischen Weins.' },
-                        { type: 'p', text: 'Das Douro & Porto Wine Festival kehrte am 3. und 4. Juli in den Porto Comercial de Cambres in Lamego zurück und versammelte die besten Produzenten der Region in einer Veranstaltung, die mit seltener Eleganz außergewöhnliche Weinproben mit Küche und Live-Musik verbindet.' },
-                        { type: 'p', text: 'Für alle, die uns zu dieser Jahreszeit besuchen, bietet das Festival eine einzigartige Gelegenheit: Dutzende von Douro-Referenzen an einem einzigen Wochenende zu probieren, direkt mit Winzern zu sprechen und Weine zu entdecken, die noch nicht in den Fachgeschäften angekommen sind.' },
-                        { type: 'p', text: 'Bei NORTHÉ verbinden wir das Festivalerlebnis mit unserer privaten Tour durch das Tal — ein Tag, der zwischen den Weinbergen beginnt und mit dem im Sonnenuntergang golden leuchtenden Fluss endet. Frühzeitige Buchungen werden empfohlen.' }
+                        { type: 'p', text: "Porto vereint reiche Geschichte, noble Architektur, hervorragende Kulinarik, Weinkultur und einen unverwechselbaren Charakter auf kompaktem Raum." },
+                        { type: 'p', text: "Die zum UNESCO-Welterbe zählende Altstadt umfasst Wahrzeichen wie die Ribeira, die Kathedrale Sé, den mit Azulejos verzierten Bahnhof São Bento und den Clérigos-Turm. Auf der anderen Flussseite in Vila Nova de Gaia laden historische Portweinkeller mit Panoramablick ein." },
+                        { type: 'p', text: "Doch Portos wahre Seele erschließt sich jenseits der bekannten Monumente: Lokale Märkte, charmante Cafés, Künstlerviertel und die Meerespromenade von Foz do Douro zeigen authentische Facetten." },
+                        { type: 'p', text: "Wer mehr Zeit mitbringt, vertieft seinen Besuch mit exzellenter Gastronomie, privater Kunstführung und architektonischen Entdeckungen." },
+                        { type: 'p', text: "Der schönste Weg, Porto zu erkunden, richtet sich ganz nach Ihrem eigenen Tempo — ob klassische Höhepunkte oder versteckte Lieblingsorte." },
+                        { type: 'p', text: "Wichtig ist, Raum für spontane Entdeckungen zu lassen, statt bloß eine Liste abzuarbeiten." },
+                        { type: 'p', text: "Erleben Sie Porto auf persönliche und stilvolle Weise mit NORTHÉ." },
                     ]
                 },
                 {
-                    slug: 'vindima-antecipada-douro-2026', title: 'Weinlese 2026: Die Ernte Beginnt Früher im Douro', excerpt: 'Der Klimawandel schreibt den Rhythmus der Weinlese im Douro neu. August ist das neue September — und wer zuerst kommt, erlebt das authentischste Erlebnis.', date: '4. Juli 2026', category: 'Trends', image: '/images/blog/2026/vindima-antecipada-2026.jpg', readTime: '4 Min. Lesezeit', bookable: true,
+                    slug: "braga-e-guimaraes-a-partir-do-porto",
+                    title: "Braga und Guimarães ab Porto",
+                    subtitle: "Zwei historische Juwelen im Herzen Nordportugals",
+                    excerpt: "Braga und Guimarães gehören zu den faszinierendsten Kulturausflügen für Reisende, die von Porto aus den Norden erkunden möchten.",
+                    date: "14. September 2026",
+                    category: "Geschichte & Erbe",
+                    image: "/images/blog/braga-guimaraes-norte.webp",
+                    readTime: "4 Min. Lesezeit",
+                    bookable: true,
                     fullContent: [
-                        { type: 'p', text: 'Es liegt etwas Stilles und Drängendes in der Luft des Douro in diesem Sommer. Die Trauben reifen schneller. Die Güter bereiten sich vor. Und die Weinlese 2026 verspricht früher als erwartet zu kommen.' },
-                        { type: 'p', text: 'Der Klimawandel verändert den jahrhundertealten Rhythmus der Ernte im Douro-Weintal. Was historisch im Oktober stattfand, beginnt heute in vielen Gütern bereits Anfang August — manchmal sogar im Juli. Die intensive Hitze beschleunigt die Traubenreife und verkürzt ein Zeitfenster, das früher wochenlange sorgfältige Beobachtung ermöglichte.' },
-                        { type: 'p', text: 'Für die Winzer ist dies eine große technische und menschliche Herausforderung. Für Reisende ist es eine seltene Gelegenheit: im Douro zu sein, wenn die Region in ihrer lebendigsten, authentischsten und sinnlichsten Phase ist.' },
-                        { type: 'p', text: 'Immersive Weinernte-Erlebnisse — Handlese, Fußtretung in Granitkeltern, regionale Mittagessen mit Weinbegleitung — füllen sich schnell. Unsere Empfehlung: Warten Sie nicht bis September. Der Douro im August ist zunehmend Weinterrassen-Zeit.' }
+                        { type: 'p', text: "Braga und Guimarães gehören zu den faszinierendsten Kulturausflügen für Reisende, die von Porto aus den Norden erkunden möchten." },
+                        { type: 'p', text: "Braga besticht durch barocke Sakralarchitektur und monumentale Ensembles wie das Heiligtum Bom Jesus do Monte mit seiner weltberühmten Treppenanlage." },
+                        { type: 'p', text: "Guimarães verströmt mittelalterlichen Zauber. Das UNESCO-geschützte Zentrum bewahrt Plätze und Natursteinhäuser, die von den Ursprüngen Portugals als Wiege der Nation erzählen." },
+                        { type: 'p', text: "Beide Städte lassen sich an einem Tag kombinieren. Wer entspannt reisen möchte, nimmt sich Zeit, um das historische Ambiente und die nordportugiesische Küche in Ruhe zu genießen." },
+                        { type: 'p', text: "Braga begeistert Architektur- und Geschichtsliebhaber; Guimarães verzaubert all jene, die intime Gassen und ritterliche Geschichte suchen." },
+                        { type: 'p', text: "Zwei Städte, zwei eindrucksvolle Perspektiven auf das kulturelle Erbe Nordportugals." },
                     ]
                 },
-                { slug: 'golden-hour-science-douro', title: 'Die Wissenschaft der Goldenen Stunde: Warum das Douro-Tal im Abendlicht leuchtet', excerpt: 'Das Abendlicht im Douro ver\u00e4ndert die Weinwahrnehmung und verwandelt jede Verkostung in ein einzigartiges Sinneserlebnis.', date: '10. Mai 2026', category: 'Erlebnisse', image: '/images/blog/2026/golden-hour.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Es gibt einen Moment an jedem Tag im Douro-Tal, den die Winzer die goldene Stunde nennen. Das Licht wird bernsteinfarben und das gesamte Tal scheint in sanfter Flamme zu brennen.' }, { type: 'h3', text: 'Das NORTHÉ Erlebnis' }, { type: 'p', text: 'Bei unseren privaten Touren planen wir jeden Moment so, dass die Hauptverkostung mit der goldenen Stunde zusammenf\u00e4llt.' }] },
-                { slug: 'quintas-secretas-douro', title: 'Das Unsichtbare Douro: Private Quintas', excerpt: 'Entdecken Sie die historischen Douro-Anwesen, die nur auf private Einladung zug\u00e4nglich sind.', date: '3. Mai 2026', category: 'Exklusiv', image: '/images/blog/2026/quinta-estate.jpg', readTime: '5 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Das Alto Douro Weingebiet beherbergt \u00fcber 40.000 Weingüter. Die exklusivsten funktionieren nur auf private Einladung.' }, { type: 'blockquote', text: 'Wahrer Luxus im Douro l\u00e4sst sich nicht kaufen. Er wird mit Zeit und Neugier erobert.' }, { type: 'p', text: 'Bei NORTHÉ organisieren wir exklusive Besuche in privaten Quintas. Kontaktieren Sie uns für Ihr personalisiertes Erlebnis.' }] },
-                { slug: 'gastronomia-michelin-douro', title: 'Haute Cuisine trifft Tradition: Die Michelin-Aromen des Douro', excerpt: 'Die gastronomische Revolution, die das Tal transformiert.', date: '25. April 2026', category: 'Gastronomie', image: '/images/blog/2026/gastronomy.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Das Douro-Weingebiet war schon immer ein Land intensiver Aromen. Jetzt erfindet eine neue Generation von K\u00f6chen dieses Erbe mit Haute-Cuisine-Technik neu.' }, { type: 'blockquote', text: 'Im Douro zu kochen bedeutet, der Erde zuzuh\u00f6ren. Jede Zutat erz\u00e4hlt eine jahrhundertealte Geschichte.' }, { type: 'p', text: 'Bei unseren gastronomischen Touren bieten wir Mittagessen in ausgew\u00e4hlten Quintas mit exklusiven Men\u00fcs.' }] },
-                { slug: 'vindima-douro-tradicao-viva', title: 'Die Douro-Weinlese: Eine Lebendige Tradition', excerpt: 'September im Douro ist magisch. Das Tal verwandelt sich in ein Fest der Farben und uralten Traditionen.', date: '15. April 2026', category: 'Tradition', image: '/images/blog/2026/harvest.jpg', readTime: '4 Min. Lesezeit', bookable: true, fullContent: [{ type: 'p', text: 'Wenn der September im Douro ankommt, explodieren die Terrassen in Paletten aus Gold, Rot und Bernstein. Es ist die Vindima, eine Tradition aus dem 12. Jahrhundert.' }, { type: 'blockquote', text: 'An einer Weinlese im Douro teilzunehmen bedeutet, die Seele Portugals zu berühren.' }, { type: 'p', text: 'Von September bis Mitte Oktober organisieren wir spezielle Weinlese-Touren. Ein authentisches und einmaliges Erlebnis.' }] }
+                {
+                    slug: "norte-de-portugal-lugares-para-conhecer",
+                    title: "Nordportugal: Orte Jenseits von Porto Entdecken",
+                    subtitle: "Eine facettenreiche Region voll Landschaft, Geschichte und Wein",
+                    excerpt: "Nordportugal bietet weitaus mehr als die bekannten Ufer von Porto und dem Douro.",
+                    date: "12. September 2026",
+                    category: "Nordportugal",
+                    image: "/images/blog/ponte-de-lima-minho.webp",
+                    readTime: "5 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Nordportugal bietet weitaus mehr als die bekannten Ufer von Porto und dem Douro." },
+                        { type: 'p', text: "Nördlich und östlich der Stadt eröffnen sich kontrastreiche Welten: Guimarães bewahrt mittelalterlichen Glanz; Braga beeindruckt mit barocker Pracht; Ponte de Lima zelebriert die Idylle des Minho und die Frische des Vinho Verde." },
+                        { type: 'p', text: "Weiter nördlich verbindet Viana do Castelo Meer, Fluss und lebendige Seefahrertradition. Im Landesinneren eröffnet der Nationalpark Peneda-Gerês raue Granitberge und uralte Steindörfer." },
+                        { type: 'p', text: "Orte wie Amarante und Arouca laden zu erholsamen Naturbegegnungen abseits des Trubels ein." },
+                        { type: 'p', text: "Diese Vielfalt zeichnet den Norden aus: An einem einzigen Tag können Sie von einer UNESCO-Stadt zu einem Spitzenweingut oder vom Gebirgsmassiv an den tosenden Atlantik reisen." },
+                        { type: 'p', text: "Ein Ausflug ins Umland von Porto belohnt mit authentischen Aromen und unberührten Landschaften." },
+                        { type: 'p', text: "Entdecken Sie Nordportugal auf maßgeschneiderten privaten Touren mit NORTHÉ." },
+                    ]
+                },
+                {
+                    slug: "parque-nacional-peneda-geres-a-partir-do-porto",
+                    title: "Nationalpark Peneda-Gerês ab Porto",
+                    subtitle: "Wilde Natur, Granitberge und traditionelle Bergdörfer",
+                    excerpt: "Für Reisende, die Portugals unberührte Natur erleben möchten, bietet der Nationalpark Peneda-Gerês einen faszinierenden Kontrast zum urbanen Leben in Porto.",
+                    date: "10. September 2026",
+                    category: "Natur & Parks",
+                    image: "/images/blog/peneda-geres-lagoa-cascata.webp",
+                    readTime: "4 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Für Reisende, die Portugals unberührte Natur erleben möchten, bietet der Nationalpark Peneda-Gerês einen faszinierenden Kontrast zum urbanen Leben in Porto." },
+                        { type: 'p', text: "Granitfelsen, glasklare Gebirgsbäche, Wasserfälle und traditionelle Schäferdörfer prägen die Kulisse im Wandel der Jahreszeiten. Dörfer wie Soajo und Lindoso bewahren historische Getreidespeicher (Espigueiros)." },
+                        { type: 'p', text: "Gerês ist ein Paradies für Wanderungen, Landschaftsfotografie und tiefe Entspannung. Im Sommer laden smaragdgrüne Lagunen zu einer erfrischenden Pause ein." },
+                        { type: 'p', text: "Aufgrund der Weitläufigkeit des Parks und der abgelegenen Schätze macht ein privates Fahrzeug mit Ortskenntnis den entscheidenden Unterschied." },
+                        { type: 'p', text: "Ab Porto ermöglicht eine private Tagestour, die Höhepunkte des Parks entspannt und nach eigenen Vorlieben zu erkunden." },
+                        { type: 'p', text: "Gerês ist die vollendete Wahl, um Stadttrubel gegen Bergluft, Stille und Weite einzutauschen." },
+                        { type: 'p', text: "Erleben Sie die wilde Seite Nordportugals mit NORTHÉ." },
+                    ]
+                },
+                {
+                    slug: "douro-ou-vinho-verde",
+                    title: "Douro oder Vinho Verde?",
+                    subtitle: "Zwei außergewöhnliche Weinerlebnisse in Nordportugal",
+                    excerpt: "Das Douro-Tal und das Vinho Verde-Gebiet repräsentieren die beiden renommiertesten Weinregionen Nordportugals — mit herrlich unterschiedlichem Charakter.",
+                    date: "8. September 2026",
+                    category: "Portugiesischer Wein",
+                    image: "/images/blog/douro-ou-vinho-verde-amarante.webp",
+                    readTime: "4 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Das Douro-Tal und das Vinho Verde-Gebiet repräsentieren die beiden renommiertesten Weinregionen Nordportugals — mit herrlich unterschiedlichem Charakter." },
+                        { type: 'p', text: "Das Douro-Tal besticht durch steile Schieferterrassen entlang des Flusses, weltberühmt für körperreiche Rotweine und die legendären Portweine." },
+                        { type: 'p', text: "Die Vinho Verde-Region im saftig-grünen Minho zeichnet sich durch herrschaftliche Landgüter und historische Städtchen wie Ponte de Lima aus und bringt aromatische, mineralische Weißweine wie Alvarinho und Loureiro hervor." },
+                        { type: 'p', text: "Der Unterschied zeigt sich im Glas wie in der Landschaft: Der Douro bietet monumentale Canyons, das Minho ländlich-feine Eleganz." },
+                        { type: 'p', text: "Für Weinliebhaber hängt die Wahl von der gewünschten Atmosphäre ab — oder von der Freude, beide Regionen zu verkosten." },
+                        { type: 'p', text: "Nordportugal bietet diesen seltenen Luxus: zwei Weltklasse-Weinkulturen in bequemer Reichweite von Porto." },
+                        { type: 'p', text: "Entdecken Sie die Spitzenweine des Nordens auf einer privaten Tour mit NORTHÉ." },
+                    ]
+                },
+                {
+                    slug: "experiencias-privadas-a-partir-do-porto",
+                    title: "Private Erlebnisse ab Porto",
+                    subtitle: "Portugal im ganz eigenen Rhythmus entdecken",
+                    excerpt: "Nicht jede Reise muss einem starren Gruppenzeitplan folgen.",
+                    date: "5. September 2026",
+                    category: "Private Erlebnisse",
+                    image: "/images/blog/experiencias-privadas-douro-terrace.webp",
+                    readTime: "4 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Nicht jede Reise muss einem starren Gruppenzeitplan folgen." },
+                        { type: 'p', text: "Ein maßgeschneidertes privates Erlebnis ermöglicht es Ihnen, den Tag nach Ihren Wünschen zu gestalten: länger auf einem Weingut verweilen, ein exzellentes Mittagessen genießen oder spontan an einem Aussichtspunkt halten." },
+                        { type: 'p', text: "Ab Porto sind die Möglichkeiten grenzenlos: Douro-Weine, mittelalterliche Geschichte in Guimarães, frische Bergluft in Gerês oder Herrenhäuser im Minho." },
+                        { type: 'p', text: "Für Paare, Familien und kleine Gruppen bedeutet Privatsphäre höchsten Komfort, ohne das Fahrzeug mit Fremden teilen zu müssen." },
+                        { type: 'p', text: "Statt Sehenswürdigkeiten im Minutentakt abzuhaken, erlaubt Ihnen eine private Tour, eine echte Verbindung zu Land und Leuten aufzubauen." },
+                        { type: 'p', text: "Diese Flexibilität macht aus einem gewöhnlichen Ausflug eine unvergessliche Erinnerung." },
+                        { type: 'p', text: "Bei NORTHÉ starten private Touren ab Porto durch das Douro-Tal und Nordportugal — stets fokussiert auf Komfort, Exklusivität und persönliche Freiheit." },
+                        { type: 'p', text: "Entdecken Sie die privaten Erlebnisse von NORTHÉ." },
+                    ]
+                },
             ],
         },
         contact: {

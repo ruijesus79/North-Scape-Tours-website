@@ -17,13 +17,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       return savedLang;
     }
     
-    // Otherwise try to infer from browser language
-    const browserLang = navigator.language.split('-')[0] as Language;
-    if (Object.keys(CONTENT).includes(browserLang)) {
-      return browserLang;
-    }
-    
-    return 'en'; // default fallback
+    // Default is 100% Portuguese; only explicit language selection changes it
+    return 'pt';
   });
 
   // Save to localStorage when language changes
