@@ -28,9 +28,9 @@ interface ToursSectionProps {
 const SECTION_UI = {
   pt: {
     exclusiveBadge: '100% Tours Privados Exclusivos',
-    title: 'Coleção de Tours Privados',
-    subtitle: '17 experiências concebidas exclusivamente para grupos de 1 a 8 pessoas. Sem partilha com desconhecidos, em viaturas executivas e ao seu próprio ritmo.',
-    allTab: 'Todos os Tours',
+    title: 'Explore Nossas Experiências Privadas',
+    subtitle: 'Descubra o Douro, o Porto e o Norte de Portugal através de experiências privadas, pensadas para o seu ritmo e para o seu grupo.',
+    allTab: 'Todas as Experiências',
     searchPlaceholder: 'Pesquisar destino, vinhos, cruzeiro...',
     noMatch: 'Nenhum tour encontrado para esta pesquisa.',
     resetFilters: 'Limpar filtros',
@@ -40,14 +40,14 @@ const SECTION_UI = {
     from: 'Desde',
     details: 'Ver Tour',
     whatsappQuick: 'WhatsApp',
-    viewAllMobile: 'Ver Todos os 17 Tours Privados',
-    showLessMobile: 'Mostrar Menos',
+    viewAllTours: 'Ver Todas as Experiências',
+    showLess: 'Mostrar Menos',
   },
   en: {
-    exclusiveBadge: '100% Exclusive Private Tours',
-    title: 'Private Tours Collection',
-    subtitle: '17 signature journeys curated exclusively for private parties of 1 to 8 guests. No shared crowds, in executive vehicles with a dedicated wine-expert guide.',
-    allTab: 'All Tours',
+    exclusiveBadge: '100% Exclusive Private Experiences',
+    title: 'Explore Our Private Experiences',
+    subtitle: 'Discover Douro Valley, Porto, and Northern Portugal through tailor-made private experiences, crafted for your pace and group.',
+    allTab: 'All Experiences',
     searchPlaceholder: 'Search by destination, wine, cruise...',
     noMatch: 'No tours matched your search criteria.',
     resetFilters: 'Reset filters',
@@ -57,14 +57,14 @@ const SECTION_UI = {
     from: 'From',
     details: 'Explore',
     whatsappQuick: 'WhatsApp',
-    viewAllMobile: 'View All 17 Private Tours',
-    showLessMobile: 'Show Less',
+    viewAllTours: 'View All Experiences',
+    showLess: 'Show Less',
   },
   es: {
-    exclusiveBadge: '100% Tours Privados Exclusivos',
-    title: 'Colección de Tours Privados',
-    subtitle: '17 experiencias diseñadas exclusivamente para grupos de 1 a 8 personas. Sin compartir con desconocidos, en vehículos ejecutivos y a su propio ritmo.',
-    allTab: 'Todos los Tours',
+    exclusiveBadge: '100% Experiencias Privadas Exclusivas',
+    title: 'Explore Nuestras Experiencias Privadas',
+    subtitle: 'Descubra el Valle del Duero, Oporto y el Norte de Portugal a través de experiencias privadas, diseñadas para su ritmo y su grupo.',
+    allTab: 'Todas las Experiencias',
     searchPlaceholder: 'Buscar destino, vinos, crucero...',
     noMatch: 'No se encontraron tours para esta búsqueda.',
     resetFilters: 'Restablecer filtros',
@@ -74,14 +74,14 @@ const SECTION_UI = {
     from: 'Desde',
     details: 'Ver Tour',
     whatsappQuick: 'WhatsApp',
-    viewAllMobile: 'Ver Todos los 17 Tours Privados',
-    showLessMobile: 'Mostrar Menos',
+    viewAllTours: 'Ver Todas las Experiencias',
+    showLess: 'Mostrar Menos',
   },
   fr: {
-    exclusiveBadge: '100% Circuits Privés Exclusifs',
-    title: 'Collection de Circuits Privés',
-    subtitle: '17 expériences conçues exclusivement pour des groupes privés de 1 à 8 personnes. Sans partage, en véhicules exécutifs et à votre propre rythme.',
-    allTab: 'Tous les Circuits',
+    exclusiveBadge: '100% Expériences Privées Exclusives',
+    title: 'Découvrez Nos Expériences Privées',
+    subtitle: 'Explorez la vallée du Douro, Porto et le nord du Portugal grâce à des expériences privées, conçues selon votre rythme et pour votre groupe.',
+    allTab: 'Toutes les Expériences',
     searchPlaceholder: 'Rechercher destination, vins, croisière...',
     noMatch: 'Aucun circuit trouvé pour cette recherche.',
     resetFilters: 'Réinitialiser les filtres',
@@ -91,14 +91,14 @@ const SECTION_UI = {
     from: 'À partir de',
     details: 'Découvrir',
     whatsappQuick: 'WhatsApp',
-    viewAllMobile: 'Voir Tous les 17 Circuits Privés',
-    showLessMobile: 'Afficher Moins',
+    viewAllTours: 'Voir Toutes les Expériences',
+    showLess: 'Afficher Moins',
   },
   de: {
-    exclusiveBadge: '100% Exklusive Private Touren',
-    title: 'Kollektion Privater Touren',
-    subtitle: '17 Erlebnisse exklusiv für geschlossene Gruppen von 1 bis 8 Personen. Keine fremden Gäste, in Executive-Fahrzeugen und in Ihrem eigenen Tempo.',
-    allTab: 'Alle Touren',
+    exclusiveBadge: '100% Exklusive Private Erlebnisse',
+    title: 'Entdecken Sie Unsere Privaten Erlebnisse',
+    subtitle: 'Erleben Sie das Douro-Tal, Porto und Nordportugal durch exklusive private Touren, perfekt abgestimmt auf Ihr Tempo und Ihre Reisegruppe.',
+    allTab: 'Alle Erlebnisse',
     searchPlaceholder: 'Nach Ziel, Weinen oder Bootsfahrt suchen...',
     noMatch: 'Keine Touren für diese Suche gefunden.',
     resetFilters: 'Filter zurücksetzen',
@@ -108,8 +108,8 @@ const SECTION_UI = {
     from: 'Ab',
     details: 'Tour Ansehen',
     whatsappQuick: 'WhatsApp',
-    viewAllMobile: 'Alle 17 Privaten Touren Anzeigen',
-    showLessMobile: 'Weniger Anzeigen',
+    viewAllTours: 'Alle Erlebnisse Anzeigen',
+    showLess: 'Weniger Anzeigen',
   }
 };
 
@@ -211,7 +211,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                   key={tab.key}
                   onClick={() => {
                     setActiveCategory(tab.key as any);
-                    setShowAll(false);
+                    setShowAll(tab.key !== 'all');
                   }}
                   className={`cursor-pointer px-4 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 flex items-center gap-2 border ${
                     isSelected
@@ -272,8 +272,8 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-7"
             >
               {filteredTours.map((tour, tourIndex) => {
-                // On mobile (controlled via state), hide cards beyond index 5 when showAll=false
-                const isMobileHidden = !showAll && tourIndex >= 6;
+                // Show initial 6 featured experiences unless expanded via showAll
+                const isCardHidden = !showAll && tourIndex >= 6;
                 const tourName = tour.name[lang] || tour.name['en'] || tour.name.pt;
                 const tourSubtitle = tour.subtitle[lang] || tour.subtitle['en'] || tour.subtitle.pt;
                 const tourCategory = tour.categoryLabel[lang] || tour.categoryLabel['en'] || tour.categoryLabel.pt;
@@ -282,7 +282,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                 const boatBadge = tour.boatBadge ? (tour.boatBadge[lang] || tour.boatBadge['en'] || tour.boatBadge.pt) : undefined;
                 const experienceBadge = tour.experienceBadge ? (tour.experienceBadge[lang] || tour.experienceBadge['en'] || tour.experienceBadge.pt) : undefined;
 
-                const quickMsg = `Olá NORTHÉ! Gostaria de saber mais sobre o tour privado: ${tour.code} - ${tourName} (${lang.toUpperCase()}).`;
+                const quickMsg = `Olá NORTHÉ! Gostaria de saber mais sobre a experiência privada: ${tourName} (${lang.toUpperCase()}).`;
                 const quickWhatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(quickMsg)}`;
 
                 return (
@@ -291,7 +291,7 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.35, delay: Math.min(tourIndex * 0.03, 0.2) }}
-                    className={`group relative flex flex-col rounded-3xl overflow-hidden bg-white/[0.03] border border-white/8 backdrop-blur-sm hover:border-amber-500/40 hover:shadow-[0_10px_35px_rgba(0,0,0,0.5)] transition-all duration-500${isMobileHidden ? ' hidden md:flex' : ''}`}
+                    className={`group relative flex flex-col rounded-3xl overflow-hidden bg-white/[0.03] border border-white/8 backdrop-blur-sm hover:border-amber-500/40 hover:shadow-[0_10px_35px_rgba(0,0,0,0.5)] transition-all duration-500${isCardHidden ? ' hidden' : ''}`}
                   >
                   {/* Photo Container */}
                   <div className="relative h-60 overflow-hidden">
@@ -303,10 +303,10 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
 
-                    {/* Top Badges */}
-                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                      <span className="text-[11px] font-mono font-bold px-3 py-1 bg-black/65 backdrop-blur-md rounded-full border border-white/15 text-amber-300">
-                        {tour.code}
+                    {/* Top Badges - Refined Luxury Aesthetic without raw codes */}
+                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                      <span className="text-[10px] px-3 py-1 bg-black/65 text-amber-200 backdrop-blur-md rounded-full border border-white/15 uppercase tracking-wider font-semibold">
+                        {tourCategory}
                       </span>
                       <span className="text-[10px] px-2.5 py-1 bg-emerald-500/20 text-emerald-300 backdrop-blur-md rounded-full border border-emerald-500/30 uppercase tracking-widest font-semibold flex items-center gap-1">
                         <Shield size={10} /> {ui.privateBadge}
@@ -417,14 +417,15 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
               })}
             </motion.div>
 
-            {/* Mobile "Show More" button if more than 6 tours exist */}
+            {/* "Ver Todas as Experiências" toggle button */}
             {filteredTours.length > 6 && (
-              <div className="mt-10 text-center md:hidden">
+              <div className="mt-14 text-center">
                 <button
                   onClick={() => setShowAll(!showAll)}
-                  className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold uppercase tracking-widest border border-white/15 transition-all"
+                  className="cta-glow border-beam btn-press cursor-pointer inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-xs sm:text-sm uppercase tracking-widest hover:bg-amber-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 shadow-xl"
                 >
-                  {showAll ? ui.showLessMobile : `${ui.viewAllMobile} (${filteredTours.length})`}
+                  <span>{showAll ? ui.showLess : `${ui.viewAllTours} (${filteredTours.length})`}</span>
+                  <ArrowRight size={16} className={`transition-transform duration-300 ${showAll ? '-rotate-90' : 'group-hover:translate-x-1'}`} />
                 </button>
               </div>
             )}

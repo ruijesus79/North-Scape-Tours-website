@@ -74,28 +74,28 @@ const SOCIAL_PROOF_TEXT = {
 
 const REASSURANCE_TEXT = {
   pt: {
-    privateTour: '100% Tours Privados (1 a 8 pax)',
-    fleet: 'Frota Executiva Mercedes-Benz',
+    privateTour: '100% Privado (1–8 pessoas)',
+    fleet: 'Transporte Executivo Mercedes-Benz',
     cancel: 'Cancelamento Gratuito até 48h',
   },
   en: {
-    privateTour: '100% Private Tours (1 to 8 guests)',
-    fleet: 'Executive Mercedes-Benz Fleet',
+    privateTour: '100% Private (1–8 guests)',
+    fleet: 'Executive Mercedes-Benz Transport',
     cancel: 'Free Cancellation up to 48h',
   },
   es: {
-    privateTour: '100% Tours Privados (1 a 8 personas)',
-    fleet: 'Flota Ejecutiva Mercedes-Benz',
+    privateTour: '100% Privado (1–8 personas)',
+    fleet: 'Transporte Ejecutivo Mercedes-Benz',
     cancel: 'Cancelación Gratuita hasta 48h',
   },
   fr: {
-    privateTour: '100% Circuits Privés (1 à 8 personnes)',
-    fleet: 'Flotte Exécutive Mercedes-Benz',
+    privateTour: '100% Privé (1–8 personnes)',
+    fleet: 'Transport Exécutif Mercedes-Benz',
     cancel: "Annulation Gratuite jusqu'à 48h",
   },
   de: {
-    privateTour: '100% Private Touren (1 bis 8 Personen)',
-    fleet: 'Executive Mercedes-Benz Flotte',
+    privateTour: '100% Privat (1–8 Gäste)',
+    fleet: 'Executive Mercedes-Benz Transport',
     cancel: 'Kostenlose Stornierung bis 48h',
   },
 };

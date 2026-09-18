@@ -306,10 +306,10 @@ export default function TourPage() {
     .filter(Boolean)
     .join(', ');
 
-  const whatsappMessage = `Olá NORTHÉ! Gostaria de reservar o tour privado:
+  const whatsappMessage = `Olá NORTHÉ! Gostaria de reservar a experiência privada:
 
 ` +
-    `• Tour: ${tour.code} - ${tourName}
+    `• Experiência: ${tourName}
 ` +
     `• Grupo: ${selectedPax} ${selectedPax === 1 ? 'pessoa' : 'pessoas'} (100% Privado)
 ` +
@@ -329,10 +329,10 @@ Poderiam confirmar a disponibilidade? Obrigado!`;
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const formMessage =
-      `Olá NORTHÉ! Tenho interesse no seguinte tour privado:
+      `Olá NORTHÉ! Tenho interesse na seguinte experiência privada:
 
 ` +
-      `• Tour: ${tour.code} - ${tourName}
+      `• Experiência: ${tourName}
 ` +
       `• Nome: ${guestName}
 ` +
@@ -413,16 +413,13 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
           <ChevronRight size={12} />
           <span>{tourCategory}</span>
           <ChevronRight size={12} />
-          <span className="text-white/80 font-medium truncate max-w-[200px]">{tour.code}</span>
+          <span className="text-white/80 font-medium truncate max-w-[200px]">{tourName}</span>
         </div>
       </div>
 
       {/* Hero Header */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 mt-4 mb-10">
         <div className="flex flex-wrap items-center gap-2.5 mb-4">
-          <span className="px-3 py-1 bg-white/10 text-amber-300 font-mono text-xs font-bold rounded-full border border-white/15">
-            {tour.code}
-          </span>
           <span className="px-3 py-1 bg-amber-500/15 text-amber-200 border border-amber-500/30 text-[11px] font-semibold uppercase tracking-wider rounded-full">
             {tourCategory}
           </span>
@@ -488,7 +485,7 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-xs text-white/70">
-              <span className="font-mono uppercase tracking-widest">{tour.code} · NORTHÉ Signature</span>
+              <span className="font-sans font-medium uppercase tracking-widest text-[11px] text-amber-200/90">NORTHÉ Signature Private Experience</span>
               <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
                 {ui.chauffeurTag}
               </span>

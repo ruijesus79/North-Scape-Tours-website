@@ -11,7 +11,7 @@ export const IMG = {
   boatRide: '/images/douro_boat_tour_1771612994491.png',
   lunch: 'https://blog.winetourismportugal.com/hs-fs/hubfs/Enotourism%5B6%5D%20(4).jpg?width=1969',
   romantic: 'https://www.louderthanfire.com/wp-content/uploads/2023/07/Boat-Trip-Marriage-Proposal-Douro-Valley-featured.jpg',
-  tailorMade: '/images/tailor-made.png',
+  tailorMade: '/images/tailor-made-luxury.webp',
   transfer: '/images/transfer_branded.png',
   ctaBg: 'https://images.winalist.com/blog/wp-content/uploads/2024/02/26114506/AdobeStock_106808196.jpeg',
   ambientVines: 'https://s27363.pcdn.co/wp-content/uploads/2024/02/Douro-Valley-Vines.jpg.optimal.jpg',

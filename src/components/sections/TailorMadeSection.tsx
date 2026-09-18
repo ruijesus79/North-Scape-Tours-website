@@ -30,16 +30,17 @@ export default function TailorMadeSection({ scrollTo }: { scrollTo: (id: string)
               <span className="inline-block px-4 py-1.5 border border-amber-500/25 rounded-full text-[11px] tracking-[0.15em] uppercase text-amber-400/70 mb-6">{t.tailorMade.badge}</span>
             </Reveal>
             <Reveal delay={0.08}>
-              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl mb-4 leading-[1.08]">
-                <span className="text-gradient-animate">{t.tailorMade.title.split('.')[0]}.</span><br />
-                <span className="italic text-white/60">{t.tailorMade.title.split('.').slice(1).join('.').trim()}</span>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 leading-[1.12]">
+                <span className="text-gradient-animate block">{t.tailorMade.title}</span>
+                {t.tailorMade.subtitle && (
+                  <span className="italic text-white/70 block text-2xl sm:text-3xl md:text-4xl font-light mt-2">
+                    {t.tailorMade.subtitle}
+                  </span>
+                )}
               </h2>
             </Reveal>
-            <Reveal delay={0.12}>
-              <p className="text-lg text-white/50 font-light mb-6">{t.tailorMade.subtitle}</p>
-            </Reveal>
-            <Reveal delay={0.16}>
-              <p className="text-white/40 font-light leading-relaxed mb-8">{t.tailorMade.desc}</p>
+            <Reveal delay={0.14}>
+              <p className="text-white/60 font-light leading-relaxed text-base sm:text-lg mb-8">{t.tailorMade.desc}</p>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="flex flex-wrap gap-2 mb-10">

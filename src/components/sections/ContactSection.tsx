@@ -3,13 +3,13 @@ import { MessageCircle, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { IMG, Reveal, AmbientGlow } from '../../utils/shared';
 import MagneticButton from '../MagneticButton';
-import { WHATSAPP_LINK } from '../../content';
+import { WHATSAPP_LINK, getWhatsAppLink } from '../../content';
 
 // @ts-ignore
 const LazyVantaWaves = lazy(() => import('../VantaWaves'));
 
 export default function ContactSection() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <section id="contacto" className="py-28 md:py-36 relative overflow-hidden bg-[#0c0c0c]">
@@ -20,10 +20,10 @@ export default function ContactSection() {
       </div>
       <AmbientGlow color="rgba(34,197,94,0.06)" top="50%" left="50%" size={800} />
       <Reveal className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl mb-7">{t.contact.title}</h2>
-        <p className="text-lg sm:text-xl text-white/45 font-light mb-12 max-w-2xl mx-auto">{t.contact.desc}</p>
+        <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl mb-6 text-balance">{t.contact.title}</h2>
+        <p className="text-base sm:text-xl text-white/60 font-light mb-12 max-w-2xl mx-auto leading-relaxed">{t.contact.desc}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <MagneticButton href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="cta-glow border-beam btn-press cursor-pointer px-9 py-4 sm:py-5 rounded-full bg-green-600 text-white font-medium text-base sm:text-lg transition-all hover:bg-green-500 duration-300">
+          <MagneticButton href={getWhatsAppLink(lang)} target="_blank" rel="noopener noreferrer" className="cta-glow border-beam btn-press cursor-pointer px-9 py-4 sm:py-5 rounded-full bg-green-600 text-white font-medium text-base sm:text-lg transition-all hover:bg-green-500 duration-300 shadow-xl">
             <span className="flex items-center gap-3"><MessageCircle size={20} /> {t.contact.ctaWhatsapp}</span>
           </MagneticButton>
           <MagneticButton href={`mailto:${t.contact.email}`} className="btn-press cursor-pointer px-7 py-4 sm:py-5 rounded-full border border-white/15 text-white font-medium text-base sm:text-lg hover:bg-white/5 transition-all duration-300">
