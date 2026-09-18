@@ -1,21 +1,70 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown, MessageCircle, HelpCircle, Search, X, Sparkles } from 'lucide-react';
+import { ChevronDown, MessageCircle, HelpCircle, Search, X, Sparkles, ChevronUp } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { IMG, Reveal, AmbientBg, AmbientGlow, TextReveal } from '../../utils/shared';
 import { getWhatsAppLink } from '../../content';
+
+// The 5 most important FAQ slugs (by question keyword match — shown by default)
+const TOP_5_KEYWORDS = [
+  'incluído',        // O que está incluído
+  'cancelamento',    // Política de cancelamento
+  'privado',         // O tour é privado?
+  'reserva',         // Como faço a reserva
+  'pessoas',         // Quantas pessoas
+];
+
+function getTop5(items: any[]): number[] {
+  const indices: number[] = [];
+  const used = new Set<number>();
+
+  // First pass: match by keyword priority
+  for (const kw of TOP_5_KEYWORDS) {
+    for (let i = 0; i < items.length; i++) {
+      if (!used.has(i) && items[i].q.toLowerCase().includes(kw.toLowerCase())) {
+        indices.push(i);
+        used.add(i);
+        break;
+      }
+    }
+  }
+
+  // Fill up to 5 from the start if not enough matches
+  for (let i = 0; i < items.length && indices.length < 5; i++) {
+    if (!used.has(i)) {
+      indices.push(i);
+      used.add(i);
+    }
+  }
+
+  return indices.sort((a, b) => a - b);
+}
+
+// UI labels per language for the expand/collapse button
+const SHOW_ALL_LABELS: Record<string, { showAll: string; showLess: string; showing: string; of: string; questions: string }> = {
+  pt: { showAll: 'Ver todas as perguntas', showLess: 'Mostrar menos', showing: 'A mostrar', of: 'de', questions: 'perguntas' },
+  en: { showAll: 'View all questions', showLess: 'Show less', showing: 'Showing', of: 'of', questions: 'questions' },
+  es: { showAll: 'Ver todas las preguntas', showLess: 'Mostrar menos', showing: 'Mostrando', of: 'de', questions: 'preguntas' },
+  fr: { showAll: 'Voir toutes les questions', showLess: 'Afficher moins', showing: 'Affichage', of: 'sur', questions: 'questions' },
+  de: { showAll: 'Alle Fragen anzeigen', showLess: 'Weniger anzeigen', showing: 'Zeige', of: 'von', questions: 'Fragen' },
+};
 
 export default function FaqSection() {
   const { lang, t } = useLanguage();
   const [selectedCat, setSelectedCat] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [showAll, setShowAll] = useState(false);
+
+  const labels = SHOW_ALL_LABELS[lang] || SHOW_ALL_LABELS.pt;
 
   const categories = (t.faq as any).categories || [
     { id: 'all', label: 'Todas as Dúvidas' },
   ];
 
-  // Filter items by category and search query
+  const isFiltering = searchQuery.trim().length > 0 || selectedCat !== 'all';
+
+  // All items matching current filters
   const filteredItems = useMemo(() => {
     return t.faq.items.filter((item: any) => {
       const matchCat = selectedCat === 'all' || item.category === selectedCat;
@@ -28,25 +77,44 @@ export default function FaqSection() {
     });
   }, [t.faq.items, selectedCat, searchQuery]);
 
-  // JSON-LD Schema for Google FAQPage Rich Results
-  const faqSchema = useMemo(() => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: t.faq.items.map((item: any) => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.a,
-        },
-      })),
-    };
-  }, [t.faq.items]);
+  // Top 5 indices within filteredItems (not global)
+  const top5Indices = useMemo(() => {
+    const set = new Set<number>();
+    for (const kw of TOP_5_KEYWORDS) {
+      for (let i = 0; i < filteredItems.length; i++) {
+        if (!set.has(i) && filteredItems[i].q.toLowerCase().includes(kw.toLowerCase())) {
+          set.add(i);
+          break;
+        }
+      }
+    }
+    for (let i = 0; i < filteredItems.length && set.size < 5; i++) {
+      set.add(i);
+    }
+    return set;
+  }, [filteredItems]);
+
+  // Items to render — top 5 or all
+  const visibleItems = useMemo(() => {
+    if (isFiltering || showAll) return filteredItems;
+    return filteredItems.filter((_: any, i: number) => top5Indices.has(i));
+  }, [filteredItems, showAll, isFiltering, top5Indices]);
+
+  const hiddenCount = filteredItems.length - top5Indices.size;
+
+  // JSON-LD Schema
+  const faqSchema = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: t.faq.items.map((item: any) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  }), [t.faq.items]);
 
   return (
     <section id="faq" className="py-28 md:py-36 px-4 sm:px-6 relative overflow-hidden bg-[#0c0c0c]">
-      {/* Schema.org JSON-LD FAQPage */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -74,9 +142,9 @@ export default function FaqSection() {
           )}
         </Reveal>
 
-        {/* Category Pills & Search */}
+        {/* Search + Category Filters */}
         <div className="mb-8 space-y-4">
-          {/* Search input */}
+          {/* Search */}
           <div className="relative max-w-xl mx-auto">
             <Search
               size={17}
@@ -88,13 +156,14 @@ export default function FaqSection() {
               onChange={(e) => {
                 setSearchQuery(e.target.value);
                 setOpenFaq(0);
+                setShowAll(false);
               }}
               placeholder={(t.faq as any).searchPlaceholder || 'Pesquisar dúvidas...'}
               className="w-full pl-11 pr-10 py-3 rounded-full bg-white/[0.04] border border-white/10 hover:border-white/20 focus:border-amber-400/60 focus:bg-white/[0.06] text-white placeholder-white/40 text-xs sm:text-sm transition-all duration-200 outline-none backdrop-blur-md"
             />
             {searchQuery && (
               <button
-                onClick={() => setSearchQuery('')}
+                onClick={() => { setSearchQuery(''); setShowAll(false); }}
                 className="cursor-pointer absolute right-3.5 top-1/2 -translate-y-1/2 text-white/40 hover:text-white p-1"
                 aria-label="Clear search"
               >
@@ -103,7 +172,7 @@ export default function FaqSection() {
             )}
           </div>
 
-          {/* Category Filter Tabs */}
+          {/* Category Tabs */}
           <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 pt-1 scrollbar-none justify-start md:justify-center flex-nowrap md:flex-wrap px-1">
             {categories.map((cat: any) => {
               const isSelected = selectedCat === cat.id;
@@ -118,6 +187,7 @@ export default function FaqSection() {
                   onClick={() => {
                     setSelectedCat(cat.id);
                     setOpenFaq(0);
+                    setShowAll(false);
                   }}
                   className={`cursor-pointer flex-shrink-0 px-3.5 sm:px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 border ${
                     isSelected
@@ -139,88 +209,143 @@ export default function FaqSection() {
           </div>
         </div>
 
-        {/* FAQ Accordion List */}
+        {/* FAQ List */}
         {filteredItems.length === 0 ? (
           <div className="text-center py-16 px-4 bg-white/[0.02] border border-white/5 rounded-3xl">
             <p className="text-white/60 text-sm mb-4">
               {(t.faq as any).noResults || 'Nenhuma pergunta encontrada.'}
             </p>
             <button
-              onClick={() => {
-                setSearchQuery('');
-                setSelectedCat('all');
-              }}
+              onClick={() => { setSearchQuery(''); setSelectedCat('all'); }}
               className="cursor-pointer text-xs uppercase tracking-widest text-amber-300 hover:text-amber-200 border-b border-amber-400/40 pb-1"
             >
               {(t.faq as any).clearSearch || 'Limpar pesquisa'}
             </button>
           </div>
         ) : (
-          <div className="space-y-3">
-            {filteredItems.map((item: any, i: number) => {
-              const isOpen = openFaq === i;
-              return (
-                <Reveal key={item.q} delay={Math.min(i * 0.03, 0.3)}>
-                  <div
-                    className={`rounded-2xl transition-all duration-300 border overflow-hidden backdrop-blur-sm ${
-                      isOpen
-                        ? 'bg-white/[0.05] border-amber-500/40 shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
-                        : 'bg-white/[0.02] border-white/8 hover:border-amber-500/30 hover:bg-white/[0.035]'
-                    }`}
-                  >
-                    <button
-                      onClick={() => setOpenFaq(isOpen ? null : i)}
-                      className="cursor-pointer w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left transition-colors duration-200"
-                      aria-expanded={isOpen}
+          <>
+            {/* Counter label (only when not filtering) */}
+            {!isFiltering && (
+              <motion.p
+                layout
+                className="text-center text-xs text-white/35 mb-5 font-mono tracking-wide"
+              >
+                {labels.showing} <span className="text-amber-400/70">{visibleItems.length}</span> {labels.of}{' '}
+                <span className="text-white/50">{filteredItems.length}</span> {labels.questions}
+              </motion.p>
+            )}
+
+            <div className="space-y-3">
+              <AnimatePresence initial={false}>
+                {visibleItems.map((item: any, i: number) => {
+                  const isOpen = openFaq === i;
+                  return (
+                    <motion.div
+                      key={item.q}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: Math.min(i * 0.04, 0.2) }}
                     >
-                      <div className="flex items-start gap-3">
-                        <span className="font-mono text-xs text-amber-400/80 font-bold mt-0.5 select-none">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                        <span
-                          className={`text-sm sm:text-base leading-snug transition-colors duration-200 ${
-                            isOpen ? 'text-white font-medium' : 'text-white/85 hover:text-white font-light'
-                          }`}
-                        >
-                          {item.q}
-                        </span>
-                      </div>
                       <div
-                        className={`flex items-center justify-center size-8 rounded-full border transition-all duration-300 flex-shrink-0 ${
+                        className={`rounded-2xl transition-all duration-300 border overflow-hidden backdrop-blur-sm ${
                           isOpen
-                            ? 'border-amber-500/40 bg-amber-500/10 text-amber-300 rotate-180'
-                            : 'border-white/10 bg-white/[0.03] text-white/50'
+                            ? 'bg-white/[0.05] border-amber-500/40 shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
+                            : 'bg-white/[0.02] border-white/8 hover:border-amber-500/30 hover:bg-white/[0.035]'
                         }`}
                       >
-                        <ChevronDown size={15} />
-                      </div>
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                          className="overflow-hidden"
+                        <button
+                          onClick={() => setOpenFaq(isOpen ? null : i)}
+                          className="cursor-pointer w-full flex items-center justify-between gap-4 p-5 sm:p-6 text-left transition-colors duration-200"
+                          aria-expanded={isOpen}
                         >
-                          <div className="px-5 sm:px-6 pb-6 pt-1 border-t border-white/5 pl-11 sm:pl-12">
-                            <p className="text-white/80 font-light leading-relaxed text-sm sm:text-[15px]">
-                              {item.a}
-                            </p>
+                          <div className="flex items-start gap-3">
+                            <span className="font-mono text-xs text-amber-400/80 font-bold mt-0.5 select-none">
+                              {String(i + 1).padStart(2, '0')}
+                            </span>
+                            <span
+                              className={`text-sm sm:text-base leading-snug transition-colors duration-200 ${
+                                isOpen ? 'text-white font-medium' : 'text-white/85 hover:text-white font-light'
+                              }`}
+                            >
+                              {item.q}
+                            </span>
                           </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </div>
+                          <div
+                            className={`flex items-center justify-center size-8 rounded-full border transition-all duration-300 flex-shrink-0 ${
+                              isOpen
+                                ? 'border-amber-500/40 bg-amber-500/10 text-amber-300 rotate-180'
+                                : 'border-white/10 bg-white/[0.03] text-white/50'
+                            }`}
+                          >
+                            <ChevronDown size={15} />
+                          </div>
+                        </button>
+
+                        <AnimatePresence initial={false}>
+                          {isOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                              className="overflow-hidden"
+                            >
+                              <div className="px-5 sm:px-6 pb-6 pt-1 border-t border-white/5 pl-11 sm:pl-12">
+                                <p className="text-white/80 font-light leading-relaxed text-sm sm:text-[15px]">
+                                  {item.a}
+                                </p>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+            </div>
+
+            {/* Show All / Show Less — only when not searching/filtering */}
+            {!isFiltering && hiddenCount > 0 && (
+              <motion.div layout className="mt-8 flex flex-col items-center gap-3">
+                <button
+                  onClick={() => {
+                    setShowAll((v) => !v);
+                    setOpenFaq(null);
+                  }}
+                  className="cursor-pointer group inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full border border-amber-500/30 bg-amber-500/5 hover:bg-amber-500/12 hover:border-amber-400/50 text-amber-300 hover:text-amber-200 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:shadow-[0_4px_20px_rgba(212,175,55,0.15)]"
+                >
+                  {showAll ? (
+                    <>
+                      <ChevronUp size={15} className="transition-transform duration-300 group-hover:-translate-y-0.5" />
+                      {labels.showLess}
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown size={15} className="transition-transform duration-300 group-hover:translate-y-0.5" />
+                      {labels.showAll}
+                      <span className="ml-1 text-[10px] px-2 py-0.5 rounded-full bg-amber-400/15 text-amber-400/80 font-mono">
+                        +{hiddenCount}
+                      </span>
+                    </>
+                  )}
+                </button>
+                {!showAll && (
+                  <p className="text-white/25 text-[11px] font-mono tracking-wider">
+                    {hiddenCount} {lang === 'pt' ? 'perguntas adicionais disponíveis' :
+                      lang === 'es' ? 'preguntas adicionales disponibles' :
+                      lang === 'fr' ? 'questions supplémentaires disponibles' :
+                      lang === 'de' ? 'weitere Fragen verfügbar' :
+                      'additional questions available'}
+                  </p>
+                )}
+              </motion.div>
+            )}
+          </>
         )}
 
-        {/* Bottom WhatsApp Direct Help Card */}
+        {/* Bottom WhatsApp Card */}
         <Reveal delay={0.2} className="mt-14">
           <div className="relative rounded-3xl overflow-hidden p-7 sm:p-8 bg-gradient-to-br from-white/[0.04] to-amber-500/[0.04] border border-amber-500/20 backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_10px_35px_rgba(0,0,0,0.5)]">
             <div>
@@ -253,4 +378,3 @@ export default function FaqSection() {
     </section>
   );
 }
-

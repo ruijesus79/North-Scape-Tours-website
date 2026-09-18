@@ -432,7 +432,7 @@ export const CONTENT = {
                     excerpt: "Braga e Guimarães estão entre os destinos mais interessantes para quem quer explorar o Norte de Portugal a partir do Porto.",
                     date: "14 de Setembro de 2026",
                     category: "História & Património",
-                    image: "/images/blog/braga-guimaraes-historical.webp",
+                    image: "/images/blog/braga-guimaraes-norte.webp",
                     readTime: "4 min de leitura",
                     bookable: true,
                     fullContent: [
@@ -1009,7 +1009,7 @@ export const CONTENT = {
                     excerpt: "Braga and Guimarães stand among the most compelling cultural day trips for travelers exploring Northern Portugal from Porto.",
                     date: "September 14, 2026",
                     category: "History & Heritage",
-                    image: "/images/blog/braga-guimaraes-historical.webp",
+                    image: "/images/blog/braga-guimaraes-norte.webp",
                     readTime: "4 min read",
                     bookable: true,
                     fullContent: [
