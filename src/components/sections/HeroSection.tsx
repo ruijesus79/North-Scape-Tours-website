@@ -100,6 +100,14 @@ const REASSURANCE_TEXT = {
   },
 };
 
+const LIVE_CONCIERGE_TEXT = {
+  pt: 'Concierge VIP Online · Resposta média < 15 min',
+  en: 'VIP Concierge Live · Average reply under 15 min',
+  es: 'Concierge VIP Online · Respuesta media < 15 min',
+  fr: 'Concierge VIP En Ligne · Réponse moyenne < 15 min',
+  de: 'VIP Concierge Online · Antwortzeit < 15 Min',
+};
+
 /* ──────── Social Proof Trust Ticker ──────── */
 function SocialProofBar({ lang }: { lang: string }) {
   const sp = SOCIAL_PROOF_TEXT[lang as keyof typeof SOCIAL_PROOF_TEXT] || SOCIAL_PROOF_TEXT.en;
@@ -193,6 +201,29 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
         <div className="hero-glow absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 w-full md:text-center md:mt-12">
+          {/* Live Concierge Status Indicator (Inspiration: cta.gallery & Luxury Hospitality) */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-4 sm:mb-5 flex justify-start md:justify-center"
+          >
+            <a
+              href={getWhatsAppLink(lang)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 hover:border-emerald-500/40 hover:bg-emerald-950/20 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.35)] transition-all duration-300 group cursor-pointer"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span className="text-[11px] sm:text-xs font-mono tracking-wide text-white/80 group-hover:text-emerald-300 transition-colors">
+                {LIVE_CONCIERGE_TEXT[lang as keyof typeof LIVE_CONCIERGE_TEXT] || LIVE_CONCIERGE_TEXT.en}
+              </span>
+            </a>
+          </motion.div>
+
           {/* Main Headline - Refined Luxury Typography with Shimmering Gradient */}
           <motion.h1
             initial={{ opacity: 0, y: 25, filter: 'blur(8px)' }}

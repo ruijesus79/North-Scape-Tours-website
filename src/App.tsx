@@ -7,6 +7,7 @@ const BlogPost = lazy(() => import('./pages/BlogPost'));
 const TourPage = lazy(() => import('./pages/TourPage'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Privacy = lazy(() => import('./pages/Privacy'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 import CustomCursor from './components/CustomCursor';
 import SEO from './components/SEO';
 
@@ -31,6 +32,7 @@ export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showCookies, setShowCookies] = useState(() => !localStorage.getItem('cookieConsent'));
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   const langDropdownRef = useRef<HTMLDivElement>(null);
 
   const location = useLocation();
@@ -145,15 +147,15 @@ export default function App() {
       {/* ═══════ SCROLL PROGRESS BAR ═══════ */}
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
 
-      {/* ═══════ HEADER ═══════ */}
+      {/* ═══════ HEADER (Inspiration: navbar.gallery & 60fps.design) ═══════ */}
       <header
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-700 ${
+        className={`fixed z-50 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           isScrolled || isSubPage
-            ? 'bg-[#0c0c0c]/85 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.4)] border-b border-white/[0.06] py-3.5'
-            : 'bg-transparent py-5 md:py-7'
+            ? 'top-0 sm:top-3 inset-x-0 sm:inset-x-6 md:inset-x-10 max-w-[1520px] mx-auto sm:rounded-full bg-[#0c0c0c]/85 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.65)] border-b sm:border border-white/10 py-2.5 px-4 sm:px-8'
+            : 'top-0 inset-x-0 bg-transparent py-5 md:py-7 px-5 sm:px-8 md:px-12'
         }`}
       >
-        <div className="max-w-[1550px] mx-auto px-5 sm:px-8 md:px-12 flex items-center justify-between">
+        <div className="max-w-[1550px] mx-auto flex items-center justify-between">
           {/* Left: Brand Logo */}
           <div className="flex-1 flex justify-start">
             <button
@@ -165,36 +167,56 @@ export default function App() {
                 src="/logo-white.png"
                 alt="NORTHÉ Private Tours"
                 className={`w-auto transition-all duration-500 origin-left ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  isScrolled || isSubPage ? 'h-9 sm:h-11' : 'h-14 sm:h-16 md:h-20'
+                  isScrolled || isSubPage ? 'h-9 sm:h-10' : 'h-14 sm:h-16 md:h-20'
                 }`}
               />
             </button>
           </div>
 
-          {/* Center: Main Navigation Menu */}
-          <nav className="hidden 2xl:flex items-center justify-center gap-7 text-[11px] font-semibold tracking-[0.18em] uppercase whitespace-nowrap">
+          {/* Center: Main Navigation Menu with 60FPS Spring Pill Indicator */}
+          <nav
+            onMouseLeave={() => setHoveredNav(null)}
+            className="hidden 2xl:flex items-center justify-center gap-1.5 text-[11px] font-semibold tracking-[0.16em] uppercase whitespace-nowrap"
+          >
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={item.action}
-                className="cursor-pointer relative pb-1 group text-white/70 hover:text-white transition-colors duration-300"
+                onMouseEnter={() => setHoveredNav(item.id)}
+                className="cursor-pointer relative px-3.5 py-1.5 rounded-full text-white/75 hover:text-white transition-colors duration-200"
               >
-                <span>{item.label}</span>
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-center pointer-events-none" />
+                <span className="relative z-10">{item.label}</span>
+                {hoveredNav === item.id && (
+                  <motion.span
+                    layoutId="nav-hover-pill"
+                    className="absolute inset-0 bg-white/[0.08] border border-amber-500/25 rounded-full z-0"
+                    transition={{ type: 'spring', stiffness: 420, damping: 32 }}
+                  />
+                )}
               </button>
             ))}
           </nav>
 
           {/* Medium Desktop Compact Nav (for screens between xl and 2xl) */}
-          <nav className="hidden xl:flex 2xl:hidden items-center justify-center gap-4 text-[10px] font-semibold tracking-widest uppercase whitespace-nowrap">
+          <nav
+            onMouseLeave={() => setHoveredNav(null)}
+            className="hidden xl:flex 2xl:hidden items-center justify-center gap-1 text-[10px] font-semibold tracking-widest uppercase whitespace-nowrap"
+          >
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={item.action}
-                className="cursor-pointer relative pb-1 group text-white/70 hover:text-white transition-colors"
+                onMouseEnter={() => setHoveredNav(item.id)}
+                className="cursor-pointer relative px-2.5 py-1 rounded-full text-white/70 hover:text-white transition-colors"
               >
-                <span>{item.label}</span>
-                <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#d4af37] scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+                <span className="relative z-10">{item.label}</span>
+                {hoveredNav === item.id && (
+                  <motion.span
+                    layoutId="nav-hover-pill-compact"
+                    className="absolute inset-0 bg-white/[0.08] border border-amber-500/25 rounded-full z-0"
+                    transition={{ type: 'spring', stiffness: 420, damping: 32 }}
+                  />
+                )}
               </button>
             ))}
           </nav>
@@ -453,8 +475,21 @@ export default function App() {
                 </motion.div>
               }
             />
-            {/* Catch-all Not Found Route: safely redirect to home */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            {/* Catch-all Not Found Route: render luxury 404 experience */}
+            <Route
+              path="*"
+              element={
+                <motion.div
+                  key="/404"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <NotFound />
+                </motion.div>
+              }
+            />
           </Routes>
         </Suspense>
       </AnimatePresence>
@@ -467,8 +502,12 @@ export default function App() {
           href={getWhatsAppLink(lang)}
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer flex-1 flex items-center justify-center gap-2 py-3 bg-emerald-600 text-white rounded-full font-medium text-xs hover:bg-emerald-500 transition-colors duration-300"
+          className="cursor-pointer flex-1 flex items-center justify-center gap-2 py-3 bg-emerald-600 text-white rounded-full font-medium text-xs hover:bg-emerald-500 transition-colors duration-300 shadow-md"
         >
+          <span className="relative flex h-2 w-2 mr-0.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          </span>
           <MessageCircle size={15} /> WhatsApp
         </a>
         <button

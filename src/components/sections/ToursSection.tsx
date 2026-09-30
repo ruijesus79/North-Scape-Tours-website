@@ -213,15 +213,20 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                     setActiveCategory(tab.key as any);
                     setShowAll(tab.key !== 'all');
                   }}
-                  className={`cursor-pointer px-4 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-all duration-300 flex items-center gap-2 border ${
-                    isSelected
-                      ? 'bg-white text-black border-white shadow-[0_4px_20px_rgba(255,255,255,0.15)] scale-[1.02]'
-                      : 'bg-white/[0.03] text-white/60 border-white/10 hover:border-amber-500/30 hover:text-white'
-                  }`}
+                  className="cursor-pointer relative px-4 py-2.5 rounded-full text-xs uppercase tracking-widest font-semibold transition-colors duration-200 flex items-center gap-2 border border-white/10 hover:border-amber-500/30"
                 >
-                  <span>{tab.label}</span>
+                  {isSelected && (
+                    <motion.div
+                      layoutId="activeTourCategoryPill"
+                      className="absolute inset-0 bg-white rounded-full shadow-[0_4px_20px_rgba(255,255,255,0.18)] -z-0"
+                      transition={{ type: 'spring', stiffness: 440, damping: 32 }}
+                    />
+                  )}
+                  <span className={`relative z-10 transition-colors ${isSelected ? 'text-black' : 'text-white/60 hover:text-white'}`}>
+                    {tab.label}
+                  </span>
                   <span
-                    className={`text-[10px] px-2 py-0.5 rounded-full ${
+                    className={`relative z-10 text-[10px] px-2 py-0.5 rounded-full transition-colors ${
                       isSelected ? 'bg-black/15 text-black font-mono font-bold' : 'bg-white/10 text-white/40 font-mono'
                     }`}
                   >

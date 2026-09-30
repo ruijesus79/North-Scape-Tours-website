@@ -189,16 +189,21 @@ export default function FaqSection() {
                     setOpenFaq(0);
                     setShowAll(false);
                   }}
-                  className={`cursor-pointer flex-shrink-0 px-3.5 sm:px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all duration-300 border ${
-                    isSelected
-                      ? 'bg-amber-400 text-black border-amber-300 font-semibold shadow-[0_4px_20px_rgba(251,191,36,0.25)]'
-                      : 'bg-white/[0.03] text-white/70 hover:text-white hover:bg-white/[0.07] border-white/10'
-                  }`}
+                  className="cursor-pointer relative flex-shrink-0 px-3.5 sm:px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-colors duration-200 border border-white/10 hover:border-amber-500/30"
                 >
-                  {cat.label}
+                  {isSelected && (
+                    <motion.div
+                      layoutId="activeFaqCatPill"
+                      className="absolute inset-0 bg-amber-400 rounded-full shadow-[0_4px_20px_rgba(251,191,36,0.25)] -z-0"
+                      transition={{ type: 'spring', stiffness: 420, damping: 32 }}
+                    />
+                  )}
+                  <span className={`relative z-10 transition-colors ${isSelected ? 'text-black font-semibold' : 'text-white/70 hover:text-white'}`}>
+                    {cat.label}
+                  </span>
                   <span
-                    className={`ml-1.5 text-[10px] px-1.5 py-0.5 rounded-full ${
-                      isSelected ? 'bg-black/20 text-black' : 'bg-white/10 text-white/60'
+                    className={`relative z-10 ml-1.5 text-[10px] px-1.5 py-0.5 rounded-full ${
+                      isSelected ? 'bg-black/20 text-black font-bold' : 'bg-white/10 text-white/60'
                     }`}
                   >
                     {count}
@@ -288,7 +293,10 @@ export default function FaqSection() {
                               initial={{ height: 0, opacity: 0 }}
                               animate={{ height: 'auto', opacity: 1 }}
                               exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                              transition={{
+                                height: { type: 'spring', stiffness: 350, damping: 32 },
+                                opacity: { duration: 0.25 },
+                              }}
                               className="overflow-hidden"
                             >
                               <div className="px-5 sm:px-6 pb-6 pt-1 border-t border-white/5 pl-11 sm:pl-12">
