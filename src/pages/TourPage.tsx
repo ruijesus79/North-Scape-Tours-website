@@ -15,8 +15,12 @@ import {
   MapPin,
   ExternalLink,
   ChevronRight,
+  ChevronLeft,
   Send,
-  CheckCircle2
+  CheckCircle2,
+  Camera,
+  Maximize2,
+  X
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTourBySlug, ALL_17_TOURS, VIP_EXTRAS, type TourItem } from '../data/toursData';
@@ -64,6 +68,10 @@ const UI_TEXT = {
     from: 'Desde',
     explore: 'Ver Tour',
     boatCruise: 'Barco Privado',
+    photoGallery: 'Galeria da Experiência',
+    viewFullGallery: 'Ver Galeria (5 Fotos)',
+    photoCount: (curr: number, total: number) => `Foto ${curr} de ${total}`,
+    closeGallery: 'Fechar Galeria',
   },
   en: {
     notFoundTitle: 'Tour Not Found',
@@ -105,6 +113,10 @@ const UI_TEXT = {
     from: 'From',
     explore: 'Explore',
     boatCruise: 'Private Boat',
+    photoGallery: 'Experience Gallery',
+    viewFullGallery: 'View Gallery (5 Photos)',
+    photoCount: (curr: number, total: number) => `Photo ${curr} of ${total}`,
+    closeGallery: 'Close Gallery',
   },
   es: {
     notFoundTitle: 'Tour No Encontrado',
@@ -146,6 +158,10 @@ const UI_TEXT = {
     from: 'Desde',
     explore: 'Ver Tour',
     boatCruise: 'Barco Privado',
+    photoGallery: 'Galería de la Experiencia',
+    viewFullGallery: 'Ver Galería (5 Fotos)',
+    photoCount: (curr: number, total: number) => `Foto ${curr} de ${total}`,
+    closeGallery: 'Cerrar Galería',
   },
   fr: {
     notFoundTitle: 'Circuit Non Trouvé',
@@ -187,6 +203,10 @@ const UI_TEXT = {
     from: 'À partir de',
     explore: 'Découvrir',
     boatCruise: 'Bateau Privé',
+    photoGallery: "Galerie de l'Expérience",
+    viewFullGallery: 'Voir la Galerie (5 Photos)',
+    photoCount: (curr: number, total: number) => `Photo ${curr} sur ${total}`,
+    closeGallery: 'Fermer la Galerie',
   },
   de: {
     notFoundTitle: 'Tour Nicht Gefunden',
@@ -228,6 +248,10 @@ const UI_TEXT = {
     from: 'Ab',
     explore: 'Tour Ansehen',
     boatCruise: 'Privates Boot',
+    photoGallery: 'Erlebnis-Galerie',
+    viewFullGallery: 'Galerie Ansehen (5 Fotos)',
+    photoCount: (curr: number, total: number) => `Foto ${curr} von ${total}`,
+    closeGallery: 'Galerie Schließen',
   }
 };
 
@@ -250,11 +274,35 @@ export default function TourPage() {
   const [guestEmail, setGuestEmail] = useState<string>('');
   const [guestNotes, setGuestNotes] = useState<string>('');
   const [formSent, setFormSent] = useState<boolean>(false);
+  const [activePhotoIdx, setActivePhotoIdx] = useState<number>(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState<boolean>(false);
 
-  // Scroll to top on mount or slug change
+  // Scroll to top and reset photo index on mount or slug change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+    setActivePhotoIdx(0);
+    setIsLightboxOpen(false);
   }, [slug]);
+
+  // Gallery photos
+  const photos = useMemo(() => {
+    if (tour && tour.gallery && tour.gallery.length > 0) {
+      return tour.gallery;
+    }
+    return tour?.image ? [tour.image] : [];
+  }, [tour]);
+
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsLightboxOpen(false);
+      if (e.key === 'ArrowLeft') setActivePhotoIdx((prev) => (prev - 1 + photos.length) % photos.length);
+      if (e.key === 'ArrowRight') setActivePhotoIdx((prev) => (prev + 1) % photos.length);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen, photos.length]);
 
   if (!tour) {
     return (
@@ -475,21 +523,75 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 xl:gap-14 items-start">
         {/* Left Column: Visuals & Rich Info */}
         <div className="space-y-10">
-          {/* Main Photo Banner */}
-          <div className="relative rounded-3xl overflow-hidden aspect-[16/9] sm:aspect-[16/10] border border-white/10 shadow-2xl">
-            <img
-              src={tour.image}
-              alt={tourName}
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-xs text-white/70">
-              <span className="font-sans font-medium uppercase tracking-widest text-[11px] text-amber-200/90">NORTHÉ Signature Private Experience</span>
-              <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
-                {ui.chauffeurTag}
-              </span>
+          {/* Luxury Visual Showcase & Interactive Gallery */}
+          <div className="space-y-3.5">
+            {/* Main Active Photo with Zoom trigger */}
+            <div
+              onClick={() => setIsLightboxOpen(true)}
+              className="group relative rounded-3xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] border border-white/10 shadow-2xl cursor-pointer bg-white/5"
+              role="button"
+              tabIndex={0}
+              aria-label={ui.viewFullGallery}
+            >
+              <img
+                src={photos[activePhotoIdx] || tour.image}
+                alt={`${tourName} - Photo ${activePhotoIdx + 1}`}
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-80 group-hover:opacity-65 transition-opacity" />
+
+              {/* Top Controls: Photo Counter & Fullscreen Zoom Badge */}
+              <div className="absolute top-4 sm:top-5 left-4 sm:left-5 right-4 sm:right-5 flex items-center justify-between pointer-events-none">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs text-white/90 font-mono tracking-wider">
+                  <Camera size={13} className="text-amber-400" />
+                  {ui.photoCount(activePhotoIdx + 1, photos.length)}
+                </span>
+                <span className="pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-black/60 group-hover:bg-amber-400 group-hover:text-black backdrop-blur-md border border-white/15 text-xs text-white transition-all duration-300 font-medium shadow-lg">
+                  <Maximize2 size={13} />
+                  <span className="hidden sm:inline">{ui.viewFullGallery}</span>
+                </span>
+              </div>
+
+              {/* Bottom Bar: Signature label & Chauffeur tag */}
+              <div className="absolute bottom-4 sm:bottom-5 left-4 sm:left-5 right-4 sm:right-5 flex items-center justify-between text-xs text-white/70">
+                <span className="font-sans font-medium uppercase tracking-widest text-[11px] text-amber-200/90 drop-shadow">
+                  NORTHÉ Signature Private Experience
+                </span>
+                <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
+                  {ui.chauffeurTag}
+                </span>
+              </div>
             </div>
+
+            {/* 5-Photo Interactive Thumbnail Row */}
+            {photos.length > 1 && (
+              <div className="grid grid-cols-5 gap-2 sm:gap-3">
+                {photos.map((photoUrl, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setActivePhotoIdx(idx)}
+                    className={`group/thumb relative aspect-[16/10] rounded-xl overflow-hidden border transition-all duration-300 ${
+                      activePhotoIdx === idx
+                        ? 'border-amber-400 ring-2 ring-amber-400/40 scale-[1.02] shadow-lg shadow-amber-400/10'
+                        : 'border-white/10 opacity-60 hover:opacity-100 hover:border-white/30'
+                    }`}
+                  >
+                    <img
+                      src={photoUrl}
+                      alt={`${tourName} preview ${idx + 1}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover/thumb:bg-transparent transition-colors" />
+                    <span className="absolute bottom-1 right-1.5 text-[9px] font-mono text-white/90 bg-black/70 px-1 rounded">
+                      0{idx + 1}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Description */}
@@ -836,6 +938,97 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
               );
             })}
           </div>
+        </div>
+      )}
+
+      {/* Fullscreen Lightbox Modal */}
+      {isLightboxOpen && (
+        <div
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/95 backdrop-blur-2xl p-4 sm:p-8 animate-fadeIn select-none"
+          onClick={() => setIsLightboxOpen(false)}
+        >
+          {/* Top Bar with Title, Counter and Close Button */}
+          <div className="absolute top-4 sm:top-6 left-5 sm:left-8 right-5 sm:right-8 flex items-center justify-between z-20 text-white">
+            <div className="flex items-center gap-3">
+              <span className="text-amber-400 font-serif font-medium text-base sm:text-xl tracking-wide line-clamp-1">{tourName}</span>
+              <span className="text-white/50 text-xs sm:text-sm font-mono whitespace-nowrap">
+                ({ui.photoCount(activePhotoIdx + 1, photos.length)})
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsLightboxOpen(false)}
+              className="p-2 sm:p-2.5 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors cursor-pointer"
+              aria-label={ui.closeGallery}
+            >
+              <X size={20} />
+            </button>
+          </div>
+
+          {/* Previous Button */}
+          {photos.length > 1 && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActivePhotoIdx((prev) => (prev - 1 + photos.length) % photos.length);
+              }}
+              className="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 p-3 sm:p-3.5 rounded-full bg-black/60 hover:bg-amber-400 hover:text-black text-white border border-white/15 backdrop-blur-md transition-all z-20 cursor-pointer shadow-xl"
+              aria-label="Previous photo"
+            >
+              <ChevronLeft size={24} />
+            </button>
+          )}
+
+          {/* Central Image with smooth container */}
+          <div
+            className="relative max-w-5xl max-h-[75vh] sm:max-h-[80vh] flex items-center justify-center p-2"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={photos[activePhotoIdx]}
+              alt={`${tourName} - Fullview ${activePhotoIdx + 1}`}
+              className="max-w-full max-h-[75vh] sm:max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-white/10"
+            />
+          </div>
+
+          {/* Next Button */}
+          {photos.length > 1 && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActivePhotoIdx((prev) => (prev + 1) % photos.length);
+              }}
+              className="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 p-3 sm:p-3.5 rounded-full bg-black/60 hover:bg-amber-400 hover:text-black text-white border border-white/15 backdrop-blur-md transition-all z-20 cursor-pointer shadow-xl"
+              aria-label="Next photo"
+            >
+              <ChevronRight size={24} />
+            </button>
+          )}
+
+          {/* Bottom Thumbnails inside Modal */}
+          {photos.length > 1 && (
+            <div
+              className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 p-2 bg-black/70 backdrop-blur-md rounded-2xl border border-white/10 z-20"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {photos.map((p, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setActivePhotoIdx(idx)}
+                  className={`w-12 sm:w-16 h-8 sm:h-11 rounded-lg overflow-hidden border transition-all cursor-pointer ${
+                    activePhotoIdx === idx
+                      ? 'border-amber-400 scale-105 ring-2 ring-amber-400/50'
+                      : 'border-white/20 opacity-50 hover:opacity-100'
+                  }`}
+                >
+                  <img src={p} alt="" className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
