@@ -20,7 +20,8 @@ export const getWhatsAppLink = (lang: Language = 'en', customMsg?: string) => {
 };
 export const EMAIL = 'info@northetours.com';
 export const FACEBOOK_PAGE = 'https://www.facebook.com/profile.php?id=61583598036171';
-export const TIKTOK_PAGE = 'https://www.tiktok.com/@northe.tours';
+export const INSTAGRAM_PAGE = 'https://www.instagram.com/northetours/';
+export const TIKTOK_PAGE = 'https://www.tiktok.com/@northetours';
 export const YOUTUBE_PAGE = 'https://www.youtube.com/@NorthETours';
 export const GETYOURGUIDE_LINK = 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/';
 export const CONTENT = {
