@@ -370,13 +370,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/ponte-de-lima-douro/1.webp",
+    "image": "/images/tours/ponte-de-lima-douro/ponte-de-lima-wine-tasting.webp",
     "gallery": [
-      "/images/tours/ponte-de-lima-douro/1.webp",
-      "/images/tours/ponte-de-lima-douro/2.webp",
-      "/images/tours/ponte-de-lima-douro/3.webp",
-      "/images/tours/ponte-de-lima-douro/4.webp",
-      "/images/tours/ponte-de-lima-douro/5.webp"
+      "/images/tours/ponte-de-lima-douro/ponte-de-lima-wine-tasting.webp",
+      "/images/tours/ponte-de-lima-douro/ponte-de-lima-historic-wine-centre.webp",
+      "/images/tours/ponte-de-lima-douro/douro-private-boat-cruise.webp",
+      "/images/tours/ponte-de-lima-douro/quinta-do-bucheiro-douro-wine-experience.webp",
+      "/images/tours/ponte-de-lima-douro/douro-valley-vineyards-northen-portugal.webp"
     ],
     "boatBadge": {
       "pt": "Barco Privado Exclusivo",
@@ -612,13 +612,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/douro-wine-gastronomy/1.webp",
+    "image": "/images/tours/douro-wine-gastronomy/douro-valley-private-boat-experience.webp",
     "gallery": [
-      "/images/tours/douro-wine-gastronomy/1.webp",
-      "/images/tours/douro-wine-gastronomy/2.webp",
-      "/images/tours/douro-wine-gastronomy/3.webp",
-      "/images/tours/douro-wine-gastronomy/4.webp",
-      "/images/tours/douro-wine-gastronomy/5.webp"
+      "/images/tours/douro-wine-gastronomy/douro-valley-private-boat-experience.webp",
+      "/images/tours/douro-wine-gastronomy/douro-valley-vineyards-portugal.webp",
+      "/images/tours/douro-wine-gastronomy/douro-valley-wine-gourmet-experience.webp",
+      "/images/tours/douro-wine-gastronomy/douro-valley-wine-tasting-experience.webp",
+      "/images/tours/douro-wine-gastronomy/douro-valley-gourmet-experience.webp"
     ],
     "boatBadge": {
       "pt": "Cruzeiro no Rio Douro",
@@ -859,13 +859,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 530,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/amarante-mateus-palace-douro/1.webp",
+    "image": "/images/tours/amarante-mateus-palace-douro/amarante-historic-bridge.webp",
     "gallery": [
-      "/images/tours/amarante-mateus-palace-douro/1.webp",
-      "/images/tours/amarante-mateus-palace-douro/2.webp",
-      "/images/tours/amarante-mateus-palace-douro/3.webp",
-      "/images/tours/amarante-mateus-palace-douro/4.webp",
-      "/images/tours/amarante-mateus-palace-douro/5.webp"
+      "/images/tours/amarante-mateus-palace-douro/amarante-historic-bridge.webp",
+      "/images/tours/amarante-mateus-palace-douro/palacio-de-mateus-interior-douro.webp",
+      "/images/tours/amarante-mateus-palace-douro/douro-valley-ladscape-view.webp",
+      "/images/tours/amarante-mateus-palace-douro/marthas-douro-wine-tasting.webp",
+      "/images/tours/amarante-mateus-palace-douro/douro-valley-private-tour-wine.webp"
     ],
     "experienceBadge": {
       "pt": "Palácio de Mateus & Portos 10 e 20 Anos",
@@ -1094,13 +1094,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 540,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/lamego-douro/1.webp",
+    "image": "/images/tours/lamego-douro/lamego-private-experience-historic-streets.webp",
     "gallery": [
-      "/images/tours/lamego-douro/1.webp",
-      "/images/tours/lamego-douro/2.webp",
-      "/images/tours/lamego-douro/3.webp",
-      "/images/tours/lamego-douro/4.webp",
-      "/images/tours/lamego-douro/5.webp"
+      "/images/tours/lamego-douro/lamego-private-experience-historic-streets.webp",
+      "/images/tours/lamego-douro/lamego-douro-private-experience.webp",
+      "/images/tours/lamego-douro/douro-valley-boat-private-experience.webp",
+      "/images/tours/lamego-douro/casa-do-bucheiro-vineyards-wine.webp",
+      "/images/tours/lamego-douro/douro-santa-eufemia-wine-experience.webp"
     ],
     "boatBadge": {
       "pt": "Barco Privado Exclusivo",
@@ -1592,13 +1592,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 520,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/coimbra-aveiro/1.webp",
+    "image": "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
     "gallery": [
-      "/images/tours/coimbra-aveiro/1.webp",
-      "/images/tours/coimbra-aveiro/2.webp",
-      "/images/tours/coimbra-aveiro/3.webp",
-      "/images/tours/coimbra-aveiro/4.webp",
-      "/images/tours/coimbra-aveiro/5.webp"
+      "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
+      "/images/tours/coimbra-aveiro/workshop-aveiro-vista-alegre.webp",
+      "/images/tours/coimbra-aveiro/coimbra-private-tour.webp",
+      "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour.webp",
+      "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-2.webp"
     ],
     "boatBadge": {
       "pt": "Moliceiro Tradicional em Aveiro",
@@ -1841,13 +1841,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 490,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/barcelos-braga-guimaraes/1.webp",
+    "image": "/images/tours/barcelos-braga-guimaraes/barcelos-braga-guimaraes-private-tour-2.webp",
     "gallery": [
-      "/images/tours/barcelos-braga-guimaraes/1.webp",
-      "/images/tours/barcelos-braga-guimaraes/2.webp",
-      "/images/tours/barcelos-braga-guimaraes/3.webp",
-      "/images/tours/barcelos-braga-guimaraes/4.webp",
-      "/images/tours/barcelos-braga-guimaraes/5.webp"
+      "/images/tours/barcelos-braga-guimaraes/barcelos-braga-guimaraes-private-tour-2.webp",
+      "/images/tours/barcelos-braga-guimaraes/barcelos-braga-guimaraes-private-tour-4.webp",
+      "/images/tours/barcelos-braga-guimaraes/barcelos-braga-guimaraes-private-tour-1.webp",
+      "/images/tours/barcelos-braga-guimaraes/barcelos-braga-guimaraes-private-tour-3.webp",
+      "/images/tours/barcelos-braga-guimaraes/barcelos-braga-guimaraes-private-tour.webp"
     ],
     "experienceBadge": {
       "pt": "Berço da Nação & Bom Jesus do Monte UNESCO",
@@ -2306,13 +2306,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 560,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/obidos-alcobaca/1.webp",
+    "image": "/images/tours/obidos-alcobaca/private-tour-obidos-alcobaca-1.webp",
     "gallery": [
-      "/images/tours/obidos-alcobaca/1.webp",
-      "/images/tours/obidos-alcobaca/2.webp",
-      "/images/tours/obidos-alcobaca/3.webp",
-      "/images/tours/obidos-alcobaca/4.webp",
-      "/images/tours/obidos-alcobaca/5.webp"
+      "/images/tours/obidos-alcobaca/private-tour-obidos-alcobaca-1.webp",
+      "/images/tours/obidos-alcobaca/private-tour-obidos-alcobaca.webp",
+      "/images/tours/obidos-alcobaca/private-tour-obidos-alcobaca-2.webp",
+      "/images/tours/obidos-alcobaca/private-tour-obidos-alcobaca-3.webp",
+      "/images/tours/obidos-alcobaca/private-tour-obidos-alcobaca-4.webp"
     ],
     "experienceBadge": {
       "pt": "Ginjinha no Chocolate & Mosteiro de Alcobaça UNESCO",
@@ -2541,13 +2541,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 420,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/porto-highlights-ocean/1.webp",
+    "image": "/images/tours/porto-highlights-ocean/private-tour-porto-wine-gastronomy-1.webp",
     "gallery": [
-      "/images/tours/porto-highlights-ocean/1.webp",
-      "/images/tours/porto-highlights-ocean/2.webp",
-      "/images/tours/porto-highlights-ocean/3.webp",
-      "/images/tours/porto-highlights-ocean/4.webp",
-      "/images/tours/porto-highlights-ocean/5.webp"
+      "/images/tours/porto-highlights-ocean/private-tour-porto-wine-gastronomy-1.webp",
+      "/images/tours/porto-highlights-ocean/private-tour-porto-wine-gastronomy.webp",
+      "/images/tours/porto-highlights-ocean/private-tour-porto-wine-gastronomy-2.webp",
+      "/images/tours/porto-highlights-ocean/private-tour-porto-wine-gastronomy-3.webp",
+      "/images/tours/porto-highlights-ocean/private-tour-porto-wine-gastronomy-4.webp"
     ],
     "experienceBadge": {
       "pt": "Teleférico Panorâmico de Gaia & Foz do Douro",
@@ -2773,13 +2773,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/geres-mountain-villages/1.webp",
+    "image": "/images/tours/geres-mountain-villages/private-tour-geres-2.webp",
     "gallery": [
-      "/images/tours/geres-mountain-villages/1.webp",
-      "/images/tours/geres-mountain-villages/2.webp",
-      "/images/tours/geres-mountain-villages/3.webp",
-      "/images/tours/geres-mountain-villages/4.webp",
-      "/images/tours/geres-mountain-villages/5.webp"
+      "/images/tours/geres-mountain-villages/private-tour-geres-2.webp",
+      "/images/tours/geres-mountain-villages/private-tour-geres-4.webp",
+      "/images/tours/geres-mountain-villages/private-tour-geres-3.webp",
+      "/images/tours/geres-mountain-villages/private-tour-geres-1.webp",
+      "/images/tours/geres-mountain-villages/private-tour-geres.webp"
     ],
     "experienceBadge": {
       "pt": "Ordenha Tradicional & Degustação de Queijo de Montanha",
@@ -3008,13 +3008,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 460,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/porto-filigree-gourmet/1.webp",
+    "image": "/images/tours/porto-filigree-gourmet/porto-vinho-filigrana-1.webp",
     "gallery": [
-      "/images/tours/porto-filigree-gourmet/1.webp",
-      "/images/tours/porto-filigree-gourmet/2.webp",
-      "/images/tours/porto-filigree-gourmet/3.webp",
-      "/images/tours/porto-filigree-gourmet/4.webp",
-      "/images/tours/porto-filigree-gourmet/5.webp"
+      "/images/tours/porto-filigree-gourmet/porto-vinho-filigrana-1.webp",
+      "/images/tours/porto-filigree-gourmet/porto-vinho-filigrana-2.webp",
+      "/images/tours/porto-filigree-gourmet/porto-vinho-filigrana-3.webp",
+      "/images/tours/porto-filigree-gourmet/porto-vinho-filigrana-4.webp",
+      "/images/tours/porto-filigree-gourmet/porto-vinho-filigrana.webp"
     ],
     "experienceBadge": {
       "pt": "Workshop de Filigrana (Crie a Sua Joia de Prata)",
@@ -3488,13 +3488,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 550,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/nazare-sao-martinho/1.webp",
+    "image": "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-private-tour.webp",
     "gallery": [
-      "/images/tours/nazare-sao-martinho/1.webp",
-      "/images/tours/nazare-sao-martinho/2.webp",
-      "/images/tours/nazare-sao-martinho/3.webp",
-      "/images/tours/nazare-sao-martinho/4.webp",
-      "/images/tours/nazare-sao-martinho/5.webp"
+      "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-private-tour.webp",
+      "/images/tours/nazare-sao-martinho/nazare-sao-martinho-do-porto-private-tour-1.webp",
+      "/images/tours/nazare-sao-martinho/nazare-private-tour.webp",
+      "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-nazare-private-tour.webp",
+      "/images/tours/nazare-sao-martinho/nazare-sao-martinho-do-porto-private-tour.webp"
     ],
     "experienceBadge": {
       "pt": "Canhão da Nazaré & Ondas Gigantes Mundiais",
@@ -3720,13 +3720,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 510,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/arouca-santa-maria-feira/1.webp",
+    "image": "/images/tours/arouca-santa-maria-feira/arouca-santa-maria-da-feira-tour-3.webp",
     "gallery": [
-      "/images/tours/arouca-santa-maria-feira/1.webp",
-      "/images/tours/arouca-santa-maria-feira/2.webp",
-      "/images/tours/arouca-santa-maria-feira/3.webp",
-      "/images/tours/arouca-santa-maria-feira/4.webp",
-      "/images/tours/arouca-santa-maria-feira/5.webp"
+      "/images/tours/arouca-santa-maria-feira/arouca-santa-maria-da-feira-tour-3.webp",
+      "/images/tours/arouca-santa-maria-feira/arouca-santa-maria-da-feira-private-tour-2.webp",
+      "/images/tours/arouca-santa-maria-feira/arouca-santa-maria-da-feira-1.webp",
+      "/images/tours/arouca-santa-maria-feira/arouca-santa-maria-da-feira-private-tour.webp",
+      "/images/tours/arouca-santa-maria-feira/arouca-santa-maria-da-feira-private-tour-4.webp"
     ],
     "experienceBadge": {
       "pt": "Fogaça Tradicional ao Vivo & Doçaria Conventual",
