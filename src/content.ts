@@ -543,7 +543,7 @@ export const CONTENT = {
             desc: 'Criamos experiências privadas personalizadas de acordo com os seus interesses, ritmo e ocasião.',
             collection: 'North Private Collection',
             collectionDesc: 'Jantares privados, quintas históricas e momentos inesquecíveis.',
-            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisboa'],
+            destinations: ['Porto', 'Douro Valley', 'Alcobaça', 'Amarante', 'Arouca', 'Aveiro', 'Batalha', 'Barcelos', 'Braga', 'Coimbra', 'Fátima', 'Gerês', 'Guimarães', 'Lamego', 'Nazaré', 'Óbidos', 'Ponte de Lima', 'Santa Maria da Feira', 'São Martinho do Porto', 'Tomar'],
             cta: 'Criar Minha Experiência',
         },
         footer: {
@@ -1115,7 +1115,7 @@ export const CONTENT = {
             desc: 'We create bespoke private experiences designed around your personal interests, preferred pace, and special occasions.',
             collection: 'North Private Collection',
             collectionDesc: 'Private dining, historic wine estates, and unforgettable scenic journeys.',
-            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisbon'],
+            destinations: ['Porto', 'Douro Valley', 'Alcobaça', 'Amarante', 'Arouca', 'Aveiro', 'Batalha', 'Barcelos', 'Braga', 'Coimbra', 'Fátima', 'Gerês', 'Guimarães', 'Lamego', 'Nazaré', 'Óbidos', 'Ponte de Lima', 'Santa Maria da Feira', 'São Martinho do Porto', 'Tomar'],
             cta: 'Design My Experience',
         },
         footer: {
@@ -1688,7 +1688,7 @@ blog: {
             desc: 'Diseñamos experiencias privadas personalizadas de acuerdo con sus intereses, ritmo y ocasión.',
             collection: 'North Private Collection',
             collectionDesc: 'Cenas privadas, quintas históricas y momentos inolvidables.',
-            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisboa'],
+            destinations: ['Porto', 'Douro Valley', 'Alcobaça', 'Amarante', 'Arouca', 'Aveiro', 'Batalha', 'Barcelos', 'Braga', 'Coimbra', 'Fátima', 'Gerês', 'Guimarães', 'Lamego', 'Nazaré', 'Óbidos', 'Ponte de Lima', 'Santa Maria da Feira', 'São Martinho do Porto', 'Tomar'],
             cta: 'Crear Mi Experiencia',
         },
         footer: {
@@ -2261,7 +2261,7 @@ blog: {
             desc: 'Conçues exclusivement selon vos centres d’intérêt, votre rythme et chaque occasion spéciale.',
             collection: 'North Private Collection',
             collectionDesc: 'Dîners privés, domaines viticoles historiques et moments inoubliables.',
-            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lisbonne'],
+            destinations: ['Porto', 'Douro Valley', 'Alcobaça', 'Amarante', 'Arouca', 'Aveiro', 'Batalha', 'Barcelos', 'Braga', 'Coimbra', 'Fátima', 'Gerês', 'Guimarães', 'Lamego', 'Nazaré', 'Óbidos', 'Ponte de Lima', 'Santa Maria da Feira', 'São Martinho do Porto', 'Tomar'],
             cta: 'Créer Mon Expérience',
         },
         footer: {
@@ -2834,7 +2834,7 @@ blog: {
             desc: 'Individuell abgestimmt auf Ihre Interessen, Ihr persönliches Reisetempo und jeden besonderen Anlass.',
             collection: 'North Private Collection',
             collectionDesc: 'Private Dinners, historische Weingüter und unvergessliche Augenblicke.',
-            destinations: ['Porto', 'Douro Valley', 'Braga', 'Guimarães', 'Gerês', 'Amarante', 'Aveiro', 'Coimbra', 'Nazaré', 'Óbidos', 'Peniche', 'Lissabon'],
+            destinations: ['Porto', 'Douro Valley', 'Alcobaça', 'Amarante', 'Arouca', 'Aveiro', 'Batalha', 'Barcelos', 'Braga', 'Coimbra', 'Fátima', 'Gerês', 'Guimarães', 'Lamego', 'Nazaré', 'Óbidos', 'Ponte de Lima', 'Santa Maria da Feira', 'São Martinho do Porto', 'Tomar'],
             cta: 'Mein Erlebnis Gestalten',
         },
         footer: {

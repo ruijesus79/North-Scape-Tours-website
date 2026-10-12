@@ -59,6 +59,31 @@ export interface VipExtraItem {
 
 export const VIP_EXTRAS: VipExtraItem[] = [
   {
+    id: 'private-boat',
+    name: {
+      pt: 'Private Boat Tour (Barco Privado no Rio Douro)',
+      en: 'Private Boat Tour on the Douro River',
+      es: 'Tour en Barco Privado en el Río Duero',
+      fr: 'Croisière en Bateau Privé sur le Douro',
+      de: 'Private Bootsfahrt auf dem Douro'
+    },
+    tagline: {
+      pt: 'Upgrade Exclusivo · €150 por Grupo',
+      en: 'Exclusive Upgrade · €150 per Group',
+      es: 'Mejora Exclusiva · 150 € por Grupo',
+      fr: 'Surclassement Exclusif · 150 € par Groupe',
+      de: 'Exklusives Upgrade · 150 € pro Gruppe'
+    },
+    desc: {
+      pt: 'Add a private boat experience on the Douro River for €150 per group. The supplement is €150 per group, regardless of the number of participants (1–8 people). It is not charged per person.',
+      en: 'Add a private boat experience on the Douro River for €150 per group. The supplement is €150 per group, regardless of the number of participants (1–8 people). It is not charged per person.',
+      es: 'Añada una experiencia de barco privado en el río Duero por 150 € por grupo. El suplemento es de 150 € por grupo, independientemente del número de participantes (1–8 personas). No se cobra por persona.',
+      fr: 'Ajoutez une expérience en bateau privé sur le Douro pour 150 € par groupe. Le supplément est de 150 € par groupe, quel que soit le nombre de participants (1 à 8 personnes). Il n’est pas facturé par personne.',
+      de: 'Fügen Sie eine private Bootsfahrt auf dem Douro für 150 € pro Gruppe hinzu. Der Aufpreis beträgt 150 € pro Gruppe, unabhängig von der Teilnehmerzahl (1–8 Personen). Er wird nicht pro Person berechnet.'
+    },
+    price: 150
+  },
+  {
     id: 'dj',
     name: {
       pt: 'DJ Privado',
@@ -221,7 +246,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visita ao centro histórico de Ponte de Lima e ponte romana medieval",
         "Almoço regional completo harmonizado com vinhos numa quinta tradicional",
         "Visita ao museu vitivinícola da quinta familiar no Douro",
-        "Cruzeiro privado exclusivo de 1 hora pelo Rio Douro entre os socalcos UNESCO"
+        "Cruzeiro panorâmico de 1 hora pelo Rio Douro entre os socalcos UNESCO (barco compartilhado · upgrade privado disponível)"
       ],
       "en": [
         "100% private journey with dedicated bilingual wine-expert guide",
@@ -229,7 +254,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Guided walk through historic Ponte de Lima and its iconic Roman bridge",
         "Multi-course regional lunch paired with estate Douro wines",
         "Private tour of an authentic family wine museum in the Douro",
-        "Exclusive 1-hour private cruise on the Douro River among UNESCO terraces"
+        "1-hour scenic Douro River cruise among UNESCO terraces (shared boat · private upgrade available)"
       ],
       "es": [
         "Tour 100% privado con chófer-guía bilingüe especialista en vinos",
@@ -237,7 +262,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Paseo por el centro histórico de Ponte de Lima y su puente romano",
         "Almuerzo regional completo maridado con vinos en una finca tradicional",
         "Entrada al museo vitivinícola familiar en el Duero",
-        "Crucero privado exclusivo de 1 hora por el río Duero entre bancales UNESCO"
+        "Crucero panorámico de 1 hora por el río Duero entre bancales UNESCO (barco compartido · opción privada disponible)"
       ],
       "fr": [
         "Circuit 100% privé avec chauffeur-guide bilingue expert en œnologie",
@@ -245,7 +270,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visite du centre historique de Ponte de Lima et de son pont romain",
         "Déjeuner régional traditionnel accordé aux vins dans un domaine familial",
         "Visite du musée privé du vin au cœur du Douro",
-        "Croisière privée d'une heure sur le Douro au pied des coteaux classés UNESCO"
+        "Croisière panoramique d'une heure sur le Douro (bateau partagé · option privée disponible)"
       ],
       "de": [
         "100% private Tagestour mit persönlichem, weinkundigem Fahrer/Guide",
@@ -253,7 +278,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Besuch des historischen Ponte de Lima und der römischen Steinbrücke",
         "Mehrgängiges regionales Mittagessen mit Weinbegleitung auf einem Weingut",
         "Führung durch das historische Familien-Weinmuseum im Douro-Tal",
-        "Exklusive 1-stündige private Bootsfahrt auf dem Douro entlang der UNESCO-Terrassen"
+        "1-stündige Panorama-Bootsfahrt auf dem Douro (geteiltes Boot · privates Upgrade verfügbar)"
       ]
     },
     "included": {
@@ -267,7 +292,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Entrada no museu vitivinícola histórico da propriedade",
         "Almoço regional completo com pratos tradicionais portugueses",
         "Harmonização do almoço com seleção de vinhos do Douro DOC",
-        "Cruzeiro privado e exclusivo de 1 hora pelo Rio Douro",
+        "Cruzeiro panorâmico de 1 hora pelo Rio Douro (barco compartilhado · upgrade privado disponível)",
         "Água mineral a bordo durante todo o dia",
         "Cadeirinha ou assento infantil disponível mediante pedido prévio",
         "Seguro de responsabilidade civil e acidentes pessoais"
@@ -282,7 +307,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Admission to the estate's private historical wine museum",
         "Traditional multi-course regional lunch",
         "Wine pairing during lunch with handpicked Douro DOC wines",
-        "Exclusive 1-hour private Douro River boat cruise",
+        "Scenic 1-hour Douro River boat cruise (shared boat · private upgrade available)",
         "Complimentary bottled water throughout the journey",
         "Child or infant safety seats available upon prior request",
         "Comprehensive civil liability and personal accident insurance"
@@ -297,7 +322,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Entrada al museo vitivinícola histórico de la propiedad",
         "Almuerzo regional completo con platos tradicionales portugueses",
         "Maridaje de vinos del Duero DOC durante el almuerzo",
-        "Crucero privado exclusivo de 1 hora por el río Duero",
+        "Crucero panorámico de 1 hora por el río Duero (barco compartido · opción privada disponible)",
         "Agua mineral a bordo durante todo el recorrido",
         "Asiento infantil disponible previa solicitud",
         "Seguro de responsabilidad civil y accidentes personales"
@@ -312,7 +337,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Entrée au musée privé de la vigne et du vin",
         "Déjeuner régional traditionnel complet",
         "Accords mets et vins avec une sélection de crus Douro DOC",
-        "Croisière privée d'une heure sur le fleuve Douro",
+        "Croisière panoramique d'une heure sur le fleuve Douro (bateau partagé · option privée disponible)",
         "Eau minérale à bord tout au long de la journée",
         "Siège enfant disponible sur demande préalable",
         "Assurance responsabilité civile et accidents personnels"
@@ -327,7 +352,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Eintritt in das hauseigene historische Weinmuseum",
         "Traditionelles mehrgängiges regionales Mittagessen",
         "Passende Weinbegleitung zum Essen mit Douro DOC Weinen",
-        "Exklusive 1-stündige private Douro-Bootsfahrt",
+        "1-stündige Panorama-Bootsfahrt auf dem Douro (geteiltes Boot · privates Upgrade verfügbar)",
         "Mineralwasser an Bord während des gesamten Tages",
         "Kindersitze auf Voranmeldung kostenlos verfügbar",
         "Vollumfängliche Haftpflicht- und Unfallversicherung"
@@ -379,11 +404,11 @@ export const ALL_17_TOURS: TourItem[] = [
       "/images/tours/ponte-de-lima-douro/douro-valley-vineyards-northen-portugal.webp"
     ],
     "boatBadge": {
-      "pt": "Barco Privado Exclusivo",
-      "en": "Exclusive Private Boat",
-      "es": "Barco Privado Exclusivo",
-      "fr": "Bateau Privé Exclusif",
-      "de": "Exklusives Privates Boot"
+      "pt": "Cruzeiro no Douro (Barco Partilhado)",
+      "en": "Douro River Cruise (Shared Boat)",
+      "es": "Crucero por el Duero (Barco Compartido)",
+      "fr": "Croisière sur le Douro (Bateau Partagé)",
+      "de": "Douro-Bootsfahrt (Geteiltes Boot)"
     },
     "experienceBadge": {
       "pt": "Vinho Verde & Museu Familiar",
@@ -959,7 +984,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visita ao Castelo medieval de Lamego e centro histórico",
         "Visita ao monumental Santuário de Nossa Senhora dos Remédios e escadaria barroca",
         "Almoço tradicional regional numa quinta com harmonização de vinhos",
-        "Cruzeiro privado de 1 hora pelo Rio Douro reservado exclusivamente para o grupo",
+        "Cruzeiro panorâmico de 1 hora pelo Rio Douro (barco compartilhado · upgrade privado disponível)",
         "Visita guiada e degustação de vinhos do Douro e Porto em produtora familiar"
       ],
       "en": [
@@ -967,7 +992,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Guided exploration of medieval Lamego Castle and historic alleys",
         "Visit to the iconic Sanctuary of Nossa Senhora dos Remédios and baroque stairway",
         "Multi-course traditional lunch at a Douro quinta with paired wines",
-        "Exclusive 1-hour private Douro River boat cruise reserved solely for your party",
+        "1-hour scenic Douro River boat cruise (shared boat · private upgrade available)",
         "Guided cellar tour and tasting of Douro DOC & Port wines at a family estate"
       ],
       "es": [
@@ -975,7 +1000,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visita al Castillo medieval de Lamego y casco histórico",
         "Visita al Santuario de Nuestra Señora de los Remedios y escalinata barroca",
         "Almuerzo tradicional en una quinta vinícola con maridaje de vinos",
-        "Crucero privado de 1 hora por el río Duero exclusivo para su grupo",
+        "Crucero panorámico de 1 hora por el río Duero (barco compartido · opción privada disponible)",
         "Cata comentada de vinos DOC Duero y Oporto en una bodega familiar"
       ],
       "fr": [
@@ -983,7 +1008,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visite du château médiéval de Lamego et du centre historique",
         "Visite du Sanctuaire de Nossa Senhora dos Remédios et de son escalier d'apparat",
         "Déjeuner traditionnel dans une quinta avec accords mets et vins",
-        "Croisière privée d'une heure sur le Douro réservée exclusivement à votre groupe",
+        "Croisière panoramique d'une heure sur le Douro (bateau partagé · option privée disponible)",
         "Visite guidée et dégustation de vins du Douro et Porto dans un domaine familial"
       ],
       "de": [
@@ -991,7 +1016,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Besuch der mittelalterlichen Burg und des Zentrums von Lamego",
         "Besichtigung des Wallfahrtsortes Nossa Senhora dos Remédios mit Freitreppe",
         "Traditionelles Mittagessen auf einem Douro-Weingut mit Weinbegleitung",
-        "1-stündige private Douro-Schifffahrt exklusiv für Ihre Gruppe",
+        "1-stündige Panorama-Douro-Schifffahrt (geteiltes Boot · privates Upgrade verfügbar)",
         "Führung und Weinprobe von Douro DOC- und Portweinen auf einem Traditionsgut"
       ]
     },
@@ -1003,7 +1028,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visita ao Santuário de Nossa Senhora dos Remédios",
         "Almoço tradicional regional completo numa quinta do Douro",
         "Harmonização de vinhos selecionados durante o almoço",
-        "Passeio privado de barco de 1 hora pelo Rio Douro",
+        "Passeio panorâmico de barco de 1 hora pelo Rio Douro (barco compartilhado · upgrade privado disponível)",
         "Água a bordo durante o cruzeiro",
         "Visita e prova guiada em produtora familiar de vinhos do Douro e Porto",
         "Seguro de acidentes pessoais e responsabilidade civil"
@@ -1015,19 +1040,19 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visit to the Sanctuary of Nossa Senhora dos Remédios",
         "Full traditional regional lunch at an authentic Douro quinta",
         "Curated wine pairing served during lunch",
-        "Exclusive 1-hour private boat cruise on the Douro River",
+        "Scenic 1-hour Douro River boat cruise (shared boat · private upgrade available)",
         "Bottled water on board the boat",
         "Cellar visit and guided wine tasting of Douro and Port wines",
         "Comprehensive personal accident and civil liability insurance"
       ],
       "es": [
-        "Transporte privado ejecutivo de ida y vuelta desde Oporto",
+        "Transporte privado ejecutivo de ida e vuelta desde Oporto",
         "Chófer-guía multilingüe dedicado durante todo el tour",
         "Visita al Castillo de Lamego y casco histórico",
         "Visita al Santuario de Nuestra Señora de los Remedios",
         "Almuerzo regional completo en una finca del Duero",
         "Maridaje de vinos selectos durante el almuerzo",
-        "Crucero privado de 1 hora por el río Duero",
+        "Crucero panorámico de 1 hora por el río Duero (barco compartido · opción privada disponible)",
         "Agua a bordo durante el paseo en barco",
         "Visita y cata de vinos DOC Duero y Oporto en bodega familiar",
         "Seguro de accidentes personales y responsabilidad civil"
@@ -1039,7 +1064,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Visite du Sanctuaire de Nossa Senhora dos Remédios",
         "Déjeuner régional traditionnel complet dans une quinta du Douro",
         "Accords mets-vins servis pendant le déjeuner",
-        "Croisière privée d'une heure sur le fleuve Douro",
+        "Croisière panoramique d'une heure sur le fleuve Douro (bateau partagé · option privée disponible)",
         "Eau minérale à bord du bateau",
         "Visite et dégustation guidée de vins du Douro et de Porto",
         "Assurance responsabilité civile et accidents corporels"
@@ -1051,7 +1076,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Besuch des Heiligtums Nossa Senhora dos Remédios",
         "Mehrgängiges traditionelles Mittagessen auf einem Douro-Weingut",
         "Erlesene Weinbegleitung zum Mittagessen",
-        "1-stündige private Schifffahrt auf dem Douro-Fluss",
+        "1-stündige Panorama-Schifffahrt auf dem Douro-Fluss (geteiltes Boot · privates Upgrade verfügbar)",
         "Mineralwasser an Bord des Bootes",
         "Kellerführung und Weinprobe von Douro- und Portweinen",
         "Umfassende Haftpflicht- und Unfallversicherung"
@@ -1103,11 +1128,11 @@ export const ALL_17_TOURS: TourItem[] = [
       "/images/tours/lamego-douro/douro-santa-eufemia-wine-experience.webp"
     ],
     "boatBadge": {
-      "pt": "Barco Privado Exclusivo",
-      "en": "Exclusive Private Boat",
-      "es": "Barco Privado Exclusivo",
-      "fr": "Bateau Privé Exclusif",
-      "de": "Exklusives Privates Boot"
+      "pt": "Cruzeiro no Douro (Barco Partilhado)",
+      "en": "Douro River Cruise (Shared Boat)",
+      "es": "Crucero por el Duero (Barco Compartido)",
+      "fr": "Croisière sur le Douro (Bateau Partagé)",
+      "de": "Douro-Bootsfahrt (Geteiltes Boot)"
     },
     "experienceBadge": {
       "pt": "Santuário dos Remédios & Bôla de Lamego",

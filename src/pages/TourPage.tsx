@@ -20,7 +20,8 @@ import {
   CheckCircle2,
   Camera,
   Maximize2,
-  X
+  X,
+  Anchor
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTourBySlug, ALL_17_TOURS, VIP_EXTRAS, type TourItem } from '../data/toursData';
@@ -255,6 +256,54 @@ const UI_TEXT = {
   }
 };
 
+const BOAT_OBSERVATION = {
+  pt: {
+    title: 'Private Boat Tour',
+    badge: 'Upgrade Opcional',
+    line1: 'Add a private boat experience on the Douro River for €150 per group.',
+    line2: 'The supplement is €150 per group, regardless of the number of participants (1–8 people). It is not charged per person.',
+    subNote: 'O valor base do tour inclui cruzeiro em barco compartilhado.',
+    actionAdd: 'Adicionar Barco Privado (+€150/grupo)',
+    actionAdded: 'Barco Privado Incluído (+€150)',
+  },
+  en: {
+    title: 'Private Boat Tour',
+    badge: 'Optional Upgrade',
+    line1: 'Add a private boat experience on the Douro River for €150 per group.',
+    line2: 'The supplement is €150 per group, regardless of the number of participants (1–8 people). It is not charged per person.',
+    subNote: 'Base tour rate includes a shared boat river cruise.',
+    actionAdd: 'Add Private Boat Experience (+€150/group)',
+    actionAdded: 'Private Boat Included (+€150)',
+  },
+  es: {
+    title: 'Private Boat Tour',
+    badge: 'Mejora Opcional',
+    line1: 'Add a private boat experience on the Douro River for €150 per group.',
+    line2: 'The supplement is €150 per group, regardless of the number of participants (1–8 people). It is not charged per person.',
+    subNote: 'La tarifa base del tour incluye crucero en barco compartido.',
+    actionAdd: 'Añadir Barco Privado (+€150/grupo)',
+    actionAdded: 'Barco Privado Incluido (+€150)',
+  },
+  fr: {
+    title: 'Private Boat Tour',
+    badge: 'Surclassement Optionnel',
+    line1: 'Add a private boat experience on the Douro River for €150 per group.',
+    line2: 'The supplement is €150 per group, regardless of the number of participants (1–8 people). It is not charged per person.',
+    subNote: 'Le tarif de base comprend une croisière en bateau partagé.',
+    actionAdd: 'Ajouter Bateau Privé (+€150/groupe)',
+    actionAdded: 'Bateau Privé Inclus (+€150)',
+  },
+  de: {
+    title: 'Private Boat Tour',
+    badge: 'Optionales Upgrade',
+    line1: 'Add a private boat experience on the Douro River for €150 per group.',
+    line2: 'The supplement is €150 per group, regardless of the number of participants (1–8 people). It is not charged per person.',
+    subNote: 'Der Grundpreis beinhaltet eine geteilte Bootsfahrt.',
+    actionAdd: 'Privates Boot Hinzufügen (+€150/Gruppe)',
+    actionAdded: 'Privates Boot Inbegriffen (+€150)',
+  }
+};
+
 export default function TourPage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -329,6 +378,8 @@ export default function TourPage() {
   const tourFullDesc = tour.fullDesc[lang] || tour.fullDesc['en'] || tour.fullDesc.pt;
   const boatBadge = tour.boatBadge ? (tour.boatBadge[lang] || tour.boatBadge['en'] || tour.boatBadge.pt) : undefined;
   const experienceBadge = tour.experienceBadge ? (tour.experienceBadge[lang] || tour.experienceBadge['en'] || tour.experienceBadge.pt) : undefined;
+  const hasDouroBoat = tour.category === 'douro' || tour.id === 'ponte-de-lima-douro' || (Boolean(tour.boatBadge) && !tour.boatBadge?.pt.includes('Moliceiro'));
+  const boatNote = BOAT_OBSERVATION[lang as keyof typeof BOAT_OBSERVATION] || BOAT_OBSERVATION.en;
 
   // Calculate pricing based on selected Pax
   const tierPrice = tour.pricingTiers.find((tier) => tier.pax === selectedPax)?.price ?? tour.startingPrice;
@@ -636,6 +687,26 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
                 </div>
               ))}
             </div>
+
+            {/* Douro Boat Shared note & Private Upgrade callout */}
+            {hasDouroBoat && (
+              <div className="mt-6 p-4.5 rounded-2xl bg-amber-500/[0.05] border border-amber-500/20 flex items-start gap-3">
+                <Anchor size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                <div className="text-xs text-white/70 leading-relaxed font-light">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="font-semibold text-amber-300 uppercase tracking-wider text-[11px]">
+                      {boatNote.title}
+                    </span>
+                    <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 font-semibold">
+                      {boatNote.badge}
+                    </span>
+                  </div>
+                  <p className="text-white/85 font-medium">{boatNote.line1}</p>
+                  <p className="text-white/50 mt-1">{boatNote.line2}</p>
+                  <p className="text-amber-300/80 mt-1.5 text-[11px] italic">{boatNote.subNote}</p>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* VIP Add-ons Upgrade */}
@@ -756,6 +827,46 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
                 {ui.privateVehicleNote}
               </p>
             </div>
+
+            {/* Private Boat Tour Supplement Box (Douro Experiences) */}
+            {hasDouroBoat && (
+              <div className="py-5 border-b border-white/10">
+                <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-amber-500/[0.08] to-white/[0.02] border border-amber-500/30">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-serif text-sm sm:text-base text-white font-medium flex items-center gap-2">
+                      <Anchor size={15} className="text-amber-400" />
+                      {boatNote.title}
+                    </span>
+                    <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 font-semibold">
+                      +€150 / grupo
+                    </span>
+                  </div>
+                  <p className="text-xs text-white/85 leading-relaxed font-light mb-1.5">
+                    {boatNote.line1}
+                  </p>
+                  <p className="text-[11px] text-white/50 leading-relaxed font-light mb-2.5">
+                    {boatNote.line2}
+                  </p>
+                  <p className="text-[11px] text-amber-300/80 leading-relaxed italic mb-3">
+                    {boatNote.subNote}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => toggleExtra('private-boat')}
+                    className={`w-full py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer border ${
+                      selectedExtras.includes('private-boat')
+                        ? 'bg-amber-400 text-black border-amber-400 shadow-[0_0_15px_rgba(212,175,55,0.25)]'
+                        : 'bg-white/[0.06] hover:bg-white/[0.12] text-amber-300 border-amber-400/30'
+                    }`}
+                  >
+                    <Check size={14} className={selectedExtras.includes('private-boat') ? 'text-black' : 'opacity-0'} />
+                    <span>
+                      {selectedExtras.includes('private-boat') ? boatNote.actionAdded : boatNote.actionAdd}
+                    </span>
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* Date Selection */}
             <div className="py-5 border-b border-white/10">

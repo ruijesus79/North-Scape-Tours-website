@@ -6,10 +6,7 @@ import { IMG, Reveal, AmbientBg, AmbientGlow, TextReveal, StaggerContainer, Stag
 
 export default function BlogSection({ scrollTo }: { scrollTo: (id: string) => void }) {
   const { lang, t } = useLanguage();
-  const [showAll, setShowAll] = useState(false);
-  const isPt = lang === 'pt';
-
-  const visiblePosts = showAll ? t.blog.items : t.blog.items.slice(0, 4);
+  const visiblePosts = t.blog.items;
 
   return (
     <section id="blog" className="py-28 md:py-40 px-6 md:px-12 relative overflow-hidden bg-[#0c0c0c]">
@@ -81,25 +78,6 @@ export default function BlogSection({ scrollTo }: { scrollTo: (id: string) => vo
             </StaggerItem>
           ))}
         </StaggerContainer>
-
-        {t.blog.items.length > 4 && !showAll && (
-          <div className="mt-14 text-center">
-            <button
-              onClick={() => setShowAll(true)}
-              className="cursor-pointer px-8 py-3.5 rounded-full border border-white/20 bg-white/[0.04] backdrop-blur-md text-white/80 hover:text-white hover:bg-white/10 hover:border-amber-500/40 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300"
-            >
-              {lang === 'pt'
-                ? `Ver mais ${t.blog.items.length - 4} artigos e guias →`
-                : lang === 'es'
-                ? `Ver ${t.blog.items.length - 4} artículos más →`
-                : lang === 'fr'
-                ? `Découvrir ${t.blog.items.length - 4} autres articles →`
-                : lang === 'de'
-                ? `${t.blog.items.length - 4} weitere Artikel entdecken →`
-                : `Discover ${t.blog.items.length - 4} more stories →`}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );

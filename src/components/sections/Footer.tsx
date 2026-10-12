@@ -59,16 +59,19 @@ export default function Footer({ scrollTo }: { scrollTo: (id: string) => void })
             alt="NORTHÉ — Private Tours"
             className="h-16 sm:h-20 md:h-24 w-auto opacity-90 mb-4 transition-opacity hover:opacity-100"
           />
-          <p className="font-serif italic text-white/40 text-sm sm:text-base max-w-lg mb-4">
+          <p className="font-serif italic text-white/70 text-sm sm:text-base mb-1.5">
             {lang === 'pt'
-              ? 'Experiências Privadas a partir do Porto · Douro Valley · Norte de Portugal'
+              ? 'Experiências privadas a partir do Porto'
               : lang === 'es'
-              ? 'Experiencias Privadas desde Oporto · Valle del Duero · Norte de Portugal'
+              ? 'Experiencias privadas desde Oporto'
               : lang === 'fr'
-              ? 'Expériences Privées au départ de Porto · Vallée du Douro · Nord du Portugal'
+              ? 'Expériences privées au départ de Porto'
               : lang === 'de'
-              ? 'Private Erlebnisse ab Porto · Douro-Tal · Nordportugal'
-              : 'Private Experiences from Porto · Douro Valley · Northern Portugal'}
+              ? 'Private Erlebnisse ab Porto'
+              : 'Private Experiences from Porto'}
+          </p>
+          <p className="font-sans text-xs sm:text-sm tracking-[0.2em] uppercase text-white/45 mb-5 font-light">
+            Porto . Douro . Norte de Portugal
           </p>
 
           {/* Live Portugal Destination Time & Season Badge */}
