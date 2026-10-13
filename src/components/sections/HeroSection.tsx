@@ -19,7 +19,7 @@ const SOCIAL_PROOF_TEXT = {
     travelersSub: 'desde 2018',
     driver: 'Motorista-Guia Especialista em Vinhos',
     driverSub: 'Fluente em PT · EN · ES · FR · DE',
-    fleet: 'Frota Executiva Mercedes-Benz',
+    fleet: 'Frota Executiva',
     fleetSub: 'Ar condicionado · Wi-Fi · Água',
   },
   en: {
@@ -31,7 +31,7 @@ const SOCIAL_PROOF_TEXT = {
     travelersSub: 'since 2018',
     driver: 'Certified Wine-Expert Driver-Guide',
     driverSub: 'Fluent PT · EN · ES · FR · DE',
-    fleet: 'Executive Mercedes-Benz Fleet',
+    fleet: 'Executive Fleet',
     fleetSub: 'A/C · Wi-Fi · Water',
   },
   es: {
@@ -43,7 +43,7 @@ const SOCIAL_PROOF_TEXT = {
     travelersSub: 'desde 2018',
     driver: 'Chófer-Guía Experto en Vinos',
     driverSub: 'Fluido en PT · EN · ES · FR · DE',
-    fleet: 'Flota Ejecutiva Mercedes-Benz',
+    fleet: 'Flota Ejecutiva',
     fleetSub: 'Climatización · Wi-Fi · Agua',
   },
   fr: {
@@ -55,7 +55,7 @@ const SOCIAL_PROOF_TEXT = {
     travelersSub: 'depuis 2018',
     driver: 'Chauffeur-Guide Sommelier Expert',
     driverSub: 'Parlant couramment PT · EN · ES · FR · DE',
-    fleet: 'Flotte Exécutive Mercedes-Benz',
+    fleet: 'Flotte Exécutive',
     fleetSub: 'Climatisation · Wi-Fi · Eau',
   },
   de: {
@@ -67,7 +67,7 @@ const SOCIAL_PROOF_TEXT = {
     travelersSub: 'seit 2018',
     driver: 'Zertifizierter Weinexperte & Chauffeur',
     driverSub: 'Fließend in PT · EN · ES · FR · DE',
-    fleet: 'Executive Mercedes-Benz Flotte',
+    fleet: 'Executive Flotte',
     fleetSub: 'Klimaanlage · WLAN · Wasser',
   },
 };
@@ -75,27 +75,27 @@ const SOCIAL_PROOF_TEXT = {
 const REASSURANCE_TEXT = {
   pt: {
     privateTour: '100% Privado (1–8 pessoas)',
-    fleet: 'Transporte Executivo Mercedes-Benz',
+    fleet: 'Frota Executiva',
     cancel: 'Cancelamento Gratuito até 48h',
   },
   en: {
     privateTour: '100% Private (1–8 guests)',
-    fleet: 'Executive Mercedes-Benz Transport',
+    fleet: 'Executive Fleet',
     cancel: 'Free Cancellation up to 48h',
   },
   es: {
     privateTour: '100% Privado (1–8 personas)',
-    fleet: 'Transporte Ejecutivo Mercedes-Benz',
+    fleet: 'Flota Ejecutiva',
     cancel: 'Cancelación Gratuita hasta 48h',
   },
   fr: {
     privateTour: '100% Privé (1–8 personnes)',
-    fleet: 'Transport Exécutif Mercedes-Benz',
+    fleet: 'Flotte Exécutive',
     cancel: "Annulation Gratuite jusqu'à 48h",
   },
   de: {
     privateTour: '100% Privat (1–8 Gäste)',
-    fleet: 'Executive Mercedes-Benz Transport',
+    fleet: 'Executive Flotte',
     cancel: 'Kostenlose Stornierung bis 48h',
   },
 };

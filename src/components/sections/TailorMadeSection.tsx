@@ -6,7 +6,7 @@ import { IMG, Reveal, AmbientGlow } from '../../utils/shared';
 
 const BENTO_FEATURES = {
   pt: {
-    fleetTitle: 'Frota Executiva Mercedes-Benz',
+    fleetTitle: 'Frota Executiva',
     fleetDesc: 'Viaturas de luxo com climatização individual, Wi-Fi 5G, água mineral fresca e silêncio absoluto de rodagem.',
     guideTitle: 'Guia-Especialista & Sommelier',
     guideDesc: 'Acompanhamento por profissionais experientes e fluentes, conhecedores profundos dos vinhos e tradições locais.',
@@ -15,7 +15,7 @@ const BENTO_FEATURES = {
     destinationsHeading: 'Destinos à Escolha',
   },
   en: {
-    fleetTitle: 'Executive Mercedes-Benz Fleet',
+    fleetTitle: 'Executive Fleet',
     fleetDesc: 'Top-tier luxury vehicles with privacy glass, high-speed Wi-Fi, chilled water, and superior ride comfort.',
     guideTitle: 'Local Wine Expert & Sommelier',
     guideDesc: 'Certified, multilingual specialists with deep knowledge of Portuguese terroirs, heritage, and hidden estates.',
@@ -24,7 +24,7 @@ const BENTO_FEATURES = {
     destinationsHeading: 'Destinations of Choice',
   },
   es: {
-    fleetTitle: 'Flota Ejecutiva Mercedes-Benz',
+    fleetTitle: 'Flota Ejecutiva',
     fleetDesc: 'Vehículos de alta gama con cristales tintados, Wi-Fi 5G, agua mineral fresca y máximo confort acústico.',
     guideTitle: 'Guía Especialista y Sumiller',
     guideDesc: 'Profesionales multilingües con amplio conocimiento de los mejores vinos y bodegas históricas de Portugal.',
@@ -33,7 +33,7 @@ const BENTO_FEATURES = {
     destinationsHeading: 'Destinos a su Elección',
   },
   fr: {
-    fleetTitle: 'Flotte Exécutive Mercedes-Benz',
+    fleetTitle: 'Flotte Exécutive',
     fleetDesc: 'Véhicules de prestige avec climatisation indépendante, Wi-Fi haut débit, eau fraîche et silence absolu.',
     guideTitle: 'Guide Spécialiste & Sommelier',
     guideDesc: 'Experts multilingues passionnés par les grands crus, les domaines familiaux et l’histoire secrète du Portugal.',
@@ -42,7 +42,7 @@ const BENTO_FEATURES = {
     destinationsHeading: 'Destinations au Choix',
   },
   de: {
-    fleetTitle: 'Executive Mercedes-Benz Flotte',
+    fleetTitle: 'Executive Flotte',
     fleetDesc: 'Erstklassige Fahrzeuge mit individueller Klimatisierung, schnellem WLAN, frischem Wasser und leisem Fahrkomfort.',
     guideTitle: 'Lokaler Weinexperte & Sommelier',
     guideDesc: 'Mehrsprachige Spezialisten mit profundem Wissen über Quintas, Weinherstellung und portugiesische Kultur.',
@@ -124,7 +124,7 @@ export default function TailorMadeSection({ scrollTo }: { scrollTo: (id: string)
             </div>
           </motion.div>
 
-          {/* Card 2: Mercedes-Benz Executive Fleet */}
+          {/* Card 2: Executive Fleet */}
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ duration: 0.3 }}

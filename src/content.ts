@@ -815,7 +815,7 @@ export const CONTENT = {
                 {
                     category: "transporte",
                     q: "Is vehicle transport during the tour exclusively private?",
-                    a: "Yes. All NORTHÉ journeys are conducted in executive Mercedes-Benz vehicles reserved exclusively for your party.",
+                    a: "Yes. All NORTHÉ journeys are conducted in executive fleet vehicles reserved exclusively for your party.",
                 },
                 {
                     category: "douro",
@@ -1095,7 +1095,7 @@ export const CONTENT = {
                         { type: "p", text: "Departing from Porto, possibilities abound: from the terraced vineyards of the Douro to historic Braga and Guimarães, the waterfalls of Gerês, or the manor estates of the Minho." },
                         { type: "p", text: "For couples, families, and intimate groups, privacy ensures absolute comfort in executive vehicles without sharing your day with strangers." },
                         { type: "p", text: "More than checking off monuments, a private journey lets you choose how you wish to experience Portugal." },
-                        { type: "p", text: "At NORTHÉ, we curate bespoke private journeys from Porto with certified chauffeur-guides, executive Mercedes-Benz transport, and passionate attention to detail." },
+                        { type: "p", text: "At NORTHÉ, we curate bespoke private journeys from Porto with certified chauffeur-guides, executive fleet transport, and passionate attention to detail." },
                         { type: "p", text: "Explore NORTHÉ private signature collection." },
                     ],
                 },
