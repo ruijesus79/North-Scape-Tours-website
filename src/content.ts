@@ -1592,7 +1592,7 @@ blog: {
                     ]
                 },
                 {
-                    slug: "norte-de-portugal-lugares-para-conhecer",
+                    slug: "norte-de-portugal-lugares-alem-do-porto",
                     title: "Norte de Portugal: Lugares Para Conocer Más Allá de Oporto",
                     subtitle: "Una región de paisajes, historia viva, vinos y cultura",
                     excerpt: "El Norte de Portugal es un territorio mucho más vasto y diverso que solo Oporto y el Duero.",
@@ -2165,7 +2165,7 @@ blog: {
                     ]
                 },
                 {
-                    slug: "norte-de-portugal-lugares-para-conhecer",
+                    slug: "norte-de-portugal-lugares-alem-do-porto",
                     title: "Nord du Portugal : Trésors à Découvrir au-delà de Porto",
                     subtitle: "Un territoire d'histoire, de paysages, de vignobles et d'authenticité",
                     excerpt: "Le Nord du Portugal s'étend bien au-delà de Porto et de la Vallée du Douro.",
@@ -2738,7 +2738,7 @@ blog: {
                     ]
                 },
                 {
-                    slug: "norte-de-portugal-lugares-para-conhecer",
+                    slug: "norte-de-portugal-lugares-alem-do-porto",
                     title: "Nordportugal: Orte Jenseits von Porto Entdecken",
                     subtitle: "Eine facettenreiche Region voll Landschaft, Geschichte und Wein",
                     excerpt: "Nordportugal bietet weitaus mehr als die bekannten Ufer von Porto und dem Douro.",

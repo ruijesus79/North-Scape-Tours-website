@@ -3535,13 +3535,13 @@ export const ALL_17_TOURS: TourItem[] = [
     "startingPrice": 599,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
-    "image": "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-private-tour.webp",
+    "image": "/images/tours/nazare-sao-martinho/1.webp",
     "gallery": [
-      "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-private-tour.webp",
-      "/images/tours/nazare-sao-martinho/nazare-sao-martinho-do-porto-private-tour-1.webp",
+      "/images/tours/nazare-sao-martinho/1.webp",
       "/images/tours/nazare-sao-martinho/nazare-private-tour.webp",
       "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-nazare-private-tour.webp",
-      "/images/tours/nazare-sao-martinho/nazare-sao-martinho-do-porto-private-tour.webp"
+      "/images/tours/nazare-sao-martinho/nazare-sao-martinho-do-porto-private-tour-1.webp",
+      "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-private-tour.webp"
     ],
     "experienceBadge": {
       "pt": "Canhão da Nazaré & Ondas Gigantes Mundiais",

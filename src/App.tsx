@@ -160,7 +160,7 @@ export default function App() {
           <div className="flex-1 flex justify-start">
             <button
               onClick={() => scrollTo('home')}
-              className="cursor-pointer z-50 relative flex-shrink-0 flex items-center gap-3 group"
+              className="cursor-pointer z-50 relative flex-shrink-0 flex flex-col items-start group text-left"
               aria-label="NORTHÉ Início"
             >
               <img
@@ -170,6 +170,24 @@ export default function App() {
                   isScrolled || isSubPage ? 'h-9 sm:h-10' : 'h-14 sm:h-16 md:h-20'
                 }`}
               />
+              {!isScrolled && !isSubPage && (
+                <div className="hidden sm:flex flex-col mt-1.5 transition-opacity duration-300 pointer-events-none">
+                  <span className="font-serif italic text-white/80 text-[11px] leading-tight tracking-wide">
+                    {lang === 'pt'
+                      ? 'Experiências privadas a partir do Porto'
+                      : lang === 'es'
+                      ? 'Experiencias privadas desde Oporto'
+                      : lang === 'fr'
+                      ? 'Expériences privées au départ de Porto'
+                      : lang === 'de'
+                      ? 'Private Erlebnisse ab Porto'
+                      : 'Private Experiences from Porto'}
+                  </span>
+                  <span className="font-sans text-[9px] uppercase tracking-[0.22em] text-white/45 font-light mt-0.5">
+                    Porto . Douro . Norte de Portugal
+                  </span>
+                </div>
+              )}
             </button>
           </div>
 
