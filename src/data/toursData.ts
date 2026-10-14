@@ -40,6 +40,7 @@ export interface TourItem {
   highlights: LocalizedList;
   included: LocalizedList;
   boatBadge?: LocalizedText;
+  boatOption?: 'shared_with_private_upgrade' | 'private_included' | 'none';
   experienceBadge?: LocalizedText;
   pricingTiers: TourPricingTier[];
   startingPrice: number;
@@ -358,6 +359,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Vollumfängliche Haftpflicht- und Unfallversicherung"
       ]
     },
+    "boatOption": "shared_with_private_upgrade",
     "pricingTiers": [
       {
         "pax": 1,
@@ -365,31 +367,31 @@ export const ALL_17_TOURS: TourItem[] = [
       },
       {
         "pax": 2,
-        "price": 599
-      },
-      {
-        "pax": 3,
         "price": 649
       },
       {
-        "pax": 4,
-        "price": 699
-      },
-      {
-        "pax": 5,
+        "pax": 3,
         "price": 749
       },
       {
+        "pax": 4,
+        "price": 849
+      },
+      {
+        "pax": 5,
+        "price": 949
+      },
+      {
         "pax": 6,
-        "price": 799
+        "price": 1049
       },
       {
         "pax": 7,
-        "price": 899
+        "price": 1099
       },
       {
         "pax": 8,
-        "price": 949
+        "price": 1199
       }
     ],
     "startingPrice": 549,
@@ -600,41 +602,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Umfassende Personen- und Haftpflichtversicherung"
       ]
     },
+    "boatOption": "shared_with_private_upgrade",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 549
-      },
-      {
-        "pax": 2,
         "price": 599
       },
       {
-        "pax": 3,
-        "price": 649
-      },
-      {
-        "pax": 4,
-        "price": 699
-      },
-      {
-        "pax": 5,
-        "price": 749
-      },
-      {
-        "pax": 6,
+        "pax": 2,
         "price": 799
       },
       {
+        "pax": 3,
+        "price": 949
+      },
+      {
+        "pax": 4,
+        "price": 1099
+      },
+      {
+        "pax": 5,
+        "price": 1299
+      },
+      {
+        "pax": 6,
+        "price": 1449
+      },
+      {
         "pax": 7,
-        "price": 899
+        "price": 1599
       },
       {
         "pax": 8,
-        "price": 949
+        "price": 1749
       }
     ],
-    "startingPrice": 549,
+    "startingPrice": 599,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/douro-wine-gastronomy/douro-valley-private-boat-experience.webp",
@@ -847,41 +850,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Umfassende Haftpflicht- und Unfallversicherung"
       ]
     },
+    "boatOption": "shared_with_private_upgrade",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 530
+        "price": 549
       },
       {
         "pax": 2,
-        "price": 580
+        "price": 649
       },
       {
         "pax": 3,
-        "price": 630
+        "price": 749
       },
       {
         "pax": 4,
-        "price": 680
+        "price": 849
       },
       {
         "pax": 5,
-        "price": 730
+        "price": 949
       },
       {
         "pax": 6,
-        "price": 780
+        "price": 1049
       },
       {
         "pax": 7,
-        "price": 880
+        "price": 1099
       },
       {
         "pax": 8,
-        "price": 930
+        "price": 1199
       }
     ],
-    "startingPrice": 530,
+    "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/amarante-mateus-palace-douro/amarante-historic-bridge.webp",
@@ -892,6 +896,13 @@ export const ALL_17_TOURS: TourItem[] = [
       "/images/tours/amarante-mateus-palace-douro/marthas-douro-wine-tasting.webp",
       "/images/tours/amarante-mateus-palace-douro/douro-valley-private-tour-wine.webp"
     ],
+    "boatBadge": {
+      "pt": "Cruzeiro no Douro (Barco Partilhado)",
+      "en": "Douro River Cruise (Shared Boat)",
+      "es": "Crucero en el Duero (Barco Compartido)",
+      "fr": "Croisière sur le Douro (Bateau Partagé)",
+      "de": "Douro-Schifffahrt (Geteiltes Boot)"
+    },
     "experienceBadge": {
       "pt": "Palácio de Mateus & Portos 10 e 20 Anos",
       "en": "Mateus Palace & 10 & 20 Year Aged Ports",
@@ -1082,41 +1093,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Umfassende Haftpflicht- und Unfallversicherung"
       ]
     },
+    "boatOption": "shared_with_private_upgrade",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 540
+        "price": 549
       },
       {
         "pax": 2,
-        "price": 590
+        "price": 649
       },
       {
         "pax": 3,
-        "price": 640
+        "price": 749
       },
       {
         "pax": 4,
-        "price": 690
+        "price": 849
       },
       {
         "pax": 5,
-        "price": 740
+        "price": 949
       },
       {
         "pax": 6,
-        "price": 790
+        "price": 1049
       },
       {
         "pax": 7,
-        "price": 890
+        "price": 1099
       },
       {
         "pax": 8,
-        "price": 940
+        "price": 1199
       }
     ],
-    "startingPrice": 540,
+    "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/lamego-douro/lamego-private-experience-historic-streets.webp",
@@ -1334,41 +1346,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Umfassende Haftpflicht- und Unfallversicherung"
       ]
     },
+    "boatOption": "private_included",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 649
-      },
-      {
-        "pax": 2,
-        "price": 699
-      },
-      {
-        "pax": 3,
         "price": 749
       },
       {
-        "pax": 4,
-        "price": 799
-      },
-      {
-        "pax": 5,
+        "pax": 2,
         "price": 849
       },
       {
-        "pax": 6,
-        "price": 899
+        "pax": 3,
+        "price": 949
       },
       {
-        "pax": 7,
+        "pax": 4,
         "price": 999
       },
       {
+        "pax": 5,
+        "price": 1099
+      },
+      {
+        "pax": 6,
+        "price": 1199
+      },
+      {
+        "pax": 7,
+        "price": 1299
+      },
+      {
         "pax": 8,
-        "price": 1049
+        "price": 1399
       }
     ],
-    "startingPrice": 649,
+    "startingPrice": 749,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/douro-private-celebration/1.webp",
@@ -1580,41 +1593,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Umfassende Haftpflicht- und Unfallversicherung"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 520
+        "price": 599
       },
       {
         "pax": 2,
-        "price": 570
+        "price": 699
       },
       {
         "pax": 3,
-        "price": 620
+        "price": 799
       },
       {
         "pax": 4,
-        "price": 670
+        "price": 949
       },
       {
         "pax": 5,
-        "price": 720
+        "price": 1049
       },
       {
         "pax": 6,
-        "price": 770
+        "price": 1149
       },
       {
         "pax": 7,
-        "price": 870
+        "price": 1299
       },
       {
         "pax": 8,
-        "price": 920
+        "price": 1399
       }
     ],
-    "startingPrice": 520,
+    "startingPrice": 599,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
@@ -1829,41 +1843,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und Versicherungsschutz"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 490
+        "price": 549
       },
       {
         "pax": 2,
-        "price": 540
+        "price": 649
       },
       {
         "pax": 3,
-        "price": 590
+        "price": 699
       },
       {
         "pax": 4,
-        "price": 640
+        "price": 799
       },
       {
         "pax": 5,
-        "price": 690
+        "price": 849
       },
       {
         "pax": 6,
-        "price": 740
+        "price": 899
       },
       {
         "pax": 7,
-        "price": 840
+        "price": 999
       },
       {
         "pax": 8,
-        "price": 890
+        "price": 1049
       }
     ],
-    "startingPrice": 490,
+    "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/barcelos-braga-guimaraes/barcelos-braga-guimaraes-private-tour-2.webp",
@@ -2059,41 +2074,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Haftpflicht- und Personenunfallversicherung"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 560
+        "price": 649
       },
       {
         "pax": 2,
-        "price": 610
+        "price": 749
       },
       {
         "pax": 3,
-        "price": 660
+        "price": 799
       },
       {
         "pax": 4,
-        "price": 710
+        "price": 899
       },
       {
         "pax": 5,
-        "price": 760
+        "price": 949
       },
       {
         "pax": 6,
-        "price": 810
+        "price": 1049
       },
       {
         "pax": 7,
-        "price": 910
+        "price": 1099
       },
       {
         "pax": 8,
-        "price": 960
+        "price": 1199
       }
     ],
-    "startingPrice": 560,
+    "startingPrice": 649,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/fatima-batalha-tomar/1.webp",
@@ -2294,41 +2310,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Umfassende Haftpflicht- und Unfallversicherung"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 560
+        "price": 599
       },
       {
         "pax": 2,
-        "price": 610
+        "price": 698
       },
       {
         "pax": 3,
-        "price": 660
+        "price": 837
       },
       {
         "pax": 4,
-        "price": 710
+        "price": 916
       },
       {
         "pax": 5,
-        "price": 760
+        "price": 1045
       },
       {
         "pax": 6,
-        "price": 810
+        "price": 1134
       },
       {
         "pax": 7,
-        "price": 910
+        "price": 1253
       },
       {
         "pax": 8,
-        "price": 960
+        "price": 1352
       }
     ],
-    "startingPrice": 560,
+    "startingPrice": 599,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/obidos-alcobaca/private-tour-obidos-alcobaca-1.webp",
@@ -2529,41 +2546,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und umfassende Versicherung"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 420
+        "price": 499
       },
       {
         "pax": 2,
-        "price": 470
+        "price": 599
       },
       {
         "pax": 3,
-        "price": 520
+        "price": 699
       },
       {
         "pax": 4,
-        "price": 570
+        "price": 799
       },
       {
         "pax": 5,
-        "price": 620
+        "price": 899
       },
       {
         "pax": 6,
-        "price": 670
+        "price": 999
       },
       {
         "pax": 7,
-        "price": 770
+        "price": 1099
       },
       {
         "pax": 8,
-        "price": 820
+        "price": 1249
       }
     ],
-    "startingPrice": 420,
+    "startingPrice": 499,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/porto-highlights-ocean/private-tour-porto-wine-gastronomy-1.webp",
@@ -2761,6 +2779,7 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und umfassender Versicherungsschutz"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
@@ -2996,41 +3015,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Haftpflicht- und Personenunfallversicherung"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 460
+        "price": 549
       },
       {
         "pax": 2,
-        "price": 510
+        "price": 699
       },
       {
         "pax": 3,
-        "price": 560
+        "price": 849
       },
       {
         "pax": 4,
-        "price": 610
+        "price": 999
       },
       {
         "pax": 5,
-        "price": 660
+        "price": 1199
       },
       {
         "pax": 6,
-        "price": 710
+        "price": 1349
       },
       {
         "pax": 7,
-        "price": 810
+        "price": 1499
       },
       {
         "pax": 8,
-        "price": 860
+        "price": 1649
       }
     ],
-    "startingPrice": 460,
+    "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/porto-filigree-gourmet/porto-vinho-filigrana-1.webp",
@@ -3241,41 +3261,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und Versicherungsschutz"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 640
+        "price": 699
       },
       {
         "pax": 2,
-        "price": 690
+        "price": 949
       },
       {
         "pax": 3,
-        "price": 740
+        "price": 1149
       },
       {
         "pax": 4,
-        "price": 790
+        "price": 1399
       },
       {
         "pax": 5,
-        "price": 840
+        "price": 1649
       },
       {
         "pax": 6,
-        "price": 890
+        "price": 1899
       },
       {
         "pax": 7,
-        "price": 990
+        "price": 2099
       },
       {
         "pax": 8,
-        "price": 1040
+        "price": 2299
       }
     ],
-    "startingPrice": 640,
+    "startingPrice": 699,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/douro-blind-tasting-blend/1.webp",
@@ -3476,41 +3497,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und umfassender Versicherungsschutz"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 550
+        "price": 599
       },
       {
         "pax": 2,
-        "price": 600
+        "price": 699
       },
       {
         "pax": 3,
-        "price": 650
+        "price": 749
       },
       {
         "pax": 4,
-        "price": 700
+        "price": 849
       },
       {
         "pax": 5,
-        "price": 750
+        "price": 949
       },
       {
         "pax": 6,
-        "price": 800
+        "price": 999
       },
       {
         "pax": 7,
-        "price": 900
+        "price": 1049
       },
       {
         "pax": 8,
-        "price": 950
+        "price": 1099
       }
     ],
-    "startingPrice": 550,
+    "startingPrice": 599,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/nazare-sao-martinho/sao-martinho-do-porto-private-tour.webp",
@@ -3708,41 +3730,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und umfassender Versicherungsschutz"
       ]
     },
+    "boatOption": "none",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 510
+        "price": 469
       },
       {
         "pax": 2,
-        "price": 560
+        "price": 549
       },
       {
         "pax": 3,
-        "price": 610
+        "price": 629
       },
       {
         "pax": 4,
-        "price": 660
+        "price": 699
       },
       {
         "pax": 5,
-        "price": 710
+        "price": 779
       },
       {
         "pax": 6,
-        "price": 760
+        "price": 859
       },
       {
         "pax": 7,
-        "price": 860
+        "price": 929
       },
       {
         "pax": 8,
-        "price": 910
+        "price": 1009
       }
     ],
-    "startingPrice": 510,
+    "startingPrice": 469,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/arouca-santa-maria-feira/arouca-santa-maria-da-feira-tour-3.webp",
@@ -3940,41 +3963,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und Versicherungsschutz"
       ]
     },
+    "boatOption": "shared_with_private_upgrade",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 560
+        "price": 549
       },
       {
         "pax": 2,
-        "price": 610
+        "price": 649
       },
       {
         "pax": 3,
-        "price": 660
+        "price": 749
       },
       {
         "pax": 4,
-        "price": 710
+        "price": 799
       },
       {
         "pax": 5,
-        "price": 760
+        "price": 899
       },
       {
         "pax": 6,
-        "price": 810
+        "price": 999
       },
       {
         "pax": 7,
-        "price": 910
+        "price": 1099
       },
       {
         "pax": 8,
-        "price": 960
+        "price": 1199
       }
     ],
-    "startingPrice": 560,
+    "startingPrice": 549,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/historic-quinta-bucheiro-douro/1.webp",
@@ -4179,41 +4203,42 @@ export const ALL_17_TOURS: TourItem[] = [
         "Mineralwasser an Bord und umfassende Versicherung"
       ]
     },
+    "boatOption": "shared_with_private_upgrade",
     "pricingTiers": [
       {
         "pax": 1,
-        "price": 620
+        "price": 649
       },
       {
         "pax": 2,
-        "price": 670
+        "price": 849
       },
       {
         "pax": 3,
-        "price": 720
+        "price": 999
       },
       {
         "pax": 4,
-        "price": 770
+        "price": 1199
       },
       {
         "pax": 5,
-        "price": 820
+        "price": 1399
       },
       {
         "pax": 6,
-        "price": 870
+        "price": 1599
       },
       {
         "pax": 7,
-        "price": 970
+        "price": 1799
       },
       {
         "pax": 8,
-        "price": 1020
+        "price": 1999
       }
     ],
-    "startingPrice": 620,
+    "startingPrice": 649,
     "gygVerified": true,
     "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
     "image": "/images/tours/douro-luxury-picnic/1.webp",

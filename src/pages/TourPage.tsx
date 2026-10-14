@@ -304,6 +304,44 @@ const BOAT_OBSERVATION = {
   }
 };
 
+const PRIVATE_INCLUDED_NOTE = {
+  pt: {
+    title: 'Cruzeiro 100% Privado Incluído',
+    badge: 'Exclusivo',
+    line1: 'Cruzeiro fluvial privativo no Rio Douro incluído no valor do tour.',
+    line2: 'Navegação reservada exclusivamente para o seu grupo (sem partilha com outros passageiros), com espumante a bordo.',
+    sidebarNote: 'Barco Privado já incluído no valor base deste tour.'
+  },
+  en: {
+    title: '100% Private Boat Cruise Included',
+    badge: 'Exclusive',
+    line1: 'Private river cruise on the Douro River included in base tour rate.',
+    line2: 'Dedicated exclusively to your private party (no sharing with other guests), featuring sparkling wine on board.',
+    sidebarNote: 'Private Boat already included in this tour’s base rate.'
+  },
+  es: {
+    title: 'Crucero 100% Privado Incluido',
+    badge: 'Exclusivo',
+    line1: 'Crucero fluvial privado en el río Duero incluido en la tarifa base.',
+    line2: 'Navegación reservada en exclusiva para su grupo (sin compartir con otros clientes), con vino espumoso a bordo.',
+    sidebarNote: 'Barco Privado ya incluido en la tarifa base de este tour.'
+  },
+  fr: {
+    title: 'Croisière 100% Privée Incluse',
+    badge: 'Exclusif',
+    line1: 'Croisière fluviale privée sur le Douro incluse dans le tarif du tour.',
+    line2: 'Navigation réservée exclusivement à votre groupe privé (sans partage), avec vin pétillant à bord.',
+    sidebarNote: 'Bateau Privé déjà inclus dans le tarif de base.'
+  },
+  de: {
+    title: '100% Private Bootsfahrt Inklusive',
+    badge: 'Exklusiv',
+    line1: 'Private Flussfahrt auf dem Douro im Grundpreis der Tour bereits enthalten.',
+    line2: 'Exklusiv für Ihre private Gruppe reserviert (keine geteilten Plätze), mit Schaumwein an Bord.',
+    sidebarNote: 'Privates Boot bereits im Grundpreis dieser Tour enthalten.'
+  }
+};
+
 export default function TourPage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
@@ -331,6 +369,7 @@ export default function TourPage() {
     window.scrollTo({ top: 0, behavior: 'instant' });
     setActivePhotoIdx(0);
     setIsLightboxOpen(false);
+    setSelectedExtras([]);
   }, [slug]);
 
   // Gallery photos
@@ -378,8 +417,10 @@ export default function TourPage() {
   const tourFullDesc = tour.fullDesc[lang] || tour.fullDesc['en'] || tour.fullDesc.pt;
   const boatBadge = tour.boatBadge ? (tour.boatBadge[lang] || tour.boatBadge['en'] || tour.boatBadge.pt) : undefined;
   const experienceBadge = tour.experienceBadge ? (tour.experienceBadge[lang] || tour.experienceBadge['en'] || tour.experienceBadge.pt) : undefined;
-  const hasDouroBoat = tour.category === 'douro' || tour.id === 'ponte-de-lima-douro' || (Boolean(tour.boatBadge) && !tour.boatBadge?.pt.includes('Moliceiro'));
+  const hasDouroBoatUpgrade = tour.boatOption === 'shared_with_private_upgrade';
+  const isPrivateBoatIncluded = tour.boatOption === 'private_included';
   const boatNote = BOAT_OBSERVATION[lang as keyof typeof BOAT_OBSERVATION] || BOAT_OBSERVATION.en;
+  const privateBoatNote = PRIVATE_INCLUDED_NOTE[lang as keyof typeof PRIVATE_INCLUDED_NOTE] || PRIVATE_INCLUDED_NOTE.en;
 
   // Calculate pricing based on selected Pax
   const tierPrice = tour.pricingTiers.find((tier) => tier.pax === selectedPax)?.price ?? tour.startingPrice;
@@ -689,7 +730,7 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
             </div>
 
             {/* Douro Boat Shared note & Private Upgrade callout */}
-            {hasDouroBoat && (
+            {hasDouroBoatUpgrade && (
               <div className="mt-6 p-4.5 rounded-2xl bg-amber-500/[0.05] border border-amber-500/20 flex items-start gap-3">
                 <Anchor size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
                 <div className="text-xs text-white/70 leading-relaxed font-light">
@@ -704,6 +745,25 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
                   <p className="text-white/85 font-medium">{boatNote.line1}</p>
                   <p className="text-white/50 mt-1">{boatNote.line2}</p>
                   <p className="text-amber-300/80 mt-1.5 text-[11px] italic">{boatNote.subNote}</p>
+                </div>
+              </div>
+            )}
+
+            {/* Private Boat Already Included Callout (North-005) */}
+            {isPrivateBoatIncluded && (
+              <div className="mt-6 p-4.5 rounded-2xl bg-amber-500/[0.08] border border-amber-500/30 flex items-start gap-3">
+                <Anchor size={18} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                <div className="text-xs text-white/70 leading-relaxed font-light">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="font-semibold text-amber-300 uppercase tracking-wider text-[11px]">
+                      {privateBoatNote.title}
+                    </span>
+                    <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 font-semibold">
+                      {privateBoatNote.badge}
+                    </span>
+                  </div>
+                  <p className="text-white/85 font-medium">{privateBoatNote.line1}</p>
+                  <p className="text-white/50 mt-1">{privateBoatNote.line2}</p>
                 </div>
               </div>
             )}
@@ -723,7 +783,7 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
             </p>
 
             <div className="space-y-3">
-              {VIP_EXTRAS.map((extra) => {
+              {VIP_EXTRAS.filter((extra) => extra.id !== 'private-boat' || hasDouroBoatUpgrade).map((extra) => {
                 const isChecked = selectedExtras.includes(extra.id);
                 const extraName = extra.name[lang] || extra.name['en'] || extra.name.pt;
                 const extraTagline = extra.tagline[lang] || extra.tagline['en'] || extra.tagline.pt;
@@ -828,8 +888,8 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
               </p>
             </div>
 
-            {/* Private Boat Tour Supplement Box (Douro Experiences) */}
-            {hasDouroBoat && (
+            {/* Private Boat Tour Supplement Box (when upgrade is available) */}
+            {hasDouroBoatUpgrade && (
               <div className="py-5 border-b border-white/10">
                 <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-amber-500/[0.08] to-white/[0.02] border border-amber-500/30">
                   <div className="flex items-center justify-between mb-2">
@@ -864,6 +924,21 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
                       {selectedExtras.includes('private-boat') ? boatNote.actionAdded : boatNote.actionAdd}
                     </span>
                   </button>
+                </div>
+              </div>
+            )}
+
+            {/* Private Boat Already Included Box (North-005 Celebre no Douro) */}
+            {isPrivateBoatIncluded && (
+              <div className="py-5 border-b border-white/10">
+                <div className="p-4 sm:p-5 rounded-2xl bg-amber-500/[0.06] border border-amber-500/20">
+                  <div className="flex items-center gap-2 text-amber-300 font-medium text-xs sm:text-sm">
+                    <Check size={16} className="text-amber-400 flex-shrink-0" />
+                    <span>{privateBoatNote.title}</span>
+                  </div>
+                  <p className="text-[11px] text-white/70 mt-1 leading-relaxed">
+                    {privateBoatNote.sidebarNote}
+                  </p>
                 </div>
               </div>
             )}
