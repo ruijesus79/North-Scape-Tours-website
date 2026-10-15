@@ -79,7 +79,7 @@ export default function ReviewsSection() {
 
           <div className="flex items-center gap-1 text-[10px] text-emerald-400/80 font-medium">
             <CheckCircle2 size={11} className="text-emerald-400" />
-            <span className="hidden sm:inline">Verificado</span>
+            <span className="hidden sm:inline">{(t.reviews as any).verifiedTag || 'Verificado'}</span>
           </div>
         </div>
       </div>
