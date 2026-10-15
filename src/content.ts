@@ -24,6 +24,7 @@ export const INSTAGRAM_PAGE = 'https://www.instagram.com/northetours/';
 export const TIKTOK_PAGE = 'https://www.tiktok.com/@northetours';
 export const YOUTUBE_PAGE = 'https://www.youtube.com/@NorthETours';
 export const GETYOURGUIDE_LINK = 'https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/';
+export const GOOGLE_REVIEWS_LINK = 'https://share.google/1cNLfjIGsUnAx9ebu';
 export const CONTENT = {
     pt: {
         nav: {
@@ -135,23 +136,32 @@ export const CONTENT = {
             statLabel: "Privado e Personalizado",
         },
         reviews: {
-            badge: 'Avaliações',
-            title: 'O Que Dizem os Nossos Clientes',
-            subtitle: 'Cada review é uma história real de quem viveu a experiência.',
-            rating: '4.9', totalReviews: '127',
+            badge: 'Reseñas',
+            title: 'Lo Que Dicen Nuestros Clientes',
+            subtitle: 'Cada reseña es una historia real de quien vivió la experiencia.',
+            rating: '5.0', totalReviews: '5.0 ★★★★★',
+            googleScore: '5.0',
+            googleBadge: 'Google Reviews',
+            googleVerified: 'Calificación 5.0 Estrellas en Google',
+            googleHighlight: '100% de opiniones verificadas con 5 estrellas',
+            viewOnGoogle: 'Ver todas las reseñas en Google Maps',
+            writeOnGoogle: 'Valorar en Google',
+            bottomTitle: '¿Ha vivido una experiencia con NORTHÉ?',
+            bottomSubtitle: 'Su opinión es de gran valor para nosotros. Conozca las historias de nuestros clientes o comparta su propia experiencia en nuestro perfil de Google.',
+            verifiedTag: 'Reseña Verificada en Google',
             items: [
-                { text: 'Uma experiência que transcende o turismo. Sentimo-nos como convidados de honra numa das regiões mais belas do mundo. O guia foi excepcional e a atenção ao detalhe impressionante.', author: 'Sofia Albuquerque', location: 'Lisboa, Portugal', flag: '🇵🇹', stars: 5 },
+                { text: 'Una experiencia que trasciende el turismo. Nos sentimos como invitados de honor en una de las regiones más bellas del mundo. El guía fue excepcional y la atención al detalle impresionante.', author: 'Sofia Albuquerque', location: 'Lisboa, Portugal', flag: '🇵🇹', stars: 5 },
                 { text: 'The attention to detail was impeccable. From the private boat ride to the exclusive wine tastings, everything was perfect. Highly recommended for anyone visiting Porto.', author: 'James Sterling', location: 'London, UK', flag: '🇬🇧', stars: 5 },
-                { text: 'Um dia mágico no Douro. O guia foi excelente, os vinhos soberbos e o almoço delicioso. Recomendo vivamente!', author: 'Marie Dubois', location: 'Paris, França', flag: '🇫🇷', stars: 4.5 },
-                { text: 'Melhor experiência de sempre no Douro! O passeio de barco ao pôr do sol foi inesquecível.', author: 'Carlos Mendes', location: 'São Paulo, Brasil', flag: '🇧🇷', stars: 5 },
-                { text: 'Um dia perfeito! A prova de vinhos foi de alto nível e a paisagem é de cortar a respiração.', author: 'Hannah Müller', location: 'Munique, Alemanha', flag: '🇩🇪', stars: 4.8 },
-                { text: 'Celebrámos o nosso aniversário com a NORTHÉ e foi o ponto alto da nossa viagem. Luxo real.', author: 'Michael & Sarah Chen', location: 'Nova Iorque, EUA', flag: '🇺🇸', stars: 5 },
-                { text: 'O guia sabia tudo sobre a história da região. Uma viagem imperdível para amantes de vinho.', author: 'Alessandro Rossi', location: 'Milão, Itália', flag: '🇮🇹', stars: 4.5 },
-                { text: 'Transfer impecável e tour ainda melhor. Serviço de primeira classe do início ao fim.', author: 'Lucía Fernández', location: 'Madrid, Espanha', flag: '🇪🇸', stars: 5 },
-                { text: 'Incrível! O Douro é mágico e a equipa da NORTHÉ tornou tudo mais especial.', author: 'Daan van der Berg', location: 'Amesterdão, Holanda', flag: '🇳🇱', stars: 4.8 },
+                { text: 'Un día mágico en el Duero. El guía fue excelente, los vinos soberbios y el almuerzo delicioso. ¡Muy recomendable!', author: 'Marie Dubois', location: 'París, Francia', flag: '🇫🇷', stars: 5 },
+                { text: '¡La mejor experiencia en el Duero! El paseo en barco al atardecer fue inolvidable.', author: 'Carlos Mendes', location: 'São Paulo, Brasil', flag: '🇧🇷', stars: 5 },
+                { text: '¡Un día perfecto! La cata de vinos fue de alto nivel y el paisaje es impresionante.', author: 'Hannah Müller', location: 'Múnich, Alemania', flag: '🇩🇪', stars: 5 },
+                { text: 'Celebramos nuestro aniversario con NORTHÉ y fue lo mejor de nuestro viaje. Lujo real.', author: 'Michael & Sarah Chen', location: 'Nueva York, EE. UU.', flag: '🇺🇸', stars: 5 },
+                { text: 'El guía sabía todo sobre la historia de la región. Un viaje imprescindible para los amantes del vino.', author: 'Alessandro Rossi', location: 'Milán, Italia', flag: '🇮🇹', stars: 5 },
+                { text: 'Traslado impecable y tour aún mejor. Servicio de primera clase de principio a fin.', author: 'Lucía Fernández', location: 'Madrid, España', flag: '🇪🇸', stars: 5 },
+                { text: '¡Increíble! El Duero es mágico y el equipo de NORTHÉ hizo que todo fuera especial.', author: 'Daan van der Berg', location: 'Ámsterdam, Holanda', flag: '🇳🇱', stars: 5 },
             ],
         },
-                        
+
         faq: {
             badge: "FAQ",
             title: "Perguntas Frequentes",
@@ -527,6 +537,82 @@ export const CONTENT = {
                         { type: "p", text: "Explore as experiências privadas da NORTHÉ." },
                     ],
                 },
+                {
+                    slug: "aveiro-e-coimbra-a-partir-do-porto",
+                    title: "Aveiro e Coimbra a Partir do Porto",
+                    subtitle: "Canais da Ria, Costa Nova e a Mais Antiga Universidade de Portugal",
+                    excerpt: "Uma jornada que combina os reflexos luminosos da Ria de Aveiro, as casas coloridas da Costa Nova e a monumental erudição de Coimbra.",
+                    date: "24 de Setembro de 2026",
+                    category: "Cultura & Tradição",
+                    image: "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
+                    readTime: "5 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Poucas viagens de um dia a partir do Porto oferecem um contraste tão fascinante entre a poesia da água e o peso da história como a rota entre Aveiro e Coimbra." },
+                        { type: "p", text: "Em Aveiro, muitas vezes celebrada como a 'Veneza Portuguesa', a vida desenrola-se ao ritmo dos canais da ria. A bordo de um barco moliceiro tradicional — outrora utilizado na recolha de algas para fertilização agrícola —, desliza-se suavemente sob pontes históricas enquanto se admiram as fachadas de Arte Nova mais requintadas do país." },
+                        { type: "p", text: "A curta distância, a Costa Nova surpreende com os seus 'palheiros': antigas casas de pescadores pintadas com riscas verticais vibrantes em tons de vermelho, azul e verde, diante do areal atlântico. É também paragem obrigatória para provar a autenticidade dos tradicionais ovos moles envolvidos em delicada hóstia." },
+                        { type: "p", text: "Rumo a sul, a cidade de Coimbra ergue-se imponente sobre o Rio Mondego. Berço de seis reis portugueses e da mais antiga universidade do país — fundada em 1290 e classificada pela UNESCO —, a sua Alta guarda a lendária Biblioteca Joanina. Esta obra-prima barroca abriga milhares de volumes raros e é guardada por uma colónia de morcegos que protege secularmente o acervo." },
+                        { type: "p", text: "Entre o romantismo dos canais e a solenidade académica, esta experiência privada convida a conhecer duas das cidades mais autênticas do Centro-Norte de Portugal com total conforto executivo." },
+                        { type: "p", text: "Descubra o tour privado Aveiro & Coimbra com a NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "nazare-obidos-e-sao-martinho-do-porto",
+                    title: "Nazaré e Óbidos: Ondas Gigantes e Muralhas Medievais",
+                    subtitle: "A mística da Costa de Prata entre o oceano selvagem e vilas de contos de fadas",
+                    excerpt: "Do promontório lendário da Nazaré, onde quebram as maiores ondas do planeta, às ruas floridas e muralhas de pedra da vila medieval de Óbidos.",
+                    date: "26 de Setembro de 2026",
+                    category: "Costa de Prata",
+                    image: "/images/tours/nazare-sao-martinho/1.webp",
+                    readTime: "5 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "A Costa de Prata portuguesa é um território onde a força indómita do Oceano Atlântico se cruza com séculos de histórias de reis, pescadores e marinheiros." },
+                        { type: "p", text: "Na Nazaré, o olhar perde-se do cimo do Sítio da Nazaré em direção ao horizonte. No Forte de São Miguel Arcanjo, erguido sobre a falésia, sente-se a potência cósmica do Canhão da Nazaré — um desfiladeiro submarino de mais de 5.000 metros de profundidade que gera as maiores ondas surfadas na história do planeta." },
+                        { type: "p", text: "Mas a Nazaré é também memória viva: as tradicionais varinas de sete saias, a seca artesanal do peixe no areal dourado e a gastronomia de marisco fresquíssimo que faz as delícias de quem aprecia sabores puros do mar." },
+                        { type: "p", text: "A curta distância, a atmosfera transforma-se ao avistar a baía em concha perfeita de São Martinho do Porto, um refúgio natural de águas mansas e tranquilidade rara." },
+                        { type: "p", text: "O roteiro completa-se com a entrada triunfal em Óbidos, uma das vilas medievais mais bem preservadas da Europa. Oferecida em tempos como presente de casamento pelos monarcas portugueses às suas rainhas, Óbidos convida a percorrer muralhas amparadas por torres de pedra, calçadas de seixos floridas de buganvílias e a saborear a tradicional ginjinha servida em copo de chocolate artesanal." },
+                        { type: "p", text: "Viva a Costa de Prata com o conforto e a exclusividade de um tour privado NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "fatima-batalha-e-tomar-monumentos-unesco",
+                    title: "Fátima, Batalha e Tomar: Roteiro dos Templários e Maravilhas UNESCO",
+                    subtitle: "Espiritualidade, gótico flamejante e a mística da Ordem dos Cavaleiros do Templo",
+                    excerpt: "Uma imersão na grandeza histórica de Portugal: a paz de Fátima, o rendilhado de pedra da Batalha e a fortaleza templária de Tomar.",
+                    date: "28 de Setembro de 2026",
+                    category: "História & Património",
+                    image: "/images/tours/fatima-batalha-tomar/1.webp",
+                    readTime: "5 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Poucos trajetos em Portugal concentram tanto simbolismo, fé e património arquitetónico universal como o triângulo formado por Fátima, Batalha e Tomar." },
+                        { type: "p", text: "A paragem em Fátima oferece um momento de serenidade e reflexão no Santuário de Nossa Senhora do Rosário. Um dos mais célebres locais de peregrinação mariana do mundo, Fátima acolhe visitantes de todas as origens com a sua vasta esplanada, a Basílica da Santíssima Trindade e a tocante Capelinha das Aparições." },
+                        { type: "p", text: "Prosseguindo caminho, o Mosteiro da Batalha (Santa Maria da Vitória) ergue-se como um dos cumes mundiais da arquitetura gótica e manuelina. Mandado erguer por D. João I em cumprimento de promessa após a decisiva Batalha de Aljubarrota em 1385, o monumento deslumbra pelos vitrais ancestrais e pelas célebres Capelas Imperfeitas — panteão octogonal a céu aberto trabalhado como renda em pedra calcária." },
+                        { type: "p", text: "Em Tomar, o culminar da jornada acontece no Convento de Cristo e Castelo dos Templários, sede da mítica Ordem do Templo e mais tarde da Ordem de Cristo. A Charola octogonal, inspirada na Rotunda do Santo Sepulcro de Jerusalém, e a icónica Janela Manuelina da Sala do Capítulo são testemunhos monumentais da época das Grandes Navegações e da expansão marítima portuguesa." },
+                        { type: "p", text: "Uma experiência privada indispensável para viajantes apaixonados por história, lendas cavalheirescas e grandes monumentos da humanidade." },
+                        { type: "p", text: "Reserve a sua jornada privada a Fátima, Batalha e Tomar com a NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "ponte-de-lima-e-barcelos-minho-vinho-verde",
+                    title: "Ponte de Lima e Barcelos: Tradição Nobre e Rota do Vinho Verde",
+                    subtitle: "A vila mais antiga de Portugal, a lenda do Galo e a alma senhorial do Minho",
+                    excerpt: "Descubra a nobreza rural do Minho: pontes romanas milenares, solares brasonados, o berço do Galo de Barcelos e as mais prestigiadas quintas de Vinho Verde.",
+                    date: "30 de Setembro de 2026",
+                    category: "Minho & Vinho Verde",
+                    image: "/images/tours/ponte-de-lima-douro/ponte-de-lima-historic-wine-centre.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "O coração do Minho guarda a identidade mais calorosa, tradicional e nobre de Portugal. Entre vales recortados por rios límpidos e vinhedos em pérgula, esta é a terra natal do inimitável Vinho Verde." },
+                        { type: "p", text: "Ponte de Lima ostenta com orgulho o título de vila mais antiga de Portugal, outorgado em foral de 1125 pela Rainha D. Teresa. A sua emblemática ponte gótica e romana sobre o Rio Lima foi cenário da famosa lenda do Rio Lethes: as legiões de Décimo Júnio Bruto hesitaram em atravessá-lo temendo perder todas as memórias da sua pátria." },
+                        { type: "p", text: "Passear pelo centro histórico de Ponte de Lima é respirar elegância clássica: solares fidalgos de pedra de cantaria, jardins floridos, o Centro de Interpretação e Promoção do Vinho Verde (CIPV) e restaurantes tradicionais onde o bacalhau de cebolada e o sarrabulho contam histórias de gerações." },
+                        { type: "p", text: "Em Barcelos, a criatividade artesanal revela-se na cerâmica e na célebre Lenda do Galo — o milagroso galo que cantou para salvar um peregrino inocente a caminho de Santiago de Compostela, tornando-se o símbolo nacional de Portugal." },
+                        { type: "p", text: "Com visitas a quintas solarengas com provas exclusivas das castas Loureiro e Alvarinho, este roteiro privado é a celebração definitiva da hospitalidade e do paladar minhoto." },
+                        { type: "p", text: "Explore as quintas e tradições do Minho com o conforto privado da NORTHÉ." }
+                    ]
+                }
             ],
         },
         contact: {
@@ -713,23 +799,32 @@ export const CONTENT = {
             statLabel: "Private & Tailor-Made",
         },
         reviews: {
-            badge: 'Reviews',
-            title: 'What Our Clients Say',
-            subtitle: 'Every review is a true story of those who lived the experience.',
-            rating: '4.9', totalReviews: '127',
+            badge: 'Bewertungen',
+            title: 'Was Unsere Gäste Sagen',
+            subtitle: 'Jede Bewertung ist eine echte Geschichte von Reisenden.',
+            rating: '5.0', totalReviews: '5.0 ★★★★★',
+            googleScore: '5.0',
+            googleBadge: 'Google Reviews',
+            googleVerified: 'Mit 5.0 Sternen auf Google bewertet',
+            googleHighlight: '100% verifizierte 5-Sterne-Gästebewertungen',
+            viewOnGoogle: 'Alle Bewertungen auf Google Maps ansehen',
+            writeOnGoogle: 'Auf Google bewerten',
+            bottomTitle: 'Haben Sie ein Erlebnis mit NORTHÉ genossen?',
+            bottomSubtitle: 'Ihr Feedback ist für uns von unschätzbarem Wert. Lesen Sie die Erfahrungsberichte unserer Gäste oder teilen Sie Ihre eigene Bewertung auf Google.',
+            verifiedTag: 'Verifizierte Google-Bewertung',
             items: [
-                { text: 'An experience that transcends tourism. We felt like guest of honor in one of the most beautiful regions in the world. The guide was exceptional and the attention to detail impressive.', author: 'Sofia Albuquerque', location: 'Lisbon, Portugal', flag: '🇵🇹', stars: 5 },
-                { text: 'The attention to detail was impeccable. From the private boat ride to the exclusive wine tastings, everything was perfect. Highly recommended for anyone visiting Porto.', author: 'James Sterling', location: 'London, UK', flag: '🇬🇧', stars: 5 },
-                { text: 'A magical day in the Douro. The guide was excellent, the wines superb and the lunch delicious. Highly recommend!', author: 'Marie Dubois', location: 'Paris, France', flag: '🇫🇷', stars: 4.5 },
-                { text: 'Best experience ever in the Douro! The sunset boat ride was unforgettable.', author: 'Carlos Mendes', location: 'São Paulo, Brazil', flag: '🇧🇷', stars: 5 },
-                { text: 'A perfect day! The wine tasting was top notch and the landscape is breathtaking.', author: 'Hannah Müller', location: 'Munich, Germany', flag: '🇩🇪', stars: 4.8 },
-                { text: 'We celebrated our anniversary with NORTHÉ and it was the highlight of our trip. Real luxury.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
-                { text: 'The guide knew everything about the history of the region. A must-trip for wine lovers.', author: 'Alessandro Rossi', location: 'Milan, Italy', flag: '🇮🇹', stars: 4.5 },
-                { text: 'Impeccable transfer and even better tour. First class service from start to finish.', author: 'Lucía Fernández', location: 'Madrid, Spain', flag: '🇪🇸', stars: 5 },
-                { text: 'Amazing! The Douro is magical and the NORTHÉ team made everything special.', author: 'Daan van der Berg', location: 'Amsterdam, Netherlands', flag: '🇳🇱', stars: 4.8 },
+                { text: 'Ein Erlebnis, das über den Tourismus hinausgeht. Wir fühlten uns wie Ehrengäste in einer der schönsten Regionen der Welt. Der Guide war außergewöhnlich und die Liebe zum Detail beeindruckend.', author: 'Sofia Albuquerque', location: 'Lissabon, Portugal', flag: '🇵🇹', stars: 5 },
+                { text: 'Die Liebe zum Detail war tadellos. Von der privaten Bootsfahrt bis hin zu den exklusiven Weinproben war alles perfekt. Sehr empfehlenswert für jeden, der Porto besucht.', author: 'James Sterling', location: 'London, GB', flag: '🇬🇧', stars: 5 },
+                { text: 'Ein magischer Tag im Douro-Tal. Der Guide war außergewöhnlich, die Weine hervorragend und das Mittagessen absolut köstlich. Ein absolutes Muss!', author: 'Marie Dubois', location: 'Paris, Frankreich', flag: '🇫🇷', stars: 5 },
+                { text: 'Das beste Erlebnis, das ich je am Douro hatte! Die Bootsfahrt zum Sonnenuntergang war unvergesslich. Ich kann NORTHÉ nur wärmstens empfehlen.', author: 'Carlos Mendes', location: 'São Paulo, Brasilien', flag: '🇧🇷', stars: 5 },
+                { text: 'Ein perfekter Tag im Douro-Tal! Die Weinprobe war erstklassig und die Landschaft atemberaubend. Wir werden auf jeden Fall wiederkommen.', author: 'Hannah Müller', location: 'München, Deutschland', flag: '🇩🇪', stars: 5 },
+                { text: 'Wir haben unser Jubiläum mit NORTHÉ gefeiert und es war der Höhepunkt unserer Reise. Das private Erlebnis fühlte sich wirklich exklusiv an. Es war jeden Cent wert.', author: 'Michael & Sarah Chen', location: 'New York, USA', flag: '🇺🇸', stars: 5 },
+                { text: 'Der Guide wusste alles über die Weine und die Geschichte der Region. Ein unvergessliche Reise, die ich allen Weinliebhabern empfehle.', author: 'Alessandro Rossi', location: 'Mailand, Italien', flag: '🇮🇹', stars: 5 },
+                { text: 'Der Flughafen-Transfer war makellos, und die Tour am nächsten Tag hat alle unsere Erwartungen übertroffen. Erstklassiger Service in jeder Hinsicht.', author: 'Lucía Fernández', location: 'Madrid, Spanien', flag: '🇪🇸', stars: 5 },
+                { text: 'Tolle Erfahrung! Das Boot auf dem Douro bei Sonnenuntergang war magisch. Professioneller Service von Anfang bis Ende.', author: 'Daan van der Berg', location: 'Amsterdam, Niederlande', flag: '🇳🇱', stars: 5 },
             ],
         },
-                        
+
         faq: {
             badge: "FAQ",
             title: "Everything You Need to Know",
@@ -1099,6 +1194,82 @@ export const CONTENT = {
                         { type: "p", text: "Explore NORTHÉ private signature collection." },
                     ],
                 },
+                {
+                    slug: "aveiro-e-coimbra-a-partir-do-porto",
+                    title: "Aveiro & Coimbra from Porto",
+                    subtitle: "Ria Canals, Costa Nova and Portugal's Oldest Historic University",
+                    excerpt: "A private journey uniting the aquatic grace of Aveiro's canals, vivid striped fisher cottages, and the centuries-old scholarly grandeur of Coimbra.",
+                    date: "September 24, 2026",
+                    category: "Culture & Heritage",
+                    image: "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
+                    readTime: "5 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Few day trips from Porto weave together such a compelling tapestry of maritime romance and medieval academic heritage as the scenic path to Aveiro and Coimbra." },
+                        { type: "p", text: "Often hailed as the 'Venice of Portugal', Aveiro is shaped by the tranquil lagoons of its Ria. Gliding aboard a private moliceiro boat — once navigated to harvest seagrass for agricultural fertilizer — guests drift under historic bridges while marveling at Portugal's finest Art Nouveau facades lining the banks." },
+                        { type: "p", text: "Minutes away lies Costa Nova, an idyllic seaside enclave famous for its brightly striped timber 'palheiros' in vivid candy reds, blues, and emerald greens facing the Atlantic dunes. It is also the ideal setting to savor authentic ovos moles, the delicate local egg-pastry legacy preserved by convent sisters." },
+                        { type: "p", text: "Continuing south along the banks of the Mondego River, Coimbra ascends dramatically into the sky. The cradle of six Portuguese monarchs and home to the oldest university in Portugal (founded in 1290 and recognized as a UNESCO World Heritage site), its upper campus shelters the incomparable Joanina Library. This gilded Baroque sanctuary houses thousands of rare antiquarian volumes, guarded by a resident bat colony that protects the ancient pages from insects." },
+                        { type: "p", text: "Between sunlit canals and sovereign academic libraries, this bespoke private itinerary immerses travelers in Portugal's intellectual and coastal heart in absolute executive comfort." },
+                        { type: "p", text: "Discover our private Aveiro & Coimbra tour with NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "nazare-obidos-e-sao-martinho-do-porto",
+                    title: "Nazaré & Óbidos: Monster Ocean Waves & Medieval Walled Fortresses",
+                    subtitle: "Silver Coast legends from colossal canyon swells to fairytale stone alleys",
+                    excerpt: "From the world's most epic big-wave promontory in Nazaré to the bougainvillea-draped stone ramparts of royal Óbidos.",
+                    date: "September 26, 2026",
+                    category: "Silver Coast",
+                    image: "/images/tours/nazare-sao-martinho/1.webp",
+                    readTime: "5 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Portugal's Silver Coast is a dramatic maritime realm where the untamed fury of the Atlantic meets nine centuries of kings, crusaders, and fearless seafarers." },
+                        { type: "p", text: "In Nazaré, standing atop the cliffside Sítio da Nazaré reveals a breathtaking panorama. Perched on the cliff edge, the red lighthouse fortress of São Miguel Arcanjo surveys the underwater Nazaré Canyon — an abyssal undersea chasm plunging over 16,000 feet that channels the most titanic surf waves ever ridden by humankind." },
+                        { type: "p", text: "Yet Nazaré is also deeply steeped in coastal heritage: local women still wearing the historic seven-layered skirts, silver fish drying in sea-breeze racks on golden beaches, and harborside taverns serving freshly landed seafood of exceptional caliber." },
+                        { type: "p", text: "A scenic coastal drive reveals the serene, shell-shaped bay of São Martinho do Porto, offering crystal-clear still waters framed by sheltering limestone dunes." },
+                        { type: "p", text: "The day culminates inside the fortified crown of Óbidos, one of Europe's most pristine medieval villages. Given as a royal wedding gift by Portuguese monarchs to their queens, Óbidos invites you to stroll along medieval ramparts, explore flower-filled cobbled alleys, and sip regional sour cherry liqueur (Ginjinha) served in artisanal dark chocolate cups." },
+                        { type: "p", text: "Experience the Silver Coast in bespoke luxury with a private tour by NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "fatima-batalha-e-tomar-monumentos-unesco",
+                    title: "Fátima, Batalha & Tomar: Templar Knights & UNESCO Masterpieces",
+                    subtitle: "Serene spirituality, flamboyant Gothic stone lace, and the secrets of the Knights Templar",
+                    excerpt: "An unforgettable immersion in Portugal's royal history: the peaceful sanctuary of Fátima, the Gothic majesty of Batalha, and Tomar's Templar fortress.",
+                    date: "September 28, 2026",
+                    category: "History & UNESCO",
+                    image: "/images/tours/fatima-batalha-tomar/1.webp",
+                    readTime: "5 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "Very few journeys in Southern Europe gather as much spiritual significance, military chivalry, and architectural grandeur as the historic golden triangle of Fátima, Batalha, and Tomar." },
+                        { type: "p", text: "The visit begins at the Sanctuary of Our Lady of the Rosary of Fátima, an oasis of profound peace and one of the world's most revered pilgrimage destinations. Its vast esplanade, neo-Baroque Basilica, and intimate Chapel of Apparitions provide a deeply reflective opening to the day." },
+                        { type: "p", text: "Continuing to Batalha Monastery (Santa Maria da Vitória), travelers are met by one of the crowning triumphs of European Gothic and Manueline architecture. Commissioned by King John I in gratitude for the nation-saving victory at the Battle of Aljubarrota in 1385, the monastery enchants with soaring stained-glass nave windows and the world-famous Unfinished Chapels — an open-air octagonal pantheon carved with stone lacework of unbelievable virtuosity." },
+                        { type: "p", text: "In Tomar, the adventure reaches its dramatic pinnacle at the Convent of Christ and Templar Castle, former headquarters of the enigmatic Knights Templar. The 12th-century octagonal Charola, modeled on Jerusalem's Church of the Holy Sepulchre, and the famed Chapterhouse Window tell the epic saga of maritime exploration and Christian chivalry that shaped world history." },
+                        { type: "p", text: "An indispensable bespoke journey for connoisseurs of world history, monumental architecture, and legendary tales." },
+                        { type: "p", text: "Book your private Fátima, Batalha & Tomar expedition with NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "ponte-de-lima-e-barcelos-minho-vinho-verde",
+                    title: "Ponte de Lima & Barcelos: Medieval Nobility & the Vinho Verde Route",
+                    subtitle: "Portugal's oldest chartered town, the Rooster legend, and the noble soul of Minho",
+                    excerpt: "Unveil the aristocratic rural charm of the Minho: ancient Roman bridges, manor houses, the birthplace of the Barcelos Rooster, and prestigious Vinho Verde estates.",
+                    date: "September 30, 2026",
+                    category: "Minho & Vinho Verde",
+                    image: "/images/tours/ponte-de-lima-douro/ponte-de-lima-historic-wine-centre.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "The Minho province represents the warmest, greenest, and most aristocratic soul of Northern Portugal. Framed by crystalline mountain rivers and vine-shaded pergolas, it is the exclusive birthplace of crisp Vinho Verde." },
+                        { type: "p", text: "Ponte de Lima proudly bears the distinction of being Portugal's oldest chartered town, officially established in 1125 by Countess-Queen Teresa. Its majestic Roman and medieval stone bridge across the Lima River gave rise to the legendary tale of the River Lethes, where conquering Roman legions froze in terror, fearing its waters would erase all memories of their homeland." },
+                        { type: "p", text: "Wandering through the historic heart of Ponte de Lima reveals noble granite mansions, lush botanical gardens, and the Vinho Verde Interpretation Centre (CIPV), complemented by rustic taverns celebrating traditional Minho hospitality." },
+                        { type: "p", text: "In Barcelos, artistic craft thrives in century-old ceramic workshops that gave life to the Legend of the Rooster — the miraculous bird that crowed to save an innocent pilgrim heading to Santiago de Compostela, forever cementing the Rooster as Portugal's global emblem of trust and good fortune." },
+                        { type: "p", text: "Paired with private visits to historic aristocratic quintas tasting exquisite Loureiro and single-estate Alvarinho wines, this private journey captures the purest essence of northern Portuguese tradition." },
+                        { type: "p", text: "Experience the private manor estates and wines of Minho with NORTHÉ." }
+                    ]
+                }
             ],
         },
         contact: {
@@ -1672,6 +1843,82 @@ blog: {
                         { type: 'p', text: "Explore la colección de experiencias privadas de NORTHÉ." },
                     ]
                 },
+                {
+                    slug: "aveiro-e-coimbra-a-partir-do-porto",
+                    title: "Aveiro y Coímbra desde Oporto",
+                    subtitle: "Canales de la Ría, Costa Nova y la Universidad Más Antigua de Portugal",
+                    excerpt: "Un recorrido exclusivo que une la belleza acuática de la Ría de Aveiro, las casas de rayas de Costa Nova y la monumental historia académica de Coímbra.",
+                    date: "24 de Septiembre de 2026",
+                    category: "Cultura y Tradición",
+                    image: "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
+                    readTime: "5 min de lectura",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Pocas excursiones privadas desde Oporto combinan un contraste tan inspirador entre el encanto marinero y la grandeza histórica como la ruta de Aveiro y Coímbra." },
+                        { type: 'p', text: "En Aveiro, conocida como la 'Venecia Portuguesa', los canales de la ría marcan el pulso de la ciudad. Navegar en un barco moliceiro tradicional permite deslizarse bajo puentes históricos admirando los mejores edificios Art Nouveau de Portugal." },
+                        { type: 'p', text: "A pocos minutos se encuentra Costa Nova, famosa por sus 'palheiros': pintorescas casas de madera decoradas con llamativas franjas de colores junto al mar. Es también el rincón ideal para degustar los auténticos ovos moles conventuales." },
+                        { type: 'p', text: "Hacia el sur, la noble ciudad de Coímbra se eleva sobre el río Mondego. Cuna de seis reyes y sede de la universidad más antigua del país (fundada en 1290 y declarada Patrimonio UNESCO), su campus histórico custodia la Biblioteca Joanina, un santuario barroco dorado con miles de obras singulares custodiadas por murciélagos centinelas." },
+                        { type: 'p', text: "Una vivencia que equilibra el romanticismo de la costa y el esplendor intelectual con total confort y privacidad ejecutiva." },
+                        { type: 'p', text: "Descubra el tour privado de Aveiro y Coímbra con NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "nazare-obidos-e-sao-martinho-do-porto",
+                    title: "Nazaré y Óbidos: Olas Gigantes y Murallas Medievales",
+                    subtitle: "La leyenda de la Costa de Plata entre el océano bravo y pueblos amurallados",
+                    excerpt: "Del promontorio épico de Nazaré donde rompen las mayores olas del planeta al laberinto de piedra medieval de la villa real de Óbidos.",
+                    date: "26 de Septiembre de 2026",
+                    category: "Costa de Plata",
+                    image: "/images/tours/nazare-sao-martinho/1.webp",
+                    readTime: "5 min de lectura",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "La Costa de Plata portuguesa es un escenario donde la bravura del Atlántico se une a leyendas milenarias de caballeros, reyes y pescadores." },
+                        { type: 'p', text: "En Nazaré, desde lo alto del Sítio de Nazaré, se contempla un espectáculo sobrecogedor. Junto al Forte de São Miguel Arcanjo y su faro rojo, la fuerza del Cañón de Nazaré —una fosa submarina de 5.000 metros de profundidad— crea las olas más gigantescas jamás surfeadas en el mundo." },
+                        { type: 'p', text: "La villa pesquera conserva además una identidad única: las mujeres con sus siete sayas tradicionales, el pescado secándose al sol en la arena y las marisquerías de producto fresco inigualable." },
+                        { type: 'p', text: "Siguiendo la costa, la perfecta bahía en forma de concha de São Martinho do Porto ofrece un remanso de serenidad con aguas cristalinas y tranquilas." },
+                        { type: 'p', text: "El viaje concluye con la entrada a Óbidos, joya medieval fortificada regalada durante siglos por los reyes de Portugal a sus reinas. Recorrer sus murallas almenadas y brindar con ginjinha en copa de chocolate artesanal es una experiencia inolvidable." },
+                        { type: 'p', text: "Viva la Costa de Plata en privado con el confort exclusivo de NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "fatima-batalha-e-tomar-monumentos-unesco",
+                    title: "Fátima, Batalha y Tomar: Ruta Templaria y Patrimonio UNESCO",
+                    subtitle: "Fervor sereno, gótico florido y los enigmas de la Orden del Temple",
+                    excerpt: "Una inmersión en la memoria monumental de Portugal: la paz de Fátima, la piedra labrada de Batalha y el castillo templario de Tomar.",
+                    date: "28 de Septiembre de 2026",
+                    category: "Historia y UNESCO",
+                    image: "/images/tours/fatima-batalha-tomar/1.webp",
+                    readTime: "5 min de lectura",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "El triángulo histórico entre Fátima, Batalha y Tomar reúne algunos de los monumentos más emblemáticos y sobrecogedores de Portugal." },
+                        { type: 'p', text: "La jornada comienza en el Santuario de Nuestra Señora del Rosario de Fátima, un enclave de honda serenidad espiritual con su explanada imponente y la íntima Capilla de las Apariciones." },
+                        { type: 'p', text: "A continuación, el Monasterio de Batalha deslumbra como obra maestra del gótico y manuelino luso. Mandado construir por el rey Juan I tras la decisiva Batalla de Aljubarrota en 1385, cautiva por sus Capillas Imperfectas, un panteón octogonal a cielo abierto esculpido como un encaje en piedra." },
+                        { type: 'p', text: "En Tomar, el Convento de Cristo y Castillo Templario revelan el cuartel general de los Caballeros Templarios en Portugal. La Charola románico-gótica y la famosa Ventana Manuelina son testimonios grandiosos de la epopeya de las navegaciones marítimas." },
+                        { type: 'p', text: "Un recorrido imprescindible para los amantes de la historia viva y el arte universal." },
+                        { type: 'p', text: "Reserve su expedición privada a Fátima, Batalha y Tomar con NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "ponte-de-lima-e-barcelos-minho-vinho-verde",
+                    title: "Ponte de Lima y Barcelos: Nobleza Medieval y Ruta del Vinho Verde",
+                    subtitle: "La villa más antigua de Portugal, la leyenda del Gallo y los señoríos del Minho",
+                    excerpt: "Descubra el Minho más aristocrático: puentes romanos milenarios, casonas hidalgas, el mítico Gallo de Barcelos y las mejores bodegas de Vinho Verde.",
+                    date: "30 de Septiembre de 2026",
+                    category: "Minho y Vinho Verde",
+                    image: "/images/tours/ponte-de-lima-douro/ponte-de-lima-historic-wine-centre.webp",
+                    readTime: "4 min de lectura",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "El Minho es el corazón más verde, auténtico y noble del Norte de Portugal, tierra de manantiales cristalinos y viñedos en emparrado que dan vida al apreciado Vinho Verde." },
+                        { type: 'p', text: "Ponte de Lima ostenta con orgullo el título de villa más antigua de Portugal (1125). Su majestuoso puente romano sobre el río Lima recuerda la leyenda del Río Lethes, donde las legiones romanas temían olvidar su propia patria." },
+                        { type: 'p', text: "Pasear por Ponte de Lima permite contemplar casas blasonadas, plácidos jardines y visitar el Centro de Interpretación del Vinho Verde (CIPV), saboreando la gastronomía regional más auténtica." },
+                        { type: 'p', text: "En Barcelos, la tradición artesana florece en la cerámica y en la célebre Leyenda del Gallo, símbolo imperecedero de la identidad portuguesa en todo el mundo." },
+                        { type: 'p', text: "Con catas privadas de variedades selectas como Loureiro y Alvarinho en quintas señoriales, este tour representa la máxima expresión de la elegancia minhota." },
+                        { type: 'p', text: "Viva la cultura y los vinos del Minho con NORTHÉ." }
+                    ]
+                }
             ],
         },
         contact: {
@@ -1858,21 +2105,31 @@ blog: {
         reviews: {
             badge: 'Avis',
             title: 'Ce Que Disent Nos Clients',
-            subtitle: 'Chaque avis est une histoire vraie de quelqu\'un qui a vécu l\'expérience.',
-            rating: '4.9', totalReviews: '127',
+            subtitle: 'Chaque avis est une histoire réelle vécue par nos voyageurs.',
+            rating: '5.0', totalReviews: '5.0 ★★★★★',
+            googleScore: '5.0',
+            googleBadge: 'Google Reviews',
+            googleVerified: 'Noté 5.0 Étoiles sur Google',
+            googleHighlight: '100% d\'avis 5 étoiles vérifiés',
+            viewOnGoogle: 'Voir tous les avis sur Google Maps',
+            writeOnGoogle: 'Donner votre avis sur Google',
+            bottomTitle: 'Avez-vous voyagé récemment avec NORTHÉ ?',
+            bottomSubtitle: 'Votre avis est inestimable. Découvrez les retours d\'autres voyageurs ou partagez votre propre expérience sur notre fiche officielle Google.',
+            verifiedTag: 'Avis Vérifié sur Google',
             items: [
                 { text: 'Une expérience qui transcende le tourisme. Nous nous sommes sentis comme des invités d\'honneur dans l\'une des plus belles régions du monde. Le guide était exceptionnel et l\'attention portée aux détails impressionnante.', author: 'Sofia Albuquerque', location: 'Lisbonne, Portugal', flag: '🇵🇹', stars: 5 },
                 { text: 'L\'attention portée aux détails était impeccable. De la balade en bateau privé aux dégustations de vins exclusives, tout était parfait. Hautement recommandé pour tous ceux qui visitent Porto.', author: 'James Sterling', location: 'Londres, Royaume-Uni', flag: '🇬🇧', stars: 5 },
-                { text: 'Une journée magique dans la vallée du Douro. Le guide était exceptionnel, les vins superbes et le déjeuner absolument délicieux. Une expérience incontournable !', author: 'Marie Dubois', location: 'Paris, France', flag: '🇫🇷', stars: 4.5 },
+                { text: 'Une journée magique dans la vallée du Douro. Le guide était exceptionnel, les vins superbes et le déjeuner absolument délicieux. Une expérience incontournable !', author: 'Marie Dubois', location: 'Paris, France', flag: '🇫🇷', stars: 5 },
                 { text: 'Meilleure expérience jamais vécue dans le Douro ! La balade en bateau au coucher du soleil était inoubliable. Je recommande vivement NORTHÉ.', author: 'Carlos Mendes', location: 'São Paulo, Brésil', flag: '🇧🇷', stars: 5 },
-                { text: 'Une journée parfaite dans la vallée du Douro ! La dégustation de vins était de premier ordre et le paysage à couper le souffle. Nous reviendrons sans hésiter.', author: 'Hannah Müller', location: 'Munich, Allemagne', flag: '🇩🇪', stars: 4.8 },
+                { text: 'Une journée parfaite dans la vallée du Douro ! La dégustation de vins était de premier ordre et le paysage à couper le souffle. Nous reviendrons sans hésiter.', author: 'Hannah Müller', location: 'Munich, Allemagne', flag: '🇩🇪', stars: 5 },
                 { text: 'Nous avons fêté notre anniversaire avec NORTHÉ et ce fut le point fort de notre voyage. L\'expérience privée semblait vraiment exclusive. Ça en valait chaque centime.', author: 'Michael & Sarah Chen', location: 'New York, États-Unis', flag: '🇺🇸', stars: 5 },
-                { text: 'Le guide savait tout sur les vins et l\'histoire de la région. Un voyage inoubliable que je recommande à tous les amateurs de vin.', author: 'Alessandro Rossi', location: 'Milan, Italie', flag: '🇮🇹', stars: 4.5 },
+                { text: 'Le guide savait tout sur les vins et l\'histoire de la région. Un voyage inoubliable que je recommande à tous les amateurs de vin.', author: 'Alessandro Rossi', location: 'Milan, Italie', flag: '🇮🇹', stars: 5 },
                 { text: 'Le transfert depuis l\'aéroport était impeccable, et le tour le lendemain a dépassé toutes nos attentes. Un service de première classe tout au long.', author: 'Lucía Fernández', location: 'Madrid, Espagne', flag: '🇪🇸', stars: 5 },
-                { text: 'Expérience incroyable ! Le bateau sur le Douro au coucher du soleil était magique. Un service professionnel du début à la fin.', author: 'Daan van der Berg', location: 'Amsterdam, Pays-Bas', flag: '🇳🇱', stars: 4.8 },
+                { text: 'Expérience incroyable ! Le bateau sur le Douro au coucher du soleil était magique. Un service professionnel du début à la fin.', author: 'Daan van der Berg', location: 'Amsterdam, Pays-Bas', flag: '🇳🇱', stars: 5 },
             ],
         },
-                faq: {
+
+        faq: {
             badge: "FAQ",
             title: "Tout ce que vous devez savoir",
             subtitle: "Des réponses claires et transparentes à toutes vos questions avant de réserver votre expérience privée.",
@@ -2245,6 +2502,82 @@ blog: {
                         { type: 'p', text: "Découvrez la collection des voyages privés de NORTHÉ." },
                     ]
                 },
+                {
+                    slug: "aveiro-e-coimbra-a-partir-do-porto",
+                    title: "Aveiro et Coimbra depuis Porto",
+                    subtitle: "Canaux de la Ria, Costa Nova et la Plus Ancienne Université du Portugal",
+                    excerpt: "Une journée d'exception alliant la grâce lagunaire d'Aveiro, les maisons rayées de Costa Nova et le prestige séculaire de Coimbra.",
+                    date: "24 Septembre 2026",
+                    category: "Culture & Patrimoine",
+                    image: "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
+                    readTime: "5 min de lecture",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Rarement une excursion privée au départ de Porto n'offre un contraste aussi saisissant entre la poésie des eaux et la grandeur de l'histoire portugaise." },
+                        { type: 'p', text: "À Aveiro, surnommée la 'Venise Portugaise', la vie s'écoule au fil des canaux. À bord d'un bateau moliceiro traditionnel, vous glissez sous les ponts élégants en admirant de somptueuses façades Art Nouveau." },
+                        { type: 'p', text: "À quelques minutes, le village côtier de Costa Nova séduit avec ses 'palheiros' aux rayures colorées face aux dunes atlantiques. C'est l'endroit parfait pour déguster les traditionnels ovos moles, douceur conventuelle emblématique." },
+                        { type: 'p', text: "Plus au sud, Coimbra se dresse au-dessus du fleuve Mondego. Berceau de rois et de la plus ancienne université du pays (fondée en 1290 et inscrite à l'UNESCO), elle abrite la somptueuse Bibliothèque Joanina aux dorures baroques inestimables, protégées par des chauves-souris sentinelles." },
+                        { type: 'p', text: "Une immersion inoubliable mêlant romantisme littoral et prestige universitaire dans le plus grand confort exécutif." },
+                        { type: 'p', text: "Découvrez notre circuit privé Aveiro et Coimbra avec NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "nazare-obidos-e-sao-martinho-do-porto",
+                    title: "Nazaré et Óbidos : Vagues Géantes et Remparts Médiévaux",
+                    subtitle: "La Côte d'Argent entre puissance océanique et cité fortifiée des reines",
+                    excerpt: "Du promontoire mythique de Nazaré où surgissent les vagues les plus hautes de la planète aux ruelles médiévales fleuries d'Óbidos.",
+                    date: "26 Septembre 2026",
+                    category: "Côte d'Argent",
+                    image: "/images/tours/nazare-sao-martinho/1.webp",
+                    readTime: "5 min de lecture",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "La Côte d'Argent portugaise est une terre où la majesté de l'Atlantique rencontre des siècles d'épopées maritimes et royales." },
+                        { type: 'p', text: "À Nazaré, depuis le belvédère du Sítio, le panorama est vertigineux. Près du Fort de São Miguel Arcanjo et de son phare rouge, le Canyon de Nazaré — gouffre sous-marin de plus de 5 000 mètres — propulse les vagues les plus colossales du globe." },
+                        { type: 'p', text: "Le village de pêcheurs conserve son âme authentique : poisson séché sur la plage dorée, costumes traditionnels et dégustation de fruits de mer d'une fraîcheur éclatante." },
+                        { type: 'p', text: "La route longe ensuite la superbe baie en coquillage de São Martinho do Porto, havre de calme aux eaux douces et paisibles." },
+                        { type: 'p', text: "L'excursion se termine en apothéose dans la cité fortifiée d'Óbidos. Offerte par les rois à leurs épouses, Óbidos invite à parcourir ses chemins de ronde, ses venelles de pierres fleuries et à savourer la célèbre ginjinha dans une tasse en chocolat noir." },
+                        { type: 'p', text: "Vivez la magie de la Côte d'Argent en privé avec NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "fatima-batalha-e-tomar-monumentos-unesco",
+                    title: "Fátima, Batalha et Tomar : Sur les Traces des Templiers et l'UNESCO",
+                    subtitle: "Ferveur spirituelle, dentelle gothique et secrets de l'Ordre du Temple",
+                    excerpt: "Une plongée dans le patrimoine mondial : la paix de Fátima, les splendeurs de Batalha et la forteresse templière de Tomar.",
+                    date: "28 Septembre 2026",
+                    category: "Histoire & UNESCO",
+                    image: "/images/tours/fatima-batalha-tomar/1.webp",
+                    readTime: "5 min de lecture",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Le triangle d'or réunissant Fátima, Batalha et Tomar constitue l'un des parcours patrimoniaux les plus émouvants du Portugal." },
+                        { type: 'p', text: "Le voyage débute au Sanctuaire de Fátima, lieu de pèlerinage mondial empreint d'une grande sérénité, avec son immense esplanade et la touchante Chapelle des Apparitions." },
+                        { type: 'p', text: "À Batalha, le Monastère de Santa Maria da Vitória émerveille par sa dentelle gothique et ses fameuses Chapelles Imparfaites, chef-d'œuvre à ciel ouvert édifié à la suite de la victoire d'Aljubarrota en 1385." },
+                        { type: 'p', text: "Enfin, Tomar dévoile le majestueux Couvent du Christ et Château des Templiers, ancien quartier général des chevaliers de l'Ordre du Temple. Sa Charola octogonale et sa célèbre Fenêtre Manueline symbolisent la grande aventure des découvertes portugaises." },
+                        { type: 'p', text: "Un voyage exclusif sur mesure pour les passionnés d'histoire et d'architecture sacrée." },
+                        { type: 'p', text: "Réservez votre périple privé à Fátima, Batalha et Tomar avec NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "ponte-de-lima-e-barcelos-minho-vinho-verde",
+                    title: "Ponte de Lima et Barcelos : Noblesse Médiévale et Vinho Verde",
+                    subtitle: "Le plus ancien bourg du Portugal, la légende du Coq et les manoirs du Minho",
+                    excerpt: "Explorez le Minho aristocratique : ponts romains millénaires, manoirs en granit, berceau du Coq de Barcelos et prestigieux domaines de Vinho Verde.",
+                    date: "30 Septembre 2026",
+                    category: "Minho & Vinho Verde",
+                    image: "/images/tours/ponte-de-lima-douro/ponte-de-lima-historic-wine-centre.webp",
+                    readTime: "4 min de lecture",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Le Minho est la province la plus verdoyante, généreuse et seigneuriale du Portugal, berceau exclusif du rafraîchissant Vinho Verde." },
+                        { type: 'p', text: "Ponte de Lima est fièrement reconnue comme la plus ancienne bourgade du Portugal (fondée en 1125). Son pont romain et médiéval enjambant la rivière Lima fut le théâtre de la légende du fleuve Léthé, où les légions de Rome craignaient de perdre la mémoire de leur patrie." },
+                        { type: 'p', text: "Flâner dans Ponte de Lima révèle de superbes demeures nobles, des allées de platanes séculaires et le Centre d'Interprétation du Vinho Verde (CIPV)." },
+                        { type: 'p', text: "À Barcelos, les ateliers de poterie perpétuent la célèbre Légende du Coq miraculeux, devenu l'emblème national de la loyauté et de la chance portugaise." },
+                        { type: 'p', text: "Avec des dégustations de cépages nobles Loureiro et Alvarinho au cœur de manoirs familiaux, cette excursion privée célèbre l'art de vivre du Nord." },
+                        { type: 'p', text: "Savourez l'élégance du Minho avec les voyages privés de NORTHÉ." }
+                    ]
+                }
             ],
         },
         contact: {
@@ -2818,6 +3151,82 @@ blog: {
                         { type: 'p', text: "Entdecken Sie die privaten Erlebnisse von NORTHÉ." },
                     ]
                 },
+                {
+                    slug: "aveiro-e-coimbra-a-partir-do-porto",
+                    title: "Aveiro & Coimbra ab Porto",
+                    subtitle: "Kanäle der Ria, Costa Nova und Portugals Älteste Universität",
+                    excerpt: "Eine exklusive Privattour, die den maritimen Zauber der Ria de Aveiro, gestreifte Strandhäuser und Coimbras weltberühmte Universität vereint.",
+                    date: "24. September 2026",
+                    category: "Kultur & Tradition",
+                    image: "/images/tours/coimbra-aveiro/coimbra-aveiro-private-tour-1.webp",
+                    readTime: "5 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Nur wenige Tagesausflüge ab Porto bieten einen so faszinierenden Bogen zwischen maritimer Romantik und jahrhundertealtem Gelehrtentum wie die Reise nach Aveiro und Coimbra." },
+                        { type: 'p', text: "In Aveiro, dem 'Venedig Portugals', bestimmt das Lagunensystem der Ria das Stadtbild. An Bord eines kunstvoll bemalten Moliceiro-Boots gleiten Sie unter malerischen Brücken hindurch und bestaunen feinste Jugendstil-Paläste." },
+                        { type: 'p', text: "Wenige Minuten entfernt lockt Costa Nova mit seinen berühmten 'Palheiros': historischen Holzhäusern mit bunten Längsstreifen direkt hinter den Atlantikdünen — der perfekte Ort für die traditionelle Süßspeise Ovos Moles." },
+                        { type: 'p', text: "Weiter südlich ragt Coimbra majestätisch über dem Fluss Mondego auf. Als Wiege portugiesischer Könige und Sitz der ältesten Universität des Landes (1290 gegründet, UNESCO-Welterbe) hütet sie die prachtvolle barocke Joanina-Bibliothek mit tausenden kostbaren Folianten." },
+                        { type: 'p', text: "Erleben Sie zwei der geschichtsträchtigsten Städte Zentralportugals mit höchstem individuellem Reisekomfort." },
+                        { type: 'p', text: "Entdecken Sie die private Tour Aveiro & Coimbra mit NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "nazare-obidos-e-sao-martinho-do-porto",
+                    title: "Nazaré & Óbidos: Riesenwellen und Mittelalterliche Festungsmauern",
+                    subtitle: "Die Silberküste zwischen Urgewalten des Atlantiks und königlicher Festungsidylle",
+                    excerpt: "Vom weltberühmten Leuchtturm-Felsen in Nazaré mit den höchsten Wellen der Welt bis zur blumengeschmückten Burgstadt Óbidos.",
+                    date: "26. September 2026",
+                    category: "Silberküste",
+                    image: "/images/tours/nazare-sao-martinho/1.webp",
+                    readTime: "5 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Die portugiesische Silberküste ist ein Schauplatz ungezähmter Ozeankräfte und geschichtsträchtiger Seefahrertradition." },
+                        { type: 'p', text: "In Nazaré bietet die Klippe des Sítio da Nazaré atemberaubende Ausblicke. Am Fort São Miguel Arcanjo mit seinem roten Leuchtturm erzeugt der über 5.000 Meter tiefe Unterwassercanyon von Nazaré die gewaltigsten Surfwellen des Planeten." },
+                        { type: 'p', text: "Gleichzeitig bewahrt der Fischerort seine Wurzeln: Frauen in traditionellen sieben Röcken, getrockneter Fisch am Sandstrand und fangfrische Meeresfrüchte von herausragender Qualität." },
+                        { type: 'p', text: "Entlang der Küste öffnet sich die geschützte Muschelbucht von São Martinho do Porto mit spiegelglattem, smaragdgrünem Wasser." },
+                        { type: 'p', text: "Den krönenden Abschluss bildet das mittelalterliche Óbidos, einst königliches Hochzeitsgeschenk der portugiesischen Monarchen. Spazieren Sie auf zinnenbewehrten Mauern und genießen Sie den berühmten Sauerkirschlikör Ginjinha aus Schokoladenbechern." },
+                        { type: 'p', text: "Erleben Sie die Silberküste exklusiv mit den privaten Reisen von NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "fatima-batalha-e-tomar-monumentos-unesco",
+                    title: "Fátima, Batalha & Tomar: Templerorden und UNESCO-Weltkulturerbe",
+                    subtitle: "Tiefe Spiritualität, filigrane Gotik und die Geheimnisse der Tempelritter",
+                    excerpt: "Eine faszinierende Zeitreise: die Stille von Fátima, die Steinmetzkunst in Batalha und die Templerburg von Tomar.",
+                    date: "28. September 2026",
+                    category: "Geschichte & UNESCO",
+                    image: "/images/tours/fatima-batalha-tomar/1.webp",
+                    readTime: "5 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Das historische Dreieck aus Fátima, Batalha und Tomar vereint Glaube, königliche Ritterehre und monumentale Architektur wie kaum eine andere Region Europas." },
+                        { type: 'p', text: "In Fátima empfängt das Marienheiligtum Pilger und Reisende aus aller Welt mit einer Atmosphäre tiefer innerer Ruhe auf dem weiten Platz und an der Erscheinungskapelle." },
+                        { type: 'p', text: "Das Kloster von Batalha (Santa Maria da Vitória) gilt als Meilenstein der Gotik und Manuelinik. Erbaut zum Dank für den Sieg in der Schlacht von Aljubarrota 1385, verzaubert es mit seinen unvollendeten Kapellen (Capelas Imperfeitas) — einem offenen Achteckbau aus filigranem Kalkstein." },
+                        { type: 'p', text: "In Tomar ragt die gewaltige Templerburg mit dem Christuskloster empor. Die romanisch-byzantinische Charola und das berühmte manuelinische Kapitelfenster bezeugen den Geist der Entdeckungsfahrten Portugals." },
+                        { type: 'p', text: "Ein unverzichtbares Erlebnis für Kulturreisende und Geschichtsliebhaber." },
+                        { type: 'p', text: "Buchen Sie Ihre private Entdeckungsreise nach Fátima, Batalha und Tomar mit NORTHÉ." }
+                    ]
+                },
+                {
+                    slug: "ponte-de-lima-e-barcelos-minho-vinho-verde",
+                    title: "Ponte de Lima & Barcelos: Mittelalterlicher Adel & die Vinho Verde-Route",
+                    subtitle: "Portugals ältestes Dorf, die Hahnenlegende und die Seele des Minho",
+                    excerpt: "Entdecken Sie den aristokratischen Minho: jahrtausendealte Römerbrücken, Adelshäuser, die Wiege des Galo de Barcelos und erlesene Vinho Verde-Weingüter.",
+                    date: "30. September 2026",
+                    category: "Minho & Vinho Verde",
+                    image: "/images/tours/ponte-de-lima-douro/ponte-de-lima-historic-wine-centre.webp",
+                    readTime: "4 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Das Minho verkörpert die grünste, gastfreundlichste und nobelste Region Nordportugals — die Heimat des frischen, mineralischen Vinho Verde." },
+                        { type: 'p', text: "Ponte de Lima ist stolz darauf, die älteste Stadt Portugals zu sein (gegründet 1125). Die Römerbrücke über den Fluss Lima war Schauplatz der Lethe-Sage, in der die römischen Soldaten fürchteten, im Wasser die Erinnerung an ihre Heimat zu verlieren." },
+                        { type: 'p', text: "Beim Spaziergang durch die Altstadt begegnen Ihnen herrschaftliche Adelshäuser, Alleen alter Platanen und das Vinho Verde-Museum (CIPV)." },
+                        { type: 'p', text: "In Barcelos hält die Keramikkunst die Legende des Hahns von Barcelos lebendig — des Wappenvogels, der zum Nationalsymbol Portugals wurde." },
+                        { type: 'p', text: "Mit privaten Verkostungen der Rebsorten Loureiro und Alvarinho auf traditionsreichen Landgütern ist diese Tour das pure Destillat nordportugiesischer Lebensart." },
+                        { type: 'p', text: "Erleben Sie die traditionsreichen Weine und Gutshäuser des Minho mit NORTHÉ." }
+                    ]
+                }
             ],
         },
         contact: {
