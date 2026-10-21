@@ -193,7 +193,7 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
       <section id="home" className="relative h-screen w-full overflow-hidden flex items-end pb-20 md:items-center md:pb-0 bg-[#0c0c0c]">
         <motion.div className="absolute inset-0 w-full h-full" style={{ y: heroY, opacity: heroOpacity }}>
           <motion.div initial={{ scale: 1.15 }} animate={{ scale: 1 }} transition={{ duration: 14, ease: 'easeOut' }} className="w-full h-full">
-            <img src={IMG.hero} alt="Vista panorâmica dos socalcos e vinhas do Vale do Douro" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            <img src={IMG.hero} alt="Vista panorâmica dos socalcos e vinhas do Vale do Douro — NORTHÉ Passeios Privados" fetchPriority="high" loading="eager" decoding="async" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-[#0c0c0c]/95" />
         </motion.div>

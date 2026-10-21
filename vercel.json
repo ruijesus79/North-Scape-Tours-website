@@ -90,6 +90,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/((?!assets/|images/|.*\\..*).*)", "destination": "/" }
   ]
 }
