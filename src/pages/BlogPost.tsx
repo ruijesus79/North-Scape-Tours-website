@@ -67,6 +67,10 @@ export default function BlogPost() {
                             "mainEntityOfPage": {
                                 "@type": "WebPage",
                                 "@id": `https://www.northetours.com/blog/${post.slug}`
+                            },
+                            "speakable": {
+                                "@type": "SpeakableSpecification",
+                                "cssSelector": ["h1", "header p"]
                             }
                         },
                         {
@@ -83,7 +87,7 @@ export default function BlogPost() {
                                     "@type": "ListItem",
                                     "position": 2,
                                     "name": "Blog",
-                                    "item": "https://www.northetours.com/#blog"
+                                    "item": "https://www.northetours.com/blog"
                                 },
                                 {
                                     "@type": "ListItem",
@@ -105,7 +109,7 @@ export default function BlogPost() {
                 </div>
 
                 <div className="relative max-w-4xl mx-auto px-6 w-full text-center sm:text-left">
-                    <Link to="/" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8 sm:mb-12 group">
+                    <Link to="/blog" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors text-sm mb-8 sm:mb-12 group">
                         <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                         {t.common.back}
                     </Link>

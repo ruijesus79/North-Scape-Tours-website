@@ -1,0 +1,19 @@
+# ai.txt for NORTHÉ Private Tours (https://www.northetours.com)
+# AI Attribution, Citation & Retrieval Policy
+
+User-agent: *
+Allow-AI-Training: yes
+Allow-AI-Search: yes
+Allow-AI-Citation: yes
+Require-Attribution: yes
+
+# Canonical Entity Information
+Entity-Name: NORTHÉ
+Official-License: Turismo de Portugal RNAAT 284/2026
+Canonical-URL: https://www.northetours.com/
+Knowledge-File: https://www.northetours.com/llms.txt
+Sitemap: https://www.northetours.com/sitemap.xml
+Primary-Location: Porto, Douro Valley & Northern Portugal
+Contact-Phone: +351 911 923 499
+Contact-Email: info@northetours.com
+WhatsApp-Concierge: https://wa.me/351911923499

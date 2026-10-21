@@ -380,6 +380,26 @@ export const CONTENT = {
             bookCta: "Reservar esta experiência",
             items: [
                 {
+                    slug: "passeio-de-barco-privado-no-porto-douro",
+                    title: "Passeio de Barco Privado no Porto: Guia Completo, Preço e Vistas do Rio Douro",
+                    subtitle: "Descubra o Porto e Vila Nova de Gaia a partir das águas do Rio Douro com total exclusividade",
+                    excerpt: "Navegar pelo Rio Douro numa embarcação 100% privada é uma das formas mais memoráveis de admirar a Ribeira do Porto, as caves de Vila Nova de Gaia e a Ponte D. Luís I. Saiba quanto custa (150€ até 6 pessoas) e como funciona.",
+                    date: "21 de Outubro de 2026",
+                    category: "Porto Experiences",
+                    image: "/images/tours/porto-private-boat-tour/1.webp",
+                    readTime: "4 min de leitura",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "O Passeio de Barco Privado no Porto da NORTHÉ (RNAAT 284/2026) oferece uma experiência náutica 100% exclusiva pelo Rio Douro pelo valor fixo de 150€ por saída para grupos de 1 até 6 pessoas, com duração de 1 hora e skipper profissional habilitado." },
+                        { type: "h3", text: "Porquê escolher um passeio de barco privado no Porto em vez de um cruzeiro partilhado?" },
+                        { type: "p", text: "Enquanto os cruzeiros tradicionais das Seis Pontes transportam dezenas de passageiros em horários rígidos, uma embarcação privada permite-lhe desfrutar do Rio Douro apenas com a sua família, amigos ou a dois. A bordo do barco privado da NORTHÉ, navega num ambiente tranquilo, com bancos estofados na proa e na popa e liberdade para fotografar cada ângulo da Ribeira e do Cais de Gaia sem multidões." },
+                        { type: "blockquote", text: "Ver o Porto a partir do Rio Douro revela a verdadeira alma da cidade: as fachadas históricas da Ribeira, as caves seculares de Vinho do Porto em Gaia e a imponência da Ponte D. Luís I refletida na água." },
+                        { type: "image", url: "/images/tours/porto-private-boat-tour/3.webp", text: "Conforto e exclusividade a bordo do barco privado NORTHÉ no Rio Douro (até 6 passageiros)." },
+                        { type: "h3", text: "O que está incluído e informações importantes" },
+                        { type: "p", text: "O passeio tem duração aproximada de 1 hora, lotação máxima de 6 passageiros e inclui embarcação privada exclusiva, skipper habilitado, combustível, equipamento de segurança completo e seguros obrigatórios. Recomendamos roupa confortável, casaco leve ou corta-vento, óculos de sol e chegar ao local de embarque 10 a 15 minutos antes do horário agendado." },
+                    ],
+                },
+                {
                     slug: "8-melhores-passeios-a-partir-do-porto",
                     title: "8 Melhores Passeios a partir do Porto",
                     subtitle: "Descubra o Norte de Portugal além da cidade",
@@ -1043,6 +1063,26 @@ export const CONTENT = {
             bookCta: "Book this experience",
             items: [
                 {
+                    slug: "passeio-de-barco-privado-no-porto-douro",
+                    title: "Private Boat Tour in Porto: Complete Guide, Pricing & Douro River Views",
+                    subtitle: "Discover Porto and Vila Nova de Gaia from the waters of the Douro River in complete exclusivity",
+                    excerpt: "Cruising the Douro River aboard a 100% private boat is one of the most memorable ways to admire Porto's Ribeira, the Port wine cellars of Vila Nova de Gaia, and Dom Luís I Bridge. Learn about pricing (€150 up to 6 guests) and what to expect.",
+                    date: "October 21, 2026",
+                    category: "Porto Experiences",
+                    image: "/images/tours/porto-private-boat-tour/1.webp",
+                    readTime: "4 min read",
+                    bookable: true,
+                    fullContent: [
+                        { type: "p", text: "The Private Boat Tour in Porto by NORTHÉ (Official License RNAAT 284/2026) offers a 100% exclusive nautical experience along the Douro River at a flat rate of €150 per departure for groups of 1 to 6 guests, lasting 1 hour with a licensed professional skipper." },
+                        { type: "h3", text: "Why choose a private boat tour in Porto over a shared Six Bridges cruise?" },
+                        { type: "p", text: "While traditional shared cruises carry dozens of passengers on rigid schedules, a private vessel lets you enjoy the Douro River exclusively with your partner, family, or friends. Aboard NORTHÉ's private boat, you glide in a serene atmosphere with cushioned bow and stern seating and total freedom to photograph Ribeira and Cais de Gaia without crowds." },
+                        { type: "blockquote", text: "Seeing Porto from the Douro River reveals the true soul of the city: the historic facades of Ribeira, the centuries-old Port wine cellars in Gaia, and the grandeur of the Dom Luís I Bridge reflected on the water." },
+                        { type: "image", url: "/images/tours/porto-private-boat-tour/3.webp", text: "Comfort and exclusivity aboard NORTHÉ's private boat on the Douro River (up to 6 guests)." },
+                        { type: "h3", text: "What is included and important information" },
+                        { type: "p", text: "The tour lasts approximately 1 hour, accommodates up to 6 passengers, and includes an exclusive private boat, licensed skipper, fuel, safety equipment, and mandatory insurance. We recommend comfortable clothing, a light windbreaker jacket, sunglasses, and arriving at the boarding point 10 to 15 minutes before departure." },
+                    ],
+                },
+                {
                     slug: "8-melhores-passeios-a-partir-do-porto",
                     title: "8 Best Day Trips from Porto",
                     subtitle: "Discover Northern Portugal Beyond the City",
@@ -1696,6 +1736,26 @@ blog: {
             readMore: "Leer Artículo",
             bookCta: "Reservar esta experiencia",
             items: [
+                {
+                    slug: "passeio-de-barco-privado-no-porto-douro",
+                    title: "Paseo en Barco Privado en Oporto: Guía Completa, Precio y Vistas del Río Duero",
+                    subtitle: "Descubra Oporto y Vila Nova de Gaia desde las aguas del Río Duero con total exclusividad",
+                    excerpt: "Navegar por el Río Duero en una embarcación 100% privada es una de las formas más memorables de admirar la Ribeira de Oporto, las bodegas de Vila Nova de Gaia y el Puente D. Luís I. Conozca el precio (150€ hasta 6 personas) y todos los detalles.",
+                    date: "21 de Octubre de 2026",
+                    category: "Porto Experiences",
+                    image: "/images/tours/porto-private-boat-tour/1.webp",
+                    readTime: "4 min de lectura",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "El Paseo en Barco Privado en Oporto de NORTHÉ (Licencia Oficial RNAAT 284/2026) ofrece una experiencia náutica 100% exclusiva por el Río Duero por una tarifa fija de 150€ por salida para grupos de 1 a 6 personas, con 1 hora de duración y patrón profesional titulado." },
+                        { type: 'h3', text: "¿Por qué elegir un paseo en barco privado en Oporto frente a un crucero compartido?" },
+                        { type: 'p', text: "Mientras los cruceros compartidos transportan decenas de pasajeros, una embarcación privada le permite disfrutar del Río Duero solo con su pareja, familia o amigos, admirando la Ribeira de Oporto y el Cais de Gaia con total intimidad y confort." },
+                        { type: 'blockquote', text: "Contemplar Oporto desde el Río Duero revela el alma de la ciudad: las fachadas históricas de la Ribeira, las bodegas de Vino de Oporto en Gaia y la imponente silueta del Puente D. Luís I." },
+                        { type: 'image', url: "/images/tours/porto-private-boat-tour/3.webp", text: "Confort y exclusividad a bordo del barco privado de NORTHÉ en el Río Duero (hasta 6 pasajeros)." },
+                        { type: 'h3', text: "Qué incluye e información importante" },
+                        { type: 'p', text: "El paseo tiene una duración aproximada de 1 hora, capacidad máxima para 6 pasajeros e incluye barco privado exclusivo, patrón titulado, combustible, equipo de seguridad y seguros obligatorios. Se recomienda ropa cómoda, chaqueta cortavientos, gafas de sol y llegar al punto de embarque 10 a 15 minutos antes." },
+                    ]
+                },
                 {
                     slug: "8-melhores-passeios-a-partir-do-porto",
                     title: "8 Mejores Excursiones desde Oporto",
@@ -2356,6 +2416,26 @@ blog: {
             bookCta: "Réserver cette expérience",
             items: [
                 {
+                    slug: "passeio-de-barco-privado-no-porto-douro",
+                    title: "Croisière Privée en Bateau à Porto : Guide Complet, Tarif et Vues sur le Douro",
+                    subtitle: "Découvrez Porto et Vila Nova de Gaia depuis les eaux du fleuve Douro en toute exclusivité",
+                    excerpt: "Naviguer sur le fleuve Douro à bord d'un bateau 100 % privé est l'une des façons les plus mémorables d'admirer la Ribeira de Porto, les caves de Vila Nova de Gaia et le pont Dom-Luís I. Découvrez le tarif (150 € jusqu'à 6 personnes) et tous les détails.",
+                    date: "21 Octobre 2026",
+                    category: "Porto Experiences",
+                    image: "/images/tours/porto-private-boat-tour/1.webp",
+                    readTime: "4 min de lecture",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "La Croisière Privée en Bateau à Porto de NORTHÉ (Licence Officielle RNAAT 284/2026) offre une expérience nautique 100 % exclusive sur le fleuve Douro au tarif fixe de 150 € par départ pour 1 à 6 personnes, d'une durée d'1 heure avec skipper professionnel diplômé." },
+                        { type: 'h3', text: "Pourquoi choisir une croisière privée à Porto plutôt qu'un bateau touristique partagé ?" },
+                        { type: 'p', text: "Contrairement aux croisières collectives très fréquentées, une embarcation privée vous permet de savourer le fleuve Douro uniquement en couple, en famille ou entre amis, avec une vue imprenable sur la Ribeira et Vila Nova de Gaia." },
+                        { type: 'blockquote', text: "Découvrir Porto depuis le Douro révèle l'âme véritable de la ville : les façades historiques de la Ribeira, les caves séculaires de Gaia et la majesté du pont Dom-Luís I." },
+                        { type: 'image', url: "/images/tours/porto-private-boat-tour/3.webp", text: "Confort et exclusivité à bord du bateau privé NORTHÉ sur le fleuve Douro (jusqu'à 6 passagers)." },
+                        { type: 'h3', text: "Ce qui est inclus et informations importantes" },
+                        { type: 'p', text: "L'expérience dure environ 1 heure pour un maximum de 6 passagers et comprend le bateau privé exclusif, le skipper diplômé, le carburant, l'équipement de sécurité et les assurances obligatoires. Prévoyez une veste coupe-vent, des lunettes de soleil et arrivez 10 à 15 minutes avant l'embarquement." },
+                    ]
+                },
+                {
                     slug: "8-melhores-passeios-a-partir-do-porto",
                     title: "8 Meilleures Excursions au Départ de Porto",
                     subtitle: "Découvrez le Nord du Portugal au-delà de la ville",
@@ -3014,6 +3094,26 @@ blog: {
             readMore: "Artikel lesen",
             bookCta: "Dieses Erlebnis anfragen",
             items: [
+                {
+                    slug: "passeio-de-barco-privado-no-porto-douro",
+                    title: "Private Bootstour in Porto: Kompletter Guide, Preis & Ausblicke auf den Douro",
+                    subtitle: "Entdecken Sie Porto und Vila Nova de Gaia exklusiv vom Wasser des Douro-Flusses aus",
+                    excerpt: "Eine Fahrt auf dem Douro-Fluss in einem 100 % privaten Boot ist eine der unvergesslichsten Möglichkeiten, Portos Ribeira, die Portweinkeller von Vila Nova de Gaia und die Brücke Dom Luís I zu bewundern. Erfahren Sie alles über den Festpreis (150 € bis 6 Personen).",
+                    date: "21. Oktober 2026",
+                    category: "Porto Experiences",
+                    image: "/images/tours/porto-private-boat-tour/1.webp",
+                    readTime: "4 Min. Lesezeit",
+                    bookable: true,
+                    fullContent: [
+                        { type: 'p', text: "Die Private Bootstour in Porto von NORTHÉ (Offizielle Lizenz RNAAT 284/2026) bietet ein 100 % exklusives Bootserlebnis auf dem Douro-Fluss zum Festpreis von 150 € pro Fahrt für Gruppen von 1 bis 6 Personen (Dauer: 1 Stunde) inklusive lizenziertem Skipper." },
+                        { type: 'h3', text: "Warum eine private Bootstour in Porto statt einer öffentlichen Brückenfahrt wählen?" },
+                        { type: 'p', text: "Während öffentliche Ausflugsboote Dutzende Passagiere befördern, genießen Sie auf einem privaten Boot den Douro-Fluss ganz entspannt zu zweit, mit der Familie oder mit Freunden – mit freiem Blick auf die Ribeira und Vila Nova de Gaia." },
+                        { type: 'blockquote', text: "Porto vom Wasser des Douro aus zu betrachten, offenbart die wahre Seele der Stadt: die historischen Fassaden der Ribeira, die traditionsreichen Portweinkeller in Gaia und die imposante Brücke Dom Luís I." },
+                        { type: 'image', url: "/images/tours/porto-private-boat-tour/3.webp", text: "Komfort und Exklusivität an Bord des privaten NORTHÉ-Boots auf dem Douro (bis zu 6 Gäste)." },
+                        { type: 'h3', text: "Inklusivleistungen und wichtige Hinweise" },
+                        { type: 'p', text: "Die Fahrt dauert ca. 1 Stunde für maximal 6 Passagiere und beinhaltet das exklusive Privatboot, einen lizenzierten Skipper, Treibstoff, Sicherheitsausrüstung und obligatorische Versicherungen. Wir empfehlen bequeme Kleidung, eine leichte Windjacke, Sonnenbrille und ein Erscheinen 10 bis 15 Minuten vor Abfahrt." },
+                    ]
+                },
                 {
                     slug: "8-melhores-passeios-a-partir-do-porto",
                     title: "Die 8 Besten Tagesausflüge ab Porto",
