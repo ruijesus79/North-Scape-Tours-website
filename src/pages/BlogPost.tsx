@@ -34,7 +34,67 @@ export default function BlogPost() {
                 description={post.excerpt}
                 lang={lang}
                 image={post.image}
-                url={`https://northetours.com/blog/${post.slug}`}
+                url={`https://www.northetours.com/blog/${post.slug}`}
+            />
+
+            {/* Schema.org BlogPosting & BreadcrumbList structured data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify([
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "BlogPosting",
+                            "headline": post.title,
+                            "description": post.excerpt,
+                            "image": `https://www.northetours.com${post.image}`,
+                            "datePublished": "2026-09-17",
+                            "dateModified": "2026-10-21",
+                            "inLanguage": lang,
+                            "author": {
+                                "@type": "Organization",
+                                "name": "NORTHÉ",
+                                "url": "https://www.northetours.com"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "NORTHÉ",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://www.northetours.com/logo-white.png"
+                                }
+                            },
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": `https://www.northetours.com/blog/${post.slug}`
+                            }
+                        },
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://www.northetours.com/"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://www.northetours.com/#blog"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": post.title,
+                                    "item": `https://www.northetours.com/blog/${post.slug}`
+                                }
+                            ]
+                        }
+                    ])
+                }}
             />
             {/* Article Hero */}
             <header className="relative w-full min-h-[60vh] flex flex-col justify-end pt-32 pb-16 lg:pb-20 border-b border-white/5">

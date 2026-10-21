@@ -74,7 +74,7 @@
           "value": "northscapetours.pt"
         }
       ],
-      "destination": "https://northetours.com/:path*",
+      "destination": "https://www.northetours.com/:path*",
       "permanent": true
     },
     {
@@ -85,7 +85,7 @@
           "value": "www.northscapetours.pt"
         }
       ],
-      "destination": "https://northetours.com/:path*",
+      "destination": "https://www.northetours.com/:path*",
       "permanent": true
     }
   ],

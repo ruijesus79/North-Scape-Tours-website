@@ -95,7 +95,7 @@ export default function NotFound() {
         description="A página solicitada não foi encontrada. Explore os tours privados e experiências exclusivas da NORTHÉ no Douro, Porto e Norte de Portugal."
         lang={lang}
         image="/logo-white.png"
-        url="https://northetours.com/404"
+        url="https://www.northetours.com/404"
       />
 
       {/* Atmospheric Background Layers */}

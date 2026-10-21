@@ -507,35 +507,61 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
         description={tour.shortDesc[lang] || tour.shortDesc['en'] || tour.shortDesc.pt}
         lang={lang}
         image={tour.image}
-        url={`https://northetours.com/tours/${tour.id}`}
+        url={`https://www.northetours.com/tours/${tour.id}`}
       />
 
-      {/* Schema.org TouristTrip structured data for Google Rich Snippets */}
+      {/* Schema.org TouristTrip & BreadcrumbList structured data for Google Rich Snippets */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "TouristTrip",
-            "name": tourName,
-            "description": tour.shortDesc[lang] || tour.shortDesc.en || tour.shortDesc.pt,
-            "touristType": "Private Group (1-8 pax)",
-            "image": `https://northetours.com${tour.image}`,
-            "offers": {
-              "@type": "AggregateOffer",
-              "lowPrice": tour.startingPrice.toString(),
-              "highPrice": (tour.pricingTiers[tour.pricingTiers.length - 1]?.price || tour.startingPrice).toString(),
-              "priceCurrency": "EUR",
-              "availability": "https://schema.org/InStock",
-              "url": `https://northetours.com/tours/${tour.id}`
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "TouristTrip",
+              "name": tourName,
+              "description": tour.shortDesc[lang] || tour.shortDesc.en || tour.shortDesc.pt,
+              "touristType": "Private Group (1-8 pax)",
+              "image": `https://www.northetours.com${tour.image}`,
+              "offers": {
+                "@type": "AggregateOffer",
+                "lowPrice": tour.startingPrice.toString(),
+                "highPrice": (tour.pricingTiers[tour.pricingTiers.length - 1]?.price || tour.startingPrice).toString(),
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "url": `https://www.northetours.com/tours/${tour.id}`
+              },
+              "provider": {
+                "@type": "TravelAgency",
+                "name": "NORTHÉ",
+                "url": "https://www.northetours.com",
+                "telephone": `+${WHATSAPP_NUMBER}`
+              }
             },
-            "provider": {
-              "@type": "TravelAgency",
-              "name": "NORTHÉ",
-              "url": "https://northetours.com",
-              "telephone": `+${WHATSAPP_NUMBER}`
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.northetours.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Tours",
+                  "item": "https://www.northetours.com/#tours"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": tourName,
+                  "item": `https://www.northetours.com/tours/${tour.id}`
+                }
+              ]
             }
-          })
+          ])
         }}
       />
 

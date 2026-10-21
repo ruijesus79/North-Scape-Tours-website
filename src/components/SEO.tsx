@@ -23,14 +23,14 @@ export default function SEO({ title, description, lang, image, url }: SEOProps) 
     }
 
     if (image) {
-      const fullImageUrl = image.startsWith('http') ? image : `https://northetours.com${image.startsWith('/') ? '' : '/'}${image}`;
+      const fullImageUrl = image.startsWith('http') ? image : `https://www.northetours.com${image.startsWith('/') ? '' : '/'}${image}`;
       setMeta('property', 'og:image', fullImageUrl);
       setMeta('name', 'twitter:image', fullImageUrl);
       setMeta('name', 'twitter:card', 'summary_large_image');
     }
 
     if (url) {
-      const fullUrl = url.startsWith('http') ? url : `https://northetours.com${url.startsWith('/') ? '' : '/'}${url}`;
+      const fullUrl = url.startsWith('http') ? url : `https://www.northetours.com${url.startsWith('/') ? '' : '/'}${url}`;
       setMeta('property', 'og:url', fullUrl);
 
       let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;

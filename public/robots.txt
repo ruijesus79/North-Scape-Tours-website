@@ -1,6 +1,36 @@
-# robots.txt for NORTHÉ Private Tours
+# robots.txt for NORTHÉ Private Tours (https://www.northetours.com)
 User-agent: *
+Allow: /
+Disallow:
+
+# Major Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# AI Assistants & Search Engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 # Sitemaps
-Sitemap: https://northetours.com/sitemap.xml
+Sitemap: https://www.northetours.com/sitemap.xml
+
+# Host declaration
+Host: https://www.northetours.com

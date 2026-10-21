@@ -141,7 +141,7 @@ export default function App() {
         }
         lang={lang}
         image="/logo-white.png"
-        url="https://northetours.com"
+        url="https://www.northetours.com/"
       />
 
       {/* ═══════ SCROLL PROGRESS BAR ═══════ */}
