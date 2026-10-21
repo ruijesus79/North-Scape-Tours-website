@@ -39,6 +39,8 @@ export interface TourItem {
   duration: LocalizedText;
   highlights: LocalizedList;
   included: LocalizedList;
+  importantInfo?: LocalizedList;
+  isBoatOnly?: boolean;
   boatBadge?: LocalizedText;
   boatOption?: 'shared_with_private_upgrade' | 'private_included' | 'none';
   experienceBadge?: LocalizedText;
@@ -4264,7 +4266,257 @@ export const ALL_17_TOURS: TourItem[] = [
       "de": "Privates Luxus-Picknick in den Weinbergen"
     }
   },
-
+  {
+    "id": "porto-private-boat-tour",
+    "code": "North-018",
+    "category": "porto",
+    "isBoatOnly": true,
+    "categoryLabel": {
+      "pt": "Porto Experiences",
+      "en": "Porto Experiences",
+      "es": "Porto Experiences",
+      "fr": "Porto Experiences",
+      "de": "Porto Experiences"
+    },
+    "name": {
+      "pt": "Passeio de Barco Privado no Porto | Private Boat Tour in Porto",
+      "en": "Private Boat Tour in Porto | Exclusive Douro River Cruise",
+      "es": "Paseo en Barco Privado en Oporto | Private Boat Tour in Porto",
+      "fr": "Croisière en Bateau Privé à Porto | Private Boat Tour in Porto",
+      "de": "Private Bootsfahrt in Porto | Private Boat Tour in Porto"
+    },
+    "subtitle": {
+      "pt": "Uma hora no rio. O Porto à sua frente. Uma experiência só sua a bordo de uma embarcação privada para até 6 passageiros, com vinho branco frisante, amêndoas e água.",
+      "en": "One hour on the river. Porto right in front of you. An experience entirely yours aboard a private boat for up to 6 passengers, with sparkling white wine, almonds, and water.",
+      "es": "Una hora en el río. Oporto frente a usted. Una experiencia solo suya a bordo de un barco privado para hasta 6 pasajeros, con vino blanco de aguja, almendras y agua.",
+      "fr": "Une heure sur le fleuve. Porto devant vous. Une expérience rien qu'à vous à bord d'un bateau privé jusqu'à 6 passagers, avec vin blanc pétillant, amandes et eau.",
+      "de": "Eine Stunde auf dem Fluss. Porto direkt vor Ihnen. Ein Erlebnis ganz für Sie allein an Bord eines privaten Bootes für bis zu 6 Passagiere mit Perlwein, Mandeln und Wasser."
+    },
+    "tagline": {
+      "pt": "Barco Exclusivamente Privado · Até 6 Pax · €150 por Saída",
+      "en": "Exclusively Private Boat · Up to 6 Pax · €150 per Departure",
+      "es": "Barco Exclusivamente Privado · Hasta 6 Pax · 150 € por Salida",
+      "fr": "Bateau Exclusivement Privé · Jusqu'à 6 Pax · 150 € par Sortie",
+      "de": "Exklusives Privatboot · Bis zu 6 Pers. · 150 € pro Ausfahrt"
+    },
+    "shortDesc": {
+      "pt": "Descubra o Porto a partir das águas do Douro num passeio de barco privado. Admire as margens históricas do Porto e de Vila Nova de Gaia, navegue sob a icónica Ponte D. Luís I e desfrute de uma experiência descontraída, acompanhada por vinho branco frisante, amêndoas e água.",
+      "en": "Discover Porto from the waters of the Douro on a private boat tour. Admire the historic riverbanks of Porto and Vila Nova de Gaia, sail beneath the iconic Dom Luís I Bridge, and enjoy a relaxed experience accompanied by sparkling white wine, almonds, and water.",
+      "es": "Descubra Oporto desde las aguas del Duero en un paseo en barco privado. Admire las orillas históricas de Oporto y Vila Nova de Gaia, navegue bajo el icónico Puente D. Luís I y disfrute de una experiencia relajada acompañada de vino blanco de aguja, almendras y agua.",
+      "fr": "Découvrez Porto depuis les eaux du Douro lors d'une croisière en bateau privé. Admirez les rives historiques de Porto et de Vila Nova de Gaia, naviguez sous l'emblématique pont Dom Luís I et profitez d'un moment de détente accompagné de vin blanc pétillant, d'amandes et d'eau.",
+      "de": "Entdecken Sie Porto vom Wasser des Douro aus bei einer privaten Bootsfahrt. Bewundern Sie die historischen Ufer von Porto und Vila Nova de Gaia, fahren Sie unter der ikonischen Brücke Dom Luís I hindurch und genießen Sie ein entspanntes Erlebnis mit weißem Perlwein, Mandeln und Wasser."
+    },
+    "fullDesc": {
+      "pt": [
+        "Descubra uma perspetiva diferente do Porto numa experiência privada pelo rio Douro, onde a paisagem histórica da cidade se revela a partir da água.",
+        "A bordo do seu próprio barco, desfrute de uma hora dedicada a apreciar o Porto ao seu ritmo, longe das multidões e com a liberdade de partilhar o momento apenas com as pessoas que escolheu.",
+        "Ao longo do passeio, contemple as margens do Porto e de Vila Nova de Gaia, as fachadas coloridas da Ribeira, as caves de vinho do Porto e a arquitetura que acompanha o rio. Navegue junto à emblemática Ponte D. Luís I, um dos símbolos mais reconhecidos da cidade, e admire a forma como as duas margens se encontram numa das paisagens mais características de Portugal.",
+        "Para tornar o momento ainda mais agradável, desfrute de uma pequena receção a bordo, com vinho branco frisante, água e amêndoas. Um detalhe simples, pensado para acompanhar a paisagem e proporcionar uma pausa descontraída durante a sua estadia no Porto.",
+        "Seja para uma escapadinha romântica, um momento especial em família ou um passeio entre amigos, esta experiência privada oferece uma forma intimista de descobrir a cidade, contemplar o Douro e criar memórias a partir de uma perspetiva diferente.",
+        "Uma hora no rio. O Porto à sua frente. Uma experiência só sua."
+      ],
+      "en": [
+        "Discover a different perspective of Porto on a private experience along the Douro River, where the city's historic landscape unfolds from the water.",
+        "Aboard your own private boat, enjoy an hour dedicated to appreciating Porto at your own pace, far from the crowds and with the freedom to share the moment solely with the people you have chosen.",
+        "Throughout the cruise, contemplate the riverbanks of Porto and Vila Nova de Gaia, the colorful facades of Ribeira, the historic Port wine cellars, and the architecture lining the river. Sail alongside the emblematic Dom Luís I Bridge, one of the city's most recognized symbols, and admire how the two banks meet in one of Portugal's most characteristic landscapes.",
+        "To make the moment even more enjoyable, savor a welcoming reception on board with chilled sparkling white wine, water, and almonds. A thoughtful detail designed to complement the scenery and offer a relaxed pause during your stay in Porto.",
+        "Whether for a romantic getaway, a special family moment, or an outing among friends, this private experience offers an intimate way to discover the city, contemplate the Douro, and create lasting memories from a unique vantage point.",
+        "One hour on the river. Porto right in front of you. An experience entirely yours."
+      ],
+      "es": [
+        "Descubra una perspectiva diferente de Oporto en una experiencia privada por el río Duero, donde el paisaje histórico de la ciudad se revela desde el agua.",
+        "A bordo de su propio barco, disfrute de una hora dedicada a apreciar Oporto a su ritmo, lejos de las multitudes y con la libertad de compartir el momento únicamente con las personas que ha elegido.",
+        "A lo largo del paseo, contemple las orillas de Oporto y de Vila Nova de Gaia, las fachadas coloridas de la Ribeira, las bodegas de vino de Oporto y la arquitectura que acompaña al río. Navegue junto al emblemático Puente D. Luís I, uno de los símbolos más reconocidos de la ciudad, y admire cómo las dos orillas se encuentran en uno de los paisajes más característicos de Portugal.",
+        "Para hacer el momento aún más agradable, disfrute de una pequeña recepción a bordo con vino blanco de aguja, agua y almendras. Un detalle pensado para acompañar el paisaje y ofrecer una pausa relajada durante su estancia en Oporto.",
+        "Ya sea para una escapada romántica, un momento especial en familia o un paseo entre amigos, esta experiencia privada ofrece una forma íntima de descubrir la ciudad, contemplar el Duero y crear recuerdos desde una perspectiva diferente.",
+        "Una hora en el río. Oporto frente a usted. Una experiencia solo suya."
+      ],
+      "fr": [
+        "Découvrez une perspective différente de Porto lors d'une expérience privée sur le fleuve Douro, où le paysage historique de la ville se révèle depuis l'eau.",
+        "À bord de votre propre bateau, profitez d'une heure dédiée à apprécier Porto à votre rythme, loin de la foule et avec la liberté de partager ce moment uniquement avec les personnes que vous avez choisies.",
+        "Tout au long de la promenade, contemplez les rives de Porto et de Vila Nova de Gaia, les façades colorées de la Ribeira, les caves à vin de Porto et l'architecture qui borde le fleuve. Naviguez près de l'emblématique pont Dom Luís I, l'un des symboles les plus reconnus de la ville, et admirez la façon dont les deux rives se rejoignent dans l'un des paysages les plus caractéristiques du Portugal.",
+        "Pour rendre ce moment encore plus agréable, profitez d'une réception à bord avec du vin blanc pétillant, de l'eau et des amandes. Une attention délicate, pensée pour accompagner le paysage et offrir une parenthèse de détente durant votre séjour à Porto.",
+        "Que ce soit pour une escapade romantique, un moment privilégié en famille ou une sortie entre amis, cette expérience privée offre une manière intimiste de découvrir la ville, de contempler le Douro et de créer des souvenirs sous un angle unique.",
+        "Une heure sur le fleuve. Porto devant vous. Une expérience rien qu'à vous."
+      ],
+      "de": [
+        "Entdecken Sie eine neue Perspektive auf Porto bei einem privaten Erlebnis auf dem Fluss Douro, wo sich die historische Kulisse der Stadt vom Wasser aus offenbart.",
+        "Genießen Sie an Bord Ihres eigenen Bootes eine Stunde lang Porto in Ihrem eigenen Tempo, fernab der Menschenmassen und mit der Freiheit, den Moment nur mit den Menschen zu teilen, die Sie ausgewählt haben.",
+        "Betrachten Sie während der Fahrt die Ufer von Porto und Vila Nova de Gaia, die farbenfrohen Fassaden der Ribeira, die Portweinkeller und die Architektur entlang des Flusses. Fahren Sie nahe an der berühmten Brücke Dom Luís I vorbei, einem der bekanntesten Wahrzeichen der Stadt, und bewundern Sie, wie die beiden Ufer in einer der charakteristischsten Landschaften Portugals aufeinandertreffen.",
+        "Um den Moment noch angenehmer zu gestalten, erwartet Sie an Bord ein kleiner Empfang mit weißem Perlwein, Wasser und Mandeln. Ein liebevolles Detail, das die Landschaft begleitet und Ihnen während Ihres Aufenthalts in Porto eine entspannte Pause bietet.",
+        "Ob für einen romantischen Ausflug zu zweit, einen besonderen Familienmoment oder eine Fahrt mit Freunden – dieses private Erlebnis bietet eine intime Möglichkeit, die Stadt zu entdecken, den Douro zu betrachten und Erinnerungen aus einer besonderen Perspektive zu schaffen.",
+        "Eine Stunde auf dem Fluss. Porto direkt vor Ihnen. Ein Erlebnis ganz für Sie allein."
+      ]
+    },
+    "duration": {
+      "pt": "1 hora",
+      "en": "1 hour",
+      "es": "1 hora",
+      "fr": "1 heure",
+      "de": "1 Stunde"
+    },
+    "highlights": {
+      "pt": [
+        "Passeio de barco exclusivamente privado pelo rio Douro.",
+        "Perspetivas privilegiadas do Porto histórico e de Vila Nova de Gaia.",
+        "Passagem junto à icónica Ponte D. Luís I.",
+        "Vinho branco frisante, água e amêndoas servidos a bordo.",
+        "Uma experiência ideal para casais, famílias e pequenos grupos.",
+        "Até 6 passageiros, respeitando a lotação autorizada da embarcação."
+      ],
+      "en": [
+        "Exclusively private boat tour along the Douro River.",
+        "Privileged views of historic Porto and Vila Nova de Gaia.",
+        "Passage alongside the iconic Dom Luís I Bridge.",
+        "Sparkling white wine, water, and almonds served on board.",
+        "An ideal experience for couples, families, and small groups.",
+        "Up to 6 passengers, respecting the boat's authorized capacity."
+      ],
+      "es": [
+        "Paseo en barco exclusivamente privado por el río Duero.",
+        "Perspectivas privilegiadas del Oporto histórico y de Vila Nova de Gaia.",
+        "Paso junto al icónico Puente D. Luís I.",
+        "Vino blanco de aguja, agua y almendras servidos a bordo.",
+        "Una experiencia ideal para parejas, familias y pequeños grupos.",
+        "Hasta 6 pasajeros, respetando el aforo autorizado de la embarcación."
+      ],
+      "fr": [
+        "Croisière en bateau exclusivement privée sur le fleuve Douro.",
+        "Perspectives privilégiées sur le Porto historique et Vila Nova de Gaia.",
+        "Passage près de l'emblématique pont Dom Luís I.",
+        "Vin blanc pétillant, eau et amandes servis à bord.",
+        "Une expérience idéale pour les couples, les familles et les petits groupes.",
+        "Jusqu'à 6 passagers, dans le respect de la capacité autorisée de l'embarcation."
+      ],
+      "de": [
+        "Exklusiv private Bootsfahrt auf dem Fluss Douro.",
+        "Privilegierte Ausblicke auf das historische Porto und Vila Nova de Gaia.",
+        "Vorbeifahrt an der ikonischen Brücke Dom Luís I.",
+        "Weißer Perlwein, Wasser und Mandeln werden an Bord serviert.",
+        "Ein ideales Erlebnis für Paare, Familien und kleine Gruppen.",
+        "Bis zu 6 Passagiere, unter Einhaltung der zugelassenen Kapazität des Bootes."
+      ]
+    },
+    "included": {
+      "pt": [
+        "Passeio privado de barco com duração de 1 hora.",
+        "Skipper habilitado para a operação da embarcação.",
+        "Combustível para o percurso previsto.",
+        "Vinho branco frisante.",
+        "Água.",
+        "Amêndoas servidas a bordo.",
+        "Seguro aplicável à atividade."
+      ],
+      "en": [
+        "1-hour private boat tour.",
+        "Certified skipper operating the vessel.",
+        "Fuel for the scheduled route.",
+        "Sparkling white wine.",
+        "Bottled water.",
+        "Almonds served on board.",
+        "Applicable activity insurance."
+      ],
+      "es": [
+        "Paseo privado en barco de 1 hora de duración.",
+        "Skipper titulado para la operación de la embarcación.",
+        "Combustible para el recorrido previsto.",
+        "Vino blanco de aguja.",
+        "Agua.",
+        "Almendras servidas a bordo.",
+        "Seguro aplicable a la actividad."
+      ],
+      "fr": [
+        "Croisière privée en bateau d'une durée d'1 heure.",
+        "Skipper certifié pour la navigation de l'embarcation.",
+        "Carburant pour le parcours prévu.",
+        "Vin blanc pétillant.",
+        "Eau.",
+        "Amandes servies à bord.",
+        "Assurance applicable à l'activité."
+      ],
+      "de": [
+        "1-stündige private Bootsfahrt.",
+        "Zertifizierter Skipper für die Führung des Bootes.",
+        "Treibstoff für die geplante Route.",
+        "Weißer Perlwein.",
+        "Wasser.",
+        "Mandeln an Bord serviert.",
+        "Geltende Aktivitätsversicherung."
+      ]
+    },
+    "importantInfo": {
+      "pt": [
+        "Experiência privada, sem partilha do barco com outros clientes.",
+        "Capacidade máxima anunciada: 6 passageiros, sujeita à lotação legal da embarcação.",
+        "O percurso pode ser ajustado por razões de segurança, condições meteorológicas ou operacionais.",
+        "A realização do passeio está sujeita às condições de navegação e às instruções do skipper.",
+        "Informe-nos antecipadamente sobre alergias alimentares, incluindo alergia a frutos de casca rija."
+      ],
+      "en": [
+        "Private experience, with no sharing of the boat with other guests.",
+        "Maximum advertised capacity: 6 passengers, subject to the legal capacity of the vessel.",
+        "The route may be adjusted for safety, weather, or operational reasons.",
+        "The tour is subject to navigation conditions and the skipper's instructions.",
+        "Please inform us in advance of any food allergies, including tree nut allergies."
+      ],
+      "es": [
+        "Experiencia privada, sin compartir el barco con otros clientes.",
+        "Capacidad máxima anunciada: 6 pasajeros, sujeta al aforo legal de la embarcación.",
+        "El recorrido puede ajustarse por razones de seguridad, condiciones meteorológicas u operativas.",
+        "La realización del paseo está sujeta a las condiciones de navegación y a las instrucciones del skipper.",
+        "Infórmenos con antelación sobre alergias alimentarias, incluida la alergia a los frutos secos."
+      ],
+      "fr": [
+        "Expérience privée, sans partage du bateau avec d'autres clients.",
+        "Capacité maximale annoncée : 6 passagers, sous réserve de la capacité légale de l'embarcation.",
+        "Le parcours peut être ajusté pour des raisons de sécurité, de conditions météorologiques ou opérationnelles.",
+        "La réalisation de la sortie est soumise aux conditions de navigation et aux instructions du skipper.",
+        "Veuillez nous informer à l'avance de toute allergie alimentaire, y compris l'allergie aux fruits à coque."
+      ],
+      "de": [
+        "Privates Erlebnis, ohne das Boot mit anderen Gästen zu teilen.",
+        "Maximal angegebene Kapazität: 6 Passagiere, vorbehaltlich der gesetzlichen Zulassung des Bootes.",
+        "Die Route kann aus Sicherheits-, Wetter- oder betrieblichen Gründen angepasst werden.",
+        "Die Durchführung der Fahrt unterliegt den Navigationsbedingungen und den Anweisungen des Skippers.",
+        "Bitte informieren Sie uns vorab über Lebensmittelallergien, einschließlich Nussallergien."
+      ]
+    },
+    "boatOption": "private_included",
+    "pricingTiers": [
+      { "pax": 1, "price": 150 },
+      { "pax": 2, "price": 150 },
+      { "pax": 3, "price": 150 },
+      { "pax": 4, "price": 150 },
+      { "pax": 5, "price": 150 },
+      { "pax": 6, "price": 150 }
+    ],
+    "startingPrice": 150,
+    "gygVerified": true,
+    "gygUrl": "https://www.getyourguide.com/pt-pt/north-scape-tours-lda-s716611/",
+    "image": "/images/tours/porto-private-boat-tour/1.webp",
+    "gallery": [
+      "/images/tours/porto-private-boat-tour/1.webp",
+      "/images/tours/porto-private-boat-tour/2.webp",
+      "/images/tours/porto-private-boat-tour/3.webp",
+      "/images/tours/porto-private-boat-tour/4.webp",
+      "/images/tours/porto-private-boat-tour/5.webp",
+      "/images/tours/porto-private-boat-tour/6.webp"
+    ],
+    "boatBadge": {
+      "pt": "Barco Privado Exclusivo no Rio Douro (Até 6 Pax)",
+      "en": "Exclusive Private Boat on the Douro River (Up to 6 Pax)",
+      "es": "Barco Privado Exclusivo en el Río Duero (Hasta 6 Pax)",
+      "fr": "Bateau Privé Exclusif sur le Douro (Jusqu'à 6 Pax)",
+      "de": "Exklusives Privatboot auf dem Douro (Bis zu 6 Pers.)"
+    },
+    "experienceBadge": {
+      "pt": "Vinho Branco Frisante, Amêndoas & Skipper Privado",
+      "en": "Sparkling White Wine, Almonds & Private Skipper",
+      "es": "Vino Blanco de Aguja, Almendras y Skipper Privado",
+      "fr": "Vin Blanc Pétillant, Amandes & Skipper Privé",
+      "de": "Weißer Perlwein, Mandeln & Privater Skipper"
+    }
+  }
 ];
 
 export function getTourBySlug(slug: string): TourItem | undefined {
