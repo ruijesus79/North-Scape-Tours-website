@@ -78,6 +78,26 @@ export default function BlogSection({ scrollTo }: { scrollTo: (id: string) => vo
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <Reveal className="mt-16 text-center">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full border border-white/15 bg-white/[0.03] hover:bg-white hover:text-black text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300 group"
+          >
+            <span>
+              {lang === 'pt'
+                ? 'Ver Todos os Artigos do Blog'
+                : lang === 'es'
+                ? 'Ver Todos los Artículos del Blog'
+                : lang === 'fr'
+                ? 'Voir Tous les Articles du Blog'
+                : lang === 'de'
+                ? 'Alle Blog-Artikel Anzeigen'
+                : 'View All Blog Articles'}
+            </span>
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

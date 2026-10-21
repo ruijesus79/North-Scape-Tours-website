@@ -405,6 +405,7 @@ export default function TourPage() {
     setActivePhotoIdx(0);
     setIsLightboxOpen(false);
     setSelectedExtras([]);
+    setSelectedPax(2);
   }, [slug]);
 
   // Gallery photos
@@ -449,11 +450,13 @@ export default function TourPage() {
   const tourDuration = tour.duration[lang] || tour.duration['en'] || tour.duration.pt;
   const tourHighlights = tour.highlights[lang] || tour.highlights['en'] || tour.highlights.pt;
   const tourIncluded = tour.included[lang] || tour.included['en'] || tour.included.pt;
+  const tourImportantInfo = tour.importantInfo ? (tour.importantInfo[lang] || tour.importantInfo['en'] || tour.importantInfo.pt) : undefined;
   const tourFullDesc = tour.fullDesc[lang] || tour.fullDesc['en'] || tour.fullDesc.pt;
+  const isBoatOnly = Boolean(tour.isBoatOnly);
   const boatBadge = tour.boatBadge ? (tour.boatBadge[lang] || tour.boatBadge['en'] || tour.boatBadge.pt) : undefined;
   const experienceBadge = tour.experienceBadge ? (tour.experienceBadge[lang] || tour.experienceBadge['en'] || tour.experienceBadge.pt) : undefined;
   const hasDouroBoatUpgrade = tour.boatOption === 'shared_with_private_upgrade';
-  const isPrivateBoatIncluded = tour.boatOption === 'private_included';
+  const isPrivateBoatIncluded = tour.boatOption === 'private_included' && !isBoatOnly;
   const boatNote = BOAT_OBSERVATION[lang as keyof typeof BOAT_OBSERVATION] || BOAT_OBSERVATION.en;
   const privateBoatNote = PRIVATE_INCLUDED_NOTE[lang as keyof typeof PRIVATE_INCLUDED_NOTE] || PRIVATE_INCLUDED_NOTE.en;
 
@@ -658,12 +661,12 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
             <span>{tourDuration}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Car size={16} className="text-amber-400" />
-            <span>{ui.pickupBadge}</span>
+            {isBoatOnly ? <Anchor size={16} className="text-amber-400" /> : <Car size={16} className="text-amber-400" />}
+            <span>{isBoatOnly ? ui.boatPickupBadge : ui.pickupBadge}</span>
           </div>
           <div className="flex items-center gap-2">
             <Users size={16} className="text-amber-400" />
-            <span>{ui.paxRange}</span>
+            <span>{isBoatOnly ? ui.boatPaxRange : ui.paxRange}</span>
           </div>
           <div className="flex items-center gap-2">
             <Shield size={16} className="text-green-400" />
@@ -684,7 +687,7 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
               className="group relative rounded-3xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] border border-white/10 shadow-2xl cursor-pointer bg-white/5"
               role="button"
               tabIndex={0}
-              aria-label={ui.viewFullGallery}
+              aria-label={ui.viewFullGallery(photos.length)}
             >
               <img
                 src={photos[activePhotoIdx] || tour.image}
@@ -702,7 +705,7 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
                 </span>
                 <span className="pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-black/60 group-hover:bg-amber-400 group-hover:text-black backdrop-blur-md border border-white/15 text-xs text-white transition-all duration-300 font-medium shadow-lg">
                   <Maximize2 size={13} />
-                  <span className="hidden sm:inline">{ui.viewFullGallery}</span>
+                  <span className="hidden sm:inline">{ui.viewFullGallery(photos.length)}</span>
                 </span>
               </div>
 
@@ -712,14 +715,14 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
                   NORTHÉ Signature Private Experience
                 </span>
                 <span className="bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15">
-                  {ui.chauffeurTag}
+                  {isBoatOnly ? ui.boatChauffeurTag : ui.chauffeurTag}
                 </span>
               </div>
             </div>
 
-            {/* 5-Photo Interactive Thumbnail Row */}
+            {/* Interactive Thumbnail Row */}
             {photos.length > 1 && (
-              <div className="grid grid-cols-5 gap-2 sm:gap-3">
+              <div className={`grid ${photos.length === 6 ? 'grid-cols-6' : 'grid-cols-5'} gap-2 sm:gap-3`}>
                 {photos.map((photoUrl, idx) => (
                   <button
                     key={idx}
@@ -830,6 +833,26 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
             )}
           </div>
 
+          {/* Important Information (when provided, e.g. Private Boat Tour) */}
+          {tourImportantInfo && tourImportantInfo.length > 0 && (
+            <div className="bg-white/[0.02] border border-amber-500/20 rounded-3xl p-7 sm:p-9 backdrop-blur-sm">
+              <div className="flex items-center gap-2.5 mb-5">
+                <Shield size={20} className="text-amber-400 flex-shrink-0" />
+                <h2 className="font-serif text-2xl sm:text-3xl text-white">
+                  {ui.importantInfoTitle}
+                </h2>
+              </div>
+              <div className="space-y-3">
+                {tourImportantInfo.map((info, i) => (
+                  <div key={i} className="flex items-start gap-3.5 text-sm sm:text-base text-white/75 font-light">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 flex-shrink-0 mt-2.5" />
+                    <span>{info}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* VIP Add-ons Upgrade */}
           <div className="bg-gradient-to-br from-white/[0.04] to-amber-500/[0.03] border border-amber-500/20 rounded-3xl p-7 sm:p-9 backdrop-blur-sm">
             <div className="flex items-center gap-2 text-amber-300 text-xs uppercase tracking-widest font-semibold mb-2">
@@ -894,7 +917,7 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
             <div className="flex items-center justify-between pb-5 border-b border-white/10">
               <div>
                 <span className="text-[11px] uppercase tracking-[0.2em] text-white/50 block mb-0.5">
-                  {ui.totalPrice}
+                  {isBoatOnly ? ui.boatTotalPrice : ui.totalPrice}
                 </span>
                 <div className="flex items-baseline gap-2">
                   <span className="font-serif text-4xl sm:text-5xl text-white">€{totalPrice}</span>
@@ -913,15 +936,15 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
               </div>
             </div>
 
-            {/* Interactive Group Size Selector (1 to 8 people) */}
+            {/* Interactive Group Size Selector */}
             <div className="py-6 border-b border-white/10">
               <label className="text-xs uppercase tracking-widest text-white/60 font-medium block mb-3">
-                {ui.selectPax}
+                {isBoatOnly ? ui.selectBoatPax : ui.selectPax}
               </label>
-              <div className="grid grid-cols-4 gap-2">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((pax) => {
+              <div className={`grid ${tour.pricingTiers.length === 6 ? 'grid-cols-3' : 'grid-cols-4'} gap-2`}>
+                {tour.pricingTiers.map((paxTier) => {
+                  const pax = paxTier.pax;
                   const isSelected = selectedPax === pax;
-                  const paxTier = tour.pricingTiers.find((t) => t.pax === pax);
                   return (
                     <button
                       key={pax}
@@ -934,18 +957,16 @@ Poderiam confirmar disponibilidade e detalhes? Muito obrigado!`;
                       }`}
                     >
                       <div className="text-sm font-medium">{pax} {ui.paxUnit(pax)}</div>
-                      {paxTier && (
-                        <div className={`text-[10px] font-mono mt-0.5 ${isSelected ? 'text-black/70 font-semibold' : 'text-amber-400/80'}`}>
-                          €{paxTier.price}
-                        </div>
-                      )}
+                      <div className={`text-[10px] font-mono mt-0.5 ${isSelected ? 'text-black/70 font-semibold' : 'text-amber-400/80'}`}>
+                        €{paxTier.price}
+                      </div>
                     </button>
                   );
                 })}
               </div>
               <p className="text-[11px] text-white/40 mt-3 flex items-center gap-1.5">
                 <Check size={12} className="text-emerald-400" />
-                {ui.privateVehicleNote}
+                {isBoatOnly ? ui.privateBoatOnlyNote : ui.privateVehicleNote}
               </p>
             </div>
 

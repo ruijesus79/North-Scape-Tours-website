@@ -36,8 +36,11 @@ const SECTION_UI = {
     resetFilters: 'Limpar filtros',
     privateBadge: '100% Privado',
     pickup: 'Porto Pickup',
+    boatPickup: 'Rio Douro · Porto',
     paxNote: 'Viatura Privada (1-8 pax)',
+    boatPaxNote: 'Barco Privado (Até 6 pax)',
     from: 'Desde',
+    perDeparture: 'Valor por saída',
     details: 'Ver Tour',
     whatsappQuick: 'WhatsApp',
     viewAllTours: 'Ver Todas as Experiências',
@@ -53,8 +56,11 @@ const SECTION_UI = {
     resetFilters: 'Reset filters',
     privateBadge: '100% Private',
     pickup: 'Porto Pickup',
+    boatPickup: 'Douro River · Porto',
     paxNote: 'Private Vehicle (1-8 pax)',
+    boatPaxNote: 'Private Boat (Up to 6 pax)',
     from: 'From',
+    perDeparture: 'Per departure',
     details: 'Explore',
     whatsappQuick: 'WhatsApp',
     viewAllTours: 'View All Experiences',
@@ -70,8 +76,11 @@ const SECTION_UI = {
     resetFilters: 'Restablecer filtros',
     privateBadge: '100% Privado',
     pickup: 'Recogida Oporto',
+    boatPickup: 'Río Duero · Oporto',
     paxNote: 'Vehículo Privado (1-8 pax)',
+    boatPaxNote: 'Barco Privado (Hasta 6 pax)',
     from: 'Desde',
+    perDeparture: 'Por salida',
     details: 'Ver Tour',
     whatsappQuick: 'WhatsApp',
     viewAllTours: 'Ver Todas las Experiencias',
@@ -87,8 +96,11 @@ const SECTION_UI = {
     resetFilters: 'Réinitialiser les filtres',
     privateBadge: '100% Privé',
     pickup: 'Prise en charge Porto',
+    boatPickup: 'Fleuve Douro · Porto',
     paxNote: 'Véhicule Privé (1-8 pax)',
+    boatPaxNote: "Bateau Privé (Jusqu'à 6 pax)",
     from: 'À partir de',
+    perDeparture: 'Par sortie',
     details: 'Découvrir',
     whatsappQuick: 'WhatsApp',
     viewAllTours: 'Voir Toutes les Expériences',
@@ -104,8 +116,11 @@ const SECTION_UI = {
     resetFilters: 'Filter zurücksetzen',
     privateBadge: '100% Privat',
     pickup: 'Abholung Porto',
+    boatPickup: 'Douro-Fluss · Porto',
     paxNote: 'Privatfahrzeug (1-8 pax)',
+    boatPaxNote: 'Privatboot (Bis 6 Pers.)',
     from: 'Ab',
+    perDeparture: 'Pro Ausfahrt',
     details: 'Tour Ansehen',
     whatsappQuick: 'WhatsApp',
     viewAllTours: 'Alle Erlebnisse Anzeigen',
@@ -325,8 +340,8 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                         <span>{tourDuration}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <Car size={13} className="text-amber-400" />
-                        <span>{ui.pickup}</span>
+                        {tour.isBoatOnly ? <Compass size={13} className="text-amber-400" /> : <Car size={13} className="text-amber-400" />}
+                        <span>{tour.isBoatOnly ? ui.boatPickup : ui.pickup}</span>
                       </div>
                     </div>
                   </div>
@@ -378,10 +393,10 @@ export default function ToursSection({ scrollTo, initialCategory = 'all' }: Tour
                       <div className="flex items-baseline justify-between mb-4">
                         <div>
                           <span className="text-[10px] uppercase tracking-widest text-white/50 block">
-                            {ui.paxNote}
+                            {tour.isBoatOnly ? ui.boatPaxNote : ui.paxNote}
                           </span>
                           <div className="flex items-baseline gap-1.5 mt-0.5">
-                            <span className="text-xs text-white/60">{ui.from}</span>
+                            <span className="text-xs text-white/60">{tour.isBoatOnly ? ui.perDeparture : ui.from}</span>
                             <span className="font-serif text-2xl sm:text-3xl text-white font-normal">
                               €{tour.startingPrice}
                             </span>

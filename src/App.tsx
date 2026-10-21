@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Routes, Route, useLocation, useNavigate, Link, Navigate } from 'react-router-dom';
 import { Menu, X, Globe, ChevronDown, MessageCircle, Shield } from 'lucide-react';
 
+const BlogIndex = lazy(() => import('./pages/BlogIndex'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const TourPage = lazy(() => import('./pages/TourPage'));
 const Terms = lazy(() => import('./pages/Terms'));
@@ -110,6 +111,7 @@ export default function App() {
     { id: 'north', label: 'Northern Portugal', action: () => handleCategoryNav('north') },
     { id: 'porto', label: 'Porto Experiences', action: () => handleCategoryNav('porto') },
     { id: 'about', label: t.nav.about, action: () => scrollTo('sobre-nos') },
+    { id: 'blog', label: t.nav.blog || 'Blog', action: () => { navigate('/blog'); setMenuOpen(false); } },
     { id: 'contact', label: t.nav.contact, action: () => scrollTo('contacto') },
   ];
 
@@ -420,6 +422,22 @@ export default function App() {
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <TourPage />
+                </motion.div>
+              }
+            />
+
+            {/* Blog Index Hub */}
+            <Route
+              path="/blog"
+              element={
+                <motion.div
+                  key="/blog"
+                  initial={{ opacity: 0, scale: 0.98, filter: 'blur(5px)' }}
+                  animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, scale: 0.98, filter: 'blur(5px)' }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <BlogIndex />
                 </motion.div>
               }
             />

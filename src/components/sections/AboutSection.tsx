@@ -1,9 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BookOpen } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Reveal } from '../../utils/shared';
 
 export default function AboutSection() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+
+  const blogCtaLabel =
+    lang === 'pt'
+      ? 'Ler o Diário & Blog da NORTHÉ'
+      : lang === 'es'
+      ? 'Leer el Diario & Blog de NORTHÉ'
+      : lang === 'fr'
+      ? 'Lire le Journal & Blog de NORTHÉ'
+      : lang === 'de'
+      ? 'NORTHÉ Journal & Blog Lesen'
+      : 'Read the NORTHÉ Journal & Blog';
 
   return (
     <section id="sobre-nos" className="relative bg-[#f6f2ea] text-[#14110d] overflow-hidden">
@@ -78,13 +91,21 @@ export default function AboutSection() {
             </div>
 
             <Reveal delay={0.4}>
-              <div className="mt-14 pt-8 border-t border-[#8b6f3d]/20">
+              <div className="mt-14 pt-8 border-t border-[#8b6f3d]/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
                 <p
                   className="text-xl sm:text-2xl text-[#8b6f3d] tracking-wide"
                   style={{ fontFamily: '"Dancing Script", "Brush Script MT", cursive' }}
                 >
                   {t.about.signature}
                 </p>
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center justify-center lg:justify-start gap-2.5 px-5 py-2.5 rounded-full border border-[#8b6f3d]/40 bg-[#8b6f3d]/[0.07] hover:bg-[#8b6f3d] text-[#14110d] hover:text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300 group"
+                >
+                  <BookOpen size={14} className="text-[#8b6f3d] group-hover:text-white transition-colors" />
+                  <span>{blogCtaLabel}</span>
+                  <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
+                </Link>
               </div>
             </Reveal>
           </div>
