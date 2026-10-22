@@ -118,33 +118,35 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0c0c0c] text-[#fafafa] font-sans selection:bg-white/20 overflow-x-hidden">
       <CustomCursor />
-      <SEO
-        title={
-          lang === 'pt'
-            ? 'NORTHÉ | Tours Privados & Experiências Exclusivas no Douro e Porto'
-            : lang === 'es'
-            ? 'NORTHÉ | Tours Privados y Experiencias Exclusivas en el Duero y Oporto'
-            : lang === 'fr'
-            ? 'NORTHÉ | Circuits Privés & Expériences Exclusives dans le Douro et Porto'
-            : lang === 'de'
-            ? 'NORTHÉ | Private Touren & Exklusive Erlebnisse im Douro-Tal und Porto'
-            : 'NORTHÉ | Luxury Private Tours & Experiences from Porto'
-        }
-        description={
-          lang === 'pt'
-            ? 'Experiências 100% privadas no Vale do Douro, Porto e Norte de Portugal. Guias certificados, viaturas executivas e itinerários exclusivos sob medida.'
-            : lang === 'es'
-            ? 'Experiencias 100% privadas en el Valle del Duero, Oporto y Norte de Portugal. Guías certificados, vehículos ejecutivos e itinerarios exclusivos a medida.'
-            : lang === 'fr'
-            ? 'Expériences 100% privées dans la Vallée du Douro, Porto et le Nord du Portugal. Véhicules exécutifs et itinéraires sur mesure.'
-            : lang === 'de'
-            ? '100% private Touren im Douro-Tal, Porto und Nordportugal. Zertifizierte Guides, Executive-Fahrzeuge und maßgeschneiderte Reiserouten.'
-            : 'Exclusive 100% private tours in Douro Valley, Porto, and Northern Portugal. Certified wine-master guides, executive vehicles, and bespoke itineraries.'
-        }
-        lang={lang}
-        image="/logo-white.png"
-        url="https://www.northetours.com/"
-      />
+      {location.pathname === '/' && (
+        <SEO
+          title={
+            lang === 'pt'
+              ? 'NORTHÉ | Passeios Privados no Douro e Porto · Luxury Private Tours'
+              : lang === 'es'
+              ? 'NORTHÉ | Tours Privados y Experiencias Exclusivas en el Duero y Oporto'
+              : lang === 'fr'
+              ? 'NORTHÉ | Circuits Privés & Expériences Exclusives dans le Douro et Porto'
+              : lang === 'de'
+              ? 'NORTHÉ | Private Touren & Exklusive Erlebnisse im Douro-Tal und Porto'
+              : 'NORTHÉ | Luxury Private Tours in Douro Valley, Porto & Northern Portugal'
+          }
+          description={
+            lang === 'pt'
+              ? 'NORTHÉ — Empresa de turismo de excelência com passeios 100% privados no Vale do Douro, Porto e Norte de Portugal. Provas em quintas históricas, barco privado no Douro, motorista-guia certificado e frota executiva.'
+              : lang === 'es'
+              ? 'Experiencias 100% privadas en el Valle del Duero, Oporto y Norte de Portugal. Paseo en barco privado, bodegas históricas, guías certificados y flota ejecutiva.'
+              : lang === 'fr'
+              ? 'Expériences 100% privées dans la Vallée du Douro, Porto et le Nord du Portugal. Croisière privée sur le Douro, domaines viticoles historiques et véhicules exécutifs.'
+              : lang === 'de'
+              ? '100% private Touren im Douro-Tal, Porto und Nordportugal. Private Bootstour auf dem Douro, historische Weingüter, zertifizierte Guides und Executive-Fahrzeuge.'
+              : 'Exclusive 100% private tours in Douro Valley, Porto, and Northern Portugal. Private boat tours on the Douro River, historic wine estates, certified guides, and executive fleet.'
+          }
+          lang={lang}
+          image="/images/tours/douro-wine-gastronomy/douro-valley-private-boat-experience.webp"
+          url="https://www.northetours.com/"
+        />
+      )}
 
       {/* ═══════ SCROLL PROGRESS BAR ═══════ */}
       <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
