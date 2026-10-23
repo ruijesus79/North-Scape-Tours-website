@@ -1,412 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage Principal -->
   <url>
     <loc>https://www.northetours.com/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/" />
+  </url>
+
+  <!-- 18 Experiências & Passeios Privados (Douro Valley, Northern Portugal & Porto Experiences) -->
+  <url>
+    <loc>https://www.northetours.com/tours/porto-private-boat-tour</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.northetours.com/tours/ponte-de-lima-douro</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/ponte-de-lima-douro" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/ponte-de-lima-douro?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/ponte-de-lima-douro?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/ponte-de-lima-douro?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/ponte-de-lima-douro?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/ponte-de-lima-douro" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/douro-wine-gastronomy</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/douro-wine-gastronomy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/douro-wine-gastronomy?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/douro-wine-gastronomy?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/douro-wine-gastronomy?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/douro-wine-gastronomy?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/douro-wine-gastronomy" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/amarante-mateus-palace-douro</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/amarante-mateus-palace-douro" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/amarante-mateus-palace-douro?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/amarante-mateus-palace-douro?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/amarante-mateus-palace-douro?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/amarante-mateus-palace-douro?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/amarante-mateus-palace-douro" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/lamego-douro</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/lamego-douro" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/lamego-douro?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/lamego-douro?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/lamego-douro?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/lamego-douro?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/lamego-douro" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/douro-private-celebration</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/douro-private-celebration" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/douro-private-celebration?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/douro-private-celebration?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/douro-private-celebration?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/douro-private-celebration?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/douro-private-celebration" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/coimbra-aveiro</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/coimbra-aveiro" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/coimbra-aveiro?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/coimbra-aveiro?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/coimbra-aveiro?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/coimbra-aveiro?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/coimbra-aveiro" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/barcelos-braga-guimaraes</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/barcelos-braga-guimaraes" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/barcelos-braga-guimaraes?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/barcelos-braga-guimaraes?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/barcelos-braga-guimaraes?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/barcelos-braga-guimaraes?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/barcelos-braga-guimaraes" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/fatima-batalha-tomar</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/fatima-batalha-tomar" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/fatima-batalha-tomar?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/fatima-batalha-tomar?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/fatima-batalha-tomar?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/fatima-batalha-tomar?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/fatima-batalha-tomar" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/obidos-alcobaca</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/obidos-alcobaca" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/obidos-alcobaca?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/obidos-alcobaca?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/obidos-alcobaca?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/obidos-alcobaca?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/obidos-alcobaca" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/porto-highlights-ocean</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/porto-highlights-ocean" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/porto-highlights-ocean?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/porto-highlights-ocean?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/porto-highlights-ocean?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/porto-highlights-ocean?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/porto-highlights-ocean" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/geres-mountain-villages</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/geres-mountain-villages" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/geres-mountain-villages?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/geres-mountain-villages?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/geres-mountain-villages?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/geres-mountain-villages?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/geres-mountain-villages" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/porto-filigree-gourmet</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/porto-filigree-gourmet" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/porto-filigree-gourmet?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/porto-filigree-gourmet?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/porto-filigree-gourmet?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/porto-filigree-gourmet?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/porto-filigree-gourmet" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/douro-blind-tasting-blend</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/douro-blind-tasting-blend" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/douro-blind-tasting-blend?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/douro-blind-tasting-blend?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/douro-blind-tasting-blend?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/douro-blind-tasting-blend?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/douro-blind-tasting-blend" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/nazare-sao-martinho</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/nazare-sao-martinho" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/nazare-sao-martinho?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/nazare-sao-martinho?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/nazare-sao-martinho?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/nazare-sao-martinho?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/nazare-sao-martinho" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/arouca-santa-maria-feira</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/arouca-santa-maria-feira" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/arouca-santa-maria-feira?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/arouca-santa-maria-feira?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/arouca-santa-maria-feira?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/arouca-santa-maria-feira?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/arouca-santa-maria-feira" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/historic-quinta-bucheiro-douro</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/historic-quinta-bucheiro-douro" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/historic-quinta-bucheiro-douro?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/historic-quinta-bucheiro-douro?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/historic-quinta-bucheiro-douro?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/historic-quinta-bucheiro-douro?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/historic-quinta-bucheiro-douro" />
   </url>
   <url>
     <loc>https://www.northetours.com/tours/douro-luxury-picnic</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/douro-luxury-picnic" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/douro-luxury-picnic?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/douro-luxury-picnic?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/douro-luxury-picnic?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/douro-luxury-picnic?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/douro-luxury-picnic" />
   </url>
-  <url>
-    <loc>https://www.northetours.com/tours/porto-private-boat-tour</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/tours/porto-private-boat-tour" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/tours/porto-private-boat-tour?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/tours/porto-private-boat-tour?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/tours/porto-private-boat-tour?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/tours/porto-private-boat-tour?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/tours/porto-private-boat-tour" />
-  </url>
+
+  <!-- Blog & Guias de Viagem (Hub Principal + 13 Artigos) -->
   <url>
     <loc>https://www.northetours.com/blog</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog" />
+  </url>
+  <url>
+    <loc>https://www.northetours.com/blog/passeio-de-barco-privado-no-porto-douro</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.northetours.com/blog/8-melhores-passeios-a-partir-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/8-melhores-passeios-a-partir-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/8-melhores-passeios-a-partir-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/8-melhores-passeios-a-partir-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/8-melhores-passeios-a-partir-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/8-melhores-passeios-a-partir-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/8-melhores-passeios-a-partir-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/vale-do-douro-a-partir-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/vale-do-douro-a-partir-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/vale-do-douro-a-partir-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/vale-do-douro-a-partir-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/vale-do-douro-a-partir-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/vale-do-douro-a-partir-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/vale-do-douro-a-partir-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/o-que-fazer-no-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/o-que-fazer-no-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/o-que-fazer-no-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/o-que-fazer-no-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/o-que-fazer-no-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/o-que-fazer-no-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/o-que-fazer-no-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/braga-e-guimaraes-a-partir-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/braga-e-guimaraes-a-partir-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/braga-e-guimaraes-a-partir-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/braga-e-guimaraes-a-partir-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/braga-e-guimaraes-a-partir-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/braga-e-guimaraes-a-partir-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/braga-e-guimaraes-a-partir-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/norte-de-portugal-lugares-alem-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/norte-de-portugal-lugares-alem-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/norte-de-portugal-lugares-alem-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/norte-de-portugal-lugares-alem-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/norte-de-portugal-lugares-alem-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/norte-de-portugal-lugares-alem-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/norte-de-portugal-lugares-alem-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/parque-nacional-peneda-geres-a-partir-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/parque-nacional-peneda-geres-a-partir-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/parque-nacional-peneda-geres-a-partir-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/parque-nacional-peneda-geres-a-partir-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/parque-nacional-peneda-geres-a-partir-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/parque-nacional-peneda-geres-a-partir-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/parque-nacional-peneda-geres-a-partir-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/douro-ou-vinho-verde</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/douro-ou-vinho-verde" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/douro-ou-vinho-verde?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/douro-ou-vinho-verde?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/douro-ou-vinho-verde?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/douro-ou-vinho-verde?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/douro-ou-vinho-verde" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/experiencias-privadas-a-partir-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/experiencias-privadas-a-partir-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/experiencias-privadas-a-partir-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/experiencias-privadas-a-partir-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/experiencias-privadas-a-partir-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/experiencias-privadas-a-partir-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/experiencias-privadas-a-partir-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/aveiro-e-coimbra-a-partir-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/aveiro-e-coimbra-a-partir-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/aveiro-e-coimbra-a-partir-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/aveiro-e-coimbra-a-partir-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/aveiro-e-coimbra-a-partir-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/aveiro-e-coimbra-a-partir-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/aveiro-e-coimbra-a-partir-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/nazare-obidos-e-sao-martinho-do-porto</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/nazare-obidos-e-sao-martinho-do-porto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/nazare-obidos-e-sao-martinho-do-porto?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/nazare-obidos-e-sao-martinho-do-porto?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/nazare-obidos-e-sao-martinho-do-porto?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/nazare-obidos-e-sao-martinho-do-porto?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/nazare-obidos-e-sao-martinho-do-porto" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/fatima-batalha-e-tomar-monumentos-unesco</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/fatima-batalha-e-tomar-monumentos-unesco" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/fatima-batalha-e-tomar-monumentos-unesco?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/fatima-batalha-e-tomar-monumentos-unesco?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/fatima-batalha-e-tomar-monumentos-unesco?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/fatima-batalha-e-tomar-monumentos-unesco?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/fatima-batalha-e-tomar-monumentos-unesco" />
   </url>
   <url>
     <loc>https://www.northetours.com/blog/ponte-de-lima-e-barcelos-minho-vinho-verde</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/blog/ponte-de-lima-e-barcelos-minho-vinho-verde" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/blog/ponte-de-lima-e-barcelos-minho-vinho-verde?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/blog/ponte-de-lima-e-barcelos-minho-vinho-verde?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/blog/ponte-de-lima-e-barcelos-minho-vinho-verde?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/blog/ponte-de-lima-e-barcelos-minho-vinho-verde?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/blog/ponte-de-lima-e-barcelos-minho-vinho-verde" />
   </url>
+
+  <!-- Páginas Legais -->
   <url>
     <loc>https://www.northetours.com/termos</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/termos" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/termos?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/termos?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/termos?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/termos?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/termos" />
   </url>
   <url>
     <loc>https://www.northetours.com/privacidade</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://www.northetours.com/privacidade" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.northetours.com/privacidade?lang=en" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.northetours.com/privacidade?lang=es" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.northetours.com/privacidade?lang=fr" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.northetours.com/privacidade?lang=de" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.northetours.com/privacidade" />
   </url>
 </urlset>
