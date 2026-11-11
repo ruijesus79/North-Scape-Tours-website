@@ -20,21 +20,29 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hide default cursor on desktop machines so custom cursor shines, but preserve it for form inputs */
+/* ─── Hardware-accelerated Luxury Gold Cursor ─── */
 @media (hover: hover) and (pointer: fine) {
-  body,
-  a,
-  button,
-  .cursor-pointer {
-    cursor: none !important;
+  html,
+  body {
+    cursor: url('/images/cursor/cursor-default.svg') 2 2, auto;
   }
 
-  /* Keep native cursor on inputs and textareas for accessibility & text selection */
+  a,
+  button,
+  [role="button"],
+  .cursor-pointer,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    cursor: url('/images/cursor/cursor-pointer.svg') 7 2, pointer !important;
+  }
+
+  /* Natural text selection on inputs and textareas */
   input,
   select,
   textarea,
   [contenteditable="true"] {
-    cursor: auto !important;
+    cursor: text !important;
   }
 }
 

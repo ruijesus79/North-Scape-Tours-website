@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <!-- Outer contrast border for visibility on any background -->
+  <path d="M2 2L2 19.5L6.5 15.5L10.2 23L13.2 21.6L9.5 14.1L15.5 14.1L2 2Z" 
+        fill="#0a0a0a" 
+        stroke="#0a0a0a" 
+        stroke-width="2.5" 
+        stroke-linejoin="round" 
+        stroke-linecap="round"/>
+  <!-- Inner Douro Gold Fill with subtle highlight border -->
+  <path d="M2 2L2 19.5L6.5 15.5L10.2 23L13.2 21.6L9.5 14.1L15.5 14.1L2 2Z" 
+        fill="url(#goldGradient)" 
+        stroke="#fff4cf" 
+        stroke-width="0.6" 
+        stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="goldGradient" x1="2" y1="2" x2="15.5" y2="23" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f5e197"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </linearGradient>
+  </defs>
+</svg>
