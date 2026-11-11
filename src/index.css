@@ -20,17 +20,21 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hide default cursor on desktop machines so custom cursor shines */
+/* Hide default cursor on desktop machines so custom cursor shines, but preserve it for form inputs */
 @media (hover: hover) and (pointer: fine) {
-
   body,
   a,
   button,
+  .cursor-pointer {
+    cursor: none !important;
+  }
+
+  /* Keep native cursor on inputs and textareas for accessibility & text selection */
   input,
   select,
   textarea,
-  .cursor-pointer {
-    cursor: none !important;
+  [contenteditable="true"] {
+    cursor: auto !important;
   }
 }
 

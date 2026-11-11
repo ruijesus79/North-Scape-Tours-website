@@ -1,88 +1,124 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useSpring, useMotionValue, useTransform } from 'motion/react';
 
 export default function CustomCursor() {
-    const cursorRef = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [isTextElement, setIsTextElement] = useState(false);
 
-    // Smooth spring physics for the cursor ring
-    const springConfig = { damping: 25, stiffness: 200, mass: 0.5 };
-    const cursorX = useSpring(-100, springConfig);
-    const cursorY = useSpring(-100, springConfig);
+    // Raw mouse coordinates (updated instantly with 0ms latency)
+    const mouseX = useMotionValue(-100);
+    const mouseY = useMotionValue(-100);
 
-    // High performance hover state via direct GPU motion value (0 = normal, 1 = hovering)
-    const hoverMotion = useMotionValue(0);
-    const hoverSpring = useSpring(hoverMotion, { stiffness: 300, damping: 20 });
+    // Snappy, ultra-responsive spring for the outer trailing ring (high stiffness, balanced damping)
+    const springConfig = { damping: 28, stiffness: 420, mass: 0.18 };
+    const ringRawX = useTransform(mouseX, x => x - 16);
+    const ringRawY = useTransform(mouseY, y => y - 16);
+    const ringX = useSpring(ringRawX, springConfig);
+    const ringY = useSpring(ringRawY, springConfig);
 
-    // Transforms for outer ring
-    const ringScale = useTransform(hoverSpring, [0, 1], [1, 1.8]);
-    const ringBg = useTransform(hoverSpring, [0, 1], ['transparent', 'rgba(212, 175, 55, 0.1)']);
-    const ringBorder = useTransform(hoverSpring, [0, 1], ['1px', '2px']);
+    // Instant position for the inner focal dot (centered at mouse coordinates with 0 lag)
+    const dotX = useTransform(mouseX, x => x - 3.5);
+    const dotY = useTransform(mouseY, y => y - 3.5);
 
-    // Transforms for inner dot
-    const dotScale = useTransform(hoverSpring, [0, 1], [1, 0]);
-    const dotOpacity = useTransform(hoverSpring, [0, 1], [1, 0]);
+    // Interactive states via direct GPU motion values
+    const hoverMotion = useMotionValue(0); // 0 = normal, 1 = hovering interactive
+    const clickMotion = useMotionValue(0); // 0 = up, 1 = mousedown
+
+    const hoverSpring = useSpring(hoverMotion, { stiffness: 400, damping: 25 });
+    const clickSpring = useSpring(clickMotion, { stiffness: 500, damping: 20 });
+
+    // Dynamic scale and styling for the outer ring
+    const ringScale = useTransform([hoverSpring, clickSpring], ([hover, click]: number[]) => {
+        const baseScale = 1 + hover * 0.45; // Expands to 1.45x on hover
+        const clickScale = 1 - click * 0.2;  // Snaps down on click
+        return baseScale * clickScale;
+    });
+
+    const ringBg = useTransform(hoverSpring, [0, 1], ['rgba(212, 175, 55, 0)', 'rgba(212, 175, 55, 0.12)']);
+    const ringBorder = useTransform(hoverSpring, [0, 1], ['1.25px', '2px']);
+
+    // Inner dot subtle scale on click/hover
+    const dotScale = useTransform([hoverSpring, clickSpring], ([hover, click]: number[]) => {
+        return (1 - hover * 0.3) * (1 - click * 0.3);
+    });
 
     useEffect(() => {
-        // Only show custom cursor on devices with a fine pointer (mice/trackpads)
-        const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+        // Disable on touchscreens/mobile devices
+        const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
         if (isTouchDevice) return;
 
         setIsVisible(true);
 
         const moveCursor = (e: MouseEvent) => {
-            cursorX.set(e.clientX - 16); // offset by half width (32/2)
-            cursorY.set(e.clientY - 16);
+            mouseX.set(e.clientX);
+            mouseY.set(e.clientY);
         };
 
         const handleMouseOver = (e: MouseEvent) => {
-            const target = e.target as HTMLElement;
-            // Check if we are hovering over clickable elements
-            const isClickable = target.closest('a') || target.closest('button') || target.closest('.cursor-pointer');
-            if (isClickable) {
-                hoverMotion.set(1);
-            } else {
-                hoverMotion.set(0);
-            }
+            const target = e.target as HTMLElement | null;
+            if (!target) return;
+
+            // Check if hovering over form inputs / textareas
+            const isText = Boolean(
+                target.closest('input, textarea, select, [contenteditable="true"]')
+            );
+            setIsTextElement(isText);
+
+            // Check if hovering over clickable / interactive elements
+            const isClickable = Boolean(
+                target.closest('a, button, [role="button"], .cursor-pointer, input[type="submit"]')
+            );
+            hoverMotion.set(isClickable ? 1 : 0);
         };
+
+        const handleMouseDown = () => clickMotion.set(1);
+        const handleMouseUp = () => clickMotion.set(0);
 
         const handleMouseLeave = () => setIsVisible(false);
         const handleMouseEnter = () => setIsVisible(true);
 
         window.addEventListener('mousemove', moveCursor, { passive: true });
         window.addEventListener('mouseover', handleMouseOver, { passive: true });
+        window.addEventListener('mousedown', handleMouseDown, { passive: true });
+        window.addEventListener('mouseup', handleMouseUp, { passive: true });
         document.addEventListener('mouseleave', handleMouseLeave);
         document.addEventListener('mouseenter', handleMouseEnter);
 
         return () => {
             window.removeEventListener('mousemove', moveCursor);
             window.removeEventListener('mouseover', handleMouseOver);
+            window.removeEventListener('mousedown', handleMouseDown);
+            window.removeEventListener('mouseup', handleMouseUp);
             document.removeEventListener('mouseleave', handleMouseLeave);
             document.removeEventListener('mouseenter', handleMouseEnter);
         };
-    }, [cursorX, cursorY, hoverMotion]);
+    }, [mouseX, mouseY, hoverMotion, clickMotion]);
 
-    if (!isVisible) return null;
+    if (!isVisible || isTextElement) return null;
 
     return (
-        <motion.div
-            ref={cursorRef}
-            className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#d4af37] pointer-events-none z-[99999] mix-blend-exclusion flex items-center justify-center transform-gpu"
-            style={{
-                x: cursorX,
-                y: cursorY,
-                scale: ringScale,
-                backgroundColor: ringBg,
-                borderWidth: ringBorder
-            }}
-        >
+        <>
+            {/* 1. Instant Precision Dot (Zero Latency - exactly follows physical pointer) */}
             <motion.div
-                className="w-1.5 h-1.5 bg-[#d4af37] rounded-full transform-gpu"
+                className="fixed top-0 left-0 w-[7px] h-[7px] rounded-full bg-[#d4af37] pointer-events-none z-[99999] shadow-[0_0_8px_rgba(212,175,55,0.8)]"
                 style={{
+                    x: dotX,
+                    y: dotY,
                     scale: dotScale,
-                    opacity: dotOpacity
                 }}
             />
-        </motion.div>
+
+            {/* 2. Fluid Luxury Halo Ring (Ultra-snappy high-stiffness spring follow) */}
+            <motion.div
+                className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#d4af37]/70 pointer-events-none z-[99998] backdrop-blur-[0.5px]"
+                style={{
+                    x: ringX,
+                    y: ringY,
+                    scale: ringScale,
+                    backgroundColor: ringBg,
+                    borderWidth: ringBorder,
+                }}
+            />
+        </>
     );
 }
