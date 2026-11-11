@@ -1,22 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <!-- Outer contrast border for visibility on any background -->
-  <path d="M2 2L2 19.5L6.5 15.5L10.2 23L13.2 21.6L9.5 14.1L15.5 14.1L2 2Z" 
-        fill="#0a0a0a" 
-        stroke="#0a0a0a" 
-        stroke-width="2.5" 
-        stroke-linejoin="round" 
-        stroke-linecap="round"/>
-  <!-- Inner Douro Gold Fill with subtle highlight border -->
-  <path d="M2 2L2 19.5L6.5 15.5L10.2 23L13.2 21.6L9.5 14.1L15.5 14.1L2 2Z" 
-        fill="url(#goldGradient)" 
-        stroke="#fff4cf" 
-        stroke-width="0.6" 
-        stroke-linejoin="round"/>
   <defs>
-    <linearGradient id="goldGradient" x1="2" y1="2" x2="15.5" y2="23" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f5e197"/>
-      <stop offset="50%" stop-color="#d4af37"/>
-      <stop offset="100%" stop-color="#b8860b"/>
+    <filter id="needleShadow" x="-25%" y="-25%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="1" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <linearGradient id="facetLight" x1="2" y1="2" x2="11" y2="19.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFDF5"/>
+      <stop offset="45%" stop-color="#EEDBB2"/>
+      <stop offset="100%" stop-color="#C5A059"/>
+    </linearGradient>
+    <linearGradient id="facetDark" x1="2" y1="2" x2="19" y2="12.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="55%" stop-color="#9C7423"/>
+      <stop offset="100%" stop-color="#6B4F10"/>
     </linearGradient>
   </defs>
+  <g filter="url(#needleShadow)">
+    <!-- Left Facet (Light Champagne) -->
+    <path d="M2 2L9.5 19.5L12 14L2 2Z" fill="url(#facetLight)"/>
+    <!-- Right Facet (Deep Champagne / Bronze Gold) -->
+    <path d="M2 2L12 14L19 12.5L2 2Z" fill="url(#facetDark)"/>
+    <!-- Subtle perimeter rim for contrast on white/light surfaces -->
+    <path d="M2 2L9.5 19.5L12 14L19 12.5L2 2Z" stroke="#3D2E0B" stroke-width="0.5" stroke-linejoin="round" stroke-opacity="0.5"/>
+    <!-- Center Bevel Ridge -->
+    <line x1="2" y1="2" x2="12" y2="14" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.9"/>
+    <!-- Tip Luminous Accent -->
+    <circle cx="2" cy="2" r="0.75" fill="#FFFFFF"/>
+  </g>
 </svg>

@@ -34,7 +34,7 @@ body {
   input[type="submit"],
   input[type="button"],
   input[type="reset"] {
-    cursor: url('/images/cursor/cursor-pointer.svg') 7 2, pointer !important;
+    cursor: url('/images/cursor/cursor-pointer.svg') 12 12, pointer !important;
   }
 
   /* Natural text selection on inputs and textareas */
