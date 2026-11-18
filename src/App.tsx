@@ -11,6 +11,8 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 import CustomCursor from './components/CustomCursor';
 import SEO from './components/SEO';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 import { useLanguage } from './contexts/LanguageContext';
 import { WHATSAPP_LINK, getWhatsAppLink, type Language } from './content';
@@ -118,6 +120,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0c0c0c] text-[#fafafa] font-sans selection:bg-white/20 overflow-x-hidden">
       <CustomCursor />
+      <SpeedInsights />
+      <Analytics />
       {location.pathname === '/' && (
         <SEO
           title={
