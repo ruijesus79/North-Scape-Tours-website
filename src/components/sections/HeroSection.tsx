@@ -187,17 +187,49 @@ export default function HeroSection({ scrollTo }: { scrollTo: (id: string) => vo
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 1000], ['0%', '20%']);
   const heroOpacity = useTransform(scrollY, [0, 600], [1, 0]);
+  const [loadVanta, setLoadVanta] = React.useState(false);
+
+  React.useEffect(() => {
+    // Defere o carregamento do Three.js/WebGL para não competir com o LCP inicial.
+    // Em telemóveis (< 768px), o Three.js NUNCA é descarregado (poupança de 750 kB).
+    if (typeof window === 'undefined') return;
+    if (window.innerWidth < 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const timer = setTimeout(() => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(() => setLoadVanta(true));
+      } else {
+        setLoadVanta(true);
+      }
+    }, 2200);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       <section id="home" className="relative h-screen w-full overflow-hidden flex items-end pb-20 md:items-center md:pb-0 bg-[#0c0c0c]">
         <motion.div className="absolute inset-0 w-full h-full" style={{ y: heroY, opacity: heroOpacity }}>
           <motion.div initial={{ scale: 1.15 }} animate={{ scale: 1 }} transition={{ duration: 14, ease: 'easeOut' }} className="w-full h-full">
-            <img src={IMG.hero} alt="Vista panorâmica dos socalcos e vinhas do Vale do Douro — NORTHÉ Passeios Privados" fetchPriority="high" loading="eager" decoding="async" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            <img 
+              src={IMG.hero} 
+              srcSet="/images/hero-douro-valley-mobile.webp 800w, /images/hero-douro-valley.webp 1920w"
+              sizes="100vw"
+              alt="Vista panorâmica dos socalcos e vinhas do Vale do Douro — NORTHÉ Passeios Privados" 
+              fetchPriority="high" 
+              loading="eager" 
+              decoding="async" 
+              className="w-full h-full object-cover" 
+              referrerPolicy="no-referrer" 
+            />
           </motion.div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-[#0c0c0c]/95" />
         </motion.div>
-        <Suspense fallback={null}><LazyVantaFog /></Suspense>
+        {loadVanta && (
+          <Suspense fallback={null}>
+            <LazyVantaFog />
+          </Suspense>
+        )}
         <div className="hero-glow absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8 w-full md:text-center md:mt-12">

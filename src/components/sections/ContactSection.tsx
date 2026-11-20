@@ -10,10 +10,19 @@ const LazyVantaWaves = lazy(() => import('../VantaWaves'));
 
 export default function ContactSection() {
   const { lang, t } = useLanguage();
+  const [showVanta, setShowVanta] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (window.innerWidth >= 768 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const timer = setTimeout(() => setShowVanta(true), 3500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   return (
     <section id="contacto" className="py-28 md:py-36 relative overflow-hidden bg-[#0c0c0c]">
-      <Suspense fallback={null}><LazyVantaWaves /></Suspense>
+      {showVanta && <Suspense fallback={null}><LazyVantaWaves /></Suspense>}
       <div className="absolute inset-0 z-0">
         <img src={IMG.ctaBg} alt="Paisagem do Douro" className="w-full h-full object-cover opacity-15 mix-blend-luminosity" referrerPolicy="no-referrer" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-[#0c0c0c]/80 to-[#0c0c0c]/90" />

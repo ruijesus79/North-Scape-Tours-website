@@ -10,10 +10,19 @@ const LazyVantaWaves = lazy(() => import('../VantaWaves'));
 
 export default function TransferSection({ scrollTo }: { scrollTo: (id: string) => void }) {
   const { t } = useLanguage();
+  const [showVanta, setShowVanta] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (window.innerWidth >= 768 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const timer = setTimeout(() => setShowVanta(true), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   return (
     <section id="transfer" className="py-28 md:py-36 px-6 md:px-12 relative overflow-hidden bg-[#0a0a00]">
-      <Suspense fallback={null}><LazyVantaWaves /></Suspense>
+      {showVanta && <Suspense fallback={null}><LazyVantaWaves /></Suspense>}
       <AmbientBg src={IMG.ambientBarrels} opacity={0.04} position="center bottom" />
       <AmbientGlow color="rgba(59,130,246,0.03)" top="40%" left="80%" size={500} />
       <div className="relative z-10 max-w-7xl mx-auto">

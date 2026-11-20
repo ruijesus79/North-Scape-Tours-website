@@ -190,6 +190,11 @@ for (const page of pages) {
       /<meta\s+name=["']twitter:image["']\s+content=["'].*?["']\s*\/?>/i,
       `<meta name="twitter:image" content="${page.image}" />`
     );
+    // Replace LCP image preload with page-specific hero image
+    html = html.replace(
+      /<link\s+rel=["']preload["']\s+as=["']image["'].*?\/?>/i,
+      `<link rel="preload" as="image" href="${page.image}" fetchpriority="high" />`
+    );
   }
 
   // 6. Inject Schema if present

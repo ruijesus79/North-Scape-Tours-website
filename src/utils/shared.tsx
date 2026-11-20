@@ -3,21 +3,21 @@ import { motion } from 'motion/react';
 import { Star, Compass } from 'lucide-react';
 import { FACEBOOK_PAGE, INSTAGRAM_PAGE, TIKTOK_PAGE, YOUTUBE_PAGE, GETYOURGUIDE_LINK, WHATSAPP_LINK } from '../content';
 
-/* ──────── Curated Douro Valley Images — Hand-picked Feb 2026 ──────── */
+/* ──────── Curated Douro Valley Images — Ultra-optimized WebP (Local Edge CDN) ──────── */
 export const IMG = {
-  hero: 'https://www.anadventurousworld.com/wp-content/uploads/2017/05/douro-valley-day-trip.jpg',
-  douroVineyard: 'https://s27363.pcdn.co/wp-content/uploads/2024/02/Quinta-do-Seixo-Douro-Valley.jpg.optimal.jpg',
-  wineTasting: 'https://blog.winetourismportugal.com/hs-fs/hubfs/37QuintaNova1404.jpg?width=1383',
+  hero: '/images/hero-douro-valley.webp',
+  douroVineyard: '/images/ambient/douroVineyard.webp',
+  wineTasting: '/images/ambient/wineTasting.webp',
   boatRide: '/images/douro_boat_tour_1771612994491.png',
-  lunch: 'https://blog.winetourismportugal.com/hs-fs/hubfs/Enotourism%5B6%5D%20(4).jpg?width=1969',
-  romantic: 'https://www.louderthanfire.com/wp-content/uploads/2023/07/Boat-Trip-Marriage-Proposal-Douro-Valley-featured.jpg',
+  lunch: '/images/ambient/lunch.webp',
+  romantic: '/images/ambient/romantic.webp',
   tailorMade: '/images/tailor-made-luxury.webp',
   transfer: '/images/transfer-fleet-douro.webp',
-  ctaBg: 'https://images.winalist.com/blog/wp-content/uploads/2024/02/26114506/AdobeStock_106808196.jpeg',
-  ambientVines: 'https://s27363.pcdn.co/wp-content/uploads/2024/02/Douro-Valley-Vines.jpg.optimal.jpg',
-  ambientBarrels: 'https://images.winalist.com/blog/wp-content/uploads/2024/02/21152357/maksym-kaharlytskyi-5ZmAyIG_OrI-unsplash.jpg',
-  ambientRiver: 'https://images.winalist.com/blog/wp-content/uploads/2022/04/26174037/what-to-do-douro-valley-pinhao-winalist.jpeg',
-  ambientSunset: 'https://blog.winetourismportugal.com/hs-fs/hubfs/1607627042-portugal-estates-douro-quinta-do-seixo-6.jpg?width=1383',
+  ctaBg: '/images/ambient/ctaBg.webp',
+  ambientVines: '/images/ambient/ambientVines.webp',
+  ambientBarrels: '/images/ambient/ambientBarrels.webp',
+  ambientRiver: '/images/ambient/ambientRiver.webp',
+  ambientSunset: '/images/ambient/ambientSunset.webp',
 };
 
 export const NAV_IDS = ['home', 'tours', 'transfer', 'sobre-nos', 'avaliacoes', 'blog', 'contacto'] as const;

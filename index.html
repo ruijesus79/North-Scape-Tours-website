@@ -28,12 +28,10 @@
   <link rel="alternate" hreflang="x-default" href="https://www.northetours.com/" />
   <link rel="alternate" type="text/plain" href="https://www.northetours.com/llms.txt" title="AI & LLM Context" />
 
-  <!-- Core Web Vitals Optimization: Preconnect & LCP Hero Image Preload -->
+  <!-- Core Web Vitals Optimization: Preconnect & LCP Hero Image Preload (Local Edge CDN) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://www.anadventurousworld.com" crossorigin />
-  <link rel="preconnect" href="https://unpkg.com" crossorigin />
-  <link rel="preload" as="image" href="https://www.anadventurousworld.com/wp-content/uploads/2017/05/douro-valley-day-trip.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/hero-douro-valley.webp" fetchpriority="high" type="image/webp" />
 
   <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website" />
@@ -58,11 +56,11 @@
   <meta name="twitter:description" content="Experiências 100% privadas no Vale do Douro, Porto e Norte de Portugal. Degustação de vinhos raros, cruzeiros fluviais e itinerários sob medida." />
   <meta name="twitter:image" content="https://www.northetours.com/images/tours/douro-wine-gastronomy/douro-valley-private-boat-experience.webp" />
 
-  <!-- Non-Render-Blocking Luxury Fonts -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Dancing+Script:wght@500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Dancing+Script:wght@500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <!-- Non-Render-Blocking Luxury Fonts (Optimized Payload & Zero CLS) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Dancing+Script:wght@500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   </noscript>
 
   <!-- SEO Avançado + AEO/GEO: TravelAgency, LocalBusiness, OfferCatalog & FAQPage JSON-LD -->
